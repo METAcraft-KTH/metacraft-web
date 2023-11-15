@@ -1,5 +1,12 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
     font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(
+        #fecdd380, 
+        #fecdd380
+      ),
+      url("$lib/images/background.png");
+    background-attachment: fixed;
 }

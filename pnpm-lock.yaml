@@ -5,6 +5,7 @@ specifiers:
   '@sveltejs/kit': ^1.20.4
   '@typescript-eslint/eslint-plugin': ^6.0.0
   '@typescript-eslint/parser': ^6.0.0
+  '@unocss/extractor-svelte': ^0.57.1
   '@unocss/preset-uno': ^0.57.1
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
@@ -23,6 +24,7 @@ devDependencies:
   '@sveltejs/kit': 1.27.2_svelte@4.2.2+vite@4.5.0
   '@typescript-eslint/eslint-plugin': 6.9.1_6zldm7dnffi7r2a7lc5c4oleyu
   '@typescript-eslint/parser': 6.9.1_i3vkbg2fztj7jno7sh3heeojya
+  '@unocss/extractor-svelte': 0.57.1
   '@unocss/preset-uno': 0.57.1
   eslint: 8.52.0
   eslint-config-prettier: 8.10.0_eslint@8.52.0
@@ -690,6 +692,10 @@ packages:
     resolution: {integrity: sha512-9s+azHhBnwjxm46TsD1RY0krDAwOR8tcw58Vtl3emd6C0VQsAOdoprt7UHE7GEXMvDVq7nMf8lAT0BM0LteW3w==}
     dependencies:
       '@unocss/core': 0.57.1
+    dev: true
+
+  /@unocss/extractor-svelte/0.57.1:
+    resolution: {integrity: sha512-Uz9ie+SMaTiF08i31nF5G4AzqNIGEF8ukOlBKC6NtOhCFAt1nN18UHHv20Wou68LvbPP7OgRlWc4kizihY123A==}
     dev: true
 
   /@unocss/inspector/0.57.1:
