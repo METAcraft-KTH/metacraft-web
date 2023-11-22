@@ -27,7 +27,7 @@
 				<p slot="content">
 					METAcraft behåller alla viktiga detaljer i hur Minecraft fungerar, så att alla avancerade
 					redstone-maskiner fungerar som de ska. Bygg mob farms, sorteringsmaskiner och automatisera
-					dina resurser! Läs mer i <a href="/features#vanillamechanics">Vanilla Mechanics</a>.
+					dina resurser! Läs mer i <a href="/features#mechanics">Tekniska detaljer</a>.
 				</p>
 			</PrSquare>
 			<PrSquare>

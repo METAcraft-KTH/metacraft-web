@@ -4,7 +4,7 @@
 </script>
 
 <div class="m-4">
-	<a {id} href="#{id}" class="text-pink-700 hover:text-pink-800">{title}</a>
+	<a {id} href="#{id}" class="text-pink-700 hover:text-pink-800 no-underline">{title}</a>
 	<div class="p-4">
 		<slot />
 	</div>

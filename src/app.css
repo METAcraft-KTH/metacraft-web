@@ -9,4 +9,6 @@ body {
       ),
       url("$lib/images/background.png");
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
