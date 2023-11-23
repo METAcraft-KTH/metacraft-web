@@ -23,7 +23,7 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_KEY }}
 
       - name: Test
-        run: ssh mc@mc.datasektionen.se find / -name "docker-compose.yml"
+        run: ssh mc@mc.datasektionen.se pwd && find /home -name "docker-compose.yml"
 
       - name: Run docker compose up
         run: docker compose up -d
