@@ -6,10 +6,15 @@
 	import trader from '$lib/images/pr_squares/trader.png';
 	import warrior from '$lib/images/pr_squares/warrior.png';
 	import PrSquare from '$lib/widgets/PrSquare.svelte';
+	import LaunchBanner from '$lib/widgets/LaunchBanner.svelte';
 </script>
 
 <div class="flex flex-justify-center flex-items-center flex-col">
-	<img src={logo} alt="METAcraft" class="logo p-8 max-h-200px" />
+	<div class="flex justify-center w-100%">
+		<img src={logo} alt="METAcraft" class="logo p-8 max-h-200px" />
+		<LaunchBanner />
+	</div>
+
 	<PageCard>
 		<div class="grid grid-cols-2 grid-rows-2 gap-4 p-8 max-w-80vw">
 			<PrSquare>
