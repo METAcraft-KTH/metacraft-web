@@ -41,7 +41,7 @@
 				<p slot="content">
 					Samla dyrbarheter, köp och sälj med andra spelare, och bygg ditt handelsimperium.
 					METAcraft har ett unikt shopsystem som för det enkelt att sätta upp affärer och handla med
-					andra spelare. Läs mer i <a href="/features#shopmod">Shop mod</a>.
+					andra spelare. Läs mer om <a href="/mods#shops">Shop moddet</a>.
 				</p>
 			</PrSquare>
 			<PrSquare>
