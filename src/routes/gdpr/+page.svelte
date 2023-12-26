@@ -16,9 +16,9 @@
 			</p>
 
 			<p>
-				You can contact us at: <a href="mailto:metacraft@datasektionen.se"
-					> metacraft@datasektionen.se </a
-				>
+				You can contact us at: <a href="mailto:metacraft@datasektionen.se"></a>
+					metacraft@datasektionen.se
+				</a>
 			</p>
 
 			<p>
@@ -34,16 +34,16 @@
 				ensuring transparency and compliance beyond the scope of this statement.
 			</p>
 
-			<p>2. TYPES OF DATA WE PROCESS</p>
+			<p>2. TYPES OF PROCESSED DATA</p>
 
 			<p>
 				We process various types of data, including information entered through the 'verify' command
-				in-game, alongside other relevant details associated with the METAcraft Minecraft server.
-				This encompasses email addresses, Discord usernames, Minecraft usernames, real names (first
-				and last names), chat logs, and optional user-submitted text. Additionally, block placement
-				history, player analytics, and related statistics, including information from the 'verify'
-				command (such as email and Minecraft usernames), are stored on our servers hosted by
-				Hetzner, located at Helsinki, Finland.
+				in-game, alongside other relevant details associated with the METAcraft Minecraft and
+				Discord servers. This may encompass email addresses, Discord usernames, Minecraft usernames,
+				real names (first and last names), chat logs, and optional user-submitted text.
+				Additionally, block placement history, player analytics, and related statistics, including
+				information from the in-game 'verify' command (such as email and Minecraft usernames), are
+				stored on our servers hosted by Hetzner Online GmbH, located in Helsinki, Finland.
 			</p>
 
 			<p>3. PURPOSE OF DATA COLLECTION</p>
@@ -52,20 +52,22 @@
 				Our data collection serves multiple essential purposes. Its primary objective is to create a
 				secure and inclusive environment while ensuring the efficient operation of our Minecraft and
 				Discord servers. The information gathered is integral to upholding security measures and
-				enabling the seamless functionality of our servers. Additionally, it plays a critical role
-				in proactively detecting and preventing cheating, hacking, or disruptions, thereby promoting
+				enabling seamless functionality of our servers. Additionally, it plays a critical role in
+				proactively detecting and preventing cheating, hacking, or disruptions, thereby promoting
 				fair play and improving the overall gaming experience for all users. We are dedicated to
-				preserving the integrity of interactions and emphasizing a positive user experience within
+				preserving the integrity of interactions and emphasising a positive user experience within
 				our community.
 			</p>
 
 			<p>4. DATA PROCESSING METHODS</p>
 
 			<p>
-				All contact details and personally identifiable GDPR-protected data are securely stored
-				within Google Workspace Drive and accessible only to the relevant Moderation team members.
-				Limited access is granted to minimize exposure. General feedback data and player analytics
-				may be collated, anonymized, and shared with METAcraft members.
+				All personally identifiable GDPR-protected data are securely stored within the Google
+				Workspace Drive of Konglig Datasektionen or on our server hosted by Hetzner. Access is
+				limited to relevant Moderation team members for counteracting cheating or harassment or to
+				the server admin for server management purposes. We maintain strict access controls to
+				minimize exposure. General feedback data and player analytics may be collated, anonymized,
+				and shared with METAcraft members.
 			</p>
 
 			<p>5. DATA RETENTION PERIOD</p>
@@ -74,14 +76,15 @@
 				We commit to promptly removing any contact details or other personally identifiable
 				GDPR-protected data. At the latest, this information will be deleted within three weeks
 				after the conclusion of METAcraft Season 3. Users can request explicit removal of their data
-				at any time by contacting us.
+				at any time by contacting us using the provided email address or by opening a ticket on our
+				Discord server.
 			</p>
 
 			<p>6. DATA SUBJECT RIGHTS</p>
 
 			<p>
-				As a data subject, you have certain rights. You're entitled to be informed and can reach out
-				to us with any queries. You have the right to request access to your data, rectify any
+				As a data subject, you have specific rights. You're entitled to be informed and can reach
+				out to us with any queries. You have the right to request access to your data, rectify any
 				inaccuracies, delete your data, or use it yourself, according to your own preferences.
 				Additionally, you have the option to refrain from sharing your data by not accepting this
 				agreement.
@@ -93,10 +96,10 @@
 </div>
 
 <style>
-    p {
-        display: block;
-        margin: 1em 0px;
-        line-height: 18px;
-        font-size: 18px;
-    }
+	p {
+		display: block;
+		margin: 1em 0px;
+		line-height: 18px;
+		font-size: 18px;
+	}
 </style>
