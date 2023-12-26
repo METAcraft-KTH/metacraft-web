@@ -16,7 +16,7 @@
 			</p>
 
 			<p>
-				You can contact us at: <a href="mailto:metacraft@datasektionen.se"></a>
+				You can contact us at: <a href="mailto:metacraft@datasektionen.se">
 					metacraft@datasektionen.se
 				</a>
 			</p>
