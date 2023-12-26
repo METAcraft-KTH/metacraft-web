@@ -1,5 +1,5 @@
 <script lang="ts">
-	const launchDate = new Date('2023-12-26 18:00:00'); // 19 svensk tid
+	const launchDate = new Date('2023-12-26 19:00:00'); // 19 svensk tid
 
 	let currentTime = Date.now();
 
