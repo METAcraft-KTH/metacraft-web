@@ -7,16 +7,53 @@
 	import shop_hoppers from '$lib/images/mods/shop_hoppers.jpg';
 	import shop_simple from '$lib/images/mods/shop_simple.jpg';
 	import shop_trades from '$lib/images/mods/shop_trades.jpg';
+	import cart_tier1 from '$lib/images/mods/cart_tier1.jpg';
+	import cart_tier2 from '$lib/images/mods/cart_tier2.jpg';
+	import cart_tier3 from '$lib/images/mods/cart_tier3.jpg';
 </script>
 
 <div class="m-t20 p-b300px">
 	<PageCard>
 		<div class="p-4 max-w-60vw">
-			<Hotlink id="mods" title="Mods">
-				<div class="mb-4">
-					METAcraft håller sig nära upplevelsen av en vanlig Minecraft servern, men vi har några väl
-					utvalda modifikationer och plugins som förhöjer upplevelsen. Den här sidan detaljerar
-					några av dom lite mer avancerade modsen, och hur man kommer igång och använder dom.
+			<Hotlink id="voice" title="Voice chat">
+				<div class="mb-8">
+					<a href="https://modrinth.com/plugin/simple-voice-chat">simple-voice-chat</a> finns installerat
+					för de som vill enkelt prata med varandra i spelet. Men det är absolut inget krav att använda,
+					Discord och chatten i spelet är fortfarande det primära sätten att kommunicera med andra spelare.
+				</div>
+
+				<div class="mb-8">
+					Med standardinställningarna använder man <div class="bg-gray-3 p-2px inline-block">
+						CAPS LOCK
+					</div>
+					för push-to-talk. Inställningarna kan man ändra genom att trycka på
+					<div class="bg-gray-3 p-2px inline-block">V</div>
+					och grupper kan man hitta med
+					<div class="bg-gray-3 p-2px inline-block">G</div>
+					.
+				</div>
+			</Hotlink>
+
+			<Hotlink id="carts" title="Minecarts">
+				<div class="mb-8">
+					På en stor server kan man resa långa sträckor för att besöka spelare, sammla resurser
+					eller utforska nya områden. Uppgraderade minecarts gör resan snabbare och gör järnvägen
+					till ett rimligt transportmedel i höjd med båtar på is. För att uppgradera en minecart
+					till nästa nivå krävs bemästring av många resurser.
+				</div>
+				<div class="mb-8 flex flex-row flex-justify-between w-100%">
+					<div class="flex flex-col">
+						Tier 1 (uppgraderar vanlig minecart)
+						<img src={cart_tier1} alt="Cart tier 1" class="h-160px pt-2" />
+					</div>
+					<div class="flex flex-col">
+						Tier 2 (uppgraderar tier 1)
+						<img src={cart_tier2} alt="Cart tier 2" class="h-160px pt-2" />
+					</div>
+					<div class="flex flex-col">
+						Tier 3 (uppgraderar tier 2)
+						<img src={cart_tier3} alt="Cart tier 3" class="h-160px pt-2" />
+					</div>
 				</div>
 			</Hotlink>
 
@@ -29,7 +66,8 @@
 				<div class="mb-8 flex flex-row flex-justify-between w-100%">
 					<div class="mr-8">
 						Börja med att konstruera ett shop-block enligt receptet. Träslag och färg på ullen är
-						valfritt. Placera sedan ovanpå eller på sidan av en tunna för att aktivera shopen.
+						valfritt. Placera sedan blocket ovanpå eller på sidan av en tunna för att aktivera
+						shopen.
 					</div>
 					<img src={shop_crafting} alt="crafting" class="h-200px" />
 					<img src={shop_simple} alt="simple shop" class="h-200px" />

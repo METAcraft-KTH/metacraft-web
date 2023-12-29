@@ -58,7 +58,7 @@
 						<li>Hackade klienter</li>
 						<li>X-ray</li>
 						<li>Flyghack</li>
-						<li>Att duplicera items (med undantag av tänd TnT för farms)</li>
+						<li>Att duplicera items</li>
 					</ul>
 				</div>
 				<div class="mb-4">

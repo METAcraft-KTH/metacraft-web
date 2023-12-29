@@ -6,13 +6,13 @@
 	import trader from '$lib/images/pr_squares/trader.png';
 	import warrior from '$lib/images/pr_squares/warrior.png';
 	import PrSquare from '$lib/widgets/PrSquare.svelte';
-	import LaunchBanner from '$lib/widgets/LaunchBanner.svelte';
+	import AddressBanner from '$lib/widgets/AddressBanner.svelte';
 </script>
 
 <div class="flex flex-justify-center flex-items-center flex-col">
 	<div class="flex justify-center w-100%">
 		<img src={logo} alt="METAcraft" class="logo p-8 max-h-200px" />
-		<LaunchBanner />
+		<AddressBanner />
 	</div>
 
 	<PageCard>
@@ -40,7 +40,7 @@
 				<h2 slot="title">För Byteshandlare</h2>
 				<p slot="content">
 					Samla dyrbarheter, köp och sälj med andra spelare, och bygg ditt handelsimperium.
-					METAcraft har ett unikt shopsystem som för det enkelt att sätta upp affärer och handla med
+					METAcraft har ett enkelt shop mod som underlättar att sätta upp affärer och handla med
 					andra spelare. Läs mer om <a href="/mods#shops">Shop moddet</a>.
 				</p>
 			</PrSquare>
