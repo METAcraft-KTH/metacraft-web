@@ -39,7 +39,7 @@
 				För att göra alla blocken man placerar flyttbara.
 			</Hotlink>
 			<Hotlink id="status" title="Statyer">
-				Genom att signera och döpa en skriven bok till "Status" (stort S är viktigt) så får man en
+				Genom att signera och döpa en skriven bok till "Statues" (stort S är viktigt) så får man en
 				bok som kan användas för att manipulera armor stands för att skapa avancerade statyer.
 			</Hotlink>
 			<Hotlink id="portals" title="Portaler">
@@ -47,7 +47,7 @@
 				rektanglar.
 			</Hotlink>
 			<Hotlink id="pearls" title="Enderpärlor">
-				Enderpärlor kan nu teleportera spelare genom dimensioner.
+				Enderpärlor kan nu teleportera spelare mellan dimensioner.
 			</Hotlink>
 			<Hotlink id="heads" title="Huvuden">
 				Levande varelser har en chans att tappa sitt huvud om de dödas av en spelare. Det gäller
@@ -57,7 +57,7 @@
 				Den vandrande byteshandlaren har med sig spännande små block att byta mot ett större.
 			</Hotlink>
 			<Hotlink id="firetick" title="Eld">
-				Under borgargordens beskydd så sprids inte eld, och bränner inte upp block.
+				Inom imperiets murar så sprids inte eld, och bränner inte upp block.
 			</Hotlink>
 			<Hotlink id="silence" title="Tysta djur">
 				Döper man ett djur till "Silence me" så slutar den att göra ljud ifrån sig.
