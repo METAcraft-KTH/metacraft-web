@@ -46,14 +46,14 @@
 						Tier 1 (uppgraderar vanlig minecart)
 						<img src={cart_tier1} alt="Cart tier 1" class="h-160px pt-2" />
 					</div>
-					<div class="flex flex-col">
+					<!--<div class="flex flex-col">
 						Tier 2 (uppgraderar tier 1)
 						<img src={cart_tier2} alt="Cart tier 2" class="h-160px pt-2" />
 					</div>
 					<div class="flex flex-col">
 						Tier 3 (uppgraderar tier 2)
 						<img src={cart_tier3} alt="Cart tier 3" class="h-160px pt-2" />
-					</div>
+					</div>-->
 				</div>
 			</Hotlink>
 
