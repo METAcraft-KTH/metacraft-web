@@ -1,3 +1,18 @@
+/* official fonts */
+
+@font-face {
+    font-family: 'MinecraftSeven';
+    src: url('MinecraftSeven.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinecraftTen';
+    src: url('MinecraftTen.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -13,6 +28,30 @@ body {
     background-position: center;
 }
 
-.minecraftia {
-  font-family: 'minecraftia';
+.mc7 {
+    font-family: 'MinecraftSeven', sans-serif;
+}
+.mc10 {
+    font-family: 'MinecraftTen', sans-serif;
+}
+
+.bg-white-concrete-powder {
+    background: url('$lib/images/bg/white_concrete_powder.png') repeat;
+}
+.bg-cerise-concrete-powder {
+    background: url('$lib/images/bg/cerise_concrete_powder.png') repeat;
+}
+.bg-white-concrete {
+    background: url('$lib/images/bg/white_concrete.png') repeat;
+}
+
+/* use the class below when you need a button to not look like a button.
+   a11y standards say clickable things should use html elements that are
+   meant to be clicked, so using <div> is not an option.
+*/
+.notButton {
+    background: none;
+    border: none;
+    appearance: none;
+    cursor: pointer;
 }

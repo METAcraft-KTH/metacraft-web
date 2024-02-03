@@ -2,14 +2,12 @@
 	import 'virtual:uno.css';
 	import '../reset.css';
 	import '../app.css';
-	import TopBar from '$lib/widgets/TopBar.svelte';
-	import Hotlink from '$lib/widgets/Hotlink.svelte';
+	import Header from '$lib/widgets/layout/Header.svelte';
+	import Footer from '$lib/widgets/layout/Footer.svelte';
 </script>
 
 <div class="h-full flex flex-col">
-	<TopBar />
+	<Header />
 	<slot />
-	<div style="text-align: center; margin-top: 2em;">
-		<a href="/gdpr">GDPR Statement</a>
-	</div>
+	<Footer />
 </div>
