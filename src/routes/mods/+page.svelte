@@ -9,7 +9,7 @@
 	import shop_trades from '$lib/images/mods/shop_trades.jpg';
 	import cart_tier1 from '$lib/images/mods/cart_tier1.jpg';
 	import cart_tier2 from '$lib/images/mods/cart_tier2.jpg';
-	import cart_tier3 from '$lib/images/mods/cart_tier3.jpg';
+	//import cart_tier3 from '$lib/images/mods/cart_tier3.jpg';
 </script>
 
 <div class="m-t20 p-b300px">
@@ -41,18 +41,18 @@
 					till ett rimligt transportmedel i höjd med båtar på is. För att uppgradera en minecart
 					till nästa nivå krävs bemästring av många resurser.
 				</div>
-				<div class="mb-8 flex flex-row flex-justify-between w-100%">
+				<div class="mb-8 flex flex-row flex-justify-around w-100%">
 					<div class="flex flex-col">
-						Tier 1 (uppgraderar vanlig minecart)
-						<img src={cart_tier1} alt="Cart tier 1" class="h-160px pt-2" />
+						Mk. 2 (uppgraderar vanlig minecart)
+						<img src={cart_tier1} alt="Cart Mk. 2" class="h-160px pt-2" />
+					</div>
+					<div class="flex flex-col">
+						Mk. 3 (uppgraderar Mk. 2)
+						<img src={cart_tier2} alt="Cart Mk. 3" class="h-160px pt-2" />
 					</div>
 					<!--<div class="flex flex-col">
-						Tier 2 (uppgraderar tier 1)
-						<img src={cart_tier2} alt="Cart tier 2" class="h-160px pt-2" />
-					</div>
-					<div class="flex flex-col">
-						Tier 3 (uppgraderar tier 2)
-						<img src={cart_tier3} alt="Cart tier 3" class="h-160px pt-2" />
+						Mk. 4 (uppgraderar Mk. 3)
+						<img src={cart_tier3} alt="Cart Mk. 4" class="h-160px pt-2" />
 					</div>-->
 				</div>
 			</Hotlink>
