@@ -1,6 +1,6 @@
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="1539.000000pt" height="668.000000pt" viewBox="0 0 1539.000000 668.000000"
- preserveAspectRatio="xMidYMid meet" class="transition-color h-100%">
+ preserveAspectRatio="xMidYMid meet" class="transition-color h-100% max-w-100%">
 <g transform="translate(0.000000,668.000000) scale(0.100000,-0.100000)"
 fill="currentColor" stroke="none">
 

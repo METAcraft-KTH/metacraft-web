@@ -5,13 +5,13 @@
 	export let dropdown: Array<Array<string>> = [];
 
 	let active = false;
-	$: active = $page.url.pathname === href;
+	$: active = $page.url.pathname.includes(href);
 
 	let hovered = false;
 </script>
 
 <a {href}
-	class="relative color-white no-underline inline-block px-4 lg:px-8 h-100% flex flex-justify-center flex-items-center mc7"
+	class="relative color-white no-underline inline-block px-4 lg:px-8 h-100% flex flex-justify-center flex-items-center mc7 transition-all"
 	class:bg-pink-900={active}
 	class:hover:bg-pink-700={!active}
 	on:mouseover={() => hovered = true}
@@ -19,7 +19,7 @@
 	on:mouseleave={() => hovered = false}
 >
 	<slot />
-	{#if dropdown.length > 1}
+	{#if dropdown.length > 1 && hovered}
 		<HeaderDropdown bind:hovered={hovered} elements={dropdown}>
 		</HeaderDropdown>
 	{/if}
