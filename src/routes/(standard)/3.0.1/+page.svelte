@@ -42,24 +42,24 @@
     <p class="mb-6">
       Nedan följer den fullständiga listan av ändringar:
     </p>
-      <ul class="list-disc list-inside mb-6">
+      <ul class="list-disc mb-6 ml-4">
         <li>Serverns spelversion uppdateras till 1.20.4. Man kommer inte kunna logga in på servern med 1.20.2.</li>
         <li>
           <b>Crafters</b> och alla nya tuff- och kopparblocks kommer kunna tillverkas enligt vanilla-recept.
-          <ul class="ml-4 list-circle list-inside">
+          <ul class="ml-8 list-circle">
             <li>Trial Chambers kommer inte läggas till, då den är fortfarande i ett ofärdigt skick.</li>
           </ul>
         </li>
         <li>
           <b>Bundles</b> kommer kunna tillverkas.
-          <ul class="ml-4 list-circle list-inside">
+          <ul class="ml-8 list-circle">
             <li>Se crafting-boken i din inventory för receptet.</li>
             <li>För tillfället håller varje bundle 1 stack items, men vi har planer att utöka detta i framtida uppdateringar.</li>
           </ul>
         </li>
         <li>
           <b>Uppgraderade minecarts</b> kan också tillverkas.
-          <ul class="ml-4 list-circle list-inside">
+          <ul class="ml-8 list-circle">
             <li>Dessa är snabbare än tidigare minecarts och recept kan såklart hittas i crafting-boken.</li>
           </ul>
         </li>
