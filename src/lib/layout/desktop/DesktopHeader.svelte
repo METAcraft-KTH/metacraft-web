@@ -11,14 +11,14 @@
 	// the two dropdowns
 	let info = [
 		["/tweaks", "Justeringar"],
-		["/shop", "Ekonomi"],
+		["/mods", "Mods"],
+		/*["/shop", "Ekonomi"],
 		["/crafting", "Crafting"],
 		["/zones", "Världszoner"],
-		["/lore", "Lore"]
+		["/lore", "Lore"]*/
 	];
 	let news = [
-		["/event", "Event"],
-		["/update", "Uppdateringar"]
+		["/changelog", "Changelog"]
 	];
 </script>
 <div class="flex flex-row flex-justify-between fixed top-0 w-100% h-14 transition-all"
@@ -34,9 +34,9 @@
 		<HeaderLink href="/rules">Regler</HeaderLink>
 		<HeaderLink href="/news" dropdown={news}>Nyheter</HeaderLink>
 		<HeaderLink href="/map">Live-karta</HeaderLink>
-		<HeaderLink href="/faq">FAQ</HeaderLink>
+		<!--<HeaderLink href="/faq">FAQ</HeaderLink>-->
 	</div>
-	<a href="https://dsekt.se/metacraft" target="_blank" class="inline-block w-115px h-100% color-pink-400 hover:color-pink-100 p-3 text-right" class:color-white={hideHeader}>
+	<a href="/discord" target="_blank" class="inline-block w-115px h-100% color-pink-400 hover:color-pink-100 p-3 text-right" class:color-white={hideHeader}>
 		<Discord />
 	</a>
 </div>

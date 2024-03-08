@@ -20,8 +20,8 @@ body {
     height: 100vh;
     font-family: 'Noto Sans', sans-serif;
     background-image: linear-gradient(
-        #fecdd380, 
-        #fecdd380
+        #724b4f80, 
+        #724b4f80
       ),
       url("$lib/images/background.png");
     background-attachment: fixed;
@@ -42,7 +42,7 @@ body {
 .bg-white-concrete-powder {
     background-image: linear-gradient(
         #ffffffe0, 
-        #ffffffa0,
+        #ffffffc0,
         #ffffffe0
       ), url('$lib/images/bg/white_concrete_powder.png');
     background-repeat: repeat;
@@ -51,7 +51,7 @@ body {
 .bg-cerise-concrete-powder {
     background: url('$lib/images/bg/cerise_concrete_powder.png') repeat;
 }
-.bg-white-concrete {
+.bg-concrete {
     background: url('$lib/images/bg/white_concrete.png') repeat;
 }
 .bg-wool {
@@ -88,6 +88,10 @@ body {
       url("$lib/images/bg/stone.png");
     background-repeat: repeat;
     background-size: initial;
+}
+
+a {
+    color: #be185d;
 }
 
 /* use the class below when you need a button to not look like a button.

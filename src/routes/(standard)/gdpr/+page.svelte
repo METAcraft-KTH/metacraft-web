@@ -1,13 +1,15 @@
 <script lang="ts">
-	import PageCard from '$lib/widgets/PageCard.svelte';
+	import Main from '$lib/layout/standard/Main.svelte';
+import Title from '$lib/layout/standard/Title.svelte';
 </script>
 
-<div class="m-t20 p-b300px">
-	<PageCard>
+<Title>GDPR Statement</Title>
+
+	<Main>
 		<div class="p-4 max-w-60vw">
 			<p><strong>GDPR STATEMENT</strong></p>
 
-			<p>1. CONTACT DETAILS</p>
+			<p><strong>1. CONTACT DETAILS</strong></p>
 
 			<p>
 				METAcraft is a collaborative Minecraft-related project jointly hosted by
@@ -24,8 +26,8 @@
 			<p>
 				Apart from this statement, our commitment to comprehensive data handling aligns with a
 				detailed information policy, accessible for review at:
-				<a href="https://styrdokument.datasektionen.se/informationshanteringspolicy">
-					https://styrdokument.datasektionen.se/informationshanteringspolicy
+				<a href="https://styrdokument.datasektionen.se/pm/pm_informationshantering" target="_blank">
+					https://styrdokument.datasektionen.se/pm/pm_informationshantering
 				</a>
 			</p>
 
@@ -34,7 +36,7 @@
 				ensuring transparency and compliance beyond the scope of this statement.
 			</p>
 
-			<p>2. TYPES OF PROCESSED DATA</p>
+			<p><strong>2. TYPES OF PROCESSED DATA</strong></p>
 
 			<p>
 				We process various types of data, including information entered through the 'verify' command
@@ -46,7 +48,7 @@
 				stored on our servers hosted by Hetzner Online GmbH, located in Helsinki, Finland.
 			</p>
 
-			<p>3. PURPOSE OF DATA COLLECTION</p>
+			<p><strong>3. PURPOSE OF DATA COLLECTION</strong></p>
 
 			<p>
 				Our data collection serves multiple essential purposes. Its primary objective is to create a
@@ -59,7 +61,7 @@
 				our community.
 			</p>
 
-			<p>4. DATA PROCESSING METHODS</p>
+			<p><strong>4. DATA PROCESSING METHODS</strong></p>
 
 			<p>
 				All personally identifiable GDPR-protected data are securely stored within the Google
@@ -70,7 +72,7 @@
 				and shared with METAcraft members.
 			</p>
 
-			<p>5. DATA RETENTION PERIOD</p>
+			<p><strong>5. DATA RETENTION PERIOD</strong></p>
 
 			<p>
 				We commit to promptly removing any contact details or other personally identifiable
@@ -80,7 +82,7 @@
 				Discord server.
 			</p>
 
-			<p>6. DATA SUBJECT RIGHTS</p>
+			<p><strong>6. DATA SUBJECT RIGHTS</strong></p>
 
 			<p>
 				As a data subject, you have specific rights. You're entitled to be informed and can reach
@@ -90,16 +92,18 @@
 				agreement.
 			</p>
 
-			<p>MAY ALL BEINGS BE HAPPY</p>
+			<p><strong>MAY ALL BEINGS BE HAPPY</strong></p>
 		</div>
-	</PageCard>
-</div>
+	</Main>
 
 <style>
 	p {
 		display: block;
 		margin: 1em 0px;
-		line-height: 18px;
-		font-size: 18px;
+		line-height: 1.25;
+	}
+	strong {
+		font-weight: bold;
+		font-size: 1.2rem;
 	}
 </style>

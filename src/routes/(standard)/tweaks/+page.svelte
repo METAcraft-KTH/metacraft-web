@@ -1,11 +1,20 @@
 <script lang="ts">
 	import PageCard from '$lib/widgets/PageCard.svelte';
 	import Hotlink from '$lib/widgets/Hotlink.svelte';
+	import Main from '$lib/layout/standard/Main.svelte';
+	import Title from '$lib/layout/standard/Title.svelte';
+	import PageDescription from '$lib/layout/standard/PageDescription.svelte';
 </script>
 
-<div class="m-t20 p-b300px">
-	<PageCard>
-		<div class="p-4 max-w-60vw">
+<Title>
+	JUSTERINGAR
+</Title>
+
+<PageDescription>
+	För optimal spelupplevelse har vi infört en hel del Quality of Life-ändringar, listad nedan!
+</PageDescription>
+	<Main>
+		<div class="max-w-250">
 			<Hotlink id="reparation" title="Reparation och Enchanting">
 				Reparation av vapen, verktyg och rustningar har balanserats om så att de kostar signifikant
 				mindre material, och kostnaden i xp går inte upp. Det finns heller inget tak för hur många
@@ -13,14 +22,13 @@
 			</Hotlink>
 			<Hotlink id="mending" title="Mending">
 				För att behålla en efterfrågan på reparationsmaterial på marknaden kan villagers inte längre
-				sälja mending-böcker. Inga andra böcker är ändrade.
+				sälja mending-böcker. Inga andra böcker är ändrade. Servern använder <span class="font-bold">inte</span> <a href="https://minecraft.wiki/w/Villager_Trade_Rebalance" target="_blank">Villager Trade Rebalance</a>-datapacken.
 			</Hotlink>
 			<Hotlink id="fishing" title="Fiske">
 				Fiskar man mycket får man akta sig, det kan luras odödliga i botten av havet!
 			</Hotlink>
 			<Hotlink id="duping" title="Duplicering">
-				Duplicering av TnT och sand är vanligt förekommande, men är borttaget från METAcraft. Sand
-				kan fås från Husks, och TnT kan placeras med dispensers. Behövs rörliga maskiner med TnT kan
+				Duplicering av TNT och sand är vanligt förekommande, men är <span class="font-bold">borttaget</span> från METAcraft på grund av lagg. Sand kan fås från Husks, och TNT kan placeras med dispensers. Behövs rörliga maskiner med TNT kan
 				man använda sig av movable tile entities.
 			</Hotlink>
 			<Hotlink id="sand" title="Sand">
@@ -43,7 +51,7 @@
 				bok som kan användas för att manipulera armor stands för att skapa avancerade statyer.
 			</Hotlink>
 			<Hotlink id="portals" title="Portaler">
-				Portaler kan tändas i många olika storlekar och formationer, inte bara traditionella
+				Netherportaler kan tändas i många olika storlekar och formationer, inte bara traditionella
 				rektanglar.
 			</Hotlink>
 			<Hotlink id="pearls" title="Enderpärlor">
@@ -63,5 +71,4 @@
 				Döper man ett djur till "Silence me" så slutar den att göra ljud ifrån sig.
 			</Hotlink>
 		</div>
-	</PageCard>
-</div>
+	</Main>

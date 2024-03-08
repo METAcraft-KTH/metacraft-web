@@ -19,7 +19,7 @@
 	on:mouseleave={() => hovered = false}
 >
 	<slot />
-	{#if dropdown.length > 1 && hovered}
+	{#if dropdown.length > 0 && hovered}
 		<HeaderDropdown bind:hovered={hovered} elements={dropdown}>
 		</HeaderDropdown>
 	{/if}

@@ -60,8 +60,8 @@
   
     <div id="gameVersion" class="py-1 px-4 bg-white text-black mc7 sm:text-lg">Java 1.20.4</div>
   
-    <a href="/faq#login" class="faq block px-4 py-3 no-underline m-t8 rd text-black font-bold shadow-lg transition-all hover:scale-105">
-      Problem med inloggning?
+    <a href="https://modrinth.com/plugin/simple-voice-chat" target="_blank" class="faq block px-4 py-3 no-underline m-t8 rd text-black font-bold shadow-lg transition-all hover:scale-105">
+      Ladda ner Simple Voice Chat här!
     </a>
   </div>
 
@@ -79,10 +79,14 @@
   </ActiveEvent>
 {/if}
 
+<div class="mx-auto mt-12 w-100% max-w-250 p-5 rd">
+  <iframe class="w-100% aspect-video" style="box-shadow: 0 0 0 .5rem white" src="https://www.youtube-nocookie.com/embed/B6CmcGmRNwE?si=FMbaRhAsolJx9YcD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 
 
-<main class="mx-auto my-12 w-100% max-w-250 p-5 md:p-10 md:text-lg shadow-xl bg-white-concrete-powder rd">
+
+<main class="mx-auto my-12 w-100% max-w-250 p-5 md:p-10 text-base md:text-lg shadow-xl bg-white-concrete-powder rd">
   <span class="font-bold">Välkommen till METAcraft!</span> En spännande Minecraft SMP (Survival Multiplayer) som är öppen till alla studenter vid Data- och Medieteknik-programmet på KTH. Stig in i en aktiv community med regelbundna uppdateringar av nya innehåll och event. Här finns det alltid något kul att göra oavsett din spelstil, eller om du är nybörjare eller veteran till spelet!
 
   <div class="my-14" />

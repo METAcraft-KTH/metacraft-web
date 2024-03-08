@@ -9,16 +9,14 @@
     "href": "/byggtavling",
     "title": "Byggtävling",
     "date": "2024-2-23",
-    "type": "event",
-    "live": true
+    "type": "event"
   },
   {
     "href": "/3.0.2",
     "title": "3.0.2",
     "date": "2024-2-9",
     "type": "update",
-    "image": "background2.png",
-    "latest": true
+    "image": "background2.png"
   },
   {
     "href": "/3.0.1",

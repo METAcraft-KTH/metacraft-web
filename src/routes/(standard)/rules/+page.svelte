@@ -1,11 +1,21 @@
 <script lang="ts">
 	import PageCard from '$lib/widgets/PageCard.svelte';
 	import Hotlink from '$lib/widgets/Hotlink.svelte';
+	import Main from '$lib/layout/standard/Main.svelte';
+	import Title from '$lib/layout/standard/Title.svelte';
+	import PageDescription from '$lib/layout/standard/PageDescription.svelte';
 </script>
 
-<div class="m-t20 p-b300px">
-	<PageCard>
-		<div class="p-4 max-w-60vw">
+<Title>
+	REGLER
+</Title>
+
+<PageDescription>
+	För allas trivsel har vi skrivit några regler. Genom att spela på servern godkänner du att följa reglerna.
+</PageDescription>
+
+	<Main>
+		<div class="max-w-250">
 			<Hotlink id="general" title="Generellt">
 				<div class="mb-4">
 					På METAcraft finns det en mängd olika spelare med olika sätt att spela Minecraft på.
@@ -34,10 +44,10 @@
 					<ul class="list-disc list-inside ml-2">
 						<li>Var artig och respektfull mot andra spelare.</li>
 						<li>
-							På servern förhåller vi oss till JML-policyn som du kan finna på denna länk: <a
+							På servern förhåller vi oss till <a
 								href="https://styrdokument.datasektionen.se/jamlikhetspolicy"
-								>https://styrdokument.datasektionen.se/jamlikhetspolicy</a
-							>
+								> Datasektionens JML-policy</a
+							>.
 						</li>
 						<li>
 							Undvik att marknadsföra andra servrar eller tjänster. Spam, reklam och oönskade länkar
@@ -49,7 +59,7 @@
 
 			<Hotlink id="cheating" title="Fusk">
 				<div class="mb-4">
-					Fusk är absolut inte tillåter i METAcraft eller något event som arrangeras i anknytning
+					Fusk är absolut inte tillåtet i METAcraft eller något event som arrangeras i anknytning
 					till servern. Fuskar du kan du avstängd från servern och får inte delta i event.
 				</div>
 				<div class="mb-4">
@@ -121,5 +131,4 @@
 				</div>
 			</Hotlink>
 		</div>
-	</PageCard>
-</div>
+	</Main>
