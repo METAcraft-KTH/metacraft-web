@@ -6,12 +6,25 @@
 	import PageDescription from '$lib/layout/standard/PageDescription.svelte';
 </script>
 
+
+<!-- !! CUSTOM BG !! -->
+<style>
+	.custombg {
+		background-image: linear-gradient(
+        #724b4f80, 
+        #724b4f80
+      ), url("$lib/images/background2.png")
+	}
+</style>
+<div class="w-100lvw h-100lvh fixed z--10 custombg bg-center-center bg-cover" />
+<!-- !! CUSTOM BG !! -->
+
 <Title>
 	REGLER
 </Title>
 
 <PageDescription>
-	För allas trivsel har vi skrivit några regler. Genom att spela på servern godkänner du att följa reglerna.
+	För allas trivsel har vi skrivit några enkla regler som alla förväntas att följa.<br>Genom att spela på servern godkänner du att följa reglerna.
 </PageDescription>
 
 	<Main>

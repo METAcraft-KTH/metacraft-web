@@ -5,14 +5,26 @@
 	import Title from '$lib/layout/standard/Title.svelte';
 </script>
 
+<!-- !! CUSTOM BG !! -->
+<style>
+	.custombg {
+		background-image: linear-gradient(
+        #724b4f80, 
+        #724b4f80
+      ), url("$lib/images/splashes/borgargarden.webp")
+	}
+</style>
+<div class="w-100lvw h-100lvh fixed z--10 custombg bg-center-center bg-cover" />
+<!-- !! CUSTOM BG !! -->
+
 <Title>
 	UPPTÄCK METACRAFT
 </Title>
 <Main>
 	<div class="max-w-250">
 		<Hotlink id="qol" title={'Vanilla+'}>
-			Servern har en mängd olika små mods och datapack installerade för att förbättra kvalitén på
-			livet i Minecraft. Se listan med <a href="/tweaks">Justeringar</a> och
+			Servern har en mängd olika små mods och datapack installerade för att förbättra livskvalitén
+			i Minecraft. Se listan med <a href="/tweaks">Justeringar</a> och
 			<a href="/mods">Mods</a>!
 		</Hotlink>
 		<Hotlink id="lore" title="Lore">

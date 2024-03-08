@@ -1,5 +1,5 @@
 <script lang="ts">
-  import TypeAndTime from './TypeAndTime.svelte';
+  import TypeAndTime from '$lib/widgets/TypeAndTime.svelte';
   import { slide } from 'svelte/transition';
 
   export let href: string;
@@ -79,13 +79,15 @@
       <TypeAndTime {type} {date} />
     </div>
 
-    <div class="banner rd-r transition-all w-50% md:w-60% relative"
+    <!--<div class="banner rd-r transition-all w-50% md:w-60% relative"
          style={
                 (image !== '')
                   ? "background-image: url('/src/lib/images/"+image+"')"
                   : ''
                 }
-    />
-
+    />-->
+    
+    <div class="banner rd-r transition-all w-50% md:w-60% relative" />
+    
   </div>
 </a>

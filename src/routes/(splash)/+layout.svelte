@@ -4,5 +4,5 @@
 </script>
 
 <Header splashPage={true} />
-<slot />
+	<slot />
 <Footer />

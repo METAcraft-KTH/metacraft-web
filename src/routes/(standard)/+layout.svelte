@@ -5,5 +5,7 @@
 
 
 <Header />
-<slot />
+<div class="flex-1 w-100% flex flex-col flex-items-center">
+	<slot />
+</div>
 <Footer />

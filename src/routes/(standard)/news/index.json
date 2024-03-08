@@ -1,17 +1,5 @@
 [
   {
-    "href": "/news/140224",
-    "title": "Test post, please ignore",
-    "date": "2024-2-14",
-    "image": "splashes/main.webp"
-  },
-  {
-    "href": "/byggtavling",
-    "title": "Byggtävling",
-    "date": "2024-2-23",
-    "type": "event"
-  },
-  {
     "href": "/3.0.2",
     "title": "3.0.2",
     "date": "2024-2-9",

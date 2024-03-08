@@ -14,6 +14,18 @@
 	import Title from '$lib/layout/standard/Title.svelte';
 </script>
 
+<!-- !! CUSTOM BG !! -->
+<style>
+	.custombg {
+		background-image: linear-gradient(
+        #724b4f80, 
+        #724b4f80
+      ), url("$lib/images/splashes/hamn.webp")
+	}
+</style>
+<div class="w-100lvw h-100lvh fixed z--10 custombg bg-center-center bg-cover" />
+<!-- !! CUSTOM BG !! -->
+
 <Title>
 	MODS
 </Title>
@@ -21,7 +33,7 @@
 		<div class="max-w-250">
 			<Hotlink id="voice" title="Voice chat">
 				<div class="mb-8">
-					Moddet <a href="https://modrinth.com/plugin/simple-voice-chat">Simple Voice Chat</a> finns installerat på servern
+					Moddet <a href="https://modrinth.com/plugin/simple-voice-chat/version/fabric-1.20.4-2.5.0">Simple Voice Chat</a> finns installerat på servern
 					för de som vill enkelt prata med varandra i spelet. Det är naturligtvis inget krav för spelarna att använda moddet: det går bra att använda
 					Discord och chatten i spelet. Däremot underlättar det mycket i events och daglig spelande att kunna kommunicera med andra spelare i realtid.
 				</div>
@@ -40,24 +52,24 @@
 
 			<Hotlink id="carts" title="Minecarts">
 				<div class="mb-8">
-					På en stor server kan man resa långa sträckor för att besöka spelare, sammla resurser
+					På en stor server kan man resa långa sträckor för att besöka spelare, samla resurser
 					eller utforska nya områden. Uppgraderade minecarts gör resan snabbare och gör järnvägen
 					till ett rimligt transportmedel i höjd med båtar på is. För att uppgradera en minecart
 					till nästa nivå krävs bemästring av många resurser.
 				</div>
 				<div class="mb-8 flex flex-col lg:flex-row flex-justify-between gap-4 w-100%">
 					<div class="flex flex-1 flex-col">
-						Tier 1<br>(uppgraderar vanlig minecart)
+						Mk. II<br>(uppgraderar vanlig minecart)
 						<img src={cart_tier1} alt="Cart tier 1" class="max-w-70 lg:w-initial pt-2" />
 					</div>
 					<div class="flex flex-1 flex-col">
-						Tier 2<br>(uppgraderar tier 1)
+						Mk. III<br>(uppgraderar Mk. II)
 						<img src={cart_tier2} alt="Cart tier 2" class="max-w-70 lg:w-initial pt-2" />
 					</div>
-					<div class="flex flex-1 flex-col">
+					<!--<div class="flex flex-1 flex-col">
 						Tier 3<br>(uppgraderar tier 2)
 						<img src={cart_tier3} alt="Cart tier 3" class="max-w-70 lg:w-initial pt-2" />
-					</div>
+					</div>-->
 				</div>
 			</Hotlink>
 

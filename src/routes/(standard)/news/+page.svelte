@@ -19,7 +19,7 @@
 -->
 <PageDescription>
   <p class="mb-4">Här är en översikt av alla stora uppdateringar och events som har skett eller kommer att ske!</p>
-  <p>Om du föredrar att få informationen rakt på sak, testa <a href="/changelog">changeloggen</a>.</p>
+  <p>Om du föredrar att få informationen rakt på sak, besök <a href="/changelog">changelog</a>.</p>
 </PageDescription>
 
 <div class="mb-20 max-w-300 w-100% flex flex-col gap-2 md:gap-6">

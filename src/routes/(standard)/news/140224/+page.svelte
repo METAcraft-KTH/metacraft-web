@@ -4,7 +4,7 @@
   import Title from "$lib/layout/standard/Title.svelte";
 
   import img from "$lib/images/background2.png"; // ÄNDRA FÖR VARJE POST
-	import TypeAndTime from "../TypeAndTime.svelte";
+	import TypeAndTime from "$lib/widgets/TypeAndTime.svelte";
   let url = `url(${img})`;
 
   let dateString = new Date('2024-2-14').toLocaleDateString('sv-SE', {'weekday': 'long', 'year': 'numeric', 'month': 'short', 'day': '2-digit'});

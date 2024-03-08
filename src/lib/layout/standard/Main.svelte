@@ -8,9 +8,9 @@
 		: 'rd-b-lg md:p-20 pt-0 md:pt-0';
 </script>
 <main class="
-	flex flex-col flex-items-center
-	w-100% max-w-300
-	p-4 md:p-10 mx-auto mb-12
+	flex flex-col
+	w-100% max-w-280
+	p-4 md:p-10 mx-auto mb-36
 	bg-{bg}
 	text-base md:text-lg
 	{classes}"
