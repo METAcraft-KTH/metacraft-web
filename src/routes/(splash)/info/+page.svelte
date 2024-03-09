@@ -51,7 +51,7 @@
 		<Hotlink id="mechanics" title={'Tekniska detaljer'}>
 			Servern använder sig av Fabric och en mängd olika mods för att förbättra spelupplevelsen,
 			samtidigt som den behåller en så vanilla-lik upplevelse som möjligt. Spelare kan bygga
-			avancerade maskiner och farma mobs, och utöver de nämna justeringarna lite på att funktioner
+			avancerade maskiner och farma mobs, och utöver de nämna justeringarna lita på att funktioner
 			är bevarade.
 		</Hotlink>
 	</div>

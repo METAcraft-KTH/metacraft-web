@@ -101,8 +101,8 @@
 					djuruppfödning.
 				</div>
 				<div class="mb-4">
-					Se till att minimera mängden block och ljust som ändras när du använder din maskin. Fråga
-					någon kunnig i METAcraft-teamet om du är osäker på om din maskin är lagvänlig.
+					Se till att minimera mängden block och ljus som ändras när du använder din maskin. Fråga
+					någon kunnig i METAcraft-teamet om du är osäker på om din maskin är lagg-vänlig.
 				</div>
 				<div class="mb-4">
 					Föder du upp allt för många djur ökar risken för spontana blixtnedslag i hagen.

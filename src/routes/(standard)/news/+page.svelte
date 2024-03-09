@@ -3,9 +3,27 @@
   import Title from '$lib/layout/standard/Title.svelte';
   import Latest from './Latest.svelte';
   import Post from './Post.svelte';
-  import index from './index.json';
+  //import index from './index.json';
 
-  let haveWeFoundLatestYet = false;
+  import img_entre from "$lib/images/splashes/entre.webp";
+  import img_borgargarden from "$lib/images/splashes/borgargarden.webp";
+
+  const index = [
+    {
+      "href": "/3.0.2",
+      "title": "3.0.2",
+      "date": "2024/2/9",
+      "type": "update",
+      "image": img_borgargarden
+    },
+    {
+      "href": "/3.0.1",
+      "title": "3.0.1",
+      "date": "2024/2/2",
+      "type": "update",
+      "image": img_entre
+    }
+  ]
 </script>
 
 <Title>
@@ -24,6 +42,6 @@
 
 <div class="mb-20 max-w-300 w-100% flex flex-col gap-2 md:gap-6">
   {#each index as post}
-    <Post {...post} />
+    <Post {...post} --image={`url("${post.image}")`} />
   {/each}
 </div>

@@ -40,7 +40,7 @@
 				Fiskar man mycket får man akta sig, det kan luras odödliga i botten av havet!
 			</Hotlink>
 			<Hotlink id="duping" title="Duplicering">
-				Duplicering av TNT och sand är vanligt förekommande, men är <span class="font-bold">borttaget</span> från METAcraft på grund av lagg. Sand kan fås från Husks, och TNT kan placeras med dispensers. Behövs rörliga maskiner med TNT kan
+				Duplicering av TNT och sand är vanligt förekommande, men är <span class="font-bold">borttaget</span> från METAcraft. Sand kan fås från Husks, och TNT kan placeras med dispensers. Behövs rörliga maskiner med TNT kan
 				man använda sig av movable tile entities.
 			</Hotlink>
 			<Hotlink id="sand" title="Sand">

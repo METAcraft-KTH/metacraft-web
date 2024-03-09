@@ -105,7 +105,7 @@
 				</div>
 				<div class="mb-8 flex flex-col lg:flex-row flex-justify-between w-100%">
 					<div class="mr-8">
-						Spelare som interagerar med shopen eller tunnan blir presenterade en menyn med byten.
+						Spelare som interagerar med shopen eller tunnan blir presenterade en meny med byten.
 						Sakerna de köper plockas från tunnan, och betalningar läggs där med. Ägaren kan även se
 						och testa bytena genom att smyga och öppna shop-blocket, och får hjälpsam information om
 						de uppsatta bytena fungerar eller ej.

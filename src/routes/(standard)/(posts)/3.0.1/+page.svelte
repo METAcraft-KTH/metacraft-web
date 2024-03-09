@@ -3,7 +3,7 @@
   import Main from "$lib/layout/standard/Main.svelte";
   import Title from "$lib/layout/standard/Title.svelte";
 
-  import img from "$lib/images/splashes/main.webp"; // ÄNDRA FÖR VARJE POST
+  import img from "$lib/images/splashes/entre.webp"; // ÄNDRA FÖR VARJE POST
 
   import teaser from "./3.0.1.png";
 
@@ -24,7 +24,7 @@
 
   <Main {post}>
     <div class="text-center w-100%">
-      <TypeAndTime type={'update'} date={'2024-2-3'} style={'mb-6 md:mb-10'} />
+      <TypeAndTime type={'update'} date={'2024/2/3'} style={'mb-6 md:mb-10'} />
     </div>
     <!-- TODO: make these into $lib/textstyle components -->
     <p class="mb-6 text-center text-neutral italic">

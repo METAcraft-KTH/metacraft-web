@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import TypeAndTime from '$lib/widgets/TypeAndTime.svelte';
   import { slide } from 'svelte/transition';
 
@@ -6,7 +7,7 @@
   export let title = 'Unnamed';
   export let date = '';
   export let type = 'post';
-  export let image = '';
+  export let image: any; // intentionally unused. image link is passed as a css variable --image
   export let live = false;
   export let latest = false;
 
@@ -32,7 +33,7 @@
     background-size: cover;
     background-position: center center;
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 15% 100%);
-    background-image: url('$lib/images/splashes/main.webp');
+    background-image: var(--image);
   }
   a:hover .banner {
     clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
@@ -79,15 +80,12 @@
       <TypeAndTime {type} {date} />
     </div>
 
-    <!--<div class="banner rd-r transition-all w-50% md:w-60% relative"
-         style={
-                (image !== '')
-                  ? "background-image: url('/src/lib/images/"+image+"')"
-                  : ''
-                }
-    />-->
-    
     <div class="banner rd-r transition-all w-50% md:w-60% relative" />
+    
+    <!--<div class="banner rd-r transition-all w-50% md:w-60% relative">
+      <img src="{image}" alt="banner">
+      {image}
+    </div>-->
     
   </div>
 </a>

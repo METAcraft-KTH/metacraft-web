@@ -3,7 +3,7 @@
   import Main from "$lib/layout/standard/Main.svelte";
   import Title from "$lib/layout/standard/Title.svelte";
 
-  import img from "$lib/images/splashes/main.webp"; // ÄNDRA FÖR VARJE POST
+  import img from "$lib/images/splashes/borgargarden.webp"; // ÄNDRA FÖR VARJE POST
 
   import mk2 from "./mk2.png";
   import mk3 from "./mk3.png";
@@ -25,7 +25,7 @@
 
   <Main {post}>
     <div class="text-center w-100%">
-      <TypeAndTime type={'update'} date={'2024-2-9'} style={'mb-6 md:mb-10'} />
+      <TypeAndTime type={'update'} date={'2024/2/9'} style={'mb-6 md:mb-10'} />
     </div>
     <!-- TODO: make these into $lib/textstyle components -->
     <p class="mb-12">
@@ -44,7 +44,7 @@
       Mer information kommer!
     </p>
     
-    <h1 class="text-2xl font-bold mb-3">GRUVVAGN MK. III</h1>
+    <h1 class="text-2xl font-bold mb-3">NYTT MATERIAL</h1>
     <p class="mb-3 text-center text-neutral italic">
       EDIT: På grund av kommunikationsfel räknas denna del av inlägget som <b>non-canon</b>.<br>Den är endast inkluderade här av arkiverande skäl.
     </p>
