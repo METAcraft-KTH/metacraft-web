@@ -82,7 +82,7 @@
       <img transition:slide src={d10} alt="i" class="w-100% b-white b-solid b-2 m-2">
       <div transition:slide class="w-100% b-white b-solid b-2 bg-black text-neutral-200 p-4 flex flex-col gap-3">
         <p class="text-2xl">Välkomna tillbaka, METAcrafters!</p>
-        <p><b>TLDR:</b> METAcraft öppnar 26 december på IP <span class="mono">mc.datasektionen.se</span> med en storslagen launch-event. [Gå med i Discorden](https://discord.gg/MttUbkmeyD) och [läs om servern](https://mc.datasektionen.se/) så missar du inget.</p>
+        <p><b>TLDR:</b> METAcraft öppnar 26 december på IP <span class="mono">mc.datasektionen.se</span> med en storslagen launch-event. <a href="https://discord.gg/MttUbkmeyD" target="_blank" class="text-green"><b>Gå med i Discorden</b></a> så missar du inget.</p>
 
         <hr class="w-100%">
         
