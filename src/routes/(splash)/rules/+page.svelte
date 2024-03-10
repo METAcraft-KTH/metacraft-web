@@ -43,7 +43,7 @@
 				</div>
 				<div class="mb-4">
 					Istället för att stängas av kan du även hamna i <b>Exil</b> under en kortare period,
-					vilket innebär att du är fast i <b>Vildmarken</b> och förlorat rättigheten att använda chatten.
+					vilket innebär att du är fast i <b>Vildmarken</b> och förlorar rättigheten att använda chatten.
 				</div>
 				<div class="mb-4">
 					Om du stöter på problem, trakasserier eller brytande av regler, rapportera det genom att
@@ -96,7 +96,7 @@
 					bedrock.
 				</div>
 				<div class="mb-4">
-					Undvik så långt det går att generera för mycket lag. Du är inte ensam på servern, och
+					Undvik så långt det går att generera för mycket lagg. Du är inte ensam på servern, och
 					påverkar det prestandan kan du bli ombedd att stänga av din maskin och skära ner på
 					djuruppfödning.
 				</div>

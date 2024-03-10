@@ -7,6 +7,7 @@
 
   import img_entre from "$lib/images/splashes/entre.webp";
   import img_borgargarden from "$lib/images/splashes/borgargarden.webp";
+  import img_main from "$lib/images/splashes/main.webp";
 
   const index = [
     {
@@ -18,10 +19,17 @@
     },
     {
       "href": "/3.0.1",
-      "title": "3.0.1",
+      "title": "3.0.1: Migration Patch",
       "date": "2024/2/2",
       "type": "update",
       "image": img_entre
+    },
+    {
+      "href": "/3.0",
+      "title": "3.0: Grand Opening",
+      "date": "2023/12/26",
+      "type": "update",
+      "image": img_main
     }
   ]
 </script>

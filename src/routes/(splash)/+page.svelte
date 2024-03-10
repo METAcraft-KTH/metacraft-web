@@ -127,7 +127,7 @@
     <PrRow left={true} imgSrc={warrior} imgAlt={'Warrior'}>
       <svelte:fragment slot="title">För Krigare</svelte:fragment>
         <p slot="text">
-          Slåss mot andra spelare i vildmarken eller PvP-arenan, eller utrusta dig med dina
+          Slåss mot andra spelare i vildmarken, eller utrusta dig med dina
           medspelare och delta i event och besegra monster och bossar. Läs mer om
           <a href="/info#wilderness">vildmarken</a>.
         </p>

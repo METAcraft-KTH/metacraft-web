@@ -76,7 +76,7 @@
     />
 
     <div class="flex-1 flex flex-col flex-justify-center my-2">
-      <h1 class="text-xl md:text-2xl mb-1 text-pink-800">{title}</h1>
+      <h1 class="text-lg sm:text-xl md:text-2xl mb-1 text-pink-800">{title}</h1>
       <TypeAndTime {type} {date} />
     </div>
 

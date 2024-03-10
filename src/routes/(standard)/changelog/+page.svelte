@@ -30,7 +30,7 @@
 
 <Main bg="concrete">
   <div class="max-w-250 w-100%">
-		<Hotlink id="080324" title={d('2024/03/08')}>
+		<Hotlink id="080324" title={d('2024/03/10')}>
 			<ul>
         <li>Hemsidan har gjorts om för att vara mer kompatibel med mobilskärmar.</li>
         <li>Ny information har lagts till på hemsidan, inklusive denna changelog.</li>
@@ -83,7 +83,11 @@
             <li>Eventet löper från 16 februari till 1 mars. Mer information följer.</li>
           </ul>
         </li>
-        <li>Craftingreceptet till <a href="/mods#carts">Gruvvagn Mk. III</a> har annonserats på nytt.</li>
+        <li>Ny item: <a href="/mods#carts">Gruvvagn Mk. III</a>
+          <ul>
+            <li>En uppgradering av Gruvvagn Mk. II med en topphastighet på 30 m/s.</li>
+          </ul>
+        </li>
         <li>En ny, "netherit-liknande" material har släppts. Ledtråd hävdas finnas i Dr Hortens kontor på campus.
         </li>
       </ul>
@@ -102,12 +106,7 @@
             <li>För tillfället håller varje bundle 1 stack items, men vi har planer att utöka detta i framtida uppdateringar.</li>
           </ul>
         </li>
-        <li><a href="/mods#carts">Gruvvagn Mk. III</a> kan nu tillverkas.
-          <ul>
-            <li>Mk. III har topphastighet på 30 m/s.</li>
-            <li>Craftingreceptet till Gruvvagn Mk. II och Mk. III hittas i crafting-boken.</li>
-          </ul>
-        </li>
+        <li>En påminnelse om <a href="/mods#carts">Gruvvagn Mk. II</a> skickades ut.</li>
       </ul>
 		</Hotlink>
     <Hotlink id="050124" title={d('2024/01/05')}>
@@ -131,6 +130,12 @@
         <li>Ny event: Portalöppningen
           <ul>
             <li>Dr Alpert Hortens research indikerar att 1 000 guldblock och en "Interdimensionell Relativitetskärna" krävs för att etablera kontakt till Netherdimensionen.</li>
+          </ul>
+        </li>
+        <li>
+          Ny item: Gruvvagn Mk. II
+          <ul>
+            <li>En uppgraderad gruvvagn med en topphastighet på 20 m/s.</li>
           </ul>
         </li>
       </ul>
