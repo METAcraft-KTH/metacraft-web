@@ -55,10 +55,10 @@
   -->
 
   <div class="flex flex-row text-bold h-8 md:h-16 text-xl md:text-3xl gap-1 w-100% max-w-200 text-green px-2">
-    <button class="b-green b-solid mono text-3xl md:text-5xl text-white bg-black cursor-pointer w-8 md:w-16 h-100% flex justify-center items-center" on:click={() => {pageNumber--; if (pageNumber < 0) pageNumber = 4}}>
+    <button class="b-green hover:b-white b-solid mono text-3xl md:text-5xl text-white bg-black cursor-pointer w-8 md:w-16 h-100% flex justify-center items-center" on:click={() => {pageNumber--; if (pageNumber < 0) pageNumber = 4}}>
       {#if pageNumber > 0}←{/if}
     </button>
-    <div class="b-green b-2 b-solid flex-1 text-bold mono bg-black h-100% flex justify-center items-center">
+    <div class="b-green hover:b-white b-2 b-solid flex-1 text-bold mono bg-black h-100% flex justify-center items-center">
       {#if pageNumber == 0}
         T MINUS 10 DAGAR
       {:else if pageNumber == 1}
@@ -71,7 +71,7 @@
         LAUNCH DAY
       {/if}
     </div>
-    <button class="b-green b-solid mono text-3xl md:text-5xl text-white bg-black cursor-pointer w-8 md:w-16 h-100% flex justify-center items-center" on:click={() => {pageNumber++; if (pageNumber > 4) pageNumber = 0}}>
+    <button class="b-green hover:b-white b-solid mono text-3xl md:text-5xl text-white bg-black cursor-pointer w-8 md:w-16 h-100% flex justify-center items-center" on:click={() => {pageNumber++; if (pageNumber > 4) pageNumber = 0}}>
       {#if pageNumber < 4}→{/if}
     </button>
   </div>

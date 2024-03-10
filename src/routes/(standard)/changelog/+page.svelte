@@ -119,7 +119,7 @@
         <li>Netherdimensionen är nu tillgänglig för alla spelare, efter Borgarordens seger i striden.</li>
       </ul>
 		</Hotlink>
-    <Hotlink id="261223" title={d('2023/12/26') + ' — "3.0"'}>
+    <Hotlink id="261223" title={d('2023/12/26') + ' — "3.0 Grand Opening"'}>
 			<ul>
         <li>METAcraft Säsong 3 invigdes officiellt.</li>
         <li>Ny mini-event: Campusrundvandring
