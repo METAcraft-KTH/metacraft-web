@@ -69,7 +69,7 @@
     <span class="loopspan">
       {#each {length: 60} as _}
         {#if state === 'starting'}
-          <span class="inner">NY EVENT!&nbsp;</span>
+          <span class="inner">NYTT EVENT!&nbsp;</span>
         {:else if state === 'active'}
           <span class="inner">HÄNDER JUST NU!&nbsp;</span>
         {:else}

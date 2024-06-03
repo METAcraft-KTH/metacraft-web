@@ -32,12 +32,6 @@
         #000000a0
       ), url("./end_gateway.avif");
 	}
-  .custombg3 {
-    background: linear-gradient(
-        #00000000, 
-        #000000f0
-      );
-  }
 </style>
 <div class="w-100lvw h-100lvh fixed z--10 bg-center-center custombg2" />
 
@@ -48,7 +42,7 @@
 
   <Countdown />
 
-  <button class="notButton absolute bottom-0 left-0 w-100% h-15 m-0 text-center color-white custombg3 titleFadeIn" on:mousedown={scrollDown}>
+  <button class="notButton absolute bottom-0 left-0 w-100% h-15 m-0 text-center color-white titleFadeIn" on:mousedown={scrollDown}>
     <ChevronDown />
   </button>
 </div>
