@@ -8,8 +8,25 @@
   import img_entre from "$lib/images/splashes/entre.webp";
   import img_borgargarden from "$lib/images/splashes/borgargarden.webp";
   import img_main from "$lib/images/splashes/main.webp";
+  import img_besoscraft from "../(posts)/besoscraft/besoscraft.jpg";
+  import img_end from "../../3.1/splash.webp";
 
   const index = [
+    {
+      "href": "/3.1",
+      "title": "3.1: Final Campaign",
+      "date": "2024/6/9",
+      "type": "update",
+      "live": true,
+      "image": img_end
+    },
+    {
+      "href": "/besoscraft",
+      "title": "METACRAFT ÄR DÖD, LEVE BE$O$CRAFT",
+      "date": "2024/4/1",
+      "type": "event",
+      "image": img_besoscraft
+    },
     {
       "href": "/3.0.2",
       "title": "3.0.2",

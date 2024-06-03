@@ -45,7 +45,7 @@
 
 <!-- TODO: gör det här elementet till en layout? -->
 
-  <Title>3.0<br>GRAND LAUNCH</Title>
+  <Title>3.0<br>GRAND OPENING</Title>
 
   <!--
   <p class="font-bold text-2xl text-white shadow-lg">SPELA NU!</p>
