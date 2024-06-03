@@ -63,7 +63,7 @@
   }
 </style>
 
-<div class="w-100% mt-10 flex flex-col flex-justify-center flex-items-center bg-yellow-400">
+<a href={href} class="block w-100% mt-10 flex flex-col flex-justify-center flex-items-center bg-yellow-400 no-underline text-black">
 
   <div class="loop-container mc10 mb-2 text-yellow-700">
     <span class="loopspan">
@@ -106,13 +106,13 @@
     <span class="loopspan reverse">
       {#each {length: 60} as _}
         {#if state === 'starting'}
-          <span>NY EVENT!&nbsp;</span>
+          <span>KLICKA HÄR!&nbsp;</span>
         {:else if state === 'active'}
-        <span>HÄNDER JUST NU!&nbsp;</span>
+        <span>KLICKA HÄR!&nbsp;</span>
         {:else}
-          <span class="inner">EVENTET ÄR ÖVER!&nbsp;</span>
+          <span class="inner">KLICKA HÄR!&nbsp;</span>
         {/if}
       {/each}
     </span>
   </div>
-</div>
+</a>

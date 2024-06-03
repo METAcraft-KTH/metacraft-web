@@ -58,10 +58,10 @@
       <!--{$page.url.toString().replace(/https?:\/\//,'').replace(/\//,'')}-->
     </div>
   
-    <div id="gameVersion" class="py-1 px-4 bg-white text-black mc7 sm:text-lg">Java 1.20.4</div>
+    <div id="gameVersion" class="py-1 px-4 bg-white text-black mc7 sm:text-lg">Java 1.20.6</div>
     
     <div class="flex flex-col md:flex-row gap-4 text-center">
-      <a href="https://modrinth.com/plugin/simple-voice-chat/version/fabric-1.20.4-2.5.0" target="_blank" class="faq block px-4 py-3 no-underline m-t8 rd text-black font-bold shadow-lg transition-all hover:scale-105">
+      <a href="https://modrinth.com/plugin/simple-voice-chat/version/fabric-1.20.6-2.5.15" target="_blank" class="faq block px-4 py-3 no-underline m-t8 rd text-black font-bold shadow-lg transition-all hover:scale-105">
         Ladda ner Simple Voice Chat här!
       </a>
   
@@ -79,9 +79,9 @@
 
 
 
-{#if false} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
-  <ActiveEvent start={new Date('2024-02-04 19:00:00')} end={new Date('2024-02-05 19:00:00')} href={'/event'}>
-    SPRÄNGA KTH
+{#if true} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
+  <ActiveEvent start={new Date('2024-06-09 19:00:00')} end={new Date('2024-06-09 21:00:00')} href={'/3.1'}>
+    FINAL CAMPAIGN
   </ActiveEvent>
 {/if}
 

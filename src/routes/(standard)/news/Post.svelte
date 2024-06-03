@@ -80,7 +80,7 @@
       <TypeAndTime {type} {date} />
     </div>
 
-    <div class="banner rd-r transition-all w-50% md:w-60% relative" />
+    <div class="banner rd-r transition-all w-30% md:w-40% relative" />
     
     <!--<div class="banner rd-r transition-all w-50% md:w-60% relative">
       <img src="{image}" alt="banner">

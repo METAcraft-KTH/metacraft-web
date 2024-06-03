@@ -30,7 +30,23 @@
 
 <Main bg="concrete">
   <div class="max-w-250 w-100%">
-		<Hotlink id="080324" title={d('2024/03/10')}>
+    <Hotlink id="010424" title={d('2024/04/15')}>
+			<ul>
+        <li>Minecraft Hexathlon ({d('2024/04/19')}) annonserades för första gången.</li>
+      </ul>
+		</Hotlink>
+		<Hotlink id="010424" title={d('2024/04/11')}>
+			<ul>
+        <li>Tävlingen mot Karlsruhe Institute of Technology ({d('2024/04/17')}) annonserades för första gången.</li>
+      </ul>
+		</Hotlink>
+		<Hotlink id="010424" title={d('2024/04/01') + ' — "BE$O$craft"'}>
+			<ul>
+        <li>BE$O$craft är live på IP:n <span class="font-mono bg-slate-300 font-bold">betasektionen.se</span>. Den använder spelversion Beta 1.7.3.</li>
+        <li>Discordservern har rebrandats till att vara BE$O$craft-temad. Detta återställdes efter 28 timmar.</li>
+      </ul>
+		</Hotlink>
+		<Hotlink id="100324" title={d('2024/03/10')}>
 			<ul>
         <li>Hemsidan har gjorts om för att vara mer kompatibel med mobilskärmar.</li>
         <li>Ny information har lagts till på hemsidan, inklusive denna changelog.</li>
