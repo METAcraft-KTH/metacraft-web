@@ -1,7 +1,7 @@
 <script lang="ts">
   // stulen från LaunchBanner - tack martin!
 
-  let start = new Date('2024-06-09 19:00:00');
+  let start = new Date('2024-06-09 19:00:00').getTime();
   let now = Date.now();
   let count: number;
   let s: number;
@@ -13,9 +13,9 @@
 
   
   $: {
-    if (now < start.getTime()) { // before start
+    if (now < start) { // before start
       state = 'starting';
-      count = Math.max(Math.round((start.getTime() - now) / 1000), 0);
+      count = Math.max(Math.round((start - now) / 1000), 0);
     }
     s = count % 60;
     m = Math.floor(count / 60) % 60;
