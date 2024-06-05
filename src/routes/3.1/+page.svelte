@@ -59,7 +59,7 @@
     font-family: 'OCR', monospace;
   }
 </style>
-<div class="w-100lvw h-100lvh fixed z--10 bg-center-center custombg2" />
+<div class="w-100lvw h-100vh fixed z--10 bg-center-center custombg2" />
 
 <div class="w-100% min-h-100svh pt-10 block">
   <div class="absolute top-0 left-0 w-100% h-100% bg-center-bottom bg-cover custombg z--5" />
@@ -91,7 +91,7 @@
 </div>
 <div class="flex flex-row w-100% max-w-180 ocr">
   <Shortcut href="#tis">TIS</Shortcut>
-  <Shortcut disabled={true} href="#ons">ONS</Shortcut>
+  <Shortcut href="#ons">ONS</Shortcut>
   <Shortcut disabled={true} href="#tors">TORS</Shortcut>
   <Shortcut disabled={true} href="#fre">FRE</Shortcut>
   <Shortcut disabled={true} href="#lör">LÖR</Shortcut>
@@ -113,11 +113,11 @@
     <p class="mb-2">Väldigt intressant. Nu när Kriget är nära har vi tyvärr svårt att delegera fler resurser, men vi ska inventera och återkomma snarast. Under tiden är du välkommen att involvera medborgarna och låta dem sätta igång först.</p>
   </Message>
 
-  <!--<DayStart href="ons">ONSDAG, 5 JUNI</DayStart>
+  <DayStart href="ons">ONSDAG, 5 JUNI</DayStart>
 
   <Message head="Soulboundinatorn" subhead="Internt pressmeddelande">
-    <p class="mb-2">Lystring! En av våra assistenter har lyckats bygga en ny maskin som vi kallar Soulboundinatorn! Denna maskin använder föremålets kraft för att göra så att du kan behålla dina items i din inventory när du dör! Vi planerar att testa den här maskinen när vi öppnar endportalen på söndag!</p>
-  </Message>-->
+    <p class="mb-2">Lystring! En av våra assistenter har lyckats bygga en ny maskin som vi kallar Soulboundinatorn! Denna maskin använder Föremålets kraft för att göra så att <u>du kan behålla dina items i din inventory när du dör!</u> Vi planerar att testa den här maskinen när vi öppnar endportalen på söndag!</p>
+  </Message>
 </main>
 
 
