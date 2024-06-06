@@ -80,10 +80,10 @@
 <!--<Main bg="black" text="white">
 </Main>-->
 
-<p class="text-center ocr text-red-5 text-lg md:text-xl mb-4 px-3">INTERN KOMMUNIKATION. OBEHÖRIGA ÄGA EJ TILLTRÄDE.<br>LADDA OM SIDAN FÖR ATT UPPDATERA MÄTAREN.</p>
+<p class="text-center ocr text-red-5 text-lg md:text-xl mb-4 px-3">LADDA OM SIDAN FÖR ATT UPPDATERA MÄTAREN.</p>
 
 <div class="relative flex flex-col gap-3 items-center text-white text-lg ocr w-100% max-w-180">
-  <span class="text-center">ÅTERSTÄLLER ARKIVDATA... [1/6]</span>
+  <span class="text-center">ÅTERSTÄLLER ARKIVDATA... [3/6]</span>
   <img src={BossbarBackground} alt="bossbar" class="w-100%" style="image-rendering: pixelated;">
   <img src={BossbarProgress} alt="bossbar" class="w-100% absolute bottom-0 left-0" style={`image-rendering: pixelated;
     clip-path: polygon(0 0, ${progressBarPercentage}% 0, ${progressBarPercentage}% 100%, 0 100%);`}>
@@ -92,7 +92,7 @@
 <div class="flex flex-row w-100% max-w-180 ocr">
   <Shortcut href="#tis">TIS</Shortcut>
   <Shortcut href="#ons">ONS</Shortcut>
-  <Shortcut disabled={true} href="#tors">TORS</Shortcut>
+  <Shortcut href="#tors">TORS</Shortcut>
   <Shortcut disabled={true} href="#fre">FRE</Shortcut>
   <Shortcut disabled={true} href="#lör">LÖR</Shortcut>
   <Shortcut disabled={true} href="#sön">SÖN</Shortcut>
@@ -117,6 +117,14 @@
 
   <Message head="Soulboundinatorn" subhead="Internt pressmeddelande">
     <p class="mb-2">Lystring! En av våra assistenter har lyckats bygga en ny maskin som vi kallar Soulboundinatorn! Denna maskin använder Föremålets kraft för att göra så att <u>du kan behålla dina items i din inventory när du dör!</u> Vi planerar att testa den här maskinen när vi öppnar endportalen på söndag!</p>
+  </Message>
+
+  <DayStart href="tors">TORSDAG, 6 JUNI</DayStart>
+
+  <Message iconUUID="e9e4eda633fd4f02a7185d7307dcd5d9" head="Utrustning vid KTH Entré" subhead="Pressmeddelande från Herobrine">
+    <p class="mb-2">Vi har samlat och förberett våra resurser för att så många som möjligt ska kunna bidra i Kriget. <u>Besök KTH Entré snarast för att hämta era utrustningar</u>, oavsett om du har tidigare varit aktiv i världen eller ej. Inför söndag behöver vi verkligen varenda person vi kan få tag på.</p>
+    <p class="mb-2">I varje persons utrustningspaket ingår järnutrustning, resurser, svärd, pilbåge, pilar, guldäpple, mat, byggmaterial, annat gott vi kunde slänga in, och såklart en shulker box som innehåller allt ovan.</p>
+    <p class="mb-2">Om du inte hinner komma förbi Campus tidigare, så kan du hämta dina utrustning fram tills Kriget börjar söndag kl 19. Bli inte sen.</p>
   </Message>
 </main>
 
