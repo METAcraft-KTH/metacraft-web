@@ -9,6 +9,8 @@
   import BossbarProgress from "./lib/pink_progress.png";
 
   import trial_maps from "./attachments/trial_maps.png";
+  import rep from "./attachments/representative.png";
+  import infopic from "./attachments/info.png";
 
 	import Header from "$lib/layout/Header.svelte";
 	import Footer from "$lib/layout/Footer.svelte";
@@ -83,7 +85,7 @@
 <p class="text-center ocr text-red-5 text-lg md:text-xl mb-4 px-3">LADDA OM SIDAN FÖR ATT UPPDATERA MÄTAREN.</p>
 
 <div class="relative flex flex-col gap-3 items-center text-white text-lg ocr w-100% max-w-180">
-  <span class="text-center">ÅTERSTÄLLER ARKIVDATA... [3/6]</span>
+  <span class="text-center">ÅTERSTÄLLER ARKIVDATA... [4/6]</span>
   <img src={BossbarBackground} alt="bossbar" class="w-100%" style="image-rendering: pixelated;">
   <img src={BossbarProgress} alt="bossbar" class="w-100% absolute bottom-0 left-0" style={`image-rendering: pixelated;
     clip-path: polygon(0 0, ${progressBarPercentage}% 0, ${progressBarPercentage}% 100%, 0 100%);`}>
@@ -93,7 +95,7 @@
   <Shortcut href="#tis">TIS</Shortcut>
   <Shortcut href="#ons">ONS</Shortcut>
   <Shortcut href="#tors">TORS</Shortcut>
-  <Shortcut disabled={true} href="#fre">FRE</Shortcut>
+  <Shortcut href="#fre">FRE</Shortcut>
   <Shortcut disabled={true} href="#lör">LÖR</Shortcut>
   <Shortcut disabled={true} href="#sön">SÖN</Shortcut>
 </div>
@@ -125,6 +127,22 @@
     <p class="mb-2">Vi har samlat och förberett våra resurser för att så många som möjligt ska kunna bidra i Kriget. <u>Besök KTH Entré snarast för att hämta era utrustningar</u>, oavsett om du har tidigare varit aktiv i världen eller ej. Inför söndag behöver vi verkligen varenda person vi kan få tag på.</p>
     <p class="mb-2">I varje persons utrustningspaket ingår järnutrustning, resurser, svärd, pilbåge, pilar, guldäpple, mat, byggmaterial, annat gott vi kunde slänga in, och såklart en shulker box som innehåller allt ovan.</p>
     <p class="mb-2">Om du inte hinner komma förbi Campus tidigare, så kan du hämta dina utrustning fram tills Kriget börjar söndag kl 19. Bli inte sen.</p>
+    <a href={rep} target="_blank" class="block no-underline"><img src={rep} alt="tis_map.png" ><p class="text-sm text-gray-6">representative.png - Klicka för att visa i ett annat fönster.</p></a>
+  </Message>
+
+  <DayStart href="fre">FREDAG, 7 JUNI</DayStart>
+
+  <Message iconUUID="586bde1fad41411dbc8ceb2148821763" head="Info" subhead="Från Okänd">
+    <p class="mb-2"></p>
+    <a href={infopic} target="_blank" class="block no-underline"><img src={infopic} alt="tis_map.png" ><p class="text-sm text-gray-6">info.png - Klicka för att visa i ett annat fönster.</p></a>
+  </Message>
+
+  <Message head="Re: Info" subhead="Från Borgarorden" iconOnLeft={false}>
+    <p class="mb-2">Vem är det här? Hur fick du tillgång till kanalen?</p>
+  </Message>
+
+  <Message iconUUID="586bde1fad41411dbc8ceb2148821763" head="Re: Info" subhead="Från Okänd">
+    <p class="mb-2">Vi ses på söndag.</p>
   </Message>
 </main>
 
