@@ -11,6 +11,7 @@
   import trial_maps from "./attachments/trial_maps.png";
   import rep from "./attachments/representative.png";
   import infopic from "./attachments/info.png";
+  import shop from "./attachments/shop.png";
 
 	import Header from "$lib/layout/Header.svelte";
 	import Footer from "$lib/layout/Footer.svelte";
@@ -85,7 +86,7 @@
 <p class="text-center ocr text-red-5 text-lg md:text-xl mb-4 px-3">LADDA OM SIDAN FÖR ATT UPPDATERA MÄTAREN.</p>
 
 <div class="relative flex flex-col gap-3 items-center text-white text-lg ocr w-100% max-w-180">
-  <span class="text-center">ÅTERSTÄLLER ARKIVDATA... [4/6]</span>
+  <span class="text-center">ÅTERSTÄLLER ARKIVDATA... [5/6]</span>
   <img src={BossbarBackground} alt="bossbar" class="w-100%" style="image-rendering: pixelated;">
   <img src={BossbarProgress} alt="bossbar" class="w-100% absolute bottom-0 left-0" style={`image-rendering: pixelated;
     clip-path: polygon(0 0, ${progressBarPercentage}% 0, ${progressBarPercentage}% 100%, 0 100%);`}>
@@ -96,7 +97,7 @@
   <Shortcut href="#ons">ONS</Shortcut>
   <Shortcut href="#tors">TORS</Shortcut>
   <Shortcut href="#fre">FRE</Shortcut>
-  <Shortcut disabled={true} href="#lör">LÖR</Shortcut>
+  <Shortcut href="#lör">LÖR</Shortcut>
   <Shortcut disabled={true} href="#sön">SÖN</Shortcut>
 </div>
 
@@ -143,6 +144,13 @@
 
   <Message iconUUID="586bde1fad41411dbc8ceb2148821763" head="Re: Info" subhead="Från Okänd">
     <p class="mb-2">Vi ses på söndag.</p>
+  </Message>
+
+  <DayStart href="lör">LÖRDAG, 8 JUNI</DayStart>
+
+  <Message iconUUID="e9e4eda633fd4f02a7185d7307dcd5d9" head="Fler utrustningar finns att köpa" subhead="Pressmeddelande från Herobrine">
+    <p class="mb-2">Exklusiva utrustningar finns nu att handla utanför KTH Entré. Vi erbjuder allt från stridsklubbor till förtrollade guldäpple. Missa inte specialpriset på de första fem stridsklubborna.</p>
+    <a href={shop} target="_blank" class="block no-underline"><img src={shop} alt="tis_map.png" ><p class="text-sm text-gray-6">shop.png - Klicka för att visa i ett annat fönster.</p></a>
   </Message>
 </main>
 
