@@ -86,7 +86,7 @@
 <p class="text-center ocr text-red-5 text-lg md:text-xl mb-4 px-3">LADDA OM SIDAN FÖR ATT UPPDATERA MÄTAREN.</p>
 
 <div class="relative flex flex-col gap-3 items-center text-white text-lg ocr w-100% max-w-180">
-  <span class="text-center">ÅTERSTÄLLER ARKIVDATA... [5/6]</span>
+  <span class="text-center">ÅTERSTÄLLER ARKIVDATA... [5/6] ERROR!</span>
   <img src={BossbarBackground} alt="bossbar" class="w-100%" style="image-rendering: pixelated;">
   <img src={BossbarProgress} alt="bossbar" class="w-100% absolute bottom-0 left-0" style={`image-rendering: pixelated;
     clip-path: polygon(0 0, ${progressBarPercentage}% 0, ${progressBarPercentage}% 100%, 0 100%);`}>
@@ -98,7 +98,7 @@
   <Shortcut href="#tors">TORS</Shortcut>
   <Shortcut href="#fre">FRE</Shortcut>
   <Shortcut href="#lör">LÖR</Shortcut>
-  <Shortcut disabled={true} href="#sön">SÖN</Shortcut>
+  <Shortcut href="#sön">???</Shortcut>
 </div>
 
 <main class="ocr w-100% max-w-200 mb-20 md:mb-32 text-white">
@@ -151,6 +151,28 @@
   <Message iconUUID="e9e4eda633fd4f02a7185d7307dcd5d9" head="Fler utrustningar finns att köpa" subhead="Pressmeddelande från Herobrine">
     <p class="mb-2">Exklusiva utrustningar finns nu att handla utanför KTH Entré. Vi erbjuder allt från stridsklubbor till förtrollade guldäpple. Missa inte specialpriset på de första fem stridsklubborna.</p>
     <a href={shop} target="_blank" class="block no-underline"><img src={shop} alt="tis_map.png" ><p class="text-sm text-gray-6">shop.png - Klicka för att visa i ett annat fönster.</p></a>
+  </Message>
+
+  <DayStart href="lör">SÖNDAG, 9 JUNI</DayStart>
+
+  <Message iconUUID="586bde1fad41411dbc8ceb2148821763" head="* ERROR *" subhead="* ERROR *">
+    <p class="mb-2">* ERROR *</p>
+  </Message>
+
+  <Message iconUUID="586bde1fad41411dbc8ceb2148821763" iconOnLeft={false} head="* ERROR *" subhead="* ERROR *">
+    <p class="mb-2">* ERROR *</p>
+  </Message>
+
+  <Message iconUUID="e9e4eda633fd4f02a7185d7307dcd5d9" head="Re:" subhead="Från Herobrine">
+    <p class="mb-2">Ondskan sprider sig i väntan på vår attack. Vi har ingen tillbakaväg längre. Lycka till.</p>
+  </Message>
+
+  <Message iconUUID="586bde1fad41411dbc8ceb2148821763" iconOnLeft={false} head="* ERROR *" subhead="* ERROR *">
+    <p class="mb-2">* ERROR *</p>
+  </Message>
+
+  <Message iconUUID="586bde1fad41411dbc8ceb2148821763" iconOnLeft={false} head="* ERROR *" subhead="* ERROR *">
+    <p class="mb-2">* ERROR *</p>
   </Message>
 </main>
 
