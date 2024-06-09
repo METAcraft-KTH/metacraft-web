@@ -16,11 +16,14 @@
     if (now < start) { // before start
       state = 'starting';
       count = Math.max(Math.round((start - now) / 1000), 0);
+      s = count % 60;
+      m = Math.floor(count / 60) % 60;
+      h = Math.floor(count / (60 * 60)) % 24;
+      d = Math.floor(count / (60 * 60 * 24));
+    } else {
+      s, m, h, d = 0;
     }
-    s = count % 60;
-    m = Math.floor(count / 60) % 60;
-    h = Math.floor(count / (60 * 60)) % 24;
-    d = Math.floor(count / (60 * 60 * 24));
+    
   }
 
   function updateTimer() {
