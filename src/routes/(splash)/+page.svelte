@@ -79,15 +79,17 @@
 
 
 
-{#if true} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
+{#if false} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
   <ActiveEvent start={new Date('2024-06-09 19:00:00')} end={new Date('2024-06-09 21:00:00')} href={'/3.1'}>
     FINAL CAMPAIGN
   </ActiveEvent>
 {/if}
 
+{#if false}
 <div class="mx-auto mt-12 w-100% max-w-250 p-5 rd">
   <iframe class="w-100% aspect-video" style="box-shadow: 0 0 0 .5rem white" src="https://www.youtube-nocookie.com/embed/B6CmcGmRNwE?si=FMbaRhAsolJx9YcD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+</div>true
+{/if}
 
 
 
