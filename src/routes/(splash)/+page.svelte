@@ -112,29 +112,29 @@
     <p class="text-4xl mc10">måndag 23 september</p>
   </div>
 
-  <main class="mx-2 my-12 w-100% max-w-250 p-5 md:p-10 text-base md:text-lg shadow-xl bg-map">
-    <span class="font-bold">Välkommen till METAcraft!</span> Ett aktivt Minecraft-gemenskap som är i första hand riktad till studenter vid Data- och Medieteknikprogrammet. Stig in i en aktiv community med regelbundna uppdateringar av nya innehåll och spännande event. Här finns det alltid något kul att göra oavsett din spelstil, eller om du är nybörjare eller veteran i spelet!
+  <main class="mx-2 my-12 w-100% max-w-250 p-8 md:p-10 text-base md:text-lg shadow-xl bg-map">
+    <span class="font-bold">Välkommen till METAcraft!</span> En Minecraft-gemenskap som i första hand är riktad till studenter vid programmen Data- och Medieteknik på KTH. Stig in i en aktiv community med spännande event och regelbundna uppdateringar med nytt innehåll. Här finns det alltid någonting kul att göra - oavsett din spelstil och erfarenhet!
   
     <div class="my-14" />
   
       <PrRow imgSrc={survival} imgAlt={'Survival'}>
         <svelte:fragment slot="title">Survival</svelte:fragment>
           <p slot="text">
-            En vanlig SMP (survival multiplayer)-upplevelse i en ovanlig värld, med mängder av främmande biomer och strukturer för dig att utforska. Hjälp drottning Quristina att kartlägga världen, och hitta alla skatter och ledtrådar den gömmer. Bli en del av serverns levande historia och styr berättelsens gång genom din insats!
+            En vanlig multiplayer-upplevelse i en ovanlig värld, fylld av främmande miljöer och fornlämningar för dig att utforska. Hjälp drottning Quristina att kartlägga världen, och hitta alla ledtrådar och skatter den gömmer. Styr berättelsens gång genom din insats och bli en del av serverns levande historia!
           </p>
       </PrRow>
   
       <PrRow left={true} imgSrc={pvp} imgAlt={'pvp'}>
         <svelte:fragment slot="title">Tävlingar</svelte:fragment>
           <p slot="text">
-            Minst två gånger per termin anordnas minispelturneringar med professionell kvalité, där man kan vinna coola priser både som individ och lag! Utöver dessa finns det också många andra event under läsårets gång. Inga av dessa kräver tidsinvesteringar eller registrering: det är bara att dyka upp och spela.
+            Minst två gånger per termin anordnas minispelturneringar av professionell kvalitet, där man kan vinna sjuka priser både som individ och lag! Utöver dessa finns det också många andra event under läsårets gång. Inga av dessa kräver registrering: det är bara att dyka upp och spela.
           </p>
       </PrRow>
   
       <PrRow imgSrc={campus} imgAlt={'Campus'}>
         <svelte:fragment slot="title">Bygga campus</svelte:fragment>
           <p slot="text">
-            Har du någonsin velat springa runt på KTH Campus i Minecraft? Tidigare var det omöjligt, men i år kommer det förändras med hjälp av alla studenter. Vi använder oss av planritningar och Google Maps för att säkerställa att vår återskapelse är så skalenligt som möjligt.
+            Har du någonsin velat springa runt på KTH Campus i Minecraft? Tidigare var det omöjligt, men i år kommer det att förändras med hjälp av alla studenter. Vi använder oss av planritningar och tjänster som Google Earth och Maps för att säkerställa att vår återskapelse är så skalenlig som möjligt.
           </p>
       </PrRow>
     
