@@ -68,7 +68,7 @@
     {/if}
     
     <div class="flex flex-col md:flex-row gap-4 text-center mt-4 sm:mt-0 justify-center items-center">
-      <a href="https://discord.com/invite/MttUbkmeyD" target="_blank" class="bg-map block px-4 py-3 no-underline md:m-t8 rd text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
+      <a href="https://forms.gle/upmdop1XPzrvvuS78" target="_blank" class="bg-map block px-4 py-3 no-underline md:m-t8 rd text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
         Hjälp till i projektgruppen!
       </a>
       <a href="https://discord.com/invite/MttUbkmeyD" target="_blank" class="bg-map block px-4 py-3 no-underline md:m-t8 rd text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
@@ -98,7 +98,12 @@
 {/if}
 
 
-<div class="w-100% bg-dark-oak-planks">
+<div class="w-100% bg-dark-oak-planks flex flex-col items-center">
+
+  <div style="border-image: url('https://minecraft.wiki/images/Block_of_Iron_(texture)_JE3_BE3.png') 2 fill round;" class="mc7 max-w-200 mt-12 p-8 font-bold text-center">
+    <p class="mb-2">BERÄKNAD ANKOMSTTID:</p>
+    <p class="text-4xl mc10">måndag 23 september</p>
+  </div>
 
   <main class="mx-auto my-12 w-100% max-w-250 p-5 md:p-10 text-base md:text-lg shadow-xl bg-map rd">
     <span class="font-bold">Välkommen till METAcraft!</span> Ett aktivt Minecraft-gemenskap som är i första hand riktad till studenter vid Data- och Medieteknikprogrammet. Stig in i en aktiv community med regelbundna uppdateringar av nya innehåll och spännande event. Här finns det alltid något kul att göra oavsett din spelstil, eller om du är nybörjare eller veteran i spelet!
@@ -127,6 +132,13 @@
       </PrRow>
     
   </main>
+
+  <!--<div class="flex flex-col sm:flex-row">
+    <img src="https://minecraft.wiki/images/Impulse_Command_Block_JE5_BE2.png" alt="command block" class="aspect-square max-w-8rem flex-1">
+    <div>
+
+    </div>
+  </div>-->
 
 
 </div>
