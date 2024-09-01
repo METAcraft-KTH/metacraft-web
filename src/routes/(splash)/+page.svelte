@@ -12,6 +12,7 @@
   import survival from '$lib/images/pr_squares/survival.png';
   import pvp from '$lib/images/pr_squares/pvp.png';
   import campus from '$lib/images/pr_squares/campus.png';
+  import hands from '$lib/images/pr_squares/holdinghands.png';
 	import PrRow from './PrRow.svelte';
   import ChevronDown from '$lib/icons/ChevronDown.svelte';
 
@@ -75,6 +76,11 @@
         Gå med i Discord-servern!
       </a>
     </div>
+
+    <div style="border-image: url('https://minecraft.wiki/images/Blank-sign-bamboo_JE1_BE1.png') 2 fill round;" class="mc7 max-w-200 mt-12 p-8 font-bold text-center">
+      <p class="mb-2">SERVER LAUNCH:</p>
+      <p class="text-4xl mc10">måndag 23 september</p>
+    </div>
   </div>
 
   <button class="notButton absolute bottom-0 left-0 w-100% h-15 text-center color-white titleFadeIn" style="animation-delay: 1s" on:mousedown={scrollDown}>
@@ -100,12 +106,7 @@
 
 <div class="w-100% bg-dark-oak-planks flex flex-col items-center">
 
-  <div style="border-image: url('https://minecraft.wiki/images/Block_of_Iron_(texture)_JE3_BE3.png') 2 fill round;" class="mc7 max-w-200 mt-12 p-8 font-bold text-center">
-    <p class="mb-2">BERÄKNAD ANKOMSTTID:</p>
-    <p class="text-4xl mc10">måndag 23 september</p>
-  </div>
-
-  <main class="mx-auto my-12 w-100% max-w-250 p-5 md:p-10 text-base md:text-lg shadow-xl bg-map rd">
+  <main class="mx-auto my-12 w-100% max-w-250 p-5 md:p-10 text-base md:text-lg shadow-xl bg-map">
     <span class="font-bold">Välkommen till METAcraft!</span> Ett aktivt Minecraft-gemenskap som är i första hand riktad till studenter vid Data- och Medieteknikprogrammet. Stig in i en aktiv community med regelbundna uppdateringar av nya innehåll och spännande event. Här finns det alltid något kul att göra oavsett din spelstil, eller om du är nybörjare eller veteran i spelet!
   
     <div class="my-14" />
@@ -132,6 +133,8 @@
       </PrRow>
     
   </main>
+
+  <img src={hands} alt="holding hands" class="max-w-40rem my-6">
 
   <!--<div class="flex flex-col sm:flex-row">
     <img src="https://minecraft.wiki/images/Impulse_Command_Block_JE5_BE2.png" alt="command block" class="aspect-square max-w-8rem flex-1">

@@ -11,7 +11,7 @@
   {#if !left}
     <img src={imgSrc} alt={imgAlt} class="relative right--2 m-2 w-40% float-right sm:hidden b-white b-4 b-solid shadow-lg rotate-2 hover:rotate-4 transition-all" />
   {/if}
-  <span class="flex-2 md:text-center">
+  <span class="flex-2 ">
     <h2 class="mb-2 text-xl md:text-2xl mc7 font-bold underline underline-3"><slot name="title" /></h2>
     <slot name="text" />
   </span>
