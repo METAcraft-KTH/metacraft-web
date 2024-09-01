@@ -19,11 +19,12 @@ body {
     padding: 0;
     height: 100vh;
     font-family: 'Noto Sans', sans-serif;
-    background-image: linear-gradient(
+    background: #000;
+    /*background-image: linear-gradient(
         #724b4f80, 
         #724b4f80
       ),
-      url("$lib/images/background.png");
+      url("$lib/images/background.png");*/
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -96,6 +97,37 @@ body {
       url("$lib/images/bg/stone.png");
     background-repeat: repeat;
     background-size: initial;
+}
+.bg-trapdoor {
+    background-image: linear-gradient(
+        #0008, 
+        #0008
+      ), url("$lib/images/bg/spruce_trapdoor.png");
+    background-repeat: repeat;
+    background-size: initial;
+}
+.bg-gray-wool {
+    background-image: linear-gradient(
+        #0008, 
+        #0008
+      ), url("https://minecraft.wiki/images/Gray_Wool_(texture)_JE3_BE3.png");
+    background-repeat: repeat;
+    background-size: initial;
+}
+.bg-dark-oak-planks {
+    background-image: linear-gradient(
+        to left,
+        #000,
+        #000a 10%,
+        #000a 90%,
+        #000
+      ), url("$lib/images/bg/dark_oak_planks.png");
+    background-repeat: repeat;
+    background-size: initial;
+}
+.bg-map {
+    border-image: url('https://minecraft.wiki/images/Map.png') 32 fill round;
+    border-image-width: 3rem;
 }
 
 a {
