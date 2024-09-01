@@ -9,6 +9,9 @@
 	import engineer from '$lib/images/pr_squares/engineer.png';
 	import trader from '$lib/images/pr_squares/trader.png';
 	import warrior from '$lib/images/pr_squares/warrior.png';
+  import survival from '$lib/images/pr_squares/survival.png';
+  import pvp from '$lib/images/pr_squares/pvp.png';
+  import campus from '$lib/images/pr_squares/campus.png';
 	import PrRow from './PrRow.svelte';
   import ChevronDown from '$lib/icons/ChevronDown.svelte';
 
@@ -24,9 +27,9 @@
   /* rendern läggs in här som bakgrund när den är klar */
   #mainSplash {
     background-image: linear-gradient(
-        #fecdd390, 
-        #fecdd390
-      ), url('$lib/images/splashes/main.webp');
+        #46373890, 
+        #46373890
+      ), url('$lib/images/splashes/borgargarden.webp');
     background-size: cover;
     background-position: center center;
   }
@@ -49,23 +52,26 @@
 <div id="mainSplash" class="w-100% min-h-100svh mt--14 flex flex-col flex-justify-center lg:bg-fixed">
 
   <div id="splashContent" class="titleFadeIn py-20 px-4 flex flex-col flex-items-center flex-justify-center">
+    <p class="mc10 text-3xl sm:text-4xl text-white text-shadow-xl text-center">Välkommen till</p>
+
     <img src={logo} alt="METAcraft" class="logo my-6 max-w-600px w-100%" />
 
-    <p class="mc10 text-3xl sm:text-4xl">SPELA NU PÅ:</p>
+    <p class="mc10 text-3xl sm:text-4xl text-white text-shadow-xl text-center">KTH:s största Minecraft-gemenskap</p>
   
-    <div class="bg-black b-white b-2 b-solid p-2 px-4 sm:w-400px text-center text-xl sm:text-2xl text-white mc7">
-      mc.datasektionen.se
-      <!--{$page.url.toString().replace(/https?:\/\//,'').replace(/\//,'')}-->
-    </div>
-  
-    <div id="gameVersion" class="py-1 px-4 bg-white text-black mc7 sm:text-lg">Java 1.20.6</div>
+    {#if false}
+      <div class="bg-black b-white b-2 b-solid p-2 px-4 sm:w-400px text-center text-xl sm:text-2xl text-white mc7">
+        mc.datasektionen.se
+        <!--{$page.url.toString().replace(/https?:\/\//,'').replace(/\//,'')}-->
+      </div>
     
-    <div class="flex flex-col md:flex-row gap-4 text-center">
-      <a href="https://modrinth.com/plugin/simple-voice-chat/version/fabric-1.20.6-2.5.15" target="_blank" class="faq block px-4 py-3 no-underline m-t8 rd text-black font-bold shadow-lg transition-all hover:scale-105">
-        Ladda ner Simple Voice Chat här!
+      <div id="gameVersion" class="py-1 px-4 bg-white text-black mc7 sm:text-lg">Java 1.20.6</div>
+    {/if}
+    
+    <div class="flex flex-col md:flex-row gap-4 text-center mt-4 sm:mt-0 justify-center items-center">
+      <a href="https://discord.com/invite/MttUbkmeyD" target="_blank" class="bg-map block px-4 py-3 no-underline md:m-t8 rd text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
+        Hjälp till i projektgruppen!
       </a>
-  
-      <a href="https://discord.com/invite/MttUbkmeyD" target="_blank" class="faq block px-4 py-3 no-underline md:m-t8 rd text-black font-bold shadow-lg transition-all hover:scale-105">
+      <a href="https://discord.com/invite/MttUbkmeyD" target="_blank" class="bg-map block px-4 py-3 no-underline md:m-t8 rd text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
         Gå med i Discord-servern!
       </a>
     </div>
@@ -88,51 +94,40 @@
 {#if false}
 <div class="mx-auto mt-12 w-100% max-w-250 p-5 rd">
   <iframe class="w-100% aspect-video" style="box-shadow: 0 0 0 .5rem white" src="https://www.youtube-nocookie.com/embed/B6CmcGmRNwE?si=FMbaRhAsolJx9YcD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>true
+</div>
 {/if}
 
 
+<div class="w-100% bg-dark-oak-planks">
 
-
-<main class="mx-auto my-12 w-100% max-w-250 p-5 md:p-10 text-base md:text-lg shadow-xl bg-white-concrete-powder rd">
-  <span class="font-bold">Välkommen till METAcraft!</span> En spännande Minecraft SMP (Survival Multiplayer) som är öppen för alla studenter vid Data- och Medieteknik-programmet på KTH. Stig in i en aktiv community med regelbundna uppdateringar av nya innehåll och spännande event. Här finns det alltid något kul att göra oavsett din spelstil, eller om du är nybörjare eller veteran i spelet!
-
-  <div class="my-14" />
-
-    <PrRow imgSrc={adventurer} imgAlt={'Adventurer'}>
-      <svelte:fragment slot="title">För Äventyrare</svelte:fragment>
-        <p slot="text">
-          Utforska världen, hitta ledtrådar och pyssla ihop legenden bakom Borgarorden och dess
-          kamp mot de onda. Delta i event och bli en del av serverns historia! Läs mer om
-          <a href="/info#lore">lore</a>.
-        </p>
-    </PrRow>
-
-    <PrRow left={true} imgSrc={engineer} imgAlt={'Engineer'}>
-      <svelte:fragment slot="title">För Ingenjörer</svelte:fragment>
-        <p slot="text">
-          METAcraft behåller alla viktiga detaljer i hur Minecraft fungerar, så att alla avancerade
-          redstone-maskiner fungerar som de ska. Bygg mob farms, sorteringsmaskiner och automatisera
-          dina resurser! Läs mer om <a href="/tweaks">tekniska justeringar</a>.
-        </p>
-    </PrRow>
-
-    <PrRow imgSrc={trader} imgAlt={'Trader'}>
-      <svelte:fragment slot="title">För Byteshandlare</svelte:fragment>
-        <p slot="text">
-          Samla dyrbarheter, köp och sälj med andra spelare, och bygg ditt handelsimperium.
-          METAcraft har ett enkelt shop mod som underlättar att sätta upp affärer och handla med
-          andra spelare. Läs mer om <a href="/mods#shops">shops</a>.
-        </p>
-    </PrRow>
-
-    <PrRow left={true} imgSrc={warrior} imgAlt={'Warrior'}>
-      <svelte:fragment slot="title">För Krigare</svelte:fragment>
-        <p slot="text">
-          Slåss mot andra spelare i vildmarken, eller utrusta dig med dina
-          medspelare och delta i event och besegra monster och bossar. Läs mer om
-          <a href="/info#wilderness">vildmarken</a>.
-        </p>
-    </PrRow>
+  <main class="mx-auto my-12 w-100% max-w-250 p-5 md:p-10 text-base md:text-lg shadow-xl bg-map rd">
+    <span class="font-bold">Välkommen till METAcraft!</span> Ett aktivt Minecraft-gemenskap som är i första hand riktad till studenter vid Data- och Medieteknikprogrammet. Stig in i en aktiv community med regelbundna uppdateringar av nya innehåll och spännande event. Här finns det alltid något kul att göra oavsett din spelstil, eller om du är nybörjare eller veteran i spelet!
   
-</main>
+    <div class="my-14" />
+  
+      <PrRow imgSrc={survival} imgAlt={'Survival'}>
+        <svelte:fragment slot="title">Survival</svelte:fragment>
+          <p slot="text">
+            En vanlig SMP (survival multiplayer)-upplevelse i en ovanlig värld, med mängder av främmande biomer och strukturer för dig att utforska. Hjälp drottning Quristina att kartlägga världen, och hitta alla skatter och ledtrådar den gömmer. Bli en del av serverns levande historia och styr berättelsens gång genom din insats!
+          </p>
+      </PrRow>
+  
+      <PrRow left={true} imgSrc={pvp} imgAlt={'pvp'}>
+        <svelte:fragment slot="title">Tävlingar</svelte:fragment>
+          <p slot="text">
+            Minst två gånger per termin anordnas minispelturneringar med professionell kvalité, där man kan vinna sjuka priser både som individ och lag! Utöver dessa finns det också många andra event under läsårets gång. Inga av dessa kräver tidsinvesteringar eller registrering: det är bara att dyka upp och spela.
+          </p>
+      </PrRow>
+  
+      <PrRow imgSrc={campus} imgAlt={'Campus'}>
+        <svelte:fragment slot="title">Bygga campus</svelte:fragment>
+          <p slot="text">
+            Har du någonsin velat springa runt på KTH Campus i Minecraft? Tidigare var det omöjligt, men i år kommer det förändras med hjälp av alla studenter. Vi använder oss av planritningar och Google Maps för att säkerställa att vår återskapelse är så skalenligt som möjligt.
+          </p>
+      </PrRow>
+    
+  </main>
+
+
+</div>
+
