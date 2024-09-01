@@ -13,6 +13,7 @@
   import pvp from '$lib/images/pr_squares/pvp.png';
   import campus from '$lib/images/pr_squares/campus.png';
   import hands from '$lib/images/pr_squares/holdinghands.png';
+  import spyglass from '$lib/images/pr_squares/spyglass.png';
 	import PrRow from './PrRow.svelte';
   import ChevronDown from '$lib/icons/ChevronDown.svelte';
 
@@ -77,7 +78,7 @@
       </a>
     </div>
 
-    <div style="border-image: url('https://minecraft.wiki/images/Blank-sign-bamboo_JE1_BE1.png') 2 fill round;" class="mc7 max-w-200 mt-12 p-8 font-bold text-center">
+    <div style="border-image: url('https://minecraft.wiki/images/Blank-sign-bamboo_JE1_BE1.png') 2 fill round;" class="mc7 max-w-200 mt-12 p-8 font-bold text-center hidden md:block">
       <p class="mb-2">SERVER LAUNCH:</p>
       <p class="text-4xl mc10">måndag 23 september</p>
     </div>
@@ -106,7 +107,12 @@
 
 <div class="w-100% bg-dark-oak-planks flex flex-col items-center">
 
-  <main class="mx-auto my-12 w-100% max-w-250 p-5 md:p-10 text-base md:text-lg shadow-xl bg-map">
+  <div style="border-image: url('https://minecraft.wiki/images/Blank-sign-bamboo_JE1_BE1.png') 2 fill round;" class="mc7 max-w-200 mt-12 mx-4 p-8 font-bold text-center block md:hidden">
+    <p class="mb-2">SERVER LAUNCH:</p>
+    <p class="text-4xl mc10">måndag 23 september</p>
+  </div>
+
+  <main class="mx-2 my-12 w-100% max-w-250 p-5 md:p-10 text-base md:text-lg shadow-xl bg-map">
     <span class="font-bold">Välkommen till METAcraft!</span> Ett aktivt Minecraft-gemenskap som är i första hand riktad till studenter vid Data- och Medieteknikprogrammet. Stig in i en aktiv community med regelbundna uppdateringar av nya innehåll och spännande event. Här finns det alltid något kul att göra oavsett din spelstil, eller om du är nybörjare eller veteran i spelet!
   
     <div class="my-14" />
@@ -121,7 +127,7 @@
       <PrRow left={true} imgSrc={pvp} imgAlt={'pvp'}>
         <svelte:fragment slot="title">Tävlingar</svelte:fragment>
           <p slot="text">
-            Minst två gånger per termin anordnas minispelturneringar med professionell kvalité, där man kan vinna sjuka priser både som individ och lag! Utöver dessa finns det också många andra event under läsårets gång. Inga av dessa kräver tidsinvesteringar eller registrering: det är bara att dyka upp och spela.
+            Minst två gånger per termin anordnas minispelturneringar med professionell kvalité, där man kan vinna coola priser både som individ och lag! Utöver dessa finns det också många andra event under läsårets gång. Inga av dessa kräver tidsinvesteringar eller registrering: det är bara att dyka upp och spela.
           </p>
       </PrRow>
   
@@ -134,7 +140,13 @@
     
   </main>
 
-  <img src={hands} alt="holding hands" class="max-w-40rem my-6">
+  <img src={hands} alt="holding hands" class="w-100% max-w-40rem my-6">
+
+  <main class="mx-2 my-12 w-100% max-w-40rem p-7 md:p-10 text-base md:text-lg shadow-xl bg-map flex flex-col items-center gap-4">
+    <div class="font-bold text-xl sm:text-2xl mc7 text-center underline underline-3">HJÄLP EFTERLYSES!!!</div>
+    <img src={spyglass} alt="kikare" class="w-100% max-w-25rem sepia-80">
+    <div>Om någon av de ovannämnda aktiviteterna låter intressant för dig, tveka inte att <a href="https://forms.gle/upmdop1XPzrvvuS78" target="_blank" class="underline">söka till METAcraft-teamet idag!</a> Tillsammans kan vi förfina och förverkliga visionen, och göra spelupplevelsen så bra som möjligt!</div>
+  </main>
 
   <!--<div class="flex flex-col sm:flex-row">
     <img src="https://minecraft.wiki/images/Impulse_Command_Block_JE5_BE2.png" alt="command block" class="aspect-square max-w-8rem flex-1">
