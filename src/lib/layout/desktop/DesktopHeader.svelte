@@ -28,7 +28,7 @@
 		<div class="h-100% flex flex-row text-pink-400">
 			<HeaderLink href="/smp">Survival</HeaderLink>
 			<HeaderLink href="/campus">Campus</HeaderLink>
-			<HeaderLink href="/event">Event</HeaderLink>
+			<HeaderLink href="/event">Tävlingar</HeaderLink>
 			<HeaderLink href="/rules">Regler</HeaderLink>
 			<HeaderLink href="/about">Hjälp oss</HeaderLink>
 		</div>
