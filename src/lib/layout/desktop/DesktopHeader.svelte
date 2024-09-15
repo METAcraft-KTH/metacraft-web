@@ -30,7 +30,7 @@
 			<HeaderLink href="/campus">Campus</HeaderLink>
 			<HeaderLink href="/event">Tävlingar</HeaderLink>
 			<HeaderLink href="/rules">Regler</HeaderLink>
-			<HeaderLink href="/about">Hjälp oss</HeaderLink>
+			<HeaderLink href="/sok">Hjälp oss</HeaderLink>
 		</div>
 
 		<a href="/discord" target="_blank" class="inline-block w-115px h-100% color-pink-300 hover:color-pink-100 p-3 text-right" class:color-white={hideHeader}>

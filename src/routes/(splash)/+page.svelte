@@ -173,19 +173,25 @@
   <div class="flex flex-col md:flex-row items-center text-white max-w-[70rem] px-6 py-12 gap-10">
     <div class="flex flex-col justify-center items-center md:items-start gap-3">
       <h1 class="text-center md:text-left mc10 text-4xl md:text-5xl"><u>Flexa</u> din sektion</h1>
-      <p class="text-center md:text-left">...och ta med dig METAcraft vart du än går! Klä på dig ditt sektionsplagg och representera din sektion, oavsett vilken server du spelar på. Ladda ner det officiella cerise-resurspaketet för att lägga till färgen cerise i ditt spel, precis som på Survivalservern! Allt dessa finns gratis att hämta på hemsidan.</p>
+      <p class="text-center md:text-left leading-tight">...och ta med dig METAcraft vart du än går! Klä på dig ditt sektionsplagg och representera din sektion, oavsett vilken server du spelar på. Ladda ner det officiella cerise-resurspaketet för att lägga till färgen cerise i ditt spel, precis som på Survivalservern! Allt dessa finns gratis att hämta på hemsidan.</p>
       <a href="/style" class="bg-map inline-block px-4 py-3 w-max no-underline md:mt-2 text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
         Kika in kollektionen
       </a>
     </div>
-    <img src={hands} alt="holding hands" class="max-w-25rem drop-shadow-xl">
+    <img src={hands} alt="holding hands" class="w-100% max-w-25rem drop-shadow-xl px-3">
   </div>
 
-  <main class="mx-2 my-12 w-100% max-w-40rem p-7 md:p-10 text-base md:text-lg shadow-xl bg-map flex flex-col items-center gap-4">
-    <div class="font-bold text-xl sm:text-2xl mc7 text-center underline underline-3">HJÄLP EFTERLYSES!!!</div>
-    <img src={spyglass} alt="kikare" class="w-100% max-w-25rem sepia-80">
-    <div>Om någon av de ovannämnda aktiviteterna låter intressant för dig, tveka inte att <a href="https://forms.gle/upmdop1XPzrvvuS78" target="_blank" class="underline">söka till METAcraft-teamet idag!</a> Tillsammans kan vi förfina och förverkliga visionen, och göra spelupplevelsen så bra som möjligt!</div>
-  </main>
+
+  <div class="mx-2 mb-12 w-100% max-w-50rem md:p-10 text-base flex flex-col items-center gap-4">
+    <h1 class="mc10 text-4xl md:text-5xl text-white">hjälp oss göra saker</h1>
+    <a href="https://forms.gle/upmdop1XPzrvvuS78" target="_blank" class="bg-map inline-block p-4 hover:scale-105 hover:contrast-120 transition-all"><img src={spyglass} alt="kikare" class="w-100% max-w-25rem sepia-50"></a>
+    
+    <p class="leading-tight text-white text-center px-5">METAcraft drivs av studenter, för studenter — inget av detta skulle vara möjligt utan insatser från studenter som du och jag. Om du finner de ovannämnda projekten intressanta, tveka inte att <b>söka till projektgruppen idag!</b> Då får du medverka i METAcrafts utveckling direkt, och ta del av exklusiv fika och aktiviteter!</p>
+
+    <a href="https://forms.gle/upmdop1XPzrvvuS78" target="_blank" class="bg-map inline-block px-4 py-3 w-max no-underline md:mt-2 text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
+      Sök till projektgruppen NU!
+    </a>
+  </div>
 
   <!--<div class="flex flex-col sm:flex-row">
     <img src="https://minecraft.wiki/images/Impulse_Command_Block_JE5_BE2.png" alt="command block" class="aspect-square max-w-8rem flex-1">
