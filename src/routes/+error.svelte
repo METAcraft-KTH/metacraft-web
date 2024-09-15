@@ -29,13 +29,17 @@
   <div id="mainSplash" class="flex flex-col flex-justify-center w-100% h-100svh min-h-[40rem] lg:bg-fixed relative">
 
     <div id="splashContent" class="titleFadeIn py-20 px-4 flex flex-col flex-items-center flex-justify-center">
-      <div class="flex flex-col-reverse md:flex-row gap-4">
-        <img src="https://minecraft.wiki/images/Enchanted_Book.gif" alt="book" class="drop-shadow-xl max-w-[10rem]">
+      <div class="flex flex-col-reverse items-start md:flex-row gap-4">
+        <img src="https://minecraft.wiki/images/Enchanted_Book.gif" alt="book" class="drop-shadow-xl max-w-[10rem] aspect-square">
         <div class="h-max tip mc7 text-xl max-w-[20rem]">
           <div class="bg-[rgba(16,0,16,0.94)] p-0.375em">
             <span class="text-#FFFF55 italic">{$page.status}</span>
             <br>
-            <span class="text-#AA00AA italic">Informationen du söker kommer uppenbara sig i en snar framtid.</span>
+            <span class="text-#AA00AA italic">Informationen du söker kommer uppenbara sig i en snar framtid.
+              <br>
+              <br>
+              Under tiden: har du gått med i vår <a href="/discord" class="text-#55FFFF">discord-server</a>?
+            </span>
           </div>
         </div>
       </div>
