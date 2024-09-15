@@ -15,7 +15,7 @@
 
 <div class="bg-stone w-100% bg-center">
     <div class="mx-auto splash w-100% max-w-[80rem] h-16rem lg:h-25rem mt--14 mc10 text-white text-5xl md:text-7xl flex items-end justify-center pb-16 shadow-xl">
-        <span class="titleFadeIn txtshadow">SURVIVAL SERVER</span>
+        <span class="titleFadeIn text-center text-shadow-xl">SURVIVAL</span>
     </div>
 
     <div class="mx-auto max-w-[80rem] px-4 my-12 flex flex-row gap-4">
