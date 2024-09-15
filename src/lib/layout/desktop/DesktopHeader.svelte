@@ -8,30 +8,33 @@
 
 	export let hideHeader: boolean;
 
-	// the two dropdowns
-	let info = [
+	// dropdowns
+	let smp = [
 		["/tweaks", "Justeringar"],
-		["/mods", "Mods"],
-		/*["/shop", "Ekonomi"],
-		["/crafting", "Crafting"],
-		["/zones", "Världszoner"],
-		["/lore", "Lore"]*/
+		["/map", "Världskarta"],
+		["/lore", "Lore"]
 	];
-	let news = [
-		["/changelog", "Changelog"]
+	let event = [
+		["/leaderboard", "Topplista"]
 	];
 </script>
-<div class="flex flex-row flex-justify-between fixed top-0 w-100% h-14 transition-all"
-	class:bg-pink-800={!hideHeader}
->
+<div class="flex justify-center fixed w-100% transition-all" class:bg-pink-900={!hideHeader}>
+	<!-- a wrapper element to make sure the elements dont get too separated on ultrawide -->
+	<div class="flex flex-row flex-justify-between top-0 w-100% max-w-[80rem] h-14">
+		<a href="/" class="w-115px p-2 flex flex-items-center color-pink-300 hover:color-pink-100" class:color-white={hideHeader}>
+			<Logo />
+		</a>
+	
+		<div class="h-100% flex flex-row text-pink-400">
+			<HeaderLink href="/smp">Survival</HeaderLink>
+			<HeaderLink href="/campus">Campus</HeaderLink>
+			<HeaderLink href="/event">Event</HeaderLink>
+			<HeaderLink href="/rules">Regler</HeaderLink>
+			<HeaderLink href="/about">Hjälp oss</HeaderLink>
+		</div>
 
-	<a href="/" class="w-115px p-2 flex flex-items-center color-pink-300 hover:color-pink-100" class:color-white={hideHeader}>
-		<Logo />
-	</a>
-
-	<div class="h-100% flex flex-row text-pink-400">
+		<a href="/discord" target="_blank" class="inline-block w-115px h-100% color-pink-300 hover:color-pink-100 p-3 text-right" class:color-white={hideHeader}>
+			<Discord />
+		</a>
 	</div>
-	<a href="/discord" target="_blank" class="inline-block w-115px h-100% color-pink-300 hover:color-pink-100 p-3 text-right" class:color-white={hideHeader}>
-		<Discord />
-	</a>
 </div>

@@ -15,21 +15,25 @@
 	export let hideHeader: boolean; // om true, göm background
 </script>
 
-<div class="flex justify-center fixed top-0 w-100% h-14 transition-all"
+<div class="flex justify-between fixed top-0 w-100% h-14 transition-all"
 	class:bg-pink-800={!hideHeader || sideVisible}
 >
 
-	<!--<button on:mousedown={() => sideVisible = !sideVisible} class="notButton text-left inline-block h-100% aspect-square color-pink-400 p-2" class:color-white={sideVisible || hideHeader}>
+	<button on:mousedown={() => sideVisible = !sideVisible} class="notButton text-left inline-block h-100% aspect-square color-pink-400 p-2" class:color-white={sideVisible || hideHeader}>
 		<Menu />
-	</button>-->
+	</button>
 
 	<a href="/" class="aspect-3 h-100% text-center p-2 color-pink-400" class:color-white={hideHeader && !sideVisible}>
 		<MetacraftLogo />
 	</a>
 
-	<!--<a href="/map" class="inline-block h-100% aspect-square color-pink-400 p-3 text-right" class:color-white={$page.url.pathname === '/map' || (hideHeader && !sideVisible)}>
-		<Map />
-	</a>-->
+	{#if false}
+		<a href="/map" class="inline-block h-100% aspect-square color-pink-400 p-3 text-right" class:color-white={$page.url.pathname === '/map' || (hideHeader && !sideVisible)}>
+			<Map />
+		</a>
+	{:else}
+		<div class="inline-block h-100% aspect-square p-3"></div>
+	{/if}
 </div>
 
 <Sidebar {sideVisible} />
