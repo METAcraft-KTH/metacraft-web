@@ -56,7 +56,7 @@
 
 </style>
 
-<div id="mainSplash" class="flex flex-col flex-justify-center w-100% h-screen min-h-[40rem] mt--14 lg:bg-fixed relative">
+<div id="mainSplash" class="flex flex-col flex-justify-center w-100% h-100svh min-h-[40rem] mt--14 lg:bg-fixed relative">
 
   <div id="splashContent" class="titleFadeIn py-20 px-4 flex flex-col flex-items-center flex-justify-center">
     <p class="mc10 text-3xl sm:text-4xl text-white text-shadow-xl text-center">Välkommen till</p>
@@ -121,13 +121,13 @@
   </div>
 </div>
 
-<div class="w-100% bg-dark-oak-planks flex flex-col items-center py-12 px-2 gap-4 md:gap-8 text-lg leading-tight">
+<div class="w-100% bg-dark-oak-planks flex flex-col items-center py-12 px-2 gap-4 md:gap-8 leading-tight">
 
   <div class="mc10 inline text-white text-4xl md:text-5xl px-2 text-center drop-shadow-xl rd">
-    SPELA PÅ DITT SÄTT
+    SPELA PÅ <u>DITT SÄTT</u>
   </div>
   <p class="text-center text-white max-w-[50rem]">
-    METAcraft består av tre delar, alla tre lika fantastiska och producerade med kärlek.
+    METAcraft består av tre delar, alla tre lika fantastiska och producerade med kärlek. Klicka nedan för att läsa mer om dem!
   </p>
   <div class="flex flex-col md:flex-row gap-6">
     <GameSquare img={survival} title="SURVIVAL" link="/smp">En vanlig multiplayer-upplevelse i en ovanlig värld!</GameSquare>
@@ -168,10 +168,18 @@
       </PrRow>
     
   </main>
-
   -->
 
-  <img src={hands} alt="holding hands" class="w-100% max-w-40rem my-6">
+  <div class="flex flex-col md:flex-row items-center text-white max-w-[70rem] px-6 py-12 gap-10">
+    <div class="flex flex-col justify-center items-center md:items-start gap-3">
+      <h1 class="text-center md:text-left mc10 text-4xl md:text-5xl"><u>Flexa</u> din sektion</h1>
+      <p class="text-center md:text-left">...och ta med dig METAcraft vart du än går! Klä på dig ditt sektionsplagg och representera din sektion, oavsett vilken server du spelar på. Ladda ner det officiella cerise-resurspaketet för att lägga till färgen cerise i ditt spel, precis som på Survivalservern! Allt dessa finns gratis att hämta på hemsidan.</p>
+      <a href="/style" class="bg-map inline-block px-4 py-3 w-max no-underline md:mt-2 text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
+        Kika in kollektionen
+      </a>
+    </div>
+    <img src={hands} alt="holding hands" class="max-w-25rem drop-shadow-xl">
+  </div>
 
   <main class="mx-2 my-12 w-100% max-w-40rem p-7 md:p-10 text-base md:text-lg shadow-xl bg-map flex flex-col items-center gap-4">
     <div class="font-bold text-xl sm:text-2xl mc7 text-center underline underline-3">HJÄLP EFTERLYSES!!!</div>
