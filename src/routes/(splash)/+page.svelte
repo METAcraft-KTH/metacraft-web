@@ -183,7 +183,7 @@
 
 
   <div class="mx-2 mb-12 w-100% max-w-50rem md:p-10 text-base flex flex-col items-center gap-4">
-    <h1 class="mc10 text-4xl md:text-5xl text-white">hjälp oss göra saker</h1>
+    <h1 class="mc10 text-4xl md:text-5xl text-white text-center">hjälp oss göra saker</h1>
     <a href="https://forms.gle/upmdop1XPzrvvuS78" target="_blank" class="bg-map inline-block p-4 hover:scale-105 hover:contrast-120 transition-all"><img src={spyglass} alt="kikare" class="w-100% max-w-25rem sepia-50"></a>
     
     <p class="leading-tight text-white text-center px-5">METAcraft drivs av studenter, för studenter — inget av detta skulle vara möjligt utan insatser från studenter som du och jag. Om du finner de ovannämnda projekten intressanta, tveka inte att <b>söka till projektgruppen idag!</b> Då får du medverka i METAcrafts utveckling direkt, och ta del av exklusiv fika och aktiviteter!</p>
