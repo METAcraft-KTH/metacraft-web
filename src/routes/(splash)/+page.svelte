@@ -51,7 +51,7 @@
 
 </style>
 
-<div id="mainSplash" class="w-100% min-h-100svh mt--14 flex flex-col flex-justify-center lg:bg-fixed">
+<div id="mainSplash" class="flex flex-col flex-justify-center w-100% h-screen min-h-[40rem] mt--14 lg:bg-fixed relative">
 
   <div id="splashContent" class="titleFadeIn py-20 px-4 flex flex-col flex-items-center flex-justify-center">
     <p class="mc10 text-3xl sm:text-4xl text-white text-shadow-xl text-center">Välkommen till</p>
