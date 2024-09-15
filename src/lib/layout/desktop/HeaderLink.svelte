@@ -12,7 +12,7 @@
 
 <a {href}
 	class="relative color-white no-underline inline-block px-4 lg:px-8 h-100% flex flex-justify-center flex-items-center mc7 transition-all"
-	class:bg-pink-900={active}
+	class:bg-pink-700={active}
 	class:hover:bg-pink-700={!active}
 	on:mouseover={() => hovered = true}
 	on:focus={()=>{/* a11y wants an on:focus event, i guess */}}

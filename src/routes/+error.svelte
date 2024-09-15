@@ -12,7 +12,7 @@
     background-image: linear-gradient(
         #46373890, 
         #46373890
-      ), url('$lib/images/splashes/cavesun.webp');
+      ), url('$lib/images/splashes/hamn.webp');
     background-size: cover;
     background-position: center center;
   }
