@@ -42,9 +42,9 @@ body {
 
 .bg-white-concrete-powder {
     background-image: linear-gradient(
-        #ffffffe0, 
-        #ffffffc0,
-        #ffffffe0
+        #ffffffc0, 
+        #ffffff90,
+        #ffffffc0
       ), url('$lib/images/bg/white_concrete_powder.png');
     background-repeat: repeat;
     background-position: center center;

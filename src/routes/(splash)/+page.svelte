@@ -16,6 +16,7 @@
   import spyglass from '$lib/images/pr_squares/spyglass.png';
 	import PrRow from './PrRow.svelte';
   import ChevronDown from '$lib/icons/ChevronDown.svelte';
+	import GameSquare from './GameSquare.svelte';
 
   const scrollDown = () => {
     let targetPx = window.innerHeight - 3.5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
@@ -43,6 +44,10 @@
       ), url('$lib/images/bg/white_concrete_powder.png');
     background-repeat: repeat;
     background-position: center center;
+  }
+
+  .abcabc {
+    background-image: url('$lib/images/background-s4-water.png');
   }
 
   #gameVersion {
@@ -98,22 +103,46 @@
   </ActiveEvent>
 {/if}
 
-{#if false}
-<div class="mx-auto mt-12 w-100% max-w-250 p-5 rd">
-  <iframe class="w-100% aspect-video" style="box-shadow: 0 0 0 .5rem white" src="https://www.youtube-nocookie.com/embed/B6CmcGmRNwE?si=FMbaRhAsolJx9YcD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="w-100% bg-center-center bg-cover abcabc bg-fixed">
+  <div class="w-100% h-100% py-12 px-2 backdrop-blur flex flex-col items-center gap-4 md:gap-8">
+    <div class="w-100% max-w-250 bg-white-concrete-powder rd p-2 shadow-2xl">
+      <iframe class="w-100% aspect-video" src="https://www.youtube-nocookie.com/embed/NA7sBWemTfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <span class="mc10 inline bg-white text-black text-4xl md:text-5xl px-3 py-2 text-center shadow-xl rd">
+      DET HÄR ÄR METACRAFT
+    </span>
+
+    <div class="rd bg-white-concrete-powder text-black px-2 py-6 text-lg leading-tight text-center shadow-xl max-w-[50rem]">
+      Vi är en Minecraft-gemenskap som i första hand är riktad till studenter vid programmen Data- och Medieteknik på KTH. Stig in i en aktiv community med spännande event och regelbundna uppdateringar med nytt innehåll. Här finns det alltid någonting kul att göra — oavsett din spelstil och erfarenhet!
+    </div>
+
+  </div>
 </div>
-{/if}
 
+<div class="w-100% bg-dark-oak-planks flex flex-col items-center py-12 px-2 gap-4 md:gap-8 text-lg leading-tight">
 
-<div class="w-100% bg-dark-oak-planks flex flex-col items-center">
+  <div class="mc10 inline text-white text-4xl md:text-5xl px-2 text-center drop-shadow-xl rd">
+    SPELA PÅ DITT SÄTT
+  </div>
+  <p class="text-center text-white max-w-[50rem]">
+    METAcraft består av tre delar, alla tre lika fantastiska och producerade med kärlek.
+  </p>
+  <div class="flex flex-col md:flex-row gap-6">
+    <GameSquare img={survival} title="SURVIVAL" link="/smp">En vanlig multiplayer-upplevelse i en ovanlig värld!</GameSquare>
+    <GameSquare img={campus} title="BYGGA CAMPUS" link="/campus">Återskapa KTH Campus i Minecraft!</GameSquare>
+    <GameSquare img={pvp} title="TÄVLINGAR" link="/event">Tävla med & mot dina kamrater i spännande turneringar och andra event!</GameSquare>
+  </div>
 
+  <!--
   <div style="border-image: url('https://minecraft.wiki/images/Blank-sign-bamboo_JE1_BE1.png') 2 fill round;" class="mc7 max-w-200 mt-12 mx-4 p-8 font-bold text-center block md:hidden">
     <p class="mb-2">SERVER LAUNCH:</p>
     <p class="text-4xl mc10">måndag 23 september</p>
   </div>
 
   <main class="mx-2 my-12 w-100% max-w-250 p-8 md:p-10 text-base md:text-lg shadow-xl bg-map">
-    <span class="font-bold">Välkommen till METAcraft!</span> En Minecraft-gemenskap som i första hand är riktad till studenter vid programmen Data- och Medieteknik på KTH. Stig in i en aktiv community med spännande event och regelbundna uppdateringar med nytt innehåll. Här finns det alltid någonting kul att göra - oavsett din spelstil och erfarenhet!
+    <span class="font-bold">Välkommen till METAcraft!</span>
   
     <div class="my-14" />
   
@@ -139,6 +168,8 @@
       </PrRow>
     
   </main>
+
+  -->
 
   <img src={hands} alt="holding hands" class="w-100% max-w-40rem my-6">
 
