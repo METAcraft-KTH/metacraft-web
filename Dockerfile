@@ -18,7 +18,7 @@ FROM busybox:1-musl
 WORKDIR /app
 
 RUN echo "E404:/app/index.html" > /httpd.conf
-COPY --from=base /app/build /app
+COPY --from=build /app/build /app
 
 EXPOSE 3000
 CMD ["httpd", "-fp3000", "-c/httpd.conf"]
