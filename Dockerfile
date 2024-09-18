@@ -14,12 +14,11 @@ COPY . .
 
 RUN pnpm build
 
-FROM base
+FROM busybox:1-musl
+WORKDIR /app
 
-COPY package.json /app/
-COPY --from=build /app/build /app/build
+RUN echo "E404:/app/index.html" > /httpd.conf
+COPY --from=base /app/build /app
 
-ENV HOST=0.0.0.0
-ENV PORT=3000
 EXPOSE 3000
-CMD ["node", "build/index.js"]
+CMD ["httpd", "-fp3000", "-c/httpd.conf"]
