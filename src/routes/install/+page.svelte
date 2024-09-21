@@ -5,6 +5,7 @@
 	import Linux from '$lib/icons/platform/Linux.svelte';
 	import Apple from '$lib/icons/platform/Apple.svelte';
 	import minecraftLauncherIcon from '$lib/images/launcher/minecraft_launcher.png';
+	import prismLauncherIcon from '$lib/images/launcher/prism_launcher.png';
 	import type { ComponentType } from 'svelte';
 	import { goto } from '$app/navigation';
 
@@ -34,6 +35,7 @@
 
 	type Launcher = {
 		name: string;
+		subtitle?: string;
 		icon: string;
 	};
 
@@ -41,19 +43,20 @@
 		name: 'Minecraft Launcher',
 		icon: minecraftLauncherIcon
 	};
-	const multimc = {
-		name: 'MultiMC',
-		icon: 'https://avatars2.githubusercontent.com/u/5411890' // As per MultiMC Branding we may not redistribute their logo.
+	const prismLauncher = {
+		name: 'Prism Launcher',
+		subtitle: '(eller MultiMC)',
+		icon: prismLauncherIcon
 	};
 
-	const launchers: Launcher[] = [minecraftLauncher, multimc];
+	const launchers: Launcher[] = [minecraftLauncher, prismLauncher];
 
 	let selectedPlatform: Platform | null = null;
 	let selectedLauncher: Launcher | null = null;
 
 	$: if (selectedPlatform === mac) {
-		// Mac must use MultiMC, so do not prompt for launcher.
-		selectedLauncher = multimc;
+		// Mac must use Prism Launcher, so do not prompt for launcher.
+		selectedLauncher = prismLauncher;
 		nextStep();
 	}
 
@@ -64,8 +67,8 @@
 			location.href = INSTALLER_JAR_URL;
 		}
 
-		if (selectedLauncher === multimc || selectedPlatform === mac) {
-			goto('/install/multimc');
+		if (selectedLauncher === prismLauncher || selectedPlatform === mac) {
+			goto('/install/prism');
 		}
 	}
 </script>
@@ -113,6 +116,9 @@
 									<img src={launcher.icon} alt={launcher.name} />
 								</div>
 								<span class="mc10">{launcher.name}</span>
+								{#if launcher.subtitle}
+									<span class="mc7 block text-2xl">{launcher.subtitle}</span>
+								{/if}
 							</div>
 						{/each}
 					</div>

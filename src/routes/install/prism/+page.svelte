@@ -1,51 +1,55 @@
 <script lang="ts">
 	import Header from '$lib/layout/Header.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
-	import profilesImage from '$lib/images/multimc-guide/profiles.png';
-	import addAccountImage from '$lib/images/multimc-guide/add-account.png';
-	import addInstanceImage from '$lib/images/multimc-guide/add-instance.png';
-	import importFromZipImage from '$lib/images/multimc-guide/import-from-zip.png';
-	import launchImage from '$lib/images/multimc-guide/launch.png';
-	import setupImage from '$lib/images/multimc-guide/setup.png';
-	import allowMicrophoneImage from '$lib/images/multimc-guide/allow-microphone.png';
+	import profilesImage from '$lib/images/install_guide/profiles.png';
+	import addAccountImage from '$lib/images/install_guide/add-account.png';
+	import addInstanceImage from '$lib/images/install_guide/add-instance.png';
+	import importImage from '$lib/images/install_guide/import.png';
+	import launchImage from '$lib/images/install_guide/launch.png';
+	import setupImage from '$lib/images/install_guide/setup.png';
+	import allowMicrophoneImage from '$lib/images/install_guide/allow-microphone.png';
 </script>
 
 <Header />
 <div class="bg-bookshelf w-100%">
 	<main class="bg-white main block m-auto line-height-normal p-5">
-		<h1 class="mc10 text-black text-4xl md:text-5xl px-3 py-2 rd">MULTIMC-GUIDE</h1>
+		<h1 class="mc10 text-black text-4xl md:text-5xl px-3 py-2 rd">Prism Launcher/MultiMC-Guide</h1>
 		<div class="bg-red px-3 py-2 m-3 max-w-lg rd">
 			<span class="mc10">Voice Chat på Mac</span>
 			<p>
-				Mac-användare måste använda MultiMC för att kunna använda Simple Voice Chat. Mac-datorer
-				kräver att program frågar efter tillåtelse för att använda mikrofonen. Eftersom Minecraft
-				inte vanligtvis använder mikrofonen kan den vanliga Minecraft launchern inte användas. Följ
-				därför denna guide för att installera Simple Voice Chat med MultiMC.
+				Mac-användare måste använda Prism Launcher (eller MultiMC) för att kunna använda Simple
+				Voice Chat. Mac-datorer kräver att program frågar efter tillåtelse för att använda
+				mikrofonen. Eftersom Minecraft inte vanligtvis använder mikrofonen kan den vanliga Minecraft
+				launchern inte användas. Följ därför denna guide för att installera Simple Voice Chat med
+				Prism Launcher.
 			</p>
 		</div>
 
-		<p>Om du redan har använt MultiMC förut kan du skippa steg 1 & 2.</p>
+		<p class="mb-3">
+			Denna guide är primärt för Prism Launcher, men instruktionerna är likadana för MultiMC.
+		</p>
+		<p>Om du redan har använt Prism Launcher förut kan du skippa steg 1 & 2.</p>
 
-		<h2 class="mc10 text-2xl mt-4">1. Ladda ner MultiMC</h2>
-		<p>Ladda ner MultiMC från <a href="https://multimc.org/#Download">multimc.org</a>.</p>
+		<h2 class="mc10 text-2xl mt-4">1. Ladda ner Prism Launcher</h2>
+		<p>Ladda ner Prism Launcher från <a href="https://prismlauncher.org/">prismlauncher.org</a>.</p>
 
 		<h2 class="mc10 text-2xl mt-4">2. Logga in med ditt Microsoftkonto</h2>
-		<p>Tryck på Profiler i övre högra hörnet.</p>
+		<p>Tryck på "Accounts" i övre högra hörnet.</p>
 		<img src={profilesImage} alt="Tryck på Profiler i övre högra hörnet" />
 		<p>
 			Lägg till ditt konto genom att logga in med ditt Microsoftkonto. Följ instruktionerna från
-			MultiMC.
+			Prism Launcher.
 		</p>
 		<img src={addAccountImage} alt="Välj 'Add Microsoft'" />
 
 		<h2 class="mc10 text-2xl mt-4">3. Lägg till METAcraft</h2>
-		<p>Välj "Add Instance", sedan "Import from zip".</p>
+		<p>Välj "Add Instance", sedan "Import".</p>
 		<img src={addInstanceImage} alt="Välj 'Add instance'" />
 		<p>Kopiera och klistra in följande länk:</p>
 		<div class="link p-3 mc7 color-white rd inline-block">
-			https://metacraft.nu/multimc/METAcraft.zip
+			https://metacraft.nu/install/METAcraft.zip
 		</div>
-		<img src={importFromZipImage} alt="Välj 'Import from zip'" />
+		<img src={importImage} alt="Välj 'Import'" />
 
 		<h2 class="mc10 text-2xl mt-4">4. Starta spelet!</h2>
 		Markera METAcraft och välj sedan "Launch" för att starta spelet.
