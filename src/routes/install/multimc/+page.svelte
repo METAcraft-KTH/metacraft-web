@@ -41,9 +41,9 @@
 		<h2 class="mc10 text-2xl mt-4">3. Lägg till METAcraft</h2>
 		<p>Välj "Add Instance", sedan "Import from zip".</p>
 		<img src={addInstanceImage} alt="Välj 'Add instance'" />
-		<p>Kopiera och klistra sedan in följande länk:</p>
-		<div class="link">
-			<input type="text" readonly value="https://metacraft.nu/multimc/METAcraft.zip" />
+		<p>Kopiera och klistra in följande länk:</p>
+		<div class="link p-3 mc7 color-white rd inline-block">
+			https://metacraft.nu/multimc/METAcraft.zip
 		</div>
 		<img src={importFromZipImage} alt="Välj 'Import from zip'" />
 
@@ -74,5 +74,10 @@
 <style>
 	.main {
 		max-width: 900px;
+	}
+	.link {
+		background-color: #777;
+		border: 5px solid #555;
+		user-select: all;
 	}
 </style>
