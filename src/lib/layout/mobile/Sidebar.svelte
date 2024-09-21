@@ -15,5 +15,6 @@
 	<SideLink href="/event">Tävlingar</SideLink>
   <SideLink href="/rules">Regler</SideLink>
 	<SideLink href="/sok">Hjälp oss</SideLink>
+	<SideLink href="/install">Voice Chat</SideLink>
 	<!--<SideLink href="/faq">FAQ</SideLink>-->
 </aside>
