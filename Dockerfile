@@ -17,7 +17,7 @@ RUN pnpm build
 FROM busybox:1-musl
 WORKDIR /app
 
-RUN echo "E404:/app/index.html" > /httpd.conf
+RUN echo "E404:/app/404.html" > /httpd.conf
 COPY --from=build /app/build /app
 
 EXPOSE 3000
