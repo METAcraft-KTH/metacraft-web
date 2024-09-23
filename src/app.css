@@ -43,7 +43,7 @@ body {
 .bg-white-concrete-powder {
     background-image: linear-gradient(
         #ffffffc0, 
-        #ffffff90,
+        #ffffffe0,
         #ffffffc0
       ), url('$lib/images/bg/white_concrete_powder.png');
     background-repeat: repeat;
