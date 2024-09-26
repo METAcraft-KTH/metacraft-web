@@ -2,6 +2,7 @@
   export let start: Date;
   export let end: Date;
   export let href: string;
+  export let countdown = true;
 
   // stulen från LaunchBanner - tack martin!
 
@@ -61,9 +62,14 @@
   .reverse {
     animation-direction: reverse;
   }
+
+  a {
+    background-image: url('https://minecraft.wiki/images/Yellow_Concrete_(texture)_JE1_BE1.png');
+    background-repeat: repeat;
+  }
 </style>
 
-<a href={href} class="block w-100% mt-10 flex flex-col flex-justify-center flex-items-center bg-yellow-400 no-underline text-black">
+<a href={href} class="block w-100% my-10 flex flex-col flex-justify-center flex-items-center no-underline text-black hover:contrast-150 shadow-xl">
 
   <div class="loop-container mc10 mb-2 text-yellow-700">
     <span class="loopspan">
@@ -80,19 +86,19 @@
   </div>
 
 
-  <span class="mc10 text-5xl"><slot /></span>
+  <span class="mc10 text-5xl text-center"><slot /></span>
 
-  <span class="text-lg">
+  <span class="text-lg text-center">
     {#if state === 'starting'}
       börjar om
     {:else if state === 'active'}
-      avslutas om
+      {countdown ? 'avslutas om' : 'är LIVE just nu! Klicka här!'}
     {:else}
       är avslutad!
     {/if}
   </span>
 
-  {#if state === 'starting' || state === 'active'}
+  {#if countdown && (state === 'starting' || state === 'active')}
     <div class="mc10 text-3xl">
       {d}<span class="text-base">d</span>
       {h}<span class="text-base">h</span>
