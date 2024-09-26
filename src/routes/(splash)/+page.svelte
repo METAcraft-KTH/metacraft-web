@@ -83,10 +83,12 @@
       </a>
     </div>
 
+    {#if false}
     <div style="border-image: url('https://minecraft.wiki/images/Blank-sign-bamboo_JE1_BE1.png') 2 fill round;" class="mc7 max-w-200 mt-12 p-8 font-bold text-center hidden md:block">
       <p class="mb-2">SERVER LAUNCH:</p>
       <p class="text-4xl mc10">måndag 23 september</p>
     </div>
+    {/if}
   </div>
 
   <button class="notButton absolute bottom-0 left-0 w-100% h-15 text-center color-white titleFadeIn" style="animation-delay: 1s" on:mousedown={scrollDown}>
