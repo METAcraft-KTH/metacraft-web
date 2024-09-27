@@ -136,7 +136,7 @@ body {
     border-image-width: 3rem;
 }
 .bg-book {
-    border-image: url('$lib/images/book2x.png') 65 round;
+    border-image: url('$lib/images/book2x.png') 70 round;
     border-image-width: 3rem;
     background: #FFF9ED;
     border-radius: 20px;
