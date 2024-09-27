@@ -26,7 +26,7 @@
 
 <div class="bg-stone w-100% bg-center">
     <div class="mx-auto splash w-100% max-w-[80rem] h-16rem lg:h-25rem mt--14 mc10 text-white flex items-end justify-center pb-16 shadow-xl">
-        <Title showIP={true}>SURVIVAL</Title>
+        <Title>SURVIVAL</Title>
     </div>
 
     <div class="mt-4 text-white w-full flex flex-col items-center gap-1 text-center">

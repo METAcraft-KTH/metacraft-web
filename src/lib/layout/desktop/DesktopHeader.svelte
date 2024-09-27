@@ -10,9 +10,9 @@
 
 	// dropdowns
 	let smp = [
-		["/tweaks", "Justeringar"],
-		["/map", "Världskarta"],
-		["/lore", "Lore"]
+		["/smp/tweaks", "Skillnader"],
+		["/smp/map", "Världskarta"],
+		["/smp/news", "Nyheter"]
 	];
 	let event = [
 		["/leaderboard", "Topplista"]
@@ -26,7 +26,7 @@
 		</a>
 	
 		<div class="h-100% flex flex-row text-pink-400">
-			<HeaderLink href="/smp">Survival</HeaderLink>
+			<HeaderLink href="/smp" dropdown={smp}>Survival</HeaderLink>
 			<HeaderLink href="/campus">Campus</HeaderLink>
 			<HeaderLink href="/event">Tävlingar</HeaderLink>
 			<HeaderLink href="/install">Voice Chat</HeaderLink>
