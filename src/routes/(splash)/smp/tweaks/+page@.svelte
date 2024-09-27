@@ -14,9 +14,11 @@
 
     <a href="/smp" class="block w-full max-w-[79rem] mx-auto font-bold text-white mb-2 no-underline hover:text-#BE185D transition-colors">&lt; Tillbaka till Survival</a>
     <div class="flex flex-col lg:flex-row gap-4 max-w-[80rem] mx-auto mb-4">
-        <div class="flex flex-col gap-2 flex-1 bg-book p-6">
+        <div class="flex flex-col gap-2 flex-1 bg-book p-6 leading-tight">
             <div class="mc10 text-2xl md:text-3xl">PLAYER SHOPS</div>
+            <p>Sätt upp dina egna shops med shop-blocket som tillverkas enligt följande recept (valfri färg på plankor och ull):</p>
             <img src={shopCraft} alt="shop block crafting recipe" class="max-w-[25rem]">
+            <p>Sedan behöver blocket placeras över en <b>barrel</b> som lagrar input/output. När du har gjort det kan du högerklicka på shop-blocket för att börja konfigurera dina trades.</p>
         </div>
         <div class="flex flex-col gap-2 flex-1 bg-book p-6 leading-tight">
             <div class="mc10 text-2xl md:text-3xl">CAMPUS PLOTS</div>
