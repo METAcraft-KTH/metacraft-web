@@ -15,7 +15,7 @@
         <Section icon="https://minecraft.wiki/images/Anvil_(N)_JE3.png" anchor="anvil">
             <b>Anvil</b> ökar inte XP-kostnaden när man reparerar eller döper om ett item, och det maximala XP-kostnaden kan aldrig överstiga 39 nivåer.
             <br>
-            <span class="text-sm text-stone-500">(Det betyder att <i class="italic">Mending</i> inte är lika nödvändigt som i vanilla.)</span>
+            <span class="text-sm text-stone-500">(Det betyder att <i class="italic">Mending</i> inte är lika nödvändigt som i vanilla, eftersom det inte finns en övre gräns för hur många gånger man kan reparera ett item.)</span>
         </Section>
         <Section icon="https://minecraft.wiki/images/VillagerFace.png" anchor="villager">
             <b>Villager trading</b> på servern använder <a href="https://minecraft.wiki/w/Villager_Trade_Rebalance" target="_blank">Villager Trade Rebalance</a>.

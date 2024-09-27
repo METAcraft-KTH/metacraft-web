@@ -50,7 +50,7 @@
         </Button>
     </div>
 
-    {#if true} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
+    {#if false} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
         <ActiveEvent start={new Date('2024-09-23 18:00:00')} end={new Date('2024-10-07 18:00:00')} href={'/4.0'} countdown={false}>
         SERVER LAUNCH
         </ActiveEvent>
