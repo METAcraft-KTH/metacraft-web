@@ -36,7 +36,7 @@
     </div>
 
     <div class="mx-auto max-w-[80rem] px-4 my-12 flex flex-col md:flex-row gap-4">
-        <Button href="/smp/tweaks">
+        <Button href="/smp/features">
             <img src="https://minecraft.wiki/images/Knowledge_Book_JE2.png" alt="icon" class="w-3rem md:w-4rem">
             <span>Allt du behöver veta!</span>
         </Button>
@@ -97,7 +97,7 @@
             Världen som besättningen har landat i är annorlunda från den ni är bekant med. Här hittar du fantastiska oaser, isgrottor, häpnadsväckande savanner, och så mycket mer, inte för att nämna 30+ nya strukturer för dig att utforska i alla dimensioner.
         </p>
         <p class="text-base leading-tight">
-            Förutom historiska hemligheter så är världen också bunden till speciella lagar som är bra att känna till. De kan ha en påverkan på dina redstone-apparater, men man kan också utnyttja dem till sin fördel! <a href="/smp/tweaks">Läs om alla skillnader här.</a>
+            Förutom historiska hemligheter så är världen också bunden till speciella lagar som är bra att känna till. De kan ha en påverkan på dina redstone-apparater, men man kan också utnyttja dem till sin fördel! <a href="/smp/features">Läs om alla skillnader här.</a>
         </p>
     </SplashRow>
 

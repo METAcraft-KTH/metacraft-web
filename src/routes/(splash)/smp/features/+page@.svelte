@@ -10,7 +10,7 @@
 <Header />
 <div class="w-100% flex-1 bg-bookshelf">
 
-    <Title>SKILLNADER</Title>
+    <Title>FEATURES</Title>
 
     <a href="/smp" class="block w-full max-w-[79rem] mx-auto font-bold text-white mb-2 no-underline hover:text-#BE185D transition-colors">&lt; Tillbaka till Survival</a>
     <div class="flex flex-col lg:flex-row gap-4 max-w-[80rem] mx-auto mb-4">

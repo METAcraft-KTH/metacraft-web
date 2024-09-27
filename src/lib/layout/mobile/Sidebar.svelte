@@ -7,7 +7,7 @@
 <aside class="fixed top-14 transition-all-300 w-100% bg-pink-900 flex flex-col z-10" class:left--100%={!sideVisible} class:left-0={sideVisible}>
 	<SideLink href="/smp">Survival</SideLink>
   
-    <SideSubLink href="/smp/tweaks">Skillnader</SideSubLink>
+    <SideSubLink href="/smp/features">Features</SideSubLink>
     <SideSubLink href="/smp/map">Världskarta</SideSubLink>
     <SideSubLink href="/smp/news">Nyheter</SideSubLink>
   

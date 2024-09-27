@@ -10,7 +10,7 @@
 
 	// dropdowns
 	let smp = [
-		["/smp/tweaks", "Skillnader"],
+		["/smp/features", "Features"],
 		["/smp/map", "Världskarta"],
 		["/smp/news", "Nyheter"]
 	];
