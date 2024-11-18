@@ -34,7 +34,7 @@
 			<p>
 				Det går också bra att uppdatera manuellt i Prism launcher om du vet hur man gör. Ladda ner
 				nya versioner av modsen och ersätt jar-filerna. Ändra sedan Minecraft och Fabric Loader till
-				1.21.3.
+				0.16.9.
 			</p>
 		</div>
 
