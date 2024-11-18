@@ -3,4 +3,4 @@
   </script>
   
   <Header />
-  <iframe title="map" class="flex-1 w-100%" src="https://map.mc.datasektionen.se/?world=minecraft_overworld&zoom=3" />
+  <iframe title="map" class="flex-1 w-100%" src="https://map.metacraft.nu/?world=minecraft_overworld&zoom=3" />
