@@ -25,7 +25,7 @@
 			</p>
 		</div>
 		<div class="bg-yellow px-3 py-2 m-3 max-w-lg">
-			<span class="mc10">Uppdatera till 1.21.3</span>
+			<span class="mc10">Uppdatera till 1.21.4</span>
 			<p>
 				Det lättaste sättet att uppdatera är att genomföra stegen nedan igen och skapa en ny profil
 				för METAcraft från den nyaste METAcraft.zip-länken.
