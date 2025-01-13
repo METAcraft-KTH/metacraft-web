@@ -104,13 +104,14 @@ body {
     background-repeat: repeat;
     background-size: initial;
 }
-.bg-trapdoor {
+.bg-footer {
     background-image: linear-gradient(
         #0008, 
         #0008
-      ), url("$lib/images/bg/spruce_trapdoor.png");
+      ), url("https://minecraft.wiki/images/Mud_Bricks_(texture)_JE1_BE1.png");
     background-repeat: repeat;
     background-size: initial;
+    background-position: top center;
 }
 .bg-gray-wool {
     background-image: linear-gradient(
