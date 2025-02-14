@@ -69,7 +69,7 @@
   }
 </style>
 
-<a href={href} class="block w-100% my-10 flex flex-col flex-justify-center flex-items-center no-underline text-black hover:contrast-150 shadow-xl">
+<a href={href} class="w-100% my-10 flex flex-col flex-justify-center flex-items-center no-underline text-black hover:contrast-150 shadow-xl">
 
   <div class="loop-container mc10 mb-2 text-yellow-700">
     <span class="loopspan">
@@ -92,7 +92,7 @@
     {#if state === 'starting'}
       börjar om
     {:else if state === 'active'}
-      {countdown ? 'avslutas om' : 'är LIVE just nu! Klicka här!'}
+      {countdown ? 'avslutas om' : 'är LIVE just nu! Klicka här för att läsa mer!'}
     {:else}
       är avslutad!
     {/if}

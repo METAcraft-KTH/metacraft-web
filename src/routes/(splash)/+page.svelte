@@ -58,7 +58,7 @@
 
 <div id="mainSplash" class="flex flex-col flex-justify-center w-100% h-100svh min-h-[40rem] mt--14 lg:bg-fixed relative">
 
-  <div id="splashContent" class="titleFadeIn py-20 px-4 flex flex-col flex-items-center flex-justify-center">
+  <div id="splashContent" class="titleFadeIn py-20 px-0 flex flex-col flex-items-center flex-justify-center">
     <p class="mc10 text-3xl sm:text-4xl text-white text-shadow-xl text-center">Välkommen till</p>
 
     <img src={logo} alt="METAcraft" class="logo my-6 max-w-600px w-100%" />
@@ -75,8 +75,8 @@
     {/if}
     
     <div class="flex flex-col md:flex-row gap-4 text-center mt-4 sm:mt-0 justify-center items-center">
-      <a href="https://forms.gle/upmdop1XPzrvvuS78" target="_blank" class="bg-map block px-4 py-3 no-underline md:m-t8 rd text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
-        Hjälp till i projektgruppen!
+      <a href="/smp" target="_blank" class="bg-map block px-4 py-3 no-underline md:m-t8 rd text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
+        Börja spela nu!
       </a>
       <a href="https://discord.com/invite/MttUbkmeyD" target="_blank" class="bg-map block px-4 py-3 no-underline md:m-t8 rd text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
         Gå med i Discord-servern!
@@ -89,6 +89,12 @@
       <p class="text-4xl mc10">måndag 23 september</p>
     </div>
     {/if}
+
+    {#if true} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
+    <ActiveEvent start={new Date('2025-01-31 20:00:00')} end={new Date('2025-02-24 21:00:00')} countdown={false} href={'/mystery'}>
+      MYSTERIET PÅ CAMPUS
+    </ActiveEvent>
+    {/if}
   </div>
 
   <button class="notButton absolute bottom-0 left-0 w-100% h-15 text-center color-white titleFadeIn" style="animation-delay: 1s" on:mousedown={scrollDown}>
@@ -99,11 +105,6 @@
 
 
 
-{#if false} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
-  <ActiveEvent start={new Date('2024-06-09 19:00:00')} end={new Date('2024-06-09 21:00:00')} href={'/3.1'}>
-    FINAL CAMPAIGN
-  </ActiveEvent>
-{/if}
 
 
 <div class="w-100% bg-center-center bg-cover abcabc bg-fixed">

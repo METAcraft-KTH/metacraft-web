@@ -2,12 +2,12 @@
     import splashbg from '$lib/images/splashes/cavesun.webp';
 	import Title from '$lib/layout/standard/Title.svelte';
 	import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
-	import Button from './Button.svelte';
+	import Button from '../Button.svelte';
 
     import skepp from '$lib/images/splashes/smp/skepp.png';
     import samling from '$lib/images/splashes/smp/samling.png';
     import oas from '$lib/images/splashes/smp/oas.png';
-	import SplashRow from './SplashRow.svelte';
+	import SplashRow from '../SplashRow.svelte';
 </script>
 
 <style>

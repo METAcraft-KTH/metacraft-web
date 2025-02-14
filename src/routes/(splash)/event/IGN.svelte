@@ -1,0 +1,1 @@
+<span class="mc7 text-sm"><slot /></span>

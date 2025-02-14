@@ -50,7 +50,14 @@ body {
     background-position: center center;
 }
 .bg-cerise-concrete-powder {
-    background: url('$lib/images/bg/cerise_concrete_powder.png') repeat;
+    background-image: linear-gradient(
+        #ee2a7ba0,
+        #ee2a7b70,
+        #ee2a7b70,
+        #ee2a7ba0
+    ), url('$lib/images/bg/cerise_concrete_powder.png');
+    background-repeat: repeat;
+    background-position: center center;
 }
 .bg-concrete {
     background: url('$lib/images/bg/white_concrete.png') repeat;
