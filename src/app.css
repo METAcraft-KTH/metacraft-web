@@ -29,6 +29,11 @@ body {
     background-size: cover;
     background-position: center;
 }
+/*
+html {
+    scroll-behavior: smooth;
+}
+*/
 
 .mc7 {
     font-family: 'MinecraftSeven', sans-serif;

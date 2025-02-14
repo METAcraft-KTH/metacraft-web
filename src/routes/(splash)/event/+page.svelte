@@ -13,6 +13,15 @@
 	import Ign from './IGN.svelte';
 </script>
 
+<svelte:head>
+    <style>
+
+html {
+    scroll-behavior: smooth;
+}
+    </style>
+</svelte:head>
+
 <style>
     .splash {
         background-image: linear-gradient(
@@ -62,7 +71,7 @@
     <div class="mx-auto max-w-[80rem] px-4 my-12 flex flex-col md:flex-row gap-4">
         <Button href="/event/leaderboard">
             <img src="https://minecraft.wiki/images/Gold_Ingot_JE4_BE2.png" alt="icon" class="w-3rem md:w-4rem">
-            <span>Se leaderboards!</span>
+            <span>Se leaderboards! (KOMMER SNART)</span>
         </Button>
         <Button href="#timeline">
             <img src="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png" alt="icon" class="w-3rem md:w-4rem">
@@ -110,7 +119,8 @@
         </p>
     </SplashRow>
 
-    <div class="w-100% bg-center-center bg-cover abcabc bg-fixed" id="timeline">
+    <div class="w-100% bg-center-center bg-cover abcabc bg-fixed relative">
+        <div id="timeline" class="absolute top--14"></div>
         <div class="w-100% h-100% pt-12 px-2 flex flex-col items-center gap-4 md:gap-8">
             <span class="mc10 inline bg-white text-black text-4xl md:text-5xl px-3 py-2 text-center shadow-xl rd">
               TIDSLINJEN
@@ -121,7 +131,7 @@
                         Fan-favoriten gör sin återkomst med 3 nya spel och 3 gamla!
                     </p>
                     <a href="https://cclan.se/esports/tournament/10" target="_blank">CCLAN:s inlägg och turneringsinfo</a>
-                    <a href="/event/leaderboard">Leaderboard per minispel</a>
+                    <a href="/event/leaderboard">Leaderboard per minispel (KOMMER SNART)</a>
                 </TimelineItem>
                 <TimelineItem name="MINECRAFT HEXATHLON" time="20 april, 2024" collab="CCLAN">
                     <p>

@@ -1,8 +1,4 @@
-<style>
-    :global(div.timelineItemDesktop:nth-child(2n)) {
-        flex-direction: row-reverse;
-    }
-</style>
+
 
 <div class="flex flex-col items-center justify-center gap-0">
     <slot />
