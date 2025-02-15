@@ -17,7 +17,7 @@
     // create key-value pairs for each image link so i can refer to them easier
     let post_images = {};
     post_images_array.forEach((link) => {
-        let index = link.match(/^.+\/([a-zA-Z0-9\-_]+)(?:\.[a-z]+)+$/i)[1]; // for some reason this must be case insensitive to match
+        let index = link.match(/^.+\/([a-zA-Z0-9\-_]+)(\.[a-zA-Z0-9]+)+$/gi); // for some reason this must be case insensitive to match
         //post_images.push(index)
         post_images[index] = link;
     });
