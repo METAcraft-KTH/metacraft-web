@@ -15,10 +15,11 @@
     // get (links of) all the images from the directory
     let post_images_array = Object.values(import.meta.glob('$lib/images/posts/*.{png,webp}', { eager: true, import: 'default' }));
     // create key-value pairs for each image link so i can refer to them easier
-    let post_images = {};
+    let post_images = [];
     post_images_array.forEach((link) => {
-        let index = link.match(/.+\/([a-zA-Z0-9\-_]+)\.[a-z]+/gi)[1];
-        post_images[index] = link;
+        let index = link.match(/^.+\/([a-zA-Z0-9\-_]+)(?:\.[a-z]+)+$/i); // for some reason this must be case insensitive to match
+        post_images.push(index)
+        //post_images[index] = link;
     });
 
 </script>
@@ -146,9 +147,14 @@
             {/each}
         </div>
 
+        <!--
         <p class="text-white">
             {JSON.stringify(post_images_array)}
         </p>
+        <p class="text-gray">
+            {JSON.stringify(post_images)}
+        </p>
+        -->
 
     </div>
 </div>
