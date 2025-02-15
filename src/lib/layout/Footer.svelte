@@ -1,5 +1,6 @@
 <script lang="ts">
   export let bg = true;
+  export let bg_texture = 'https://minecraft.wiki/images/Mud_Bricks_(texture)_JE1_BE1.png';
 </script>
 <style>
   .hasbg {
@@ -12,13 +13,14 @@
 </style>
 
 
-<div id="footer" class="text-center py-10 px-3 w-100% text-base text-white font-bold relative" class:bg-footer={bg}>
+<div id="footer" class="text-center py-10 px-3 w-100% text-base text-white font-bold relative" class:bg-footer={bg}
+  style={`background-image: linear-gradient(#0008, #0008), url("${bg_texture}");`}>
   <div class="overflow-hidden absolute w-100% left-0 top--50px flex justify-center">
     <span
-      style="background-image: url('https://minecraft.wiki/images/Mud_Bricks_(texture)_JE1_BE1.png');
+      style={`background-image: url('${bg_texture}');
              transform: perspective(400px) rotateX(60deg) scaleX(3.085);
-             background-size: 2.5%;"
-      class="w-1920px h-70px inline-block flex-shrink-0">
+             background-size: 2.5%;`}
+      class="w-1920px h-70px inline-block flex-shrink-0" class:hidden={!bg}>
     </span>
   </div>
   <p class="m-b2">METAcraft ©2023-2025</p>

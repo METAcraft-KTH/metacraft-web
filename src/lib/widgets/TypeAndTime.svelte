@@ -11,7 +11,7 @@
   }
 </script>
 
-<p class="text-sm md:text-base {style}">
-  <span class="hidden sm:inline text-sm font-bold uppercase">{type} ・ </span>
+<p class="text-xs sm:text-sm md:text-base {style}">
+  <span class="font-bold uppercase">{type} ・ </span>
   {dateString}
 </p>

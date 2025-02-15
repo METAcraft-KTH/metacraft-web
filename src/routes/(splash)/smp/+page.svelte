@@ -2,12 +2,25 @@
     import splashbg from '$lib/images/splashes/cavesun.webp';
 	import Title from '$lib/layout/standard/Title.svelte';
 	import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
-	import Button from '../Button.svelte';
+	import Button from './../Button.svelte';
 
     import skepp from '$lib/images/splashes/smp/skepp.png';
     import samling from '$lib/images/splashes/smp/samling.png';
     import oas from '$lib/images/splashes/smp/oas.png';
-	import SplashRow from '../SplashRow.svelte';
+	import SplashRow from './../SplashRow.svelte';
+	import Post from '$lib/layout/news/Post.svelte';
+
+    import index from './Posts.json';
+
+    // get (links of) all the images from the directory
+    let post_images_array = Object.values(import.meta.glob('$lib/images/posts/*.{png,webp}', { eager: true, import: 'default' }));
+    // create key-value pairs for each image link so i can refer to them easier
+    let post_images = {};
+    post_images_array.forEach((link) => {
+        let index = link.match(/.+posts\/([a-zA-Z0-9\-_]+)\.[a-z]+/)[1];
+        post_images[index] = link;
+    });
+
 </script>
 
 <style>
@@ -106,17 +119,36 @@
             <span class="mc10 inline bg-white text-black text-4xl md:text-5xl px-3 py-2 text-center shadow-xl rd">
               SE TRAILERN
             </span>
-          <div class="w-100% max-w-250 bg-white-concrete-powder rd p-2 shadow-2xl">
-            <iframe class="w-100% aspect-video" src="https://www.youtube-nocookie.com/embed/NA7sBWemTfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-      
-      
-          <div class="rd bg-white-concrete-powder text-black px-2 py-6 text-lg leading-tight text-center shadow-xl max-w-[50rem]">
-            <span class="font-bold">Redo att spela?</span>
-            <div class="inline-block mc7 bg-black text-xl w-full max-w-[15rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">metacraft.nu</div>
-            <div class="text-base font-bold">Java 1.21.4 — Inga mods krävs</div>
-          </div>
-      
+            <div class="w-100% max-w-250 bg-white-concrete-powder rd p-2 shadow-2xl">
+                <iframe class="w-100% aspect-video" src="https://www.youtube-nocookie.com/embed/NA7sBWemTfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div class="rd bg-white-concrete-powder text-black px-2 py-6 text-lg leading-tight text-center shadow-xl max-w-[50rem]">
+                <span class="font-bold">Redo att spela?</span>
+                <div class="inline-block mc7 bg-black text-xl w-full max-w-[15rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">metacraft.nu</div>
+                <div class="text-base font-bold">Java 1.21.4 — Inga mods krävs</div>
+            </div>
         </div>
-      </div>
+    </div>
+
+    <div class="flex flex-col items-center bg-bookshelf px-2 py-12 pb-24 gap-4 md:gap-8">
+        <span class="mc10 inline bg-white text-black text-4xl md:text-5xl px-3 py-2 text-center shadow-xl rd w-max">
+            SERVERHISTORIK
+        </span>
+        <div class="max-w-300 w-100% flex flex-col items-center mb-12 gap-2 md:gap-6">
+            {#each index as post}
+              <Post {...post} --image={
+                post.image && post_images[post.image]                   ? "url(" + post_images[post.image] + ")" :
+                post.image && post.image.startsWith("http")             ? "url(" + post.image + ")" :
+                post.date && post_images[post.date.replaceAll("/","")]  ? "url(" + post_images[post.date.replaceAll("/","")] + ")" :
+                "url(/src/lib/images/pr_squares/survival.png)"
+                } />
+            {/each}
+        </div>
+
+        <p class="text-white">
+            {JSON.stringify(post_images_array)}
+        </p>
+
+    </div>
 </div>

@@ -11,5 +11,10 @@ export default defineConfig({
 			],
 		}),
 		sveltekit(),
-	]
+	],
+	resolve: {
+		alias: {
+			'$lib': '/src/lib'
+		}
+	}
 });
