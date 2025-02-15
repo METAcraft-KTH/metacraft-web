@@ -17,7 +17,7 @@
     // create key-value pairs for each image link so i can refer to them easier
     let post_images = {};
     post_images_array.forEach((link) => {
-        let index = link.match(/.+posts\/([a-zA-Z0-9\-_]+)\.[a-z]+/)[1];
+        let index = link.match(/.+\/([a-zA-Z0-9\-_]+)\.[a-z]+/gi)[1];
         post_images[index] = link;
     });
 
