@@ -4,9 +4,8 @@
 	import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
 	import Button from '../Button.svelte';
 
-    import walls from '$lib/images/splashes/event/walls.png';
-    import main from '$lib/images/splashes/main.webp';
-    import hexathlon1 from '$lib/images/splashes/event/hexathlon1_end.png';
+    import walls from '$lib/images/splashes/event/walls.webp';
+    import hexathlon1 from '$lib/images/splashes/event/hexathlon1_end.webp';
 	import SplashRow from '../SplashRow.svelte';
 	import Timeline from './Timeline.svelte';
 	import TimelineItem from './TimelineItem.svelte';

@@ -5,8 +5,7 @@
 	import Button from '../Button.svelte';
 
     import skepp from '$lib/images/splashes/main.webp';
-    import samling from '$lib/images/splashes/campus/bibblan.png';
-    import oas from '$lib/images/splashes/smp/oas.png';
+    import samling from '$lib/images/splashes/campus/bibblan.webp';
 	import SplashRow from '../SplashRow.svelte';
 </script>
 
@@ -20,7 +19,7 @@
         background-size: cover;
     }
     .abcabc {
-        background-image: url('$lib/images/background-s4-water.png');
+        background-image: url('$lib/images/background-s4-water.webp');
     }
 </style>
 

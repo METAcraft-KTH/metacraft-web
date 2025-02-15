@@ -4,9 +4,9 @@
 	import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
 	import Button from './../Button.svelte';
 
-    import skepp from '$lib/images/splashes/smp/skepp.png';
-    import samling from '$lib/images/splashes/smp/samling.png';
-    import oas from '$lib/images/splashes/smp/oas.png';
+    import skepp from '$lib/images/splashes/smp/skepp.webp';
+    import samling from '$lib/images/splashes/smp/samling.webp';
+    import oas from '$lib/images/splashes/smp/oas.webp';
 	import SplashRow from './../SplashRow.svelte';
 	import Post from '$lib/layout/news/Post.svelte';
 
@@ -34,7 +34,7 @@
         background-size: cover;
     }
     .abcabc {
-        background-image: url('$lib/images/background-s4-water.png');
+        background-image: url('$lib/images/background-s4-water.webp');
     }
 </style>
 
