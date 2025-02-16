@@ -10,14 +10,17 @@
 	import SplashRow from './../SplashRow.svelte';
 	import Post from '$lib/layout/news/Post.svelte';
 
+    import fallback_post_image from '$lib/images/pr_squares/survival.png';
+
     import index from './Posts.json';
+	import { onMount } from 'svelte';
 
     // get (links of) all the images from the directory
     let post_images_array = Object.values(import.meta.glob('$lib/images/posts/*.{png,webp}', { eager: true, import: 'default' }));
     // create key-value pairs for each image link so i can refer to them easier
     let post_images = {};
     post_images_array.forEach((link) => {
-        let index = link.match(/^.+\/([a-zA-Z0-9\-_]+)(\.[a-zA-Z0-9]+)+$/gi); // for some reason this must be case insensitive to match
+        let index = link.match(/^.+\/([a-zA-Z0-9\-_]+)(\.[a-zA-Z0-9]+)+$/i)[1]; // for some reason this must be case insensitive to match
         //post_images.push(index)
         post_images[index] = link;
     });
@@ -142,7 +145,7 @@
                 post.image && post_images[post.image]                   ? "url(" + post_images[post.image] + ")" :
                 post.image && post.image.startsWith("http")             ? "url(" + post.image + ")" :
                 post.date && post_images[post.date.replaceAll("/","")]  ? "url(" + post_images[post.date.replaceAll("/","")] + ")" :
-                "url(/src/lib/images/pr_squares/survival.png)"
+                "url("+fallback_post_image+")"
                 } />
             {/each}
         </div>
@@ -154,7 +157,11 @@
         <p class="text-gray">
             {JSON.stringify(post_images)}
         </p>
+        <p class="text-gray">
+            {JSON.stringify(fallback_post_image)}
+        </p>
         -->
+        
 
     </div>
 </div>
