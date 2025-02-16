@@ -2,7 +2,7 @@
     import splashbg from '$lib/images/splashes/cavesun.webp';
 	import Title from '$lib/layout/standard/Title.svelte';
 	import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
-	import Button from '../Button.svelte';
+	import Button from '$lib/widgets/Button.svelte';
 
     import walls from '$lib/images/splashes/event/walls.webp';
     import hexathlon1 from '$lib/images/splashes/event/hexathlon1_end.webp';

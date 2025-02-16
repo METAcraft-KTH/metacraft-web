@@ -1,8 +1,7 @@
 <script lang="ts">
-    import splashbg from '$lib/images/splashes/cavesun.webp';
 	import Title from '$lib/layout/standard/Title.svelte';
 	import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
-	import Button from './../Button.svelte';
+	import Button from '$lib/widgets/Button.svelte';
 
     import skepp from '$lib/images/splashes/smp/skepp.webp';
     import samling from '$lib/images/splashes/smp/samling.webp';
@@ -136,12 +135,15 @@
     </div>
 
     <div class="flex flex-col items-center bg-bookshelf px-2 py-12 pb-24 gap-4 md:gap-8">
+        <div class="relative">
+            <div class="absolute top--14" id="history"></div>
+        </div>
         <span class="mc10 inline bg-white text-black text-4xl md:text-5xl px-3 py-2 text-center shadow-xl rd w-max">
             SERVERHISTORIK
         </span>
-        <div class="max-w-300 w-100% flex flex-col items-center mb-12 gap-2 md:gap-6">
+        <div class="max-w-300 w-100% flex flex-col-reverse items-center mb-12 gap-2 md:gap-6">
             {#each index as post}
-              <Post {...post} --image={
+              <Post {...post} href={"/smp/"+post.href} --image={
                 post.image && post_images[post.image]                   ? "url(" + post_images[post.image] + ")" :
                 post.image && post.image.startsWith("http")             ? "url(" + post.image + ")" :
                 post.date && post_images[post.date.replaceAll("/","")]  ? "url(" + post_images[post.date.replaceAll("/","")] + ")" :

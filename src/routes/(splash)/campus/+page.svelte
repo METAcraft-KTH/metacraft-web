@@ -2,7 +2,7 @@
     import splashbg from '$lib/images/splashes/cavesun.webp';
 	import Title from '$lib/layout/standard/Title.svelte';
 	import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
-	import Button from '../Button.svelte';
+	import Button from '$lib/widgets/Button.svelte';
 
     import skepp from '$lib/images/splashes/main.webp';
     import samling from '$lib/images/splashes/campus/bibblan.webp';

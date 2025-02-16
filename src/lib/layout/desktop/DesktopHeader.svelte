@@ -12,7 +12,7 @@
 	let smp = [
 		["/smp/features", "Features"],
 		["/smp/map", "Världskarta"],
-		["/smp/news", "Nyheter"]
+		["/smp#history", "Serverhistorik"]
 	];
 	let event = [
 		["/leaderboard", "Topplista"]

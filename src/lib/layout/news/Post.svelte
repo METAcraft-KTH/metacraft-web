@@ -7,7 +7,7 @@
   export let title = 'Unnamed';
   export let date = '';
   export let type = 'blog';
-  export let image: any = 0; // intentionally unused. image link is passed as a css variable --image
+  export let image: any; // intentionally unused. image link is passed as a css variable --image
   export let live = false;
   export let latest = false;
 
@@ -72,15 +72,15 @@
 <a transition:slide {href} class="text-black no-underline rd-lg w-98% hover:w-100% transition-all">
   <div class="bg-wool w-100% flex flex-col md:flex-row rd b-3 b-white b-solid" class:live={live} class:latest={latest}>
 
-    <div class="flex flex-row flex-1">
+    <div class="flex flex-row items-center flex-1">
 
-      <div class="icon mr-2 w-12 h-12 md:m-3 md:mr-5"
+      <div class="icon mr-2 w-8 h-8 md:w-12 md:h-12 md:m-3 md:mr-5"
       class:typeEvent={type==='event'}
       class:typeUpdate={type==='update'}
       />
 
       <div class="flex-1 flex flex-col flex-justify-center my-2">
-        <h1 class="text-lg sm:text-xl md:text-2xl mt--1 sm:mt-0 sm:mb-1 text-pink-800">{title}</h1>
+        <h1 class="text-lg sm:text-xl md:text-2xl leading-tight mt--1 sm:mt-0 sm:mb-1 text-pink-800">{title}</h1>
         <TypeAndTime {type} {date} />
       </div>
     </div>

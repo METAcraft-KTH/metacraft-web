@@ -9,7 +9,7 @@
   
     <SideSubLink href="/smp/features">Features</SideSubLink>
     <SideSubLink href="/smp/map">Världskarta</SideSubLink>
-    <SideSubLink href="/smp/news">Nyheter</SideSubLink>
+    <SideSubLink href="/smp#history">Serverhistorik</SideSubLink>
   
 	<SideLink href="/campus">Campus</SideLink>
 	<SideLink href="/event">Tävlingar</SideLink>
