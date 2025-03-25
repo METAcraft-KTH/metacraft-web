@@ -90,7 +90,7 @@
     </div>
     {/if}
 
-    {#if true} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
+    {#if false} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
     <ActiveEvent start={new Date('2025-01-31 20:00:00')} end={new Date('2025-02-24 21:00:00')} countdown={false} href={'/mystery'}>
       MYSTERIET PÅ CAMPUS
     </ActiveEvent>

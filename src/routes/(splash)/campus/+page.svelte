@@ -7,6 +7,11 @@
     import skepp from '$lib/images/splashes/main.webp';
     import samling from '$lib/images/splashes/campus/bibblan.webp';
 	import SplashRow from '../SplashRow.svelte';
+
+    const sessions = [
+        {time: "29:e mars, kl 20:00", place: `<a href="https://dsekt.se/desc">DESC</a>`},
+        {time: "Obestämd torsdag", place: `<a href="https://metacraft.nu/discord">METAcraft</a>`}
+    ]
 </script>
 
 <style>
@@ -30,8 +35,8 @@
 
     <div class="mt-4 text-white w-full flex flex-col items-center gap-1 text-center">
         <div class="text-lg text-white font-bold">KOMMER SNART!</div>
-        <div class="inline-block mc7 bg-black text-xl w-full max-w-[20rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white line-through">campus.metacraft.nu</div>
-        <div class="text-base text-white font-bold">Vi tackar för er tålamod!</div>
+        <div class="inline-block mc7 bg-black text-xl w-full max-w-[20rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">campus.metacraft.nu</div>
+        <div class="text-base text-white font-bold">Vi ses 28:e mars!</div>
     </div>
 
     <div class="mx-auto max-w-[80rem] px-4 my-12 flex flex-col md:flex-row gap-4">
@@ -41,7 +46,7 @@
         </Button>
         <Button href="/campus/map">
             <img src="https://minecraft.wiki/images/Map_Zoom_4.png" alt="icon" class="w-3rem md:w-4rem">
-            <span>Isometrisk karta över campus! (KOMMER SNART)</span>
+            <span>Isometrisk karta över campus!</span>
         </Button>
     </div>
 
@@ -88,6 +93,34 @@
     <div class="w-100% bg-dark-oak-planks flex flex-col items-center py-12 px-2 gap-4 md:gap-8 leading-tight">
 
         <div class="mx-2 mb-12 w-100% max-w-50rem md:p-10 text-base flex flex-col items-center gap-4">
+            <h1 class="mc10 text-4xl md:text-5xl text-white text-center mt--3">BYGGKVÄLLAR</h1>
+            
+            <p class="leading-tight text-white text-center px-5 mb-10">Byggkvällar är det bästa (och just nu enda) sättet att bidra till projektet! Kom och chatta med andra människor medan du bygger för att få instant feedback samt tips och råd. Nedan ser du schemat för alla planerade byggkvällar (samt alla som har varit!)
+            </p>
+            <table class="text-white max-w-[40rem] w-100%">
+                <tr class="font-bold text-xl b-b-white b-b-2 b-solid">
+                    <th class="w-50%">
+                        Datum och tid
+                    </th>
+                    <th class="w-50%">
+                        Discord-server
+                    </th>
+                </tr>
+                {#each sessions as session}
+                <tr>
+                    <td class="pt-4 text-center">
+                        {session.time}
+                    </td>
+                    <td class="text-center">
+                        {@html session.place}
+                    </td>
+                </tr>
+                {/each}
+            </table>
+        </div>
+
+        {#if false}
+        <div class="mx-2 mb-12 w-100% max-w-50rem md:p-10 text-base flex flex-col items-center gap-4">
             <h2 class="mc10 text-xl md:text-2xl text-white text-center">här skulle jag ha förklarat hur man bidrar...</h2>
             <h1 class="mc10 text-4xl md:text-5xl text-white text-center mt--3">om det var möjligt!!!</h1>
             
@@ -96,7 +129,8 @@
             <a href="https://forms.gle/upmdop1XPzrvvuS78" target="_blank" class="bg-map inline-block px-4 py-3 w-max no-underline md:mt-2 text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
               Sök till projektgruppen NU!
             </a>
-          </div>
+        </div>
+        {/if}
 
     </div>
 </div>
