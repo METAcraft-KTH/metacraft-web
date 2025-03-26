@@ -9,8 +9,9 @@
 	import SplashRow from '../SplashRow.svelte';
 
     const sessions = [
-        {time: "29:e mars, kl 20:00", place: `<a href="https://dsekt.se/desc">DESC</a>`},
-        {time: "Obestämd torsdag", place: `<a href="https://metacraft.nu/discord">METAcraft</a>`}
+        {time: "fredag 28:e mars 2025, kl 20:00", place: `<a href="https://dsekt.se/desc">DESC</a>`},
+        {time: "Obestämd dag, vecka 14", place: `<a href="https://metacraft.nu/discord">METAcraft</a>`},
+        {time: "Obestämd dag, vecka 15", place: `<a href="https://metacraft.nu/discord">METAcraft</a>`}
     ]
 </script>
 
