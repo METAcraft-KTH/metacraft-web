@@ -33,5 +33,8 @@
     <a href="https://discord.com/invite/MttUbkmeyD" target="_blank" class="bg-map block px-4 py-3 no-underline md:m-t8 rd text-black font-bold shadow-xl transition-all hover:scale-105 hover:contrast-200 rotate-2">
       Discord-server
     </a>
+    <a href="/about" class="bg-map block px-4 py-3 no-underline md:m-t8 rd text-black font-bold shadow-xl transition-all hover:scale-105 hover:contrast-200 rotate--2">
+      Här är alla vi!
+    </a>
   </div>
 </div>

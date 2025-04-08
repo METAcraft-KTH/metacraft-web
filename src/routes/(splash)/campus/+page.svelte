@@ -10,8 +10,8 @@
 
     const sessions = [
         {time: "fredag 28:e mars 2025, kl 20:00", place: `<a href="https://dsekt.se/desc">DESC</a>`},
-        {time: "Obestämd dag, vecka 14", place: `<a href="https://metacraft.nu/discord">METAcraft</a>`},
-        {time: "Obestämd dag, vecka 15", place: `<a href="https://metacraft.nu/discord">METAcraft</a>`}
+        {time: "Obestämd dag, vecka 15", place: `<a href="https://metacraft.nu/discord">METAcraft</a>`},
+        {time: "Obestämd dag, vecka 16", place: `<a href="https://metacraft.nu/discord">METAcraft</a>`}
     ]
 </script>
 
