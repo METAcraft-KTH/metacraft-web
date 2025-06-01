@@ -56,7 +56,7 @@
 
 			<Hotlink id="cheating" title="Fusk">
 				<div class="mb-4">
-					<b>Fusk är absolut inte tillåtet</b> i någon av METAcrafts servrar, <b>även i PVP-zoner</b>. Fuskar du kan du avstängd från
+					<b>Fusk är absolut inte tillåtet</b> i någon av METAcrafts servrar, <b>även i PVP-zoner</b>. Fuskar du kan du bli avstängd från
 					servern och inte får delta i event.
 				</div>
 				<div class="mb-4">
