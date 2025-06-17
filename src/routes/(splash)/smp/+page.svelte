@@ -133,7 +133,7 @@
             </div>
         </div>
     </div>
-
+    <!--
     <div class="flex flex-col items-center bg-bookshelf px-2 py-12 pb-24 gap-4 md:gap-8">
         <div class="relative">
             <div class="absolute top--14" id="history"></div>
@@ -150,7 +150,7 @@
                 "url("+fallback_post_image+")"
                 } />
             {/each}
-        </div>
+        </div> -->
 
         <!--
         <p class="text-white">
