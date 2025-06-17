@@ -23,7 +23,7 @@
         <div class="flex flex-col gap-2 flex-1 bg-book p-6 leading-tight">
             <div class="mc10 text-2xl md:text-3xl">CAMPUS PLOTS</div>
 
-            <p class="mb-2">Bakom META och biblioteket finns det 23 st plots som spelarna kan köpa. Sedan 24 september är alla plots uppköpta, men fler kommer läggas till i framtiden!</p>
+            <p class="mb-2">Bakom META och biblioteket finns det 23 st plots som spelarna kan köpa. <b>18 juni: Det finns fortfarande lediga plots!</b>
             <Section icon="https://minecraft.wiki/images/Blue_Key.gif" anchor="masterkey">
                 Det finns bara en enda <b>Master Key</b> för varje plot. Spelaren som har den i sin inventory kan bygga och förstöra blocks i motsvarande plot. Master Key används också för att skapa och förstöra nyckelkopior, och den droppas inte från spelaren när man dör.
             </Section>

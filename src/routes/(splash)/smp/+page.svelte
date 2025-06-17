@@ -150,9 +150,8 @@
                 "url("+fallback_post_image+")"
                 } />
             {/each}
-        </div> -->
+        </div>
 
-        <!--
         <p class="text-white">
             {JSON.stringify(post_images_array)}
         </p>
@@ -162,8 +161,7 @@
         <p class="text-gray">
             {JSON.stringify(fallback_post_image)}
         </p>
-        -->
         
 
-    </div>
+    </div> -->
 </div>
