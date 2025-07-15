@@ -48,7 +48,7 @@
     <div class="mt-4 text-white w-full flex flex-col items-center gap-1 text-center">
         <div class="text-lg text-white font-bold">SPELA IDAG!</div>
         <div class="inline-block mc7 bg-black text-xl w-full max-w-[15rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">metacraft.nu</div>
-        <div class="text-base text-white font-bold">Java 1.21.4 — Inga mods krävs</div>
+        <div class="text-base text-white font-bold">Java 1.21.7 — Inga mods krävs</div>
     </div>
 
     <div class="mx-auto max-w-[80rem] px-4 my-12 flex flex-col md:flex-row gap-4">
@@ -129,7 +129,7 @@
             <div class="rd bg-white-concrete-powder text-black px-2 py-6 text-lg leading-tight text-center shadow-xl max-w-[50rem]">
                 <span class="font-bold">Redo att spela?</span>
                 <div class="inline-block mc7 bg-black text-xl w-full max-w-[15rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">metacraft.nu</div>
-                <div class="text-base font-bold">Java 1.21.4 — Inga mods krävs</div>
+                <div class="text-base font-bold">Java 1.21.7 — Inga mods krävs</div>
             </div>
         </div>
     </div>
