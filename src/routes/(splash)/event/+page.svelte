@@ -62,8 +62,8 @@ html {
         <div class="text-base text-white font-bold">Java 1.21.8 — Inga mods</div>
         {:else}
         <div class="text-lg text-white font-bold">NÄSTA SCHEMALAGT EVENT:</div>
-        <div class="inline-block mc7 rainbowbg font-bold text-xl md:text-2xl w-full mx-1 px-3 py-1 md:py-2 w-100% text-white">CCLAN 2025</div>
-        <div class="text-base text-white font-bold">Planerad april 2025</div>
+        <div class="inline-block mc7 rainbowbg font-bold text-xl md:text-2xl w-full mx-1 px-3 py-1 md:py-2 w-100% text-white">Spelkväll med DESC och QN</div>
+        <div class="text-base text-white font-bold">2:a september 2025</div>
         {/if}
     </div>
 
@@ -125,12 +125,17 @@ html {
               TIDSLINJEN
             </span>
             <Timeline>
+                <TimelineItem name="MINECRAFT HEXATHLON 3" time="7 juni, 2025" collab="DESC">
+                    <p>
+                        Ingen CCLAN, men Hexathlon återvänder med FEM nya spel, streamad live med 3 kommentatorer!
+                    </p>
+                    <a href="https://www.youtube.com/live/WEndIBV22wo" target="_blank">Live VOD på vår YouTube-kanal</a>
+                </TimelineItem>
                 <TimelineItem name="MINECRAFT HEXATHLON 2" time="9 november, 2024" left={false} collab="CCLAN">
                     <p>
                         Fan-favoriten gör sin återkomst med 3 nya spel och 3 gamla!
                     </p>
                     <a href="https://cclan.se/esports/tournament/10" target="_blank">CCLAN:s inlägg och turneringsinfo</a>
-                    <a href="/event/leaderboard">Leaderboard per minispel (KOMMER SNART)</a>
                 </TimelineItem>
                 <TimelineItem name="MINECRAFT HEXATHLON" time="20 april, 2024" collab="CCLAN">
                     <p>

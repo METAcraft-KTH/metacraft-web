@@ -10,8 +10,7 @@
 
     const sessions = [
         {time: "fredag 28:e mars 2025, kl 20:00", place: `<a href="https://dsekt.se/desc">DESC</a>`},
-        {time: "Obestämd dag, vecka 15", place: `<a href="https://metacraft.nu/discord">METAcraft</a>`},
-        {time: "Obestämd dag, vecka 16", place: `<a href="https://metacraft.nu/discord">METAcraft</a>`}
+        {time: "Obestämd dag efter sommaren", place: `<a href="https://metacraft.nu/discord">METAcraft</a>`}
     ]
 </script>
 
@@ -24,9 +23,6 @@
         background-position: 50% 50%;
         background-size: cover;
     }
-    .abcabc {
-        background-image: url('$lib/images/background-s4-water.webp');
-    }
 </style>
 
 <div class="bg-stone w-100% bg-center">
@@ -37,7 +33,7 @@
     <div class="mt-4 text-white w-full flex flex-col items-center gap-1 text-center">
         <div class="text-lg text-white font-bold">KOMMER SNART!</div>
         <div class="inline-block mc7 bg-black text-xl w-full max-w-[20rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">campus.metacraft.nu</div>
-        <div class="text-base text-white font-bold">Vi ses 28:e mars!</div>
+        <div class="text-base text-white font-bold">Häng med på en byggkväll!</div>
     </div>
 
     <div class="mx-auto max-w-[80rem] px-4 my-12 flex flex-col md:flex-row gap-4">
@@ -64,13 +60,10 @@
             <span class="text-2xl md:text-4xl">I EN <u class="underline-2">KUBISK VÄRLD</u></span>
         </h1>
         <p class="leading-tight">
-            Du känner till <a href="https://en.wikipedia.org/wiki/Build_the_Earth" target="_blank">Build the Earth</a>. Du kanske minns<sup class="vertical-super text-xs">1</sup> att Karlsruhe Institute of Technology byggde <a href="https://campus-kit.de/" target="_blank">deras campus</a> i Minecraft. <a href="https://www.planetminecraft.com/project/world-of-worlds-3137794/" target="_blank">Den här grabben har byggt för många städer</a> och någon borde göra något åt det.
+            Du har hört talas om <a href="https://en.wikipedia.org/wiki/Build_the_Earth" target="_blank">Build the Earth</a>. Du kanske minns<sup class="vertical-super text-xs"><a href="/event#CAMPUS_BATTLE" class="no-underline">*</a></sup> att Karlsruhe Institute of Technology byggde <a href="https://campus-kit.de/" target="_blank">hela deras campus</a> i Minecraft. <a href="https://www.planetminecraft.com/project/world-of-worlds-3137794/" target="_blank">Den här grabben har byggt för många städer</a> och någon borde göra något åt det.
         </p>
         <p class="leading-tight">
             Vi är inte heller de första som försökte bygga KTH Campus i Minecraft, men vi är definitivt de som har <b>byggt bäst</b> och <b>kommit längst</b>. Den triangeln som innefattar allt från F-huset till Nymble till tunnelbaneingången är ni säkert bekanta med som <a href="/smp/map">Survivalserverns world spawn</a> i två läsår, men nu vill vi gå ett steg längre och åstadkomma något som <b>aldrig</b> gjorts tidigare: Vi vill se <b>HELA KTH Campus återskapad i Minecraft.</b>
-        </p>
-        <p class="leading-tight text-xs italic">
-            <sup class="vertical-super text-0.5rem not-italic">1</sup> från <a href="/event#CAMPUS_BATTLE">The Great Battle of Campuses 2024</a>.
         </p>
     </SplashRow>
 
