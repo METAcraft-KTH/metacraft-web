@@ -190,7 +190,7 @@
     <div class="flex flex-col justify-center items-center md:items-start gap-3">
       <h1 class="text-center md:text-left mc10 text-4xl md:text-5xl">Proximity voice chat</h1>
       <p class="text-center md:text-left leading-tight">Det roligaste sättet att kommunicera med andra spelare är att göra det direkt i spelvärlden! Med moddet <a href="https://modrinth.com/plugin/simple-voice-chat" target="_blank">Simple Voice Chat</a> kan du använda din röst för att prata med andra, och slipper stava ut dina chattmeddelande! Vi har gjort det busenkelt för dig att komma igång, följ bara länken nedan!</p>
-      <a href="/voicechat" class="bg-map inline-block px-4 py-3 w-max no-underline md:mt-2 text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
+      <a href="/install" class="bg-map inline-block px-4 py-3 w-max no-underline md:mt-2 text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
         Installera nu!
       </a>
     </div>
