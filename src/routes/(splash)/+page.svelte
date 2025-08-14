@@ -13,6 +13,7 @@
   import pvp from '$lib/images/pr_squares/pvp.png';
   import campus from '$lib/images/pr_squares/campus.png';
   import hands from '$lib/images/pr_squares/holdinghands.png';
+  import vcrender from '$lib/images/pr_squares/voicechat-render.png';
   import spyglass from '$lib/images/pr_squares/spyglass.png';
 	import PrRow from './PrRow.svelte';
   import ChevronDown from '$lib/icons/ChevronDown.svelte';
@@ -182,6 +183,17 @@
       </a>
     </div>
     <img src={hands} alt="holding hands" class="w-100% max-w-25rem drop-shadow-xl px-3">
+  </div>
+
+  <div class="flex flex-col md:flex-row items-center text-white max-w-[70rem] px-6 py-12 gap-10">
+    <img src={vcrender} alt="holding hands" class="w-100% max-w-30rem drop-shadow-xl px-3">
+    <div class="flex flex-col justify-center items-center md:items-start gap-3">
+      <h1 class="text-center md:text-left mc10 text-4xl md:text-5xl">Proximity voice chat</h1>
+      <p class="text-center md:text-left leading-tight">Det roligaste sättet att kommunicera med andra spelare är att göra det direkt i spelvärlden! Med moddet <a href="https://modrinth.com/plugin/simple-voice-chat" target="_blank">Simple Voice Chat</a> kan du använda din röst för att prata med andra, och slipper stava ut dina chattmeddelande! Vi har gjort det busenkelt för dig att komma igång, följ bara länken nedan!</p>
+      <a href="/voicechat" class="bg-map inline-block px-4 py-3 w-max no-underline md:mt-2 text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
+        Installera nu!
+      </a>
+    </div>
   </div>
 
 
