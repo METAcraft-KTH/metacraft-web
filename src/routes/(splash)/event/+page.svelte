@@ -62,8 +62,8 @@ html {
         <div class="text-base text-white font-bold">Java 1.21.8 — Inga mods</div>
         {:else}
         <div class="text-lg text-white font-bold">NÄSTA SCHEMALAGT EVENT:</div>
-        <div class="inline-block mc7 rainbowbg font-bold text-xl md:text-2xl w-full mx-1 px-3 py-1 md:py-2 w-100% text-white">Spelkväll med DESC och QN</div>
-        <div class="text-base text-white font-bold">2:a september 2025</div>
+        <div class="inline-block mc7 rainbowbg font-bold text-xl md:text-2xl w-full mx-1 px-3 py-1 md:py-2 w-100% text-white">???</div>
+        <div class="text-base text-white font-bold">Någon gång i 2025...</div>
         {/if}
     </div>
 
@@ -125,6 +125,18 @@ html {
               TIDSLINJEN
             </span>
             <Timeline>
+                <TimelineItem name="META-LAN ULTIMATE HARDCORE" time="20 september, 2025" collab="DESC" icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
+                    <p>
+                        Under Ettans LAN hölls sektionens första UHC-turnering sedan 2023! Vi började med en solo-match som uppvärmning, följt av en solo-match och en teams-match med priser. <Ign>Hynnd</Ign> tog hem segern på solo-matchen, medan <Ign>Hynnd</Ign>, <Ign>222LiamWK</Ign> och <Ign>Ahara</Ign> vann teams-matchen.
+                    </p>
+                    <a href="https://www.youtube.com/live/N2Ys8brPr78" target="_blank">Live VOD på vår YouTube-kanal</a>
+                </TimelineItem>
+                <TimelineItem name="SPELKVÄLL UHC" time="2 september, 2025" left={false} collab="QN & DESC" icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
+                    <p>
+                        Under Spelkvällen med QN och DESC spelade vi flera casual UHC-matcher utan priser eller inspelning. Det fungerade mest som uppvärmning och testkörning inför det riktiga UHC-turneringen 20 september, men matcherna var ändå fyllda med spänning!
+                    </p>
+                    <a href="https://www.youtube.com/live/WEndIBV22wo" target="_blank">Live VOD på vår YouTube-kanal</a>
+                </TimelineItem>
                 <TimelineItem name="MINECRAFT HEXATHLON 3" time="7 juni, 2025" collab="DESC">
                     <p>
                         Ingen CCLAN, men Hexathlon återvänder med FEM nya spel, streamad live med 3 kommentatorer!
