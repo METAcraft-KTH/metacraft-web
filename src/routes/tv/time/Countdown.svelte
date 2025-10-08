@@ -4,7 +4,7 @@
 	import CountdownBlock from "./CountdownBlock.svelte";
 
   
-    let start = new Date('2024-09-23 18:00:00').getTime();
+    let start = new Date('2025-10-27 20:00:00').getTime();
     let now = Date.now();
     let count: number;
     let s: number;
