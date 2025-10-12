@@ -91,11 +91,11 @@
     </div>
     {/if}
 
-    {#if false} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
-    <ActiveEvent start={new Date('2025-01-31 20:00:00')} end={new Date('2025-02-24 21:00:00')} countdown={false} href={'/mystery'}>
-      MYSTERIET PÅ CAMPUS
+     <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
+    <ActiveEvent start={new Date('2025-10-27 20:00:00')} end={new Date('2025-10-27 21:00:00')} countdown={true} href={'/smp'}>
+      SERVER LAUNCH
     </ActiveEvent>
-    {/if}
+    
   </div>
 
   <button class="notButton absolute bottom-0 left-0 w-100% h-15 text-center color-white titleFadeIn" style="animation-delay: 1s" on:mousedown={scrollDown}>
