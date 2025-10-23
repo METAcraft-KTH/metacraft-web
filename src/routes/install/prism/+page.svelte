@@ -25,7 +25,7 @@
 			</p>
 		</div>
 		<div class="bg-yellow px-3 py-2 m-3 max-w-lg">
-			<span class="mc10">Uppdatera till 1.21.8</span>
+			<span class="mc10">Uppdatera till 1.21.10</span>
 			<p>
 				Det lättaste sättet att uppdatera är att genomföra stegen nedan igen och skapa en ny profil
 				för METAcraft från den nyaste METAcraft.zip-länken.
@@ -34,7 +34,7 @@
 			<p>
 				Det går också bra att uppdatera manuellt i Prism launcher om du vet hur man gör. Ladda ner
 				nya versioner av modsen och ersätt jar-filerna. Ändra sedan Minecraft och Fabric Loader till
-				0.16.14 eller senare.
+				0.17.3 eller senare.
 			</p>
 		</div>
 
