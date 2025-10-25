@@ -56,7 +56,7 @@
 
 			<Hotlink id="cheating" title="Fusk">
 				<div class="mb-4">
-					<b>Fusk är absolut inte tillåtet</b> i någon av METAcrafts servrar, <b>även i PVP-zoner</b>. Fuskar du kan du bli avstängd från
+					<b>Fusk är inte tillåtet</b> i någon av METAcrafts servrar<!--, <b>även i PVP-zoner</b>-->. Fuskar du kan du bli avstängd från
 					servern och inte får delta i event.
 				</div>
 				<div class="mb-4">
@@ -92,7 +92,7 @@
 
 			<Hotlink id="survival" title="För Survival-servern">
 				<div class="mb-4">
-					Förutom på PVP-ön (1500, -1500), <b>i Survival-världen</b> gäller civiliserade spelandet. Det innebär alltså:
+					<b>I Survival-världen</b> gäller civiliserade spelandet. Det innebär alltså:
 				</div>
 				<div class="mb-4">
 					<ul class="list-disc ml-6">
@@ -104,9 +104,6 @@
 							<b>Försök följa god Minecraft-etikett.</b> Vi tänker inte tvinga någon att fixa creeper-hål och svävande blocks efter sig, men om du råkar förstöra någon annans bas bör du hjälpa till med reparationen.
 						</li>
 					</ul>
-				</div>
-				<div class="mb-4">
-					<b>På PVP-ön (1500, -1500)</b> får du PVP:a och förstöra hur mycket du vill, men alla andra regler gäller som vanligt.
 				</div>
 			</Hotlink>
 		</div>
