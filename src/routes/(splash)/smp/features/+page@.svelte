@@ -20,20 +20,7 @@
             <img src={shopCraft} alt="shop block crafting recipe" class="max-w-[25rem]">
             <p>Sedan behöver blocket placeras över en <b>barrel</b> som lagrar input/output. När du har gjort det kan du högerklicka på shop-blocket för att börja konfigurera dina trades.</p>
         </div>
-        <div class="flex flex-col gap-2 flex-1 bg-book p-6 leading-tight">
-            <div class="mc10 text-2xl md:text-3xl">CAMPUS PLOTS</div>
 
-            <p class="mb-2">Bakom META och biblioteket finns det 23 st plots som spelarna kan köpa. <b>18 juni: Det finns fortfarande lediga plots!</b>
-            <Section icon="https://minecraft.wiki/images/Blue_Key.gif" anchor="masterkey">
-                Det finns bara en enda <b>Master Key</b> för varje plot. Spelaren som har den i sin inventory kan bygga och förstöra blocks i motsvarande plot. Master Key används också för att skapa och förstöra nyckelkopior, och den droppas inte från spelaren när man dör.
-            </Section>
-            <Section icon="https://minecraft.wiki/images/Red_Key.gif" anchor="plotkey">
-                <b>Plot Keys</b> kan craftas med vanliga material och sedan paras ihop med en Master Key. En spelare med en parade nyckel i sin inventory kan också bygga och förstöra blocks i motsvarande plot.
-            </Section>
-            <Section icon="https://minecraft.wiki/images/Yellow_Key.gif" anchor="pairedplotkey">
-                En parade Plot Key har gul färg, annars är den röd.
-            </Section>
-        </div>
     </div>
 
     <div class="flex flex-col lg:flex-row gap-4 max-w-[80rem] mx-auto mb-4">
