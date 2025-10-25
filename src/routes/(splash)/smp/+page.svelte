@@ -3,7 +3,7 @@
 	import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
 	import Button from '$lib/widgets/Button.svelte';
 
-    import skepp from '$lib/images/splashes/smp/skepp.webp';
+    import cavesun from '$lib/images/splashes/cavesun.webp';
     import samling from '$lib/images/splashes/smp/samling.webp';
     import oas from '$lib/images/splashes/smp/oas.webp';
 	import SplashRow from './../SplashRow.svelte';
@@ -72,17 +72,20 @@
         </ActiveEvent>
     {/if}
 
-    <SplashRow image={skepp} icon="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png">
+    <SplashRow image={cavesun} icon="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png">
         <h1 class="mc10 text-lg md:text-2xl leading-tight">
             VANLIG MULTIPLAYER-UPPLEVELSE
             <br>
-            <span class="text-2xl md:text-4xl">I EN <u class="underline-2">OVANLIG</u> VÄRLD</span>
+            <span class="text-2xl md:text-4xl">SPECIELLT PÅ MÅNDAGAR</span>
         </h1>
+        <p class="text-base leading-tight">
+            En varm och hjälpsam gemenskap väntar med spelare från alla bakgrunder samarbetar, bygger och utforskar tillsammans. Hitta byggpartners, delta i evenemang eller hoppa in i spontana äventyr.
+        </p>
         <p class="text-base leading-tight italic">
-            På jakt efter det legendariska spökskeppet "Den flygande svensken" har kapten O'Brien och hans besättning försvunnit till en främmande värld. Efter en lång resa fann de civilisation: Campus, där de har fått stanna och hjälpa till. Men när natten är lång, plågas kaptenen av <a href="https://www.youtube.com/watch?v=NA7sBWemTfs" target="_blank">samma mardröm...</a>
+            Minecraft är som roligast när många spelar tillsammans. Vi förstår däremot att alla inte har tid att spela hela tiden, därför presenterar vi...
         </p>
         <p class="text-base leading-tight">
-            <b>Här kommer du in i bilden</b> — en äventyrare som har rest hit på kaptenens uppmaning. Hjälp drottning Quristina att kartlägga världen, och hitta alla skatter och ledtrådar den gömmer. Bli en del av serverns levande historia och styr berättelsens gång genom din insats!
+            <b>METACRAFT-MÅNDAGAR</b> varje måndag i veckan kl 19:00 kör vi tillsammans på servern! Oavsett om du är nybörjare eller veteran, kom och delta i roliga aktiviteter, byggprojekt och gemensamma äventyr. Det är det perfekta tillfället att träffa nya vänner och uppleva servern på det bästa sättet!
         </p>
     </SplashRow>
 
@@ -110,10 +113,10 @@
             <span class="text-2xl md:text-4xl">VÄNTAR PÅ DIG</span>
         </h1>
         <p class="text-base leading-tight">
-            Världen som besättningen har landat i är annorlunda från den ni är bekant med. Här hittar du fantastiska oaser, isgrottor, häpnadsväckande savanner, och så mycket mer, inte för att nämna 30+ nya strukturer för dig att utforska i alla dimensioner.
+            Vi har finjusterat världen en gnutta för att göra utforskandet mer spännande och givande. Du kan finna fantastiska oaser, isgrottor, häpnadsväckande savanner, och så mycket mer, inte för att nämna 30+ nya strukturer för dig att utforska i alla dimensioner.
         </p>
         <p class="text-base leading-tight">
-            Förutom historiska hemligheter så är världen också bunden till speciella lagar som är bra att känna till. De kan ha en påverkan på dina redstone-apparater, men man kan också utnyttja dem till sin fördel! <a href="/smp/features">Läs om alla skillnader här.</a>
+            Vi har även implementerat flera funktionella och dekorativa ändringar i spelet för att förbättra din upplevelse. Det kan handla om allt från Villager Trade Rebalance till möjligheten att tysta mobs. <a href="/smp/features">Läs om alla skillnader här.</a>
         </p>
     </SplashRow>
 
@@ -123,7 +126,7 @@
               SE TRAILERN
             </span>
             <div class="w-100% max-w-250 bg-white-concrete-powder rd p-2 shadow-2xl">
-                <iframe class="w-100% aspect-video" src="https://www.youtube-nocookie.com/embed/NA7sBWemTfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="w-100% aspect-video" src="https://www.youtube-nocookie.com/embed/5KnJjiPfZQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
             <div class="rd bg-white-concrete-powder text-black px-2 py-6 text-lg leading-tight text-center shadow-xl max-w-[50rem]">
