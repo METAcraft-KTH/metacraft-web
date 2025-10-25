@@ -120,7 +120,7 @@
             
             <p class="leading-tight text-white text-center px-5">På grund av personalbrist har METAcraft-teamet just nu ingen möjlighet att aktivt driva i projektet. Om du har intresset att fixa någonting stort, kontakta oss via vår <a href="/discord" target="_blank" class="text-pink-400">Discord-server</a> omgående, eller...</p>
         
-            <a href="https://forms.gle/upmdop1XPzrvvuS78" target="_blank" class="bg-map inline-block px-4 py-3 w-max no-underline md:mt-2 text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
+            <a href="https://forms.gle/aUhgyC99nNAQXGS37" target="_blank" class="bg-map inline-block px-4 py-3 w-max no-underline md:mt-2 text-black font-bold text-lg shadow-xl transition-all hover:scale-105 hover:contrast-200">
               Sök till projektgruppen NU!
             </a>
         </div>
