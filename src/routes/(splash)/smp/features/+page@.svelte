@@ -58,10 +58,10 @@
             <Section icon="https://minecraft.wiki/images/Invicon_MHF_Enderman.png" anchor="mobhead">
                 <b>Enderman</b> kan inte plocka upp blocks.
             </Section>
-            <Section icon="https://minecraft.wiki/w/File:Tamed_Wolf_with_Red_Collar_JE3_BE4.png" anchor="pet">
+            <Section icon="https://minecraft.wiki/images/Tamed_Wolf_with_Red_Collar_JE3_BE4.png?0eac6&20240119160254" anchor="pet">
                 <b>Husdjur</b> kan inte skadas av sin ägare. Du kan även välja vilka husdjuret ska lita på genom /petgui. Detta innebär att de kommer uppföra sig nästan som om spelaren vore ägaren. Papegojor kan även breedas och läkas med frön!
             </Section>
-            <Section icon="https://minecraft.wiki/w/File:Lead_JE2_BE2.png" anchor="lead">
+            <Section icon="https://minecraft.wiki/images/Lead_JE2_BE2.png?955bb&20191229205413" anchor="lead">
                 <b>Kopplade djur</b> eller husdjur (en båt med en creeper i är också ett husdjur) kan ledas genom portaler när en spelare går igenom den.
             </Section>
         </div>
