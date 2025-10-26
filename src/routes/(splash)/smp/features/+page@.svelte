@@ -64,6 +64,9 @@
             <Section icon="https://minecraft.wiki/images/Lead_JE2_BE2.png?955bb&20191229205413" anchor="lead">
                 <b>Kopplade djur</b> eller husdjur (en båt med en creeper i är också ett husdjur) kan ledas genom portaler när en spelare går igenom den.
             </Section>
+            <Section icon="https://minecraft.wiki/images/Minecart_JE4_BE2.png?92161" anchor="lead">
+                <b>Minecarts</b> har fått en ökad hastighet från 8 blocks/sekund till 40 blocks per sekund. Genom att använda is, packad is eller blå is kan hastigheten ökas med 5, 10 respektive 20 block per sekund.
+            </Section>
         </div>
         <div class="flex flex-col gap-2 flex-1 bg-book p-6">
             <div class="mc10 text-2xl md:text-3xl">DEKORATIVA ÄNDRINGAR</div>
