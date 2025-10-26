@@ -89,12 +89,9 @@
     </div>
 
     <div class="flex flex-col gap-2 w-full max-w-[80rem] mx-auto bg-book p-6 mb-6 md:mb-24">
-
-        
-
-        
-
-        <div class="text-center my-4">Och många fler! (Listan är ej färdig pga tidsbrist)</div>
+        <div class="text-center my-4">
+            <p>Vill du lägga till eller ta bort features? Skriv på discord i <a href="https://discord.com/channels/1125493460976271370/1125493461496381553" target="_blank">#general</a> så kan vi ta upp det i <a href="https://discord.com/channels/1125493460976271370/1125493461496381553" target="_blank">#polls</a>!</p>
+        </div>
     </div>
 
 </div>
