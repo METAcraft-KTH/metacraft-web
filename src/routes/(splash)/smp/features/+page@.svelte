@@ -5,6 +5,7 @@
 	import Section from './Section.svelte';
 
     import shopCraft from '$lib/images/mods/shop_crafting.jpg';
+    import wrenchCraft from '$lib/images/mods/wrench_crafting.jpg';
 </script>
   
 <Header />
@@ -21,6 +22,13 @@
             <p>Sedan behöver blocket placeras över en <b>barrel</b> som lagrar input/output. När du har gjort det kan du högerklicka på shop-blocket för att börja konfigurera dina trades.</p>
         </div>
 
+    </div>
+    <div class="flex flex-col lg:flex-row gap-4 max-w-[80rem] mx-auto mb-4">
+        <div class="flex flex-col gap-2 flex-1 bg-book p-6 leading-tight">
+            <div class="mc10 text-2xl md:text-3xl">SKIFTNYCKEL</div>
+            <p>Gör block entites såsom kistor, ugnar och dispensers flyttbara genom att högerklicka med skiftnyckeln:</p>
+            <img src={wrenchCraft} alt="wrench crafting recipe" class="max-w-[25rem]">
+        </div>
     </div>
 
     <div class="flex flex-col lg:flex-row gap-4 max-w-[80rem] mx-auto mb-4">
