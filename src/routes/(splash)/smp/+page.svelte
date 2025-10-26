@@ -101,9 +101,6 @@
         <p class="text-base leading-tight">
             Det är lätt att lägga till en spelare som din +1:a. Instruktioner står på skärmen för hen du ska lägga till, och båda spelare ska vara online.
         </p>
-        <p class="text-base leading-tight">
-            PVP och griefing är förbjudet i de flesta delar av världen, men för tävlingsinriktade spelare finns "No Man's Land", en svampö beläget vid <b>X 1500, Z -1500</b>, där PVP är tillåtet. <a href="/rules">Se till att läsa reglerna här.</a>
-        </p>
     </SplashRow>
 
     <SplashRow image={oas} icon="https://minecraft.wiki/images/Flowering_Azalea_Leaves_(fast)_BE1.png">
