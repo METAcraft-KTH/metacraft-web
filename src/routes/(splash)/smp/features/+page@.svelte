@@ -64,7 +64,7 @@
             <Section icon="https://minecraft.wiki/images/Player_Head_%28item%29_JE2.png" anchor="playerhead">
                 <b>Spelare droppar alltid sitt huvud</b> när hen blir dödade av en annan spelare.
             </Section>
-            <Section icon="https://minecraft.wiki/images/Wandering_Trader.png" anchor="trader">
+            <Section icon="https://minecraft.wiki/images/thumb/Wandering_Trader_JE1_BE1.png/270px-Wandering_Trader_JE1_BE1.png?62e9e" anchor="trader">
                 <b>Wandering Trader</b> säljer custom mini-blocks som du kan använda för att dekorera dina bygg!
             </Section>
             <Section icon="https://minecraft.wiki/images/Map_(item)_JE2_BE2.png" anchor="worldgen">
