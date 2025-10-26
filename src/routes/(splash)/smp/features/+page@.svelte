@@ -61,6 +61,9 @@
             <Section icon="https://minecraft.wiki/w/File:Tamed_Wolf_with_Red_Collar_JE3_BE4.png" anchor="pet">
                 <b>Husdjur</b> kan inte skadas av sin ägare. Du kan även välja vilka husdjuret ska lita på genom /petgui. Detta innebär att de kommer uppföra sig nästan som om spelaren vore ägaren. Papegojor kan även breedas och läkas med frön!
             </Section>
+            <Section icon="https://minecraft.wiki/w/File:Lead_JE2_BE2.png" anchor="lead">
+                <b>Kopplade djur</b> eller husdjur (en båt med en creeper i är också ett husdjur) kan ledas genom portaler när en spelare går igenom den.
+            </Section>
         </div>
         <div class="flex flex-col gap-2 flex-1 bg-book p-6">
             <div class="mc10 text-2xl md:text-3xl">DEKORATIVA ÄNDRINGAR</div>
