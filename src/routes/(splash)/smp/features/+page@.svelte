@@ -61,11 +61,9 @@
         </div>
         <div class="flex flex-col gap-2 flex-1 bg-book p-6">
             <div class="mc10 text-2xl md:text-3xl">DEKORATIVA ÄNDRINGAR</div>
-            <!--
             <Section icon="https://minecraft.wiki/images/Armor_Stand_%28item%29_JE2_BE2.png" anchor="statue">
-                <b>Armor stand</b> kan konfigureras till att vara i olika positioner, genom att använda en bok döpt till "Statues" (stort S). <a href="https://www.youtube.com/watch?v=nV9-_RacnoI">Se här för en tutorial!</a>
+                <b>Armor stands</b> kan konfigureras till att vara i olika positioner, genom att använda en bok döpt till "Statues" (stort S). <a href="https://www.youtube.com/watch?v=nV9-_RacnoI">Se här för en tutorial!</a>
             </Section>
-            -->
             <Section icon="https://minecraft.wiki/images/Invicon_MHF_Chicken.png" anchor="mobhead">
                 <b>Alla mobs har en chans att droppa sitt huvud</b> när den dödas av en spelare. <a href="https://wiki.vanillatweaks.net/More_Mob_Heads" target="_blank">Klicka här för exakta sannolikheter!</a>
             </Section>
