@@ -59,12 +59,15 @@
                 <b>Enderman</b> kan inte plocka upp blocks.
             </Section>
             <Section icon="https://minecraft.wiki/images/Tamed_Wolf_with_Red_Collar_JE3_BE4.png?0eac6&20240119160254" anchor="pet">
-                <b>Husdjur</b> kan inte skadas av sin ägare. Du kan även välja vilka husdjuret ska lita på genom /petgui. Detta innebär att de kommer uppföra sig nästan som om spelaren vore ägaren. Papegojor kan även breedas och läkas med frön!
+                <b>Husdjur</b> kan inte skadas av sin ägare eller andra spelare som husdjuret litar på. Som ägare kan du välja vilka andra spelare husdjuret ska lita på genom att sneaka och högerklicka på husdjuret. Om ett husdjur litar på dig så kan du bestämma om det ska sitta eller stå och husdjuret kommer aldrig angripa dig.
+            </Section>
+            <Section icon="https://minecraft.wiki/images/Red_Parrot_JE1_BE1.png?90904" anchor="parrots">
+                <b>Papegojor</b> kan breedas och läkas med frön!
             </Section>
             <Section icon="https://minecraft.wiki/images/Lead_JE2_BE2.png?955bb&20191229205413" anchor="lead">
-                <b>Kopplade djur</b> eller husdjur (en båt med en creeper i är också ett husdjur) kan ledas genom portaler när en spelare går igenom den.
+                <b>Tama husdjur</b> som står upp och kopplade djur (eller båtar och allt de innehåller) kommer följa med spelaren genom portaler.
             </Section>
-            <Section icon="https://minecraft.wiki/images/Minecart_JE4_BE2.png?92161" anchor="lead">
+            <Section icon="https://minecraft.wiki/images/Minecart_JE4_BE2.png?92161" anchor="minecarts">
                 <b>Minecarts</b> har fått en ökad hastighet från 8 blocks/sekund till 40 blocks per sekund. Genom att använda is, packad is eller blå is kan hastigheten ökas med 5, 10 respektive 20 block per sekund.
             </Section>
         </div>
