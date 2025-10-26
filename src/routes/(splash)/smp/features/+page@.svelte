@@ -5,7 +5,7 @@
 	import Section from './Section.svelte';
 
     import shopCraft from '$lib/images/mods/shop_crafting.jpg';
-    import wrenchCraft from '$lib/images/mods/wrench_crafting.jpg';
+    import wrenchCraft from '$lib/images/mods/wrench_crafting.png';
 </script>
   
 <Header />
