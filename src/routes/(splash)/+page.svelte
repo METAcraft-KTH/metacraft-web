@@ -91,10 +91,12 @@
     </div>
     {/if}
 
-     <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
+    <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->
+    {#if false}
     <ActiveEvent start={new Date('2025-10-27 20:00:00')} end={new Date('2025-10-27 21:00:00')} countdown={true} href={'/smp'}>
       SERVER LAUNCH
     </ActiveEvent>
+    {/if}
     
   </div>
 
