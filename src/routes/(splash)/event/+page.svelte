@@ -135,7 +135,6 @@ html {
                     <p>
                         Under Spelkvällen med QN och DESC spelade vi flera casual UHC-matcher utan priser eller inspelning. Det fungerade mest som uppvärmning och testkörning inför det riktiga UHC-turneringen 20 september, men matcherna var ändå fyllda med spänning!
                     </p>
-                    <a href="https://www.youtube.com/live/WEndIBV22wo" target="_blank">Live VOD på vår YouTube-kanal</a>
                 </TimelineItem>
                 <TimelineItem name="MINECRAFT HEXATHLON 3" time="7 juni, 2025" collab="DESC">
                     <p>
