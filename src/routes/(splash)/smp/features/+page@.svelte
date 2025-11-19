@@ -6,6 +6,7 @@
 
     import shopCraft from '$lib/images/mods/shop_crafting.jpg';
     import wrenchCraft from '$lib/images/mods/wrench_crafting.png';
+    import drillCrafting from '$lib/images/mods/bedrock_drill_crafting.png';
 </script>
   
 <Header />
@@ -28,6 +29,11 @@
             <div class="mc10 text-2xl md:text-3xl">SKIFTNYCKEL</div>
             <p>Gör block entites såsom kistor, ugnar och dispensers flyttbara genom att högerklicka med skiftnyckeln:</p>
             <img src={wrenchCraft} alt="wrench crafting recipe" class="max-w-[25rem]">
+        </div>
+        <div class="flex flex-col gap-2 flex-1 bg-book p-6 leading-tight">
+            <div class="mc10 text-2xl md:text-3xl">BERGGRUNDSBORR</div>
+            <p>Borr som kan borra igenom berggrunden högst upp i nether:</p>
+            <img src={drillCrafting} alt="Bedrock Drill crafting recipe" class="max-w-[25rem]">
         </div>
     </div>
 
