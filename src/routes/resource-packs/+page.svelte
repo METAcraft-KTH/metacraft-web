@@ -21,6 +21,20 @@
 			<a href="http://metacraft.nu:25585/b2b09336-93c6-49a7-a6b3-f283e224f272">Download</a>
 		</div>
 	</div>
+	<div class="flex flex-col lg:flex-row gap-4 max-w-[80rem] mx-auto mb-4">
+		<div class="flex flex-col gap-2 flex-1 bg-book p-10 leading-tight">
+			<div class="mc10 text-2xl md:text-3xl">McMakistein's Impossible Dragon</div>
+			Assets for McMakistein's Crystalspine bossfight, updated to the latest version.
+			<a href="http://metacraft.nu:25585/01af3a72-d7e1-4da6-b026-55dabc7eb0df">Download</a>
+			<a href="https://mcmakistein.com/creations/impossible_enderdragon">Original Datapack</a>
+		</div>
+		<div class="flex flex-col gap-2 flex-1 bg-book p-10 leading-tight">
+			<div class="mc10 text-2xl md:text-3xl">End Boss Music</div>
+			Adds "The end at hand" music by solunary for the Ender Dragon bossfight.
+			<a href="http://metacraft.nu:25585/38080a1d-18e9-47a8-8489-586e96018e2c">Download</a>
+			<div>Listen online at: <a href="https://www.youtube.com/watch?v=K3mVoCwEaqk">https://www.youtube.com/watch?v=K3mVoCwEaqk</a></div>
+		</div>
+	</div>
 </div>
 <Footer />
 
