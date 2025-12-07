@@ -53,12 +53,10 @@
                 <br>
                 <span class="text-sm text-stone-500">(Det kan vara användbart för t.ex. hemliga baser.)</span>
             </Section>
-            <!--
             <Section icon="https://minecraft.wiki/images/Nether_Portal_(EW)_JE1.png" anchor="portal">
                 <b>Netherportaler</b> kan aktiveras i vilken storlek och form du vill, inte bara rektangulär.
             </Section>
-            -->
-            <Section icon="https://minecraft.wiki/images/Sand_JE5_BE3.png" anchor="portal">
+            <Section icon="https://minecraft.wiki/images/Sand_JE5_BE3.png" anchor="sand">
                 <b>Sand kan förnyas</b> genom att döda Husks (ökenzombies), som nu även spawnas i Desert Temples.
             </Section>
             <Section icon="https://minecraft.wiki/images/Invicon_MHF_Enderman.png" anchor="mobhead">
@@ -74,7 +72,7 @@
                 <b>Tama husdjur</b> som står upp och kopplade djur (eller båtar och allt de innehåller) kommer följa med spelaren genom portaler.
             </Section>
             <Section icon="https://minecraft.wiki/images/Minecart_JE4_BE2.png?92161" anchor="minecarts">
-                <b>Minecarts</b> har fått en ökad hastighet från 8 blocks/sekund till 40 blocks per sekund. Genom att använda is, packad is eller blå is kan hastigheten ökas med 5, 10 respektive 20 block per sekund.
+                <b>Minecarts</b> har fått en ökad hastighet från 8 blocks/sekund till 40 blocks per sekund. Genom att använda is, packad is eller blå is kan hastigheten ökas med 5, 10 respektive 20 block per sekund. Om du behöver gamla mechanics för t.ex. en maskin kan du alltid omvandla dem till "Slowcarts" genom att lägga in dem ensamma i en crafting grid.
             </Section>
         </div>
         <div class="flex flex-col gap-2 flex-1 bg-book p-6">
@@ -91,8 +89,11 @@
             <Section icon="https://minecraft.wiki/images/thumb/Wandering_Trader_JE1_BE1.png/270px-Wandering_Trader_JE1_BE1.png?62e9e" anchor="trader">
                 <b>Wandering Trader</b> säljer custom mini-blocks som du kan använda för att dekorera dina bygg!
             </Section>
-            <Section icon="https://minecraft.wiki/images/Map_(item)_JE2_BE2.png" anchor="worldgen">
-                <b>Världgenerationen</b> använder datapacks <a href="https://modrinth.com/datapack/clifftree/gallery" target="_blank">Cliff under a Tree</a> och <a href="https://modrinth.com/datapack/wabi-sabi-structures/gallery">Wabi-Sabi Structures</a>, med några privata modifieringar från oss. De ger världen en mer unik känsla utan att påverka gameplay eller progression.
+            <Section icon="https://minecraft.wiki/images/Map_Zoom_4.png?34c38" anchor="worldgen">
+                <b>Världgenerationen</b> använder datapacks <a href="https://modrinth.com/datapack/clifftree/gallery" target="_blank">Cliff under a Tree</a>, <a href="https://modrinth.com/datapack/wabi-sabi-structures/gallery">Wabi-Sabi Structures</a> och <a href="https://modrinth.com/mod/towns-and-towers/gallery">Towms and Towers</a> med några privata modifieringar från oss. De ger världen en mer unik känsla utan att påverka gameplay eller progression.
+            </Section>
+            <Section icon="https://minecraft.wiki/images/Eye_of_Ender_JE2_BE2.png?3e29b&format=original" anchor="end">
+                <b>End</b> använder <a href="https://modrinth.com/datapack/nullscape">Nullscape</a> och <a href="https://modrinth.com/mod/mes-moogs-end-structures/gallery">Moog's End Structures</a> i ett försök att göra dimensionen lite mindre tråkig. Se upp, för nu spawnar phantoms i end! Du behöver inte heller känna att du måste springa till worldbordern bara för att hitta en elytra. Vi har nämligen också lagt till <a href="https://modrinth.com/datapack/elytra-vaults-atlasplays">Elytra Vaults</a> och sett till att det finns shulkers kvar i varje end city.
             </Section>
         </div>
     </div>
