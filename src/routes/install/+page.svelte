@@ -9,7 +9,7 @@
 	import type { ComponentType } from 'svelte';
 	import { goto } from '$app/navigation';
 
-	const RELEASE = '1.21.10';
+	const RELEASE = '1.21.11';
 	const INSTALLER_JAR_URL = `https://github.com/METAcraft-KTH/METAcraft-installer/releases/download/${RELEASE}/metacraft-installer-1.0.0.jar`;
 	const INSTALLER_EXE_URL = `https://github.com/METAcraft-KTH/METAcraft-installer/releases/download/${RELEASE}/metacraft-installer-1.0.0.exe`;
 

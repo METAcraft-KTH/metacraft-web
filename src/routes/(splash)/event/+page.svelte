@@ -59,7 +59,7 @@ html {
         {#if false}
         <div class="text-lg text-white font-bold">ANSLUT VIA</div>
         <div class="inline-block mc7 bg-black text-xl w-full max-w-[20rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">event.metacraft.nu</div>
-        <div class="text-base text-white font-bold">Java 1.21.10 — Inga mods</div>
+        <div class="text-base text-white font-bold">Java 1.21.11 — Inga mods</div>
         {:else}
         <div class="text-lg text-white font-bold">NÄSTA SCHEMALAGT EVENT:</div>
         <div class="inline-block mc7 rainbowbg font-bold text-xl md:text-2xl w-full mx-1 px-3 py-1 md:py-2 w-100% text-white">???</div>
