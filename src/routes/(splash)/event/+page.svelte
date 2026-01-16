@@ -125,7 +125,7 @@ html {
               TIDSLINJEN
             </span>
             <Timeline>
-                <TimelineItem name="MINECRAFT HEXATHLON 3" time="7 juni, 2025" collab="DESC">
+                <TimelineItem name="MINECRAFT HEXATHLON 3" time="20 december, 2025" left={false} collab="DESC">
                     <p>
                         Hexathlon återvände under DESCmas LAN med sex minigames! Streamad live där våra 3 kära kommentatorer är för första gången med och tävlar med bytande POVs!
                     </p>
