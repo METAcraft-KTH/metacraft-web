@@ -59,7 +59,7 @@ html {
         {#if false}
         <div class="text-lg text-white font-bold">ANSLUT VIA</div>
         <div class="inline-block mc7 bg-black text-xl w-full max-w-[20rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">event.metacraft.nu</div>
-        <div class="text-base text-white font-bold">Java 1.21.10 — Inga mods</div>
+        <div class="text-base text-white font-bold">Java 1.21.11 — Inga mods</div>
         {:else}
         <div class="text-lg text-white font-bold">NÄSTA SCHEMALAGT EVENT:</div>
         <div class="inline-block mc7 rainbowbg font-bold text-xl md:text-2xl w-full mx-1 px-3 py-1 md:py-2 w-100% text-white">???</div>
@@ -125,11 +125,16 @@ html {
               TIDSLINJEN
             </span>
             <Timeline>
+                <TimelineItem name="MINECRAFT HEXATHLON 4" time="20 december, 2025" left={false} collab="DESC">
+                    <p>
+                        Hexathlon återvände under DESCmas LAN med sex minigames! Streamad live där våra 3 kära kommentatorer är för första gången med och tävlar med bytande POVs!
+                    </p>
+                    <a href="https://www.youtube.com/live/or8i6IGV9nI?si=haAmyQtKGpZgonJG" target="_blank">Live VOD på vår YouTube-kanal</a>
+                </TimelineItem>
                 <TimelineItem name="META-LAN ULTIMATE HARDCORE" time="20 september, 2025" collab="DESC" icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
                     <p>
                         Under Ettans LAN hölls sektionens första UHC-turnering sedan 2023! Vi började med en solo-match som uppvärmning, följt av en solo-match och en teams-match med priser. <Ign>Hynnd</Ign> tog hem segern på solo-matchen, medan <Ign>Hynnd</Ign>, <Ign>222LiamWK</Ign> och <Ign>Ahara</Ign> vann teams-matchen.
                     </p>
-                    <a href="https://www.youtube.com/live/N2Ys8brPr78" target="_blank">Live VOD på vår YouTube-kanal</a>
                 </TimelineItem>
                 <TimelineItem name="SPELKVÄLL UHC" time="2 september, 2025" left={false} collab="QN & DESC" icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
                     <p>
