@@ -6,4 +6,4 @@
 	let { children }: Props = $props();
 </script>
 
-<h1 class="text-3xl font-bold">{@render children?.()}</h1>
+<h1 class="py-2 text-black text-4xl md:text-5xl mc10">{@render children?.()}</h1>

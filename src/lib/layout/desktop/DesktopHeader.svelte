@@ -22,14 +22,14 @@
 		["/leaderboard", "Topplista"]
 	];
 </script>
-<div class="flex justify-center fixed w-100% transition-all" class:bg-pink-900={!hideHeader}>
+<div class="fixed flex justify-center w-100% transition-all" class:bg-pink-900={!hideHeader}>
 	<!-- a wrapper element to make sure the elements dont get too separated on ultrawide -->
-	<div class="flex flex-row flex-justify-between top-0 w-100% max-w-[80rem] h-14">
-		<a href="/" class="w-115px p-2 flex flex-items-center color-pink-300 hover:color-pink-100" class:color-white={hideHeader}>
+	<div class="top-0 flex flex-row flex-justify-between w-100% max-w-[80rem] h-14">
+		<a href="/" class="flex flex-items-center p-2 w-115px color-pink-300 hover:color-pink-100" class:color-white={hideHeader}>
 			<Logo />
 		</a>
 	
-		<div class="h-100% flex flex-row text-pink-400">
+		<div class="flex flex-row h-100% text-pink-400">
 			<HeaderLink href="/smp" dropdown={smp}>Survival</HeaderLink>
 			<HeaderLink href="/campus">Campus</HeaderLink>
 			<HeaderLink href="/event">Tävlingar</HeaderLink>
@@ -38,7 +38,7 @@
 			<HeaderLink href="/sok">Hjälp oss</HeaderLink>
 		</div>
 
-		<a href="/discord" target="_blank" class="inline-block w-115px h-100% color-pink-300 hover:color-pink-100 p-3 text-right" class:color-white={hideHeader}>
+		<a href="/discord" target="_blank" class="inline-block p-3 w-115px h-100% text-right color-pink-300 hover:color-pink-100" class:color-white={hideHeader}>
 			<Discord />
 		</a>
 	</div>

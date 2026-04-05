@@ -9,7 +9,7 @@
   </script>
   
   <Header />
-  <div class="w-100%">
+  <div class="flex-1 w-100%">
       <!--
           this wrapper is required for top level elements in +page to properly respect height rule,
           most notably the splash page that hides overflow when the screen isnt tall enough.
