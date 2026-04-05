@@ -1,12 +1,20 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import MobileHeader from './mobile/MobileHeader.svelte';
 	import DesktopHeader from './desktop/DesktopHeader.svelte';
 
-	export let splashPage = false; // endast sant i routes/(splash)/+layout.svelte
+	interface Props {
+		splashPage?: boolean; // endast sant i routes/(splash)/+layout.svelte
+	}
 
-	let scrollY: number;
-	let hideHeader = true;
-	$: hideHeader = !(scrollY > 0) && splashPage; // om sant, göm headerns bakgrund när scroll är på toppen av sidan
+	let { splashPage = false }: Props = $props();
+
+	let scrollY: number = $state();
+	let hideHeader = $state(true);
+	run(() => {
+		hideHeader = !(scrollY > 0) && splashPage;
+	}); // om sant, göm headerns bakgrund när scroll är på toppen av sidan
 </script>
 <svelte:window bind:scrollY={scrollY} />
 
@@ -21,4 +29,4 @@
 </nav>
 
 <!--Spacer-->
-<div class="mb-14" />
+<div class="mb-14"></div>

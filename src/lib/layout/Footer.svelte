@@ -1,6 +1,10 @@
 <script lang="ts">
-  export let bg = true;
-  export let bg_texture = 'https://minecraft.wiki/images/Mud_Bricks_(texture)_JE1_BE1.png';
+  interface Props {
+    bg?: boolean;
+    bg_texture?: string;
+  }
+
+  let { bg = true, bg_texture = 'https://minecraft.wiki/images/Mud_Bricks_(texture)_JE1_BE1.png' }: Props = $props();
 </script>
 <style>
   .hasbg {

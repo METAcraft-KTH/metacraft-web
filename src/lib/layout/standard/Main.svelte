@@ -2,11 +2,22 @@
 <script lang="ts">
 	import Button from "$lib/widgets/Button.svelte";
 
-	export let post = false;
-	export let bg = "white-concrete-powder";
-	export let text = "black";
 
-	export let back_button = false;
+	interface Props {
+		post?: boolean;
+		bg?: string;
+		text?: string;
+		back_button?: boolean;
+		children?: import('svelte').Snippet;
+	}
+
+	let {
+		post = false,
+		bg = "white-concrete-powder",
+		text = "black",
+		back_button = false,
+		children
+	}: Props = $props();
 
 	let classes = !post
 		? 'rd-lg shadow-lg'
@@ -30,5 +41,5 @@
 	{classes}"
 >
 
-	<slot />
+	{@render children?.()}
 </main>

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import Header from '$lib/layout/Header.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
 	import Windows from '$lib/icons/platform/Windows.svelte';
@@ -51,14 +53,9 @@
 
 	const launchers: Launcher[] = [minecraftLauncher, prismLauncher];
 
-	let selectedPlatform: Platform | null = null;
-	let selectedLauncher: Launcher | null = null;
+	let selectedPlatform: Platform | null = $state(null);
+	let selectedLauncher: Launcher | null = $state(null);
 
-	$: if (selectedPlatform === mac) {
-		// Mac must use Prism Launcher, so do not prompt for launcher.
-		selectedLauncher = prismLauncher;
-		nextStep();
-	}
 
 	function nextStep() {
 		if (selectedPlatform === windows && selectedLauncher === minecraftLauncher) {
@@ -71,6 +68,13 @@
 			goto('/install/prism');
 		}
 	}
+	run(() => {
+		if (selectedPlatform === mac) {
+			// Mac must use Prism Launcher, so do not prompt for launcher.
+			selectedLauncher = prismLauncher;
+			nextStep();
+		}
+	});
 </script>
 
 <Header />
@@ -86,9 +90,9 @@
 			{#if selectedPlatform === null}
 				<div class="flex flex-wrap flex-justify-around gap-32 text-6xl bg-white px-12 py-8 rd">
 					{#each platforms as platform}
-						<div class="platform text-center" on:click={() => (selectedPlatform = platform)}>
+						<div class="platform text-center" onclick={() => (selectedPlatform = platform)}>
 							<div class="icon color-coolgray">
-								<svelte:component this={platform.icon} />
+								<platform.icon />
 							</div>
 							<span class="mc10">{platform.name}</span>
 						</div>
@@ -107,7 +111,7 @@
 						{#each launchers as launcher}
 							<div
 								class="platform text-center"
-								on:click={() => {
+								onclick={() => {
 									selectedLauncher = launcher;
 									nextStep();
 								}}

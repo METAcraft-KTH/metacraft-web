@@ -1,9 +1,21 @@
 <script lang="ts">
-    export let name: string;
-    export let time: string;
-    export let icon = "https://minecraft.wiki/images/Diamond_JE3_BE3.png";
-    export let left = true;
-    export let collab = "";
+    interface Props {
+        name: string;
+        time: string;
+        icon?: string;
+        left?: boolean;
+        collab?: string;
+        children?: import('svelte').Snippet;
+    }
+
+    let {
+        name,
+        time,
+        icon = "https://minecraft.wiki/images/Diamond_JE3_BE3.png",
+        left = true,
+        collab = "",
+        children
+    }: Props = $props();
 </script>
 
 <style>
@@ -29,7 +41,7 @@
     <div class="flex-1 flex px-2" class:justify-end={left}>
         <div class="bg-white-concrete-powder p-4 pt-2 rd-lg flex flex-col gap-2 shadow-lg">
             <h1 class="mc10 text-2xl">{name}</h1>
-            <slot />
+            {@render children?.()}
         </div>
     </div>
     <div class="w-100% justify-center items-center h-4 flex"><div class="w-2 h-100% bg-pink-900"></div></div>
@@ -42,7 +54,7 @@
         <div class="flex-1 flex px-2" class:justify-end={left}>
             <div class="bg-white-concrete-powder p-4 pt-2 rd-lg flex flex-col gap-2 shadow-lg">
                 <h1 class="mc10 text-4xl mb-2">{name}</h1>
-                <slot />
+                {@render children?.()}
             </div>
         </div>
         <div class="w-4rem flex justify-center items-center flex-col">

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import MetacraftLogo from '$lib/icons/MetacraftLogo.svelte';
   import Menu from '$lib/icons/Menu.svelte';
   import Map from '$lib/icons/Map.svelte';
@@ -6,20 +8,24 @@
 
 	import { page } from '$app/stores';
 
-	let sideVisible = false;
-	$: {
+	let sideVisible = $state(false);
+	run(() => {
 		$page;
 		sideVisible = false;
+	});
+
+	interface Props {
+		hideHeader: boolean; // om true, göm background
 	}
 
-	export let hideHeader: boolean; // om true, göm background
+	let { hideHeader }: Props = $props();
 </script>
 
 <div class="flex justify-between fixed top-0 w-100% h-14 transition-all"
 	class:bg-pink-800={!hideHeader || sideVisible}
 >
 
-	<button on:mousedown={() => sideVisible = !sideVisible} class="notButton text-left inline-block h-100% aspect-square color-pink-400 p-2" class:color-white={sideVisible || hideHeader}>
+	<button onmousedown={() => sideVisible = !sideVisible} class="notButton text-left inline-block h-100% aspect-square color-pink-400 p-2" class:color-white={sideVisible || hideHeader}>
 		<Menu />
 	</button>
 

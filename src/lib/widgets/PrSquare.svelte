@@ -1,13 +1,23 @@
+<script lang="ts">
+	interface Props {
+		image?: import('svelte').Snippet;
+		title?: import('svelte').Snippet;
+		content?: import('svelte').Snippet;
+	}
+
+	let { image, title, content }: Props = $props();
+</script>
+
 <div class="flex flex-row">
 	<div class="max-w-300px">
-		<slot name="image" />
+		{@render image?.()}
 	</div>
 	<div class="flex flex-col p-l-4">
 		<div class="font-size-8">
-			<slot name="title" />
+			{@render title?.()}
 		</div>
 		<div class="max-w-300px p-t-4">
-			<slot name="content" />
+			{@render content?.()}
 		</div>
 	</div>
 </div>

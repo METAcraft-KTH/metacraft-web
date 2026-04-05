@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import { slide } from 'svelte/transition';
 
   import Title from "$lib/layout/standard/Title.svelte";
@@ -62,16 +62,16 @@
     font-family: 'OCR', monospace;
   }
 </style>
-<div class="w-100lvw h-100vh fixed z--10 bg-center-center custombg2" />
+<div class="w-100lvw h-100vh fixed z--10 bg-center-center custombg2"></div>
 
 <div class="w-100% min-h-100svh pt-10 block">
-  <div class="absolute top-0 left-0 w-100% h-100% bg-center-bottom bg-cover custombg z--5" />
+  <div class="absolute top-0 left-0 w-100% h-100% bg-center-bottom bg-cover custombg z--5"></div>
 
   <Title>3.1<br>FINAL CAMPAIGN</Title>
 
   <Countdown />
 
-  <button class="notButton absolute bottom-0 left-0 w-100% h-15 m-0 text-center color-white titleFadeIn" on:mousedown={scrollDown}>
+  <button class="notButton absolute bottom-0 left-0 w-100% h-15 m-0 text-center color-white titleFadeIn" onmousedown={scrollDown}>
     <ChevronDown />
   </button>
 </div>

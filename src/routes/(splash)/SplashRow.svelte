@@ -1,7 +1,17 @@
 <script lang="ts">
-    export let image;
-    export let icon;
-    export let right = false;
+    interface Props {
+        image: any;
+        icon: any;
+        right?: boolean;
+        children?: import('svelte').Snippet;
+    }
+
+    let {
+        image,
+        icon,
+        right = false,
+        children
+    }: Props = $props();
 </script>
 
 <div class="w-full max-w-[150rem] hidden md:block bg-fixed bg-center-center bg-cover mx-auto" style={`background-image: url(${image})`}>
@@ -11,7 +21,7 @@
                 <div class="flex flex-col gap-4 relative">
                     <img src={icon} alt="icon"
                         class="w-[7rem] absolute top--21 right--5 rotate-5 drop-shadow-lg transition-transform active:scale-90 hover:rotate--5">
-                    <slot />
+                    {@render children?.()}
                 </div>
             </div>
         </div>
@@ -26,7 +36,7 @@
                 <div class="flex flex-col gap-4 relative">
                     <img src={icon} alt="icon"
                         class="w-[4rem] absolute top--15 right-0 rotate-5 drop-shadow-lg">
-                    <slot />
+                    {@render children?.()}
                 </div>
             </div>
         </div>

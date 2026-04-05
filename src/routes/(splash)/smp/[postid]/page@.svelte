@@ -9,7 +9,7 @@
 
     import PostsIndex from "../Posts.json";
     
-    import { page } from '$app/stores'
+    import { page } from '$app/state'
 	import { onMount } from 'svelte';
 	import { error } from "@sveltejs/kit";
 	import Header from "$lib/layout/Header.svelte";
@@ -17,14 +17,14 @@
 
     let post = true;
 
-    let postid = $page.params.postid;
-    let postContent: any; // svelte component
+    let postid = page.params.postid;
+    let postContent: any = $state(); // svelte component
     onMount(async () => {
         postContent = (await import(`./${postid}.svelte`)).default;
     })
 
     // find post from postindex
-    let ThisPost = undefined;
+    let ThisPost = $state(undefined);
     for (let PostItem of PostsIndex) {
         if (PostItem.href !== postid) continue;
         ThisPost = PostItem;
@@ -35,7 +35,7 @@
     // get (links of) all the images from the directory
     let post_images_array = Object.values(import.meta.glob('$lib/images/posts/*.{png,webp}', { eager: true, import: 'default' }));
     // i just want to find the image for this particular post
-    let ThisImage = undefined
+    let ThisImage = $state(undefined)
     let datename = ThisPost.date.replaceAll("/","")
     for (let link of post_images_array) {
         let index = link.match(/^.+\/([a-zA-Z0-9\-_]+)(\.[a-zA-Z0-9]+)+$/i)[1];
@@ -65,7 +65,8 @@
         <div class="text-center w-100%">
             <TypeAndTime type={ThisPost.type} date={ThisPost.date} style={'mb-6 md:mb-10'} />
         </div>
-        <svelte:component this={postContent} />
+        {@const SvelteComponent = postContent}
+        <SvelteComponent />
 
     </Main>
   

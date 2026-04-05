@@ -1,3 +1,4 @@
+<!-- @migration-task Error while migrating Svelte code: Cannot set properties of undefined (setting 'next') -->
 <!-- svelte-ignore a11y-media-has-caption -->
 <script lang="ts">
     import video from "./video.mp4";

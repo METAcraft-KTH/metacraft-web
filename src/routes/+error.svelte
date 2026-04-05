@@ -3,7 +3,7 @@
 	import Footer from '$lib/layout/Footer.svelte';
   import Title from '$lib/layout/standard/Title.svelte';
   import Main from '$lib/layout/standard/Main.svelte';
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
 </script>
 
 <style>
@@ -33,7 +33,7 @@
         <img src="https://minecraft.wiki/images/Enchanted_Book.gif" alt="book" class="drop-shadow-xl max-w-[10rem] aspect-square">
         <div class="h-max tip mc7 text-xl max-w-[20rem]">
           <div class="bg-[rgba(16,0,16,0.94)] p-0.375em">
-            <span class="text-#FFFF55 italic">{$page.status}</span>
+            <span class="text-#FFFF55 italic">{page.status}</span>
             <br>
             <span class="text-#AA00AA italic">Informationen du söker kommer uppenbara sig i en snar framtid.
               <br>
@@ -55,10 +55,10 @@
 <!--
 <Header />
   <div class="flex-1 flex flex-col flex-items-center w-100%">
-    <Title>{$page.status}</Title>
+    <Title>{page.status}</Title>
     <Main>
       <span class="text-xl">
-        {#if $page.status === 404}
+        {#if page.status === 404}
           Wow, that page sure doesn't exist!
         {/if}
       </span>

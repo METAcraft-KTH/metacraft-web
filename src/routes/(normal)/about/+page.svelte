@@ -14,14 +14,14 @@
       ), url("$lib/images/background3.png")
 	}
 </style>
-<div class="w-100lvw h-100lvh fixed top-0 z--10 custombg bg-center-center bg-cover" />
+<div class="top-0 z--10 fixed bg-cover bg-center-center w-100lvw h-100lvh custombg"></div>
 <!-- !! CUSTOM BG !! -->
 
 <Title>
   OM OSS
 </Title>
 <Main>
-  <p class="text-lg mb-5 text-center">
+  <p class="mb-5 text-lg text-center">
     <b>METAcraft drivs av studenter, för studenter.</b> Utan insatsen från följande fina människor skulle inget av detta finnas.
   </p>
   <div class="flex flex-row flex-wrap flex-justify-center w-100%">

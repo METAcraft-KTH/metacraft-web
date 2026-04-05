@@ -6,7 +6,7 @@
   import img from "./besoscraft.jpg"; // ÄNDRA FÖR VARJE POST
 
 	import TypeAndTime from "$lib/widgets/TypeAndTime.svelte";
-  $: url = `url('${img}')`;
+  let url = $derived(`url('${img}')`);
 
   let post = true;
 </script>

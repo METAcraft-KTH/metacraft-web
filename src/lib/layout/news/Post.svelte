@@ -3,13 +3,25 @@
   import TypeAndTime from '$lib/widgets/TypeAndTime.svelte';
   import { slide } from 'svelte/transition';
 
-  export let href: string;
-  export let title = 'Unnamed';
-  export let date = '';
-  export let type = 'blog';
-  export let image: any; // intentionally unused. image link is passed as a css variable --image
-  export let live = false;
-  export let latest = false;
+  interface Props {
+    href: string;
+    title?: string;
+    date?: string;
+    type?: string;
+    image: any; // intentionally unused. image link is passed as a css variable --image
+    live?: boolean;
+    latest?: boolean;
+  }
+
+  let {
+    href,
+    title = 'Unnamed',
+    date = '',
+    type = 'blog',
+    image,
+    live = false,
+    latest = false
+  }: Props = $props();
 
   let imagelink: any;
 
@@ -77,7 +89,7 @@
       <div class="icon mr-2 w-8 h-8 md:w-12 md:h-12 md:m-3 md:mr-5"
       class:typeEvent={type==='event'}
       class:typeUpdate={type==='update'}
-      />
+></div>
 
       <div class="flex-1 flex flex-col flex-justify-center my-2">
         <h1 class="text-lg sm:text-xl md:text-2xl leading-tight mt--1 sm:mt-0 sm:mb-1 text-pink-800">{title}</h1>
@@ -90,7 +102,7 @@
     -->
 
     
-    <div class="banner rd-r transition-all w-30% md:w-40% relative" />
+    <div class="banner rd-r transition-all w-30% md:w-40% relative"></div>
     
 
     <!--

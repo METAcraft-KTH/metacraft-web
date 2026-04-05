@@ -3,7 +3,7 @@
 </script>
 
 <div class="w-100% h-100% flex justify-center items-center">
-    <!-- svelte-ignore a11y-media-has-caption -->
+    <!-- svelte-ignore a11y_media_has_caption -->
     <video controls>
         <source src={video} type="video/mp4">
     </video>

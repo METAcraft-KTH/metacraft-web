@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import { page } from '$app/stores';
   import { slide } from 'svelte/transition';
 
@@ -18,9 +20,11 @@
 
   let post = true;
 
-  let pageNumber = 4;
+  let pageNumber = $state(4);
 
-  $: if ($page.url.hash) pageNumber = parseInt($page.url.hash);
+  run(() => {
+    if ($page.url.hash) pageNumber = parseInt($page.url.hash);
+  });
 </script>
 
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -40,7 +44,7 @@
     font-family: "Courier Prime", monospace;
   }
 </style>
-<div class="w-100lvw h-100lvh fixed z--10 custombg bg-center-center bg-cover" />
+<div class="w-100lvw h-100lvh fixed z--10 custombg bg-center-center bg-cover"></div>
 <!-- !! CUSTOM BG !! -->
 
 <!-- TODO: gör det här elementet till en layout? -->
@@ -55,7 +59,7 @@
   -->
 
   <div class="flex flex-row text-bold h-8 md:h-16 text-xl md:text-3xl gap-1 w-100% max-w-200 text-green px-2">
-    <button class="b-green hover:b-white b-solid mono text-3xl md:text-5xl text-white bg-black cursor-pointer w-8 md:w-16 h-100% flex justify-center items-center" on:click={() => {pageNumber--; if (pageNumber < 0) pageNumber = 4}}>
+    <button class="b-green hover:b-white b-solid mono text-3xl md:text-5xl text-white bg-black cursor-pointer w-8 md:w-16 h-100% flex justify-center items-center" onclick={() => {pageNumber--; if (pageNumber < 0) pageNumber = 4}}>
       {#if pageNumber > 0}←{/if}
     </button>
     <div class="b-green hover:b-white b-2 b-solid flex-1 text-bold mono bg-black h-100% flex justify-center items-center">
@@ -71,7 +75,7 @@
         LAUNCH DAY
       {/if}
     </div>
-    <button class="b-green hover:b-white b-solid mono text-3xl md:text-5xl text-white bg-black cursor-pointer w-8 md:w-16 h-100% flex justify-center items-center" on:click={() => {pageNumber++; if (pageNumber > 4) pageNumber = 0}}>
+    <button class="b-green hover:b-white b-solid mono text-3xl md:text-5xl text-white bg-black cursor-pointer w-8 md:w-16 h-100% flex justify-center items-center" onclick={() => {pageNumber++; if (pageNumber > 4) pageNumber = 0}}>
       {#if pageNumber < 4}→{/if}
     </button>
   </div>

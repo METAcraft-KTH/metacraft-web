@@ -1,6 +1,6 @@
 <script lang="ts">
-    let rovarsprak = "";
-    let karpsravor = "";
+    let rovarsprak = $state("");
+    let karpsravor = $state("");
     let warning = "";
 
     function warn() {
@@ -167,8 +167,8 @@
     }
 </script>
 
-<textarea bind:value={rovarsprak} on:input={translateA} placeholder="type here" class="text-lg" cols="50" rows="10"></textarea>
+<textarea bind:value={rovarsprak} oninput={translateA} placeholder="type here" class="text-lg" cols="50" rows="10"></textarea>
 
-<textarea bind:value={karpsravor} on:input={translateB} placeholder="syllabics here" class="text-lg" cols="50" rows="10"></textarea>
+<textarea bind:value={karpsravor} oninput={translateB} placeholder="syllabics here" class="text-lg" cols="50" rows="10"></textarea>
 
 {#key warning}<p class="text-red">{warning !== '' ? warning+"is not legal" : ""}</p>{/key}

@@ -1,20 +1,24 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	const launchDate = new Date('2023-12-26 19:00:00'); // 19 svensk tid
 
-	let currentTime = Date.now();
+	let currentTime = $state(Date.now());
 
-	$: count = Math.max(Math.round((launchDate.getTime() - currentTime) / 1000), 0);
-	$: s = count % 60;
-	$: m = Math.floor(count / 60) % 60;
-	$: h = Math.floor(count / (60 * 60)) % 24;
-	$: d = Math.floor(count / (60 * 60 * 24));
+	let count = $derived(Math.max(Math.round((launchDate.getTime() - currentTime) / 1000), 0));
+	let s = $derived(count % 60);
+	let m = $derived(Math.floor(count / 60) % 60);
+	let h = $derived(Math.floor(count / (60 * 60)) % 24);
+	let d = $derived(Math.floor(count / (60 * 60 * 24)));
 
 	function updateTimer() {
 		currentTime = Date.now();
 	}
 
 	let interval = setInterval(updateTimer, 1000);
-	$: if (count <= 0) clearInterval(interval);
+	run(() => {
+		if (count <= 0) clearInterval(interval);
+	});
 </script>
 
 <div class="flex flex-col justify-center items-center h-100%">

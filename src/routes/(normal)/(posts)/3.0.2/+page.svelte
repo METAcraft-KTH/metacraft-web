@@ -9,7 +9,7 @@
   import mk3 from "./mk3.png";
 
 	import TypeAndTime from "$lib/widgets/TypeAndTime.svelte";
-  $: url = `url('${img}')`;
+  let url = $derived(`url('${img}')`);
 
   let post = true;
 </script>

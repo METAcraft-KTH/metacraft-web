@@ -8,7 +8,7 @@
   import teaser from "./3.0.1.png";
 
 	import TypeAndTime from "$lib/widgets/TypeAndTime.svelte";
-  $: url = `url('${img}')`;
+  let url = $derived(`url('${img}')`);
 
   let post = true;
 </script>

@@ -1,10 +1,14 @@
 <script lang="ts">
 
-  export let date = '';
-  export let type = 'post';
-  export let style = '';
+  interface Props {
+    date?: string;
+    type?: string;
+    style?: string;
+  }
 
-  let dateString: string;
+  let { date = '', type = 'post', style = '' }: Props = $props();
+
+  let dateString: string = $state();
 
   if (date !== '') {
     dateString = new Date(date).toLocaleDateString('sv-SE', {'weekday': 'long', 'year': 'numeric', 'month': 'short', 'day': '2-digit'});

@@ -1,6 +1,5 @@
 <script lang="ts">
-    export let time;
-    export let text;
+    let { time, text } = $props();
 </script>
 
 <div class="inline-block flex flex-col items-center">

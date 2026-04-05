@@ -18,40 +18,64 @@
 	<PageCard>
 		<div class="grid grid-cols-2 grid-rows-2 gap-4 p-8 max-w-80vw">
 			<PrSquare>
-				<img src={adventurer} alt="Adventurer" slot="image" />
-				<h2 slot="title">För Äventyrare</h2>
-				<p slot="content">
-					Utforska världen, hitta ledtrådar och pussla ihop berättelsen bakom borgarorden och dess
-					kamp mot de onda. Delta i event och bli en del av serverns historia! Läs mer i
-					<a href="/features#lore">Lore</a>.
-				</p>
+				{#snippet image()}
+								<img src={adventurer} alt="Adventurer"  />
+							{/snippet}
+				{#snippet title()}
+								<h2 >För Äventyrare</h2>
+							{/snippet}
+				{#snippet content()}
+								<p >
+						Utforska världen, hitta ledtrådar och pussla ihop berättelsen bakom borgarorden och dess
+						kamp mot de onda. Delta i event och bli en del av serverns historia! Läs mer i
+						<a href="/features#lore">Lore</a>.
+					</p>
+							{/snippet}
 			</PrSquare>
 			<PrSquare>
-				<img src={engineer} alt="Engineer" slot="image" />
-				<h2 slot="title">För Ingenjörer</h2>
-				<p slot="content">
-					METAcraft behåller alla viktiga detaljer i hur Minecraft fungerar, så att alla avancerade
-					redstone-maskiner fungerar som de ska. Bygg mob farms, sorteringsmaskiner och automatisera
-					dina resurser! Läs mer i <a href="/features#mechanics">Tekniska detaljer</a>.
-				</p>
+				{#snippet image()}
+								<img src={engineer} alt="Engineer"  />
+							{/snippet}
+				{#snippet title()}
+								<h2 >För Ingenjörer</h2>
+							{/snippet}
+				{#snippet content()}
+								<p >
+						METAcraft behåller alla viktiga detaljer i hur Minecraft fungerar, så att alla avancerade
+						redstone-maskiner fungerar som de ska. Bygg mob farms, sorteringsmaskiner och automatisera
+						dina resurser! Läs mer i <a href="/features#mechanics">Tekniska detaljer</a>.
+					</p>
+							{/snippet}
 			</PrSquare>
 			<PrSquare>
-				<img src={trader} alt="Trader" slot="image" />
-				<h2 slot="title">För Byteshandlare</h2>
-				<p slot="content">
-					Samla dyrbarheter, köp och sälj med andra spelare, och bygg ditt handelsimperium.
-					METAcraft har ett enkelt shop mod som underlättar att sätta upp affärer och handla med
-					andra spelare. Läs mer om <a href="/mods#shops">Shop moddet</a>.
-				</p>
+				{#snippet image()}
+								<img src={trader} alt="Trader"  />
+							{/snippet}
+				{#snippet title()}
+								<h2 >För Byteshandlare</h2>
+							{/snippet}
+				{#snippet content()}
+								<p >
+						Samla dyrbarheter, köp och sälj med andra spelare, och bygg ditt handelsimperium.
+						METAcraft har ett enkelt shop mod som underlättar att sätta upp affärer och handla med
+						andra spelare. Läs mer om <a href="/mods#shops">Shop moddet</a>.
+					</p>
+							{/snippet}
 			</PrSquare>
 			<PrSquare>
-				<img src={warrior} alt="Warrior" slot="image" />
-				<h2 slot="title">För Krigare</h2>
-				<p slot="content">
-					Slåss mot andra spelare i vildmarken eller PvP-arenan, eller utrusta dig med dina
-					medspelare och delta i event och besegra monster och bossar. Läs mer om
-					<a href="/features#wilderness">Vildmarken</a>.
-				</p>
+				{#snippet image()}
+								<img src={warrior} alt="Warrior"  />
+							{/snippet}
+				{#snippet title()}
+								<h2 >För Krigare</h2>
+							{/snippet}
+				{#snippet content()}
+								<p >
+						Slåss mot andra spelare i vildmarken eller PvP-arenan, eller utrusta dig med dina
+						medspelare och delta i event och besegra monster och bossar. Läs mer om
+						<a href="/features#wilderness">Vildmarken</a>.
+					</p>
+							{/snippet}
 			</PrSquare>
 		</div>
 	</PageCard>

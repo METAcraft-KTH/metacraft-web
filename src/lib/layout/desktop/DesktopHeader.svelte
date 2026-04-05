@@ -4,9 +4,13 @@
 	import Logo from '$lib/icons/MetacraftLogo.svelte';
 
 	import { page } from '$app/stores';
-	$: isOnHomePage = $page.url.pathname === '/';
+	let isOnHomePage = $derived($page.url.pathname === '/');
 
-	export let hideHeader: boolean;
+	interface Props {
+		hideHeader: boolean;
+	}
+
+	let { hideHeader }: Props = $props();
 
 	// dropdowns
 	let smp = [

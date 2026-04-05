@@ -1,7 +1,11 @@
 <script lang="ts">
 	import SideLink from './SideLink.svelte';
 	import SideSubLink from './SideSubLink.svelte';
-  export let sideVisible: boolean;
+	interface Props {
+		sideVisible: boolean;
+	}
+
+	let { sideVisible }: Props = $props();
 </script>
 
 <aside class="fixed top-14 transition-all-300 w-100% bg-pink-900 flex flex-col z-10" class:left--100%={!sideVisible} class:left-0={sideVisible}>

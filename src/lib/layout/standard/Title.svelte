@@ -1,5 +1,10 @@
 <script lang="ts">
-  export let post = false;
+  interface Props {
+    post?: boolean;
+    children?: import('svelte').Snippet;
+  }
+
+  let { post = false, children }: Props = $props();
 
   let classes = !post
     ? 'titleFadeIn text-white txtshadow text-5xl md:text-7xl my-8 sm:my-12 mc10'
@@ -22,5 +27,5 @@
   text-center
   flex flex-col {classes}"
 >
-  <slot />
+  {@render children?.()}
 </div>

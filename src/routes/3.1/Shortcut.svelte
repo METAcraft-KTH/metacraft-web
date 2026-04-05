@@ -1,6 +1,11 @@
 <script lang="ts">
-  export let href;
-  export let disabled = false;
+  interface Props {
+    href: any;
+    disabled?: boolean;
+    children?: import('svelte').Snippet;
+  }
+
+  let { href, disabled = false, children }: Props = $props();
 </script>
 
 <style>
@@ -26,5 +31,5 @@
   class:cursor-default={disabled}
 >
   <span class="text-3xl">{#if disabled}✖{:else}▼{/if}</span>
-  <span class="md:text-xl">{#if disabled}?{:else}<slot />{/if}</span>
+  <span class="md:text-xl">{#if disabled}?{:else}{@render children?.()}{/if}</span>
 </a>
