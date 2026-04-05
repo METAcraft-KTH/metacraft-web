@@ -3,6 +3,7 @@
   import Main from '$lib/layout/standard/Main.svelte';
   import Person from './Person.svelte';
   import credits from './credits.json';
+  import credits_old from './credits_old.json';
 </script>
 
 <!-- !! CUSTOM BG !! -->
@@ -22,10 +23,20 @@
 </Title>
 <Main>
   <p class="mb-5 text-lg text-center">
-    <b>METAcraft drivs av studenter, för studenter.</b> Utan insatsen från följande fina människor skulle inget av detta finnas.
+    <b>METAcraft drivs av studenter, för studenter.</b> Följande människor står bakom dagens fantastiska upplevelse.
   </p>
   <div class="flex flex-row flex-wrap flex-justify-center w-100%">
     {#each credits as info}
+      <Person {info} />
+    {/each}
+  </div>
+</Main>
+<Main>
+  <p class="mb-5 text-lg text-center">
+    Följande människor är inte längre del av METAcraft-teamet, men utan deras insatser hade inget av dessa funnits.
+  </p>
+  <div class="flex flex-row flex-wrap flex-justify-center w-100%">
+    {#each credits_old as info}
       <Person {info} />
     {/each}
   </div>
