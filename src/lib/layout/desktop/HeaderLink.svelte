@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
 	import HeaderDropdown from "./HeaderDropdown.svelte";
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	interface Props {
 		href: string;
 		dropdown?: Array<Array<string>>;
@@ -11,16 +9,13 @@
 
 	let { href, dropdown = [], children }: Props = $props();
 
-	let active = $state(false);
-	run(() => {
-		active = $page.url.pathname.includes(href);
-	});
+	let active = $derived(page.url.pathname.includes(href));
 
 	let hovered = $state(false);
 </script>
 
 <a {href}
-	class="relative color-white no-underline inline-block px-4 lg:px-8 h-100% flex flex-justify-center flex-items-center mc7 transition-all text-center"
+	class="inline-block relative flex flex-justify-center flex-items-center px-4 lg:px-8 h-100% text-center no-underline transition-all color-white mc7"
 	class:bg-pink-700={active}
 	class:hover:bg-pink-700={!active}
 	onmouseover={() => hovered = true}

@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
 	import MobileHeader from './mobile/MobileHeader.svelte';
 	import DesktopHeader from './desktop/DesktopHeader.svelte';
 
@@ -10,21 +8,21 @@
 
 	let { splashPage = false }: Props = $props();
 
-	let scrollY: number = $state();
+	let scrollY: number = $state(0);
 	let hideHeader = $state(true);
-	run(() => {
+	$effect(() => {
 		hideHeader = !(scrollY > 0) && splashPage;
 	}); // om sant, göm headerns bakgrund när scroll är på toppen av sidan
 </script>
 <svelte:window bind:scrollY={scrollY} />
 
 <!-- mobile -->
-<nav class="md:hidden w-100% z-99">
+<nav class="md:hidden z-99 w-100%">
 	<MobileHeader {hideHeader} />
 </nav>
 
 <!-- not mobile -->
-<nav class="hidden md:flex w-100% z-99">
+<nav class="hidden z-99 md:flex w-100%">
 	<DesktopHeader {hideHeader} />
 </nav>
 

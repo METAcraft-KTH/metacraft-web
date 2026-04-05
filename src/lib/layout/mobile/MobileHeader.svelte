@@ -1,16 +1,15 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
 
 	import MetacraftLogo from '$lib/icons/MetacraftLogo.svelte';
-  import Menu from '$lib/icons/Menu.svelte';
-  import Map from '$lib/icons/Map.svelte';
+	import Menu from '$lib/icons/Menu.svelte';
+	import Map from '$lib/icons/Map.svelte';
 	import Sidebar from './Sidebar.svelte';
 
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	let sideVisible = $state(false);
-	run(() => {
-		$page;
+	$effect(() => {
+		page;
 		sideVisible = false;
 	});
 
@@ -21,24 +20,24 @@
 	let { hideHeader }: Props = $props();
 </script>
 
-<div class="flex justify-between fixed top-0 w-100% h-14 transition-all"
+<div class="top-0 fixed flex justify-between w-100% h-14 transition-all"
 	class:bg-pink-800={!hideHeader || sideVisible}
 >
 
-	<button onmousedown={() => sideVisible = !sideVisible} class="notButton text-left inline-block h-100% aspect-square color-pink-400 p-2" class:color-white={sideVisible || hideHeader}>
+	<button onmousedown={() => sideVisible = !sideVisible} class="inline-block p-2 h-100% aspect-square text-left notButton color-pink-400" class:color-white={sideVisible || hideHeader}>
 		<Menu />
 	</button>
 
-	<a href="/" class="aspect-3 h-100% text-center p-2 color-pink-400" class:color-white={hideHeader && !sideVisible}>
+	<a href="/" class="p-2 h-100% aspect-3 text-center color-pink-400" class:color-white={hideHeader && !sideVisible}>
 		<MetacraftLogo />
 	</a>
 
 	{#if false}
-		<a href="/map" class="inline-block h-100% aspect-square color-pink-400 p-3 text-right" class:color-white={$page.url.pathname === '/map' || (hideHeader && !sideVisible)}>
+		<a href="/map" class="inline-block p-3 h-100% aspect-square text-right color-pink-400" class:color-white={page.url.pathname === '/smp/map' || (hideHeader && !sideVisible)}>
 			<Map />
 		</a>
 	{:else}
-		<div class="inline-block h-100% aspect-square p-3"></div>
+		<div class="inline-block p-3 h-100% aspect-square"></div>
 	{/if}
 </div>
 
