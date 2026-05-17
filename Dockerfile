@@ -8,6 +8,8 @@ RUN corepack enable
 
 COPY package.json pnpm-lock.yaml ./
 
+RUN pnpm approve-builds esbuild
+
 RUN pnpm i
 
 COPY . .
