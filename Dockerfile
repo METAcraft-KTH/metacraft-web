@@ -8,7 +8,7 @@ RUN corepack enable
 
 COPY package.json pnpm-lock.yaml ./
 
-RUN pnpm --allow-build=esbuild i
+RUN for p in esbuild; do pnpm add $p --allow-build=$p; done && pnpm install
 
 COPY . .
 
