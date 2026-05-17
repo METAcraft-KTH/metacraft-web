@@ -33,7 +33,7 @@
         ["Prism / MultiMC", prismLauncherIcon]
     ];
 
-    const RELEASE = '1.21.11';
+    const RELEASE = '26.1.2';
 	const INSTALLER_JAR_URL = `https://github.com/METAcraft-KTH/METAcraft-installer/releases/download/${RELEASE}/metacraft-installer-1.0.0.jar`;
 	const INSTALLER_EXE_URL = `https://github.com/METAcraft-KTH/METAcraft-installer/releases/download/${RELEASE}/metacraft-installer-1.0.0.exe`;
 </script>
@@ -96,7 +96,7 @@
     <Main>
         <H1>Prism Launcher/MultiMC-Guide</H1>
         <div class="bg-yellow m-3 px-3 py-2 max-w-lg">
-            <span class="mc10">Uppdatera till 1.21.11</span>
+            <span class="mc10">Uppdatera till 26.1.2</span>
             <p>
                 Det lättaste sättet att uppdatera är att genomföra stegen nedan igen och skapa en ny profil
                 för METAcraft från den nyaste METAcraft.zip-länken.
@@ -105,7 +105,7 @@
             <p>
                 Det går också bra att uppdatera manuellt i Prism launcher om du vet hur man gör. Ladda ner
                 nya versioner av modsen och ersätt jar-filerna. Ändra sedan Minecraft och Fabric Loader till
-                0.18.3 eller senare.
+                0.19.2 eller senare.
             </p>
         </div>
 
