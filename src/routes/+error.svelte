@@ -4,6 +4,7 @@
   import Title from '$lib/layout/standard/Title.svelte';
   import Main from '$lib/layout/standard/Main.svelte';
   import { page } from '$app/state';
+  import { m } from '$lib/paraglide/messages.js';
 </script>
 
 <style>
@@ -35,10 +36,10 @@
           <div class="bg-[rgba(16,0,16,0.94)] p-0.375em">
             <span class="text-#FFFF55 italic">{page.status}</span>
             <br>
-            <span class="text-#AA00AA italic">Informationen du söker kommer uppenbara sig i en snar framtid.
+            <span class="text-#AA00AA italic">{m.error_info_pending()}
               <br>
               <br>
-              Under tiden: har du gått med i vår <a href="/discord" class="text-#55FFFF">discord-server</a>?
+              {m.error_discord_prefix()} <a href="/discord" class="text-#55FFFF">discord-server</a>?
             </span>
           </div>
         </div>

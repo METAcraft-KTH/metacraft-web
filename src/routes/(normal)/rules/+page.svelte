@@ -4,6 +4,8 @@
 	import Main from '$lib/layout/standard/Main.svelte';
 	import Title from '$lib/layout/standard/Title.svelte';
 	import PageDescription from '$lib/layout/standard/PageDescription.svelte';
+	import { m } from '$lib/paraglide/messages.js';
+	import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
 </script>
 
 
@@ -20,88 +22,78 @@
 <!-- !! CUSTOM BG !! -->
 
 <Title>
-	REGLER
+	{m.rules_title()}
 </Title>
 
 <PageDescription>
-	Tack för att du vill vara en del av METAcrafts fantastiska community! För allas trivsel har vi skrivit några enkla regler som alla förväntas att följa, vilket gäller på alla våra Minecraft-servrar samt på Discord.<br><b>Genom att spela på servern godkänner du att följa reglerna!</b>
+	{m.rules_description_pre()}<br><LocalizedRichText msg={m.rules_description_bold} />
 </PageDescription>
 
 	<Main>
 		<div class="max-w-250">
-			<Hotlink id="general" title="Generellt">
+			<Hotlink id="general" title={m.rules_general_title()}>
 				<div class="mb-4">
-					På METAcraft finns det en mängd olika spelare med olika sätt att spela Minecraft på.
-					Därför finns det också en mängd olika regler för att alla ska kunna ha kul, och delta i de
-					delar av servern som de vill.
+					{m.rules_general_p1()}
 				</div>
 
 				<div class="mb-4">
-					I textchatten och röstchatten på både Minecraft och Discord, gäller följande regler:
+					{m.rules_general_p2()}
 					<ul class="list-disc list-inside ml-2">
-						<li>Var artig och respektfull mot andra spelare.</li>
+						<li>{m.rules_general_li1()}</li>
 						<li>
-							På servern förhåller vi oss till <a
+							{m.rules_general_li2_pre()} <a
 								href="https://styrdokument.datasektionen.se/jamlikhetspolicy"
-								> Datasektionens JML-policy</a
+								> {m.rules_general_li2_link()}</a
 							>.
 						</li>
 						<li>
-							Undvik att marknadsföra andra servrar eller tjänster. Spam, reklam och oönskade länkar
-							är inte tillåtna.
+							{m.rules_general_li3()}
 						</li>
 					</ul>
 				</div>
 			</Hotlink>
 
-			<Hotlink id="cheating" title="Fusk">
+			<Hotlink id="cheating" title={m.rules_cheating_title()}>
 				<div class="mb-4">
-					<b>Fusk är inte tillåtet</b> i någon av METAcrafts servrar<!--, <b>även i PVP-zoner</b>-->. Fuskar du kan du bli avstängd från
-					servern och inte får delta i event.
+					<LocalizedRichText msg={m.rules_cheating_p1} /><!--, <b>även i PVP-zoner</b>-->
 				</div>
 				<div class="mb-4">
-					Till fusket räknas bland annat:
+					{m.rules_cheating_p2()}
 					<ul class="list-disc list-inside ml-2">
-						<li>Hackade klienter</li>
+						<li>{m.rules_cheating_li1()}</li>
 						<li>X-ray</li>
-						<li>Flyghack</li>
-						<li>Att duplicera items</li>
+						<li>{m.rules_cheating_li3()}</li>
+						<li>{m.rules_cheating_li4()}</li>
 					</ul>
 				</div>
 				<div class="mb-4">
-					Fråga någon i METAcraft-teamet om du är osäker på om något är fusk eller inte.
+					{m.rules_cheating_p3()}
 				</div>
 			</Hotlink>
 
-			<Hotlink id="machines" title="Maskiner och automatisering">
+			<Hotlink id="machines" title={m.rules_machines_title()}>
 				<div class="mb-4">
-					METAcraft behåller så mycket tekniska detaljer från vanliga Minecraft som möjligt, och det
-					är tillåtet att utnyttja dessa för att ex skapa maskiner, farma mobs, och förstöra
-					bedrock.
+					{m.rules_machines_p1()}
 				</div>
 				<div class="mb-4">
-					<b>Undvik så långt det går att generera för mycket lagg.</b> Du är inte ensam på servern, och
-					påverkar det prestandan kan du bli ombedd att stänga av din maskin och skära ner på
-					djuruppfödning.
+					<LocalizedRichText msg={m.rules_machines_p2} />
 				</div>
 				<div class="mb-4">
-					Se till att minimera mängden block och ljus som ändras när du använder din maskin. Fråga
-					någon kunnig i METAcraft-teamet om du är osäker på om din maskin är lagg-vänlig.
+					{m.rules_machines_p3()}
 				</div>
 			</Hotlink>
 
-			<Hotlink id="survival" title="För Survival-servern">
+			<Hotlink id="survival" title={m.rules_survival_title()}>
 				<div class="mb-4">
-					<b>I Survival-världen</b> gäller civiliserade spelandet. Det innebär alltså:
+					<LocalizedRichText msg={m.rules_survival_p1} />
 				</div>
 				<div class="mb-4">
 					<ul class="list-disc ml-6">
 						<li class="mb-2">
-							<b>PVP, stöld och griefing är förbjudet.</b> Det är tillåtet att smyga runt i folks baser, kika i deras kistor, och spela spratt på
-							dem, men du får inte förstöra något eller stjäla något. Om du vill ha något, fråga först.
+							<LocalizedRichText msg={m.rules_survival_li1} />
 						</li>
 						<li class="mb-4">
-							<b>Försök följa god Minecraft-etikett.</b> Vi tänker inte tvinga någon att fixa creeper-hål och svävande blocks efter sig, men om du råkar förstöra någon annans bas bör du hjälpa till med reparationen.
+							<LocalizedRichText msg={m.rules_survival_li2} />
 						</li>
 					</ul>
 				</div>

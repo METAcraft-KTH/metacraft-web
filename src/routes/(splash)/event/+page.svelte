@@ -9,7 +9,8 @@
 	import SplashRow from '../SplashRow.svelte';
 	import Timeline from './Timeline.svelte';
 	import TimelineItem from './TimelineItem.svelte';
-	import Ign from './IGN.svelte';
+	import { m } from '$lib/paraglide/messages.js';
+	import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
 </script>
 
 <svelte:head>
@@ -49,32 +50,32 @@ html {
     }
 </style>
 
-<div class="bg-stone w-100% bg-center">
-    <div class="mx-auto splash w-100% max-w-[80rem] h-16rem lg:h-25rem mt--14 mc10 text-white flex items-end justify-center pb-16 shadow-xl">
-        <Title>TÄVLINGAR</Title>
+<div class="bg-stone bg-center w-100%">
+    <div class="flex justify-center items-end shadow-xl mx-auto mt--14 pb-16 w-100% max-w-[80rem] h-16rem lg:h-25rem text-white splash mc10">
+        <Title>{m.event_title()}</Title>
     </div>
 
-    
-    <div class="mt-4 text-white w-full flex flex-col items-center gap-1 text-center">
+
+    <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">
         {#if false}
-        <div class="text-lg text-white font-bold">ANSLUT VIA</div>
-        <div class="inline-block mc7 bg-black text-xl w-full max-w-[20rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">event.metacraft.nu</div>
-        <div class="text-base text-white font-bold">Java 26.1.2 — Inga mods</div>
+        <div class="font-bold text-white text-lg">{m.event_connect_via()}</div>
+        <div class="inline-block bg-black mx-1 px-3 py-1 w-full max-w-[20rem] text-white text-xl mc7 b-white b-solid b-2">event.metacraft.nu</div>
+        <div class="font-bold text-white text-base">{m.event_java_no_mods()}</div>
         {:else}
-        <div class="text-lg text-white font-bold">NÄSTA SCHEMALAGT EVENT:</div>
-        <div class="inline-block mc7 rainbowbg font-bold text-xl md:text-2xl w-full mx-1 px-3 py-1 md:py-2 w-100% text-white">???</div>
-        <div class="text-base text-white font-bold">Någon gång i 2025...</div>
+        <div class="font-bold text-white text-lg">{m.event_next_scheduled()}</div>
+        <div class="inline-block mx-1 px-3 py-1 md:py-2 w-100% w-full font-bold text-white text-xl md:text-2xl mc7 rainbowbg">???</div>
+        <div class="font-bold text-white text-base">{m.event_sometime_2025()}</div>
         {/if}
     </div>
 
-    <div class="mx-auto max-w-[80rem] px-4 my-12 flex flex-col md:flex-row gap-4">
+    <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem]">
         <Button href="/event/leaderboard">
             <img src="https://minecraft.wiki/images/Gold_Ingot_JE4_BE2.png" alt="icon" class="w-3rem md:w-4rem">
-            <span>Se leaderboards! (KOMMER SNART)</span>
+            <span>{m.event_see_leaderboards()}</span>
         </Button>
         <Button href="#timeline">
             <img src="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png" alt="icon" class="w-3rem md:w-4rem">
-            <span>Läs om tidigare event!</span>
+            <span>{m.event_read_past_events()}</span>
         </Button>
     </div>
 
@@ -85,123 +86,123 @@ html {
     {/if}
 
     <SplashRow image={walls} icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
-        <h1 class="mc10 text-lg md:text-2xl leading-tight">
-            MINECRAFT-MINNE
+        <h1 class="text-lg md:text-2xl leading-tight mc10">
+            {m.event_memory_title1()}
             <br>
-            <span class="text-2xl md:text-4xl">FÖR <u class="underline-2">ALLA</u> SPELARE</span>
+            <span class="text-2xl md:text-4xl"><LocalizedRichText msg={m.event_memory_title2} /></span>
         </h1>
         <p class="text-base leading-tight">
-            Inspirerade av professionella produktioner som <i>Minecraft Championships</i>, METAcrafts event strävar efter att dra upp rolighetsfaktorn till 11 med de bästa spelen vi kan komma på.
+            <LocalizedRichText msg={m.event_memory_p1} />
         </p>
         <p class="text-base leading-tight">
-            Kom och slåss till döds i Ultra Hardcore, bygg en mural i METAplace, eller utmana varandra till en Parkour Race! Med tiotals spelare som deltar varje event, så lovar vi att det inte finns en enda tråkig stund när du spelar här!
+            {m.event_memory_p2()}
         </p>
         <p class="text-base leading-tight">
-            Oavsett hur bra du är på PVP, eller om du föredrar mindre intensiva event, så har vi säkert något för dig! Och om du mot förmodan fortfarande är missnöjd, kontakta oss på Discord, eller <a href="/sok" target="_blank">hjälp oss att bli bättre...</a>
+            <LocalizedRichText msg={m.event_memory_p3} />
         </p>
     </SplashRow>
 
     <SplashRow image={hexathlon1} icon="https://minecraft.wiki/images/Target_JE1_BE1.png" right={true}>
-        <h1 class="mc10 text-lg md:text-2xl leading-tight">
-            INGA KRAV ALLS,
+        <h1 class="text-lg md:text-2xl leading-tight mc10">
+            {m.event_norequirement_title1()}
             <br>
-            <span class="text-2xl md:text-4xl">DET ÄR <u class="underline-2">BARA ATT KOMMA</u></span>
+            <span class="text-2xl md:text-4xl"><LocalizedRichText msg={m.event_norequirement_title2} /></span>
         </h1>
         <p class="text-base leading-tight">
-            Till skillnad från vår <a href="/smp">survival-server</a> och <a href="/campus">"bygga campus"-projekt</a>, dessa event är helt offentliga, så du behöver <b>inte</b> vara (eller känna en) KTH-student för att delta!
+            <LocalizedRichText msg={m.event_norequirement_p1} />
         </p>
         <p class="text-base leading-tight">
-            Att delta i METAcrafts event kräver inte heller någon tidsinvestering. Du behöver inte ha spelat på METAcraft förut, det är bara att ansluta sig till servern under eventet, och lämna när du vill!
+            {m.event_norequirement_p2()}
         </p>
         <p class="text-base leading-tight">
-            Däremot behöver alla följa <a href="/rules">reglerna</a>, så att alla trivs och ingen fuskar.
+            <LocalizedRichText msg={m.event_norequirement_p3} />
         </p>
     </SplashRow>
 
-    <div class="w-100% bg-center-center bg-cover abcabc bg-fixed relative">
-        <div id="timeline" class="absolute top--14"></div>
-        <div class="w-100% h-100% pt-12 px-2 flex flex-col items-center gap-4 md:gap-8">
-            <span class="mc10 inline bg-white text-black text-4xl md:text-5xl px-3 py-2 text-center shadow-xl rd">
-              TIDSLINJEN
+    <div class="relative bg-cover bg-center-center bg-fixed w-100% abcabc">
+        <div id="timeline" class="top--14 absolute"></div>
+        <div class="flex flex-col items-center gap-4 md:gap-8 px-2 pt-12 w-100% h-100%">
+            <span class="inline bg-white shadow-xl px-3 py-2 text-black text-4xl md:text-5xl text-center mc10 rd">
+              {m.event_timeline_heading()}
             </span>
             <Timeline>
                 <TimelineItem name="MINECRAFT HEXATHLON 4" time="20 december, 2025" left={false} collab="DESC">
                     <p>
-                        Hexathlon återvände under DESCmas LAN med sex minigames! Streamad live där våra 3 kära kommentatorer är för första gången med och tävlar med bytande POVs!
+                        {m.event_tl_hex4_p1()}
                     </p>
-                    <a href="https://www.youtube.com/live/or8i6IGV9nI?si=haAmyQtKGpZgonJG" target="_blank">Live VOD på vår YouTube-kanal</a>
+                    <a href="https://www.youtube.com/live/or8i6IGV9nI?si=haAmyQtKGpZgonJG" target="_blank">{m.event_tl_youtube_vod()}</a>
                 </TimelineItem>
                 <TimelineItem name="META-LAN ULTIMATE HARDCORE" time="20 september, 2025" collab="DESC" icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
                     <p>
-                        Under Ettans LAN hölls sektionens första UHC-turnering sedan 2023! Vi började med en solo-match som uppvärmning, följt av en solo-match och en teams-match med priser. <Ign>Hynnd</Ign> tog hem segern på solo-matchen, medan <Ign>Hynnd</Ign>, <Ign>222LiamWK</Ign> och <Ign>Ahara</Ign> vann teams-matchen.
+                        <LocalizedRichText msg={m.event_tl_metalan_p1} />
                     </p>
                 </TimelineItem>
                 <TimelineItem name="SPELKVÄLL UHC" time="2 september, 2025" left={false} collab="QN & DESC" icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
                     <p>
-                        Under Spelkvällen med QN och DESC spelade vi flera casual UHC-matcher utan priser eller inspelning. Det fungerade mest som uppvärmning och testkörning inför det riktiga UHC-turneringen 20 september, men matcherna var ändå fyllda med spänning!
+                        {m.event_tl_spelkvall_p1()}
                     </p>
                 </TimelineItem>
                 <TimelineItem name="MINECRAFT HEXATHLON 3" time="7 juni, 2025" collab="DESC">
                     <p>
-                        Ingen CCLAN, men Hexathlon återvänder med FEM nya spel, streamad live med 3 kommentatorer!
+                        {m.event_tl_hex3_p1()}
                     </p>
-                    <a href="https://www.youtube.com/live/WEndIBV22wo" target="_blank">Live VOD på vår YouTube-kanal</a>
+                    <a href="https://www.youtube.com/live/WEndIBV22wo" target="_blank">{m.event_tl_youtube_vod()}</a>
                 </TimelineItem>
                 <TimelineItem name="MINECRAFT HEXATHLON 2" time="9 november, 2024" left={false} collab="CCLAN">
                     <p>
-                        Fan-favoriten gör sin återkomst med 3 nya spel och 3 gamla!
+                        {m.event_tl_hex2_p1()}
                     </p>
-                    <a href="https://cclan.se/esports/tournament/10" target="_blank">CCLAN:s inlägg och turneringsinfo</a>
+                    <a href="https://cclan.se/esports/tournament/10" target="_blank">{m.event_tl_cclan_info()}</a>
                 </TimelineItem>
                 <TimelineItem name="MINECRAFT HEXATHLON" time="20 april, 2024" collab="CCLAN">
                     <p>
-                        Sveriges största Minecraft-minispelturnering ägde rum under CCLAN, en årlig sammanträde mellan flera svenska högskolor och universitet! Spelarna från hela landet tävlade i 6 olika solo-minispel, och samtidigt som man tävlade kunde man också samla poäng för sitt lärosäte.
+                        {m.event_tl_hex1_p1()}
                     </p>
                     <p>
-                        Enligt feedbackformuläret för CCLAN var Minecraft Hexathlon den mest omtyckta av alla helgens turneringar. Det var även METAcrafts första livestreamade event, med VOD tillgänglig i länken nedan.
+                        {m.event_tl_hex1_p2()}
                     </p>
-                    <a href="https://cclan.se/esports/tournament/5" target="_blank">CCLAN:s inlägg och turneringsinfo</a>
-                    <a href="https://youtu.be/8o1sV7HP9dc" target="_blank">Livestream VOD</a>
+                    <a href="https://cclan.se/esports/tournament/5" target="_blank">{m.event_tl_cclan_info()}</a>
+                    <a href="https://youtu.be/8o1sV7HP9dc" target="_blank">{m.event_tl_livestream_vod()}</a>
                 </TimelineItem>
                 <TimelineItem name="CAMPUS BATTLE" time="17 april, 2024" left={false} collab="KIT">
                     <p>
-                        Studenterna vid Tysklands KIT (Karlsruhe Institute of Technology) hade också byggt sitt campus i Minecraft, så naturligtvis utmanade vi dem till en minispel-turnering!
+                        {m.event_tl_campusbattle_p1()}
                     </p>
                     <p>
-                        Detta event bestod av i princip samma minispel som Minecraft Hexathlon tre dagar senare, så det uppfyllde även syftet som en testkörning av vårt nästa event.
+                        {m.event_tl_campusbattle_p2()}
                     </p>
                 </TimelineItem>
                 <TimelineItem name="METAPLACE" time="5-11 december, 2023" icon="https://minecraft.wiki/images/Yellow_Wool_JE3_BE3.png">
                     <p>
-                        Under 7 dagar fick alla spelare placera blocks i en 128x128 canvas (med en cooldown), i stil av Reddits r/place. Det fanns också dagliga uppdateringar, event och introduktion av nya blocks. Totalt placerades <b>65 501</b> blocks av <b>58</b> unika spelare under hela eventet.
+                        <LocalizedRichText msg={m.event_tl_metaplace_p1} />
                     </p>
                     <p>
-                        Från och med dag 2 kunde man välja sektionstillhörlighet. Data placerade <b>40 389</b> blocks, Media placerade <b>22 841</b> blocks, och resterande <b>2 271</b> var från oidentifierade.
+                        <LocalizedRichText msg={m.event_tl_metaplace_p2} />
                     </p>
                     <p>
-                        Under "data vs media"-eventet dag 5 vann Data med <b>81</b> blocks marginal (3049 vs 2968).
+                        <LocalizedRichText msg={m.event_tl_metaplace_p3} />
                     </p>
-                    <a href="https://youtube.com/shorts/QHMFa096EhI" target="_blank">Officiell timelapse-video</a>
+                    <a href="https://youtube.com/shorts/QHMFa096EhI" target="_blank">{m.event_tl_metaplace_video()}</a>
                 </TimelineItem>
                 <TimelineItem name="METACRAFT SURVIVAL GAMES" time="13 november, 2023" left={false} icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
                     <p>
-                        För att fira att vi återskapade (en delmängd av) KTH Campus i Minecraft, så invigdes bygget med klassiska Survival Games-matcher som utspelar sig på just Campus! META bokades för eventet, men det var också många som deltog online.
+                        {m.event_tl_survgames_p1()}
                     </p>
                     <p>
-                        Flera matcher spelades, och topp 10 bästa spelarna (samt deras poängsumma) vid kvällens slut var <Ign>Bullen13</Ign> (186), <Ign>Hynnd</Ign> (156), <Ign>Ahara</Ign> (155), <Ign>PupuOSJ</Ign> (123), <Ign>viggo003</Ign> (73), <Ign>Alleee_</Ign> (72), <Ign>hexalotl</Ign> (60), <Ign>Jonla</Ign> (59), <Ign>Benjaneb</Ign> (55), <Ign>BOT_Bond</Ign> (32).
+                        <LocalizedRichText msg={m.event_tl_survgames_p2} />
                     </p>
                     <p>
-                        Priser utdelades till de topp 5 spelarna som var på plats.
+                        {m.event_tl_survgames_p3()}
                     </p>
                 </TimelineItem>
                 <TimelineItem name="META UHC" time="3 oktober, 2023" icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png" collab="DESC & dJubileet">
                     <p>
-                        Ultra Hardcore möter META under dJubileets METAhäng: DESCathon! Vi spelade totalt fyra matcher: En solo-match som uppvärmning, följt av en solo-match och en teams-match med priser, och som avslutning en röd vs blå deathmatch utan priser.
+                        {m.event_tl_metauhc_p1()}
                     </p>
                     <p>
-                        <Ign>Alvinn8</Ign> tog hem segern i solo-matchen, och teams-matchen var vunnen av <Ign>Ahara</Ign>, <Ign>Hynnd</Ign> och <Ign>Plotimus</Ign>.
+                        <LocalizedRichText msg={m.event_tl_metauhc_p2} />
                     </p>
-                    <a href="https://www.facebook.com/events/295533949843241" target="_blank">dJubileets Facebook-event</a>
+                    <a href="https://www.facebook.com/events/295533949843241" target="_blank">{m.event_tl_facebook_event()}</a>
                 </TimelineItem>
             </Timeline>
         </div>

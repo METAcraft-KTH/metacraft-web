@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { m } from '$lib/paraglide/messages.js';
+
     interface Props {
         image: any;
         icon: any;
@@ -31,7 +33,7 @@
 <div class="w-full max-w-[150rem] md:hidden"> <!-- MOBILE -->
     <div class="mx-auto w-full h-full py-4 transition-all">
         <div class="mx-auto max-w-[80rem] px-2">
-            <img src={image} alt="bild" class="w-full max-w-[35rem] rd-t-lg" />
+            <img src={image} alt={m.splashrow_image_alt()} class="w-full max-w-[35rem] rd-t-lg" />
             <div class="bg-white-concrete-powder max-w-[35rem] px-2 py-4 flex flex-col rd-b-lg shadow-lg">
                 <div class="flex flex-col gap-4 relative">
                     <img src={icon} alt="icon"

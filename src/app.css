@@ -14,7 +14,7 @@
     font-style: normal;
 }
 
-@import "tailwindcss";
+/* @import "tailwindcss"; */
 
 body {
     margin: 0;

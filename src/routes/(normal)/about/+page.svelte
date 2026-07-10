@@ -4,6 +4,8 @@
   import Person from './Person.svelte';
   import credits from './credits.json';
   import credits_old from './credits_old.json';
+  import { m } from '$lib/paraglide/messages.js';
+  import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
 </script>
 
 <!-- !! CUSTOM BG !! -->
@@ -19,11 +21,11 @@
 <!-- !! CUSTOM BG !! -->
 
 <Title>
-  OM OSS
+  {m.about_title()}
 </Title>
 <Main>
   <p class="mb-5 text-lg text-center">
-    <b>METAcraft drivs av studenter, för studenter.</b> Följande människor står bakom dagens fantastiska upplevelse.
+    <LocalizedRichText msg={m.about_intro} />
   </p>
   <div class="flex flex-row flex-wrap flex-justify-center w-100%">
     {#each credits as info}
@@ -33,7 +35,7 @@
 </Main>
 <Main>
   <p class="mb-5 text-lg text-center">
-    Följande människor är inte längre del av METAcraft-teamet, men utan deras insatser hade inget av dessa funnits.
+    {m.about_former_intro()}
   </p>
   <div class="flex flex-row flex-wrap flex-justify-center w-100%">
     {#each credits_old as info}

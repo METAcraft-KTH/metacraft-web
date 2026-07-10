@@ -8,7 +8,25 @@ export default defineConfig({
 	plugins: [
 		UnoCSS({ extractors: [extractorSvelte()] }),
 		sveltekit(),
-		paraglideVitePlugin({ project: './project.inlang', outdir: './src/lib/paraglide' })
+		paraglideVitePlugin({
+			project: './project.inlang',
+			outdir: './src/lib/paraglide',
+
+			// https://inlang.com/m/gerre34r/library-inlang-paraglideJs/sveltekit#disabling-asynclocalstorage-in-serverless-environments
+			disableAsyncLocalStorage: true,
+
+			strategy: ["url", "baseLocale"],
+			// https://inlang.com/m/gerre34r/library-inlang-paraglideJs/i18n-routing#locale-prefixing
+			urlPatterns: [
+				{
+					pattern: "/:path(.*)?",
+					localized: [
+						["sv", "/sv/:path(.*)?"],
+						["en", "/:path(.*)?"],
+					],
+				},
+			]
+		})
 	],
 	resolve: { alias: { $lib: '/src/lib' } }
 });

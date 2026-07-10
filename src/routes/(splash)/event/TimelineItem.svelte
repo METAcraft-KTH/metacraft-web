@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { m } from '$lib/paraglide/messages.js';
+
     interface Props {
         name: string;
         time: string;
@@ -34,7 +36,7 @@
     <div class="bg-cerise-concrete-powder p-2 rd-lg w-max h-max mc7 text-white text-center text-sm shadow-lg">
         {time}
         {#if collab !== ""}
-        <p class="text-xs">i samarbete med {collab}</p>
+        <p class="text-xs">{m.timeline_collab_with({ collab })}</p>
         {/if}
     </div>
     <div class="w-100% justify-center items-center h-4 flex"><div class="w-2 h-100% bg-pink-900"></div></div>
@@ -67,7 +69,7 @@
             <div class="bg-cerise-concrete-powder p-4 rd-lg w-max h-max mc7 text-white shadow-lg">
                 {time}
                 {#if collab !== ""}
-                <p class="mt-2 text-sm">i samarbete med {collab}</p>
+                <p class="mt-2 text-sm">{m.timeline_collab_with({ collab })}</p>
                 {/if}
             </div>
         </div>

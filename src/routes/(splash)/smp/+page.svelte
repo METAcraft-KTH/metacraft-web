@@ -13,6 +13,8 @@
 
     import index from './Posts.json';
 	import { onMount } from 'svelte';
+	import { m } from '$lib/paraglide/messages.js';
+	import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
 
     // get (links of) all the images from the directory
     let post_images_array = Object.values(import.meta.glob('$lib/images/posts/*.{png,webp}', { eager: true, import: 'default' }));
@@ -46,23 +48,23 @@
     </div>
 
     <div class="mt-4 text-white w-full flex flex-col items-center gap-1 text-center">
-        <div class="text-lg text-white font-bold">SPELA IDAG!</div>
+        <div class="text-lg text-white font-bold">{m.smp_play_today()}</div>
         <div class="inline-block mc7 bg-black text-xl w-full max-w-[15rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">metacraft.nu</div>
-        <div class="text-base text-white font-bold">Java 26.1.2 — Inga mods krävs</div>
+        <div class="text-base text-white font-bold">{m.smp_no_mods_required()}</div>
     </div>
 
     <div class="mx-auto max-w-[80rem] px-4 my-12 flex flex-col md:flex-row gap-4">
         <Button href="/smp/features">
             <img src="https://minecraft.wiki/images/Knowledge_Book_JE2.png" alt="icon" class="w-3rem md:w-4rem">
-            <span>Allt du behöver veta!</span>
+            <span>{m.smp_everything_you_need()}</span>
         </Button>
         <Button href="/smp/map">
             <img src="https://minecraft.wiki/images/Map_Zoom_4.png" alt="icon" class="w-3rem md:w-4rem">
-            <span>Se kartan över världen!</span>
+            <span>{m.smp_see_map()}</span>
         </Button>
         <Button href="/install">
             <img src="https://cdn.modrinth.com/data/9eGKb6K1/icon.png" alt="icon" class="w-3rem md:w-4rem">
-            <span>Lägg till röstchatt i spelet!</span>
+            <span>{m.smp_add_voicechat()}</span>
         </Button>
     </div>
 
@@ -74,62 +76,62 @@
 
     <SplashRow image={cavesun} icon="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png">
         <h1 class="mc10 text-lg md:text-2xl leading-tight">
-            VANLIG MULTIPLAYER-UPPLEVELSE
+            {m.smp_multiplayer_title1()}
             <br>
-            <span class="text-2xl md:text-4xl">SPECIELLT PÅ MÅNDAGAR</span>
+            <span class="text-2xl md:text-4xl">{m.smp_multiplayer_title2()}</span>
         </h1>
         <p class="text-base leading-tight">
-            En varm och hjälpsam gemenskap väntar med spelare från alla bakgrunder samarbetar, bygger och utforskar tillsammans. Hitta byggpartners, delta i evenemang eller hoppa in i spontana äventyr.
+            {m.smp_multiplayer_p1()}
         </p>
         <p class="text-base leading-tight italic">
-            Minecraft är som roligast när många spelar tillsammans. Vi förstår däremot att alla inte har tid att spela hela tiden, därför presenterar vi...
+            {m.smp_multiplayer_p2()}
         </p>
         <p class="text-base leading-tight">
-            <b>METACRAFT-MÅNDAGAR</b> varje måndag i veckan kl 19:00 kör vi tillsammans på servern! Oavsett om du är nybörjare eller veteran, kom och delta i roliga aktiviteter, byggprojekt och gemensamma äventyr. Det är det perfekta tillfället att träffa nya vänner och uppleva servern på det bästa sättet!
+            <LocalizedRichText msg={m.smp_multiplayer_p3} />
         </p>
     </SplashRow>
 
     <SplashRow image={samling} icon="https://minecraft.wiki/images/Potion_of_Healing_JE2_BE2.png" right={true}>
         <h1 class="mc10 text-lg md:text-2xl leading-tight">
-            SPELA MED KLASSKAMRATER
+            {m.smp_classmates_title1()}
             <br>
-            <span class="text-2xl md:text-4xl">OCH <u class="underline-2">ALLA</u> DINA VÄNNER</span>
+            <span class="text-2xl md:text-4xl"><LocalizedRichText msg={m.smp_classmates_title2} /></span>
         </h1>
         <p class="text-base leading-tight">
-            Servern är öppen till <span class="italic">alla KTH-studenter</span>, och dessutom får du bjuda in hur många spelare du vill från utanför KTH. Samla hela Minecraft-gänget och ge er på episka äventyr — lämna ingen utanför!
+            <LocalizedRichText msg={m.smp_classmates_p1} />
         </p>
         <p class="text-base leading-tight">
-            Det är lätt att lägga till en spelare som din +1:a. Instruktioner står på skärmen för hen du ska lägga till, och båda spelare ska vara online.
+            {m.smp_classmates_p2()}
         </p>
     </SplashRow>
 
     <SplashRow image={oas} icon="https://minecraft.wiki/images/Flowering_Azalea_Leaves_(fast)_BE1.png">
         <h1 class="mc10 text-lg md:text-2xl leading-tight">
-            UNIKA LANDSKAP OCH LAGAR
+            {m.smp_landscape_title1()}
             <br>
-            <span class="text-2xl md:text-4xl">VÄNTAR PÅ DIG</span>
+            <span class="text-2xl md:text-4xl">{m.smp_landscape_title2()}</span>
         </h1>
         <p class="text-base leading-tight">
-            Vi har finjusterat världen en gnutta för att göra utforskandet mer spännande och givande. Du kan finna fantastiska oaser, isgrottor, häpnadsväckande savanner, och så mycket mer, inte för att nämna 30+ nya strukturer för dig att utforska i alla dimensioner.
+            {m.smp_landscape_p1()}
         </p>
         <p class="text-base leading-tight">
-            Vi har även implementerat flera funktionella och dekorativa ändringar i spelet för att förbättra din upplevelse. Det kan handla om allt från Villager Trade Rebalance till möjligheten att tysta mobs. <a href="/smp/features">Läs om alla skillnader här.</a>
+            <LocalizedRichText msg={m.smp_landscape_p2} />
         </p>
     </SplashRow>
 
     <div class="w-100% bg-center-center bg-cover abcabc bg-fixed">
         <div class="w-100% h-100% py-12 px-2 flex flex-col items-center gap-4 md:gap-8">
             <span class="mc10 inline bg-white text-black text-4xl md:text-5xl px-3 py-2 text-center shadow-xl rd">
-              SE TRAILERN
+              {m.smp_watch_trailer()}
             </span>
             <div class="w-100% max-w-250 bg-white-concrete-powder rd p-2 shadow-2xl">
                 <iframe class="w-100% aspect-video" src="https://www.youtube-nocookie.com/embed/5KnJjiPfZQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
             <div class="rd bg-white-concrete-powder text-black px-2 py-6 text-lg leading-tight text-center shadow-xl max-w-[50rem]">
-                <span class="font-bold">Redo att spela?</span>
+                <span class="font-bold">{m.smp_ready_to_play()}</span>
                 <div class="inline-block mc7 bg-black text-xl w-full max-w-[15rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">metacraft.nu</div>
-                <div class="text-base font-bold">Java 26.1.2 — Inga mods krävs</div>
+                <div class="text-base font-bold">{m.smp_no_mods_required()}</div>
             </div>
         </div>
     </div>
