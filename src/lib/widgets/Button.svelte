@@ -1,13 +1,12 @@
 <script lang="ts">
     interface Props {
-        href: any;
-        mc7?: boolean;
+        href: string;
         children?: import('svelte').Snippet;
     }
 
-    let { href, mc7 = true, children }: Props = $props();
+    let { href, children }: Props = $props();
 </script>
 
-<a {href} class="flex-1 bg-map rd-lg p-2 flex flex-row items-center gap-4 text-black no-underline hover:translate-y--2 hover:contrast-150 transition-all leading-tight" class:mc7={mc7}>
+<a {href} class="flex flex-row flex-1 items-center gap-4 bg-map p-2 font-mc text-black no-underline leading-tight transition-all hover:translate-y--2 rd-lg hover:contrast-150">
     {@render children?.()}
 </a>

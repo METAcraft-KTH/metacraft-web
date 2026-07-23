@@ -6,4 +6,4 @@
 	let { children }: Props = $props();
 </script>
 
-<span class="text-sm mc7">{@render children?.()}</span>
+<span class="font-mc text-sm">{@render children?.()}</span>

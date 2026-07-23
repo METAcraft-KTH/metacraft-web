@@ -28,45 +28,45 @@
 
 <!-- anchor element -->
 <div class="relative">
-    <div id={name.replaceAll(" ","_")} class="absolute top--16"></div>
+    <div id={name.replaceAll(" ","_")} class="top--16 absolute"></div>
 </div>
 
 <!-- mobile -->
-<div class="w-100% px-2 flex-col justify-center items-center flex md:hidden">
-    <div class="bg-cerise-concrete-powder p-2 rd-lg w-max h-max mc7 text-white text-center text-sm shadow-lg">
+<div class="md:hidden flex flex-col justify-center items-center px-2 w-100%">
+    <div class="bg-cerise-concrete-powder shadow-lg p-2 w-max h-max font-mc text-white text-sm text-center rd-lg">
         {time}
         {#if collab !== ""}
         <p class="text-xs">{m.timeline_collab_with({ collab })}</p>
         {/if}
     </div>
-    <div class="w-100% justify-center items-center h-4 flex"><div class="w-2 h-100% bg-pink-900"></div></div>
-    <div class="flex-1 flex px-2" class:justify-end={left}>
-        <div class="bg-white-concrete-powder p-4 pt-2 rd-lg flex flex-col gap-2 shadow-lg">
-            <h1 class="mc10 text-2xl">{name}</h1>
+    <div class="flex justify-center items-center w-100% h-4"><div class="bg-pink-900 w-2 h-100%"></div></div>
+    <div class="flex flex-1 px-2" class:justify-end={left}>
+        <div class="flex flex-col gap-2 bg-white-concrete-powder shadow-lg p-4 pt-2 rd-lg">
+            <h1 class="font-ten text-2xl">{name}</h1>
             {@render children?.()}
         </div>
     </div>
-    <div class="w-100% justify-center items-center h-4 flex"><div class="w-2 h-100% bg-pink-900"></div></div>
+    <div class="flex justify-center items-center w-100% h-4"><div class="bg-pink-900 w-2 h-100%"></div></div>
 </div>
 
 
 <!-- desktop -->
-<div class="max-w-[80rem] w-100% relative">
-    <div class="timelineItemDesktop hidden md:flex" class:flex-row-reverse={!left}>
-        <div class="flex-1 flex px-2" class:justify-end={left}>
-            <div class="bg-white-concrete-powder p-4 pt-2 rd-lg flex flex-col gap-2 shadow-lg">
-                <h1 class="mc10 text-4xl mb-2">{name}</h1>
+<div class="relative w-100% max-w-[80rem]">
+    <div class="hidden md:flex timelineItemDesktop" class:flex-row-reverse={!left}>
+        <div class="flex flex-1 px-2" class:justify-end={left}>
+            <div class="flex flex-col gap-2 bg-white-concrete-powder shadow-lg p-4 pt-2 rd-lg">
+                <h1 class="mb-2 font-ten text-4xl">{name}</h1>
                 {@render children?.()}
             </div>
         </div>
-        <div class="w-4rem flex justify-center items-center flex-col">
-            <a href={"#"+name.replaceAll(" ","_")} class="bg-cerise-concrete-powder w-4rem h-4rem p-2 rd-lg transition-transform shadow-lg hover:scale-110 active:scale-95" class:hover:rotate-5={left} class:hover:rotate--5={!left}>
+        <div class="flex flex-col justify-center items-center w-4rem">
+            <a href={"#"+name.replaceAll(" ","_")} class="bg-cerise-concrete-powder shadow-lg p-2 w-4rem h-4rem hover:scale-110 active:scale-95 transition-transform rd-lg" class:hover:rotate-5={left} class:hover:rotate--5={!left}>
                 <img src={icon} alt="icon">
             </a>
-            <div class="flex-1 w-2 bg-pink-900"></div>
+            <div class="flex-1 bg-pink-900 w-2"></div>
         </div>
-        <div class="flex-1 px-2 flex" class:justify-end={!left}>
-            <div class="bg-cerise-concrete-powder p-4 rd-lg w-max h-max mc7 text-white shadow-lg">
+        <div class="flex flex-1 px-2" class:justify-end={!left}>
+            <div class="bg-cerise-concrete-powder shadow-lg p-4 w-max h-max font-mc text-white rd-lg">
                 {time}
                 {#if collab !== ""}
                 <p class="mt-2 text-sm">{m.timeline_collab_with({ collab })}</p>
@@ -75,6 +75,6 @@
         </div>
     </div>
 </div>
-<div class="w-100% justify-center items-center h-8 flex">
-    <div class="w-2 h-100% bg-pink-900"></div>
+<div class="flex justify-center items-center w-100% h-8">
+    <div class="bg-pink-900 w-2 h-100%"></div>
 </div>

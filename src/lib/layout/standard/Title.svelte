@@ -7,7 +7,7 @@
   let { post = false, children }: Props = $props();
 
   let classes = !post
-    ? 'titleFadeIn text-white txtshadow text-5xl md:text-7xl my-8 sm:my-12 mc10'
+    ? 'titleFadeIn text-white txtshadow text-5xl md:text-7xl my-8 sm:my-12 font-ten'
     : 'px-4 py-2 md:py-4 bg-white-concrete-powder text-4xl md:text-5xl mt-12 font-bold md:min-w-100';
 </script>
 

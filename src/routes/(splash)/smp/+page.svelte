@@ -42,18 +42,18 @@
     }
 </style>
 
-<div class="bg-stone w-100% bg-center">
-    <div class="mx-auto splash w-100% max-w-[80rem] h-16rem lg:h-25rem mt--14 mc10 text-white flex items-end justify-center pb-16 shadow-xl">
+<div class="bg-stone bg-center w-100%">
+    <div class="flex justify-center items-end shadow-xl mx-auto mt--14 pb-16 w-100% max-w-[80rem] h-16rem lg:h-25rem font-ten text-white splash">
         <Title>SURVIVAL</Title>
     </div>
 
-    <div class="mt-4 text-white w-full flex flex-col items-center gap-1 text-center">
-        <div class="text-lg text-white font-bold">{m.smp_play_today()}</div>
-        <div class="inline-block mc7 bg-black text-xl w-full max-w-[15rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">metacraft.nu</div>
-        <div class="text-base text-white font-bold">{m.smp_no_mods_required()}</div>
+    <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">
+        <div class="font-bold text-white text-lg">{m.smp_play_today()}</div>
+        <div class="inline-block bg-black mx-1 px-3 py-1 w-full max-w-[15rem] font-mc text-white text-xl b-white b-solid b-2">metacraft.nu</div>
+        <div class="font-bold text-white text-base">{m.smp_no_mods_required()}</div>
     </div>
 
-    <div class="mx-auto max-w-[80rem] px-4 my-12 flex flex-col md:flex-row gap-4">
+    <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem] font-mc">
         <Button href="/smp/features">
             <img src="https://minecraft.wiki/images/Knowledge_Book_JE2.png" alt="icon" class="w-3rem md:w-4rem">
             <span>{m.smp_everything_you_need()}</span>
@@ -75,7 +75,7 @@
     {/if}
 
     <SplashRow image={cavesun} icon="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png">
-        <h1 class="mc10 text-lg md:text-2xl leading-tight">
+        <h1 class="font-ten text-lg md:text-2xl leading-tight">
             {m.smp_multiplayer_title1()}
             <br>
             <span class="text-2xl md:text-4xl">{m.smp_multiplayer_title2()}</span>
@@ -83,7 +83,7 @@
         <p class="text-base leading-tight">
             {m.smp_multiplayer_p1()}
         </p>
-        <p class="text-base leading-tight italic">
+        <p class="text-base italic leading-tight">
             {m.smp_multiplayer_p2()}
         </p>
         <p class="text-base leading-tight">
@@ -92,7 +92,7 @@
     </SplashRow>
 
     <SplashRow image={samling} icon="https://minecraft.wiki/images/Potion_of_Healing_JE2_BE2.png" right={true}>
-        <h1 class="mc10 text-lg md:text-2xl leading-tight">
+        <h1 class="font-ten text-lg md:text-2xl leading-tight">
             {m.smp_classmates_title1()}
             <br>
             <span class="text-2xl md:text-4xl"><LocalizedRichText msg={m.smp_classmates_title2} /></span>
@@ -106,7 +106,7 @@
     </SplashRow>
 
     <SplashRow image={oas} icon="https://minecraft.wiki/images/Flowering_Azalea_Leaves_(fast)_BE1.png">
-        <h1 class="mc10 text-lg md:text-2xl leading-tight">
+        <h1 class="font-ten text-lg md:text-2xl leading-tight">
             {m.smp_landscape_title1()}
             <br>
             <span class="text-2xl md:text-4xl">{m.smp_landscape_title2()}</span>
@@ -119,31 +119,31 @@
         </p>
     </SplashRow>
 
-    <div class="w-100% bg-center-center bg-cover abcabc bg-fixed">
-        <div class="w-100% h-100% py-12 px-2 flex flex-col items-center gap-4 md:gap-8">
-            <span class="mc10 inline bg-white text-black text-4xl md:text-5xl px-3 py-2 text-center shadow-xl rd">
+    <div class="bg-cover bg-center-center bg-fixed w-100% abcabc">
+        <div class="flex flex-col items-center gap-4 md:gap-8 px-2 py-12 w-100% h-100%">
+            <span class="inline bg-white shadow-xl px-3 py-2 font-ten text-black text-4xl md:text-5xl text-center rd">
               {m.smp_watch_trailer()}
             </span>
-            <div class="w-100% max-w-250 bg-white-concrete-powder rd p-2 shadow-2xl">
+            <div class="bg-white-concrete-powder shadow-2xl p-2 w-100% max-w-250 rd">
                 <iframe class="w-100% aspect-video" src="https://www.youtube-nocookie.com/embed/5KnJjiPfZQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
-            <div class="rd bg-white-concrete-powder text-black px-2 py-6 text-lg leading-tight text-center shadow-xl max-w-[50rem]">
+            <div class="bg-white-concrete-powder shadow-xl px-2 py-6 max-w-[50rem] text-black text-lg text-center leading-tight rd">
                 <span class="font-bold">{m.smp_ready_to_play()}</span>
-                <div class="inline-block mc7 bg-black text-xl w-full max-w-[15rem] mx-1 px-3 py-1 b-white b-solid b-2 text-white">metacraft.nu</div>
-                <div class="text-base font-bold">{m.smp_no_mods_required()}</div>
+                <div class="inline-block bg-black mx-1 px-3 py-1 w-full max-w-[15rem] font-mc text-white text-xl b-white b-solid b-2">metacraft.nu</div>
+                <div class="font-bold text-base">{m.smp_no_mods_required()}</div>
             </div>
         </div>
     </div>
     <!--
-    <div class="flex flex-col items-center bg-bookshelf px-2 py-12 pb-24 gap-4 md:gap-8">
+    <div class="flex flex-col items-center gap-4 md:gap-8 bg-bookshelf px-2 py-12 pb-24">
         <div class="relative">
-            <div class="absolute top--14" id="history"></div>
+            <div class="top--14 absolute" id="history"></div>
         </div>
-        <span class="mc10 inline bg-white text-black text-4xl md:text-5xl px-3 py-2 text-center shadow-xl rd w-max">
+        <span class="inline bg-white shadow-xl px-3 py-2 w-max font-ten text-black text-4xl md:text-5xl text-center rd">
             SERVERHISTORIK
         </span>
-        <div class="max-w-300 w-100% flex flex-col-reverse items-center mb-12 gap-2 md:gap-6">
+        <div class="flex flex-col-reverse items-center gap-2 md:gap-6 mb-12 w-100% max-w-300">
             {#each index as post}
               <Post {...post} href={"/smp/"+post.href} --image={
                 post.image && post_images[post.image]                   ? "url(" + post_images[post.image] + ")" :

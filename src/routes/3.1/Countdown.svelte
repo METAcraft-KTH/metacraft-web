@@ -39,9 +39,9 @@
   $: if (count <= 0) clearInterval(interval);
 </script>
 
-<div class="bg-#000000aa w-100% py-8 flex justify-center items-center flex-col text-white">
-  <div class="mc7 text-lg md:text-xl">Kriget börjar om</div>
-  <div class="mc10 text-5xl md:text-8xl">
+<div class="flex flex-col justify-center items-center bg-#000000aa py-8 w-100% text-white">
+  <div class="font-mc text-lg md:text-xl">Kriget börjar om</div>
+  <div class="font-ten text-5xl md:text-8xl">
     {d}<span class="text-2xl md:text-5xl">d</span>
     {h}<span class="text-2xl md:text-5xl">h</span>
     {m}<span class="text-2xl md:text-5xl">m</span>

@@ -47,7 +47,7 @@
 	VOICE CHAT
 </Title>
 
-<h1 class="mb-2 text-white text-center mc7">{m.install_os_question()}</h1>
+<h1 class="mb-2 font-mc text-white text-center">{m.install_os_question()}</h1>
 <div class="flex flex-row bg-calcite mx-auto mb-8 rounded-xl max-w-200 overflow-hidden">
     {#each platformButtons as [platformName, PlatformIcon]}
         <button class="flex flex-col flex-1 items-center bg-opacity-40 p-2 border-none transition-colors"
@@ -58,14 +58,14 @@
             <div class="text-3xl">
                 <PlatformIcon />
             </div>
-            <span class="mc7">{platformName}</span>
+            <span class="font-mc">{platformName}</span>
         </button>
     {/each}
 </div>
 
 {#if selectedPlatform !== 'Mac'}
 <div transition:slide={{duration: 100}}>
-    <h1 class="mb-2 text-white text-center mc7">{m.install_launcher_question()}</h1>
+    <h1 class="mb-2 font-mc text-white text-center">{m.install_launcher_question()}</h1>
     <div class="flex flex-row bg-calcite mx-auto mb-8 rounded-xl max-w-200 overflow-hidden">
         {#each launcherButtons as [launcherName, launcherIcon]}
             <button class="flex flex-col flex-1 items-center bg-opacity-40 p-2 border-none transition-colors"
@@ -74,7 +74,7 @@
                 class:bg-transparent={selectedLauncher !== launcherName}
                 onmousedown={() => {selectedLauncher = launcherName}}>
                 <img src={launcherIcon} alt={launcherName} class="mb-2 h-12" />
-                <span class="mc7">{launcherName}</span>
+                <span class="font-mc">{launcherName}</span>
             </button>
         {/each}
     </div>
@@ -82,7 +82,7 @@
 {:else}
 <div transition:slide={{duration: 100}}>
     <div class="bg-book mx-auto mb-8 p-8 rounded-xl max-w-180">
-        <h1 class="mb-2 text-2xl mc10">{m.install_mac_important_title()}</h1>
+        <h1 class="mb-2 font-ten text-2xl">{m.install_mac_important_title()}</h1>
         <p class="leading-tight">
             <LocalizedRichText msg={m.install_mac_important} />
         </p>
@@ -95,7 +95,7 @@
     <Main>
         <H1>{m.install_prism_guide_title()}</H1>
         <div class="bg-yellow m-3 px-3 py-2 max-w-lg">
-            <span class="mc10">{m.install_prism_update_title()}</span>
+            <span class="font-ten">{m.install_prism_update_title()}</span>
             <p>
                 {m.install_prism_update_p1()}
             </p>
@@ -110,10 +110,10 @@
         </p>
         <p>{m.install_prism_skip_note()}</p>
 
-        <h2 class="mt-4 text-2xl mc10">{m.install_prism_step1_title()}</h2>
-        <p><LocalizedRichText msg={m.install_prism_step1_pre} /></p>
+        <h2 class="mt-4 font-ten text-2xl">{m.install_prism_step1_title()}</h2>
+        <p>{m.install_prism_step1_pre()}</p>
 
-        <h2 class="mt-4 text-2xl mc10">{m.install_prism_step2_title()}</h2>
+        <h2 class="mt-4 font-ten text-2xl">{m.install_prism_step2_title()}</h2>
         <p>{m.install_prism_step2_p1()}</p>
         <img src={profilesImage} alt={m.install_prism_step2_alt1()} class="max-w-200" />
         <p>
@@ -121,27 +121,27 @@
         </p>
         <img src={addAccountImage} alt={m.install_prism_step2_alt2()} class="max-w-200" />
 
-        <h2 class="mt-4 text-2xl mc10">{m.install_prism_step3_title()}</h2>
+        <h2 class="mt-4 font-ten text-2xl">{m.install_prism_step3_title()}</h2>
         <p>{m.install_prism_step3_p1()}</p>
         <img src={addInstanceImage} alt={m.install_prism_step3_alt1()} class="max-w-200" />
         <p>{m.install_prism_step3_p2()}</p>
-        <div class="inline-block bg-black p-3 link mc7 color-white rd">
+        <div class="inline-block bg-black p-3 font-mc link color-white rd">
             https://metacraft.nu/install/METAcraft.zip
         </div>
         <img src={importImage} alt={m.install_prism_step3_alt2()} class="max-w-200" />
 
-        <h2 class="mt-4 text-2xl mc10">{m.install_prism_step4_title()}</h2>
+        <h2 class="mt-4 font-ten text-2xl">{m.install_prism_step4_title()}</h2>
         {m.install_prism_step4_body()}
         <img src={launchImage} alt={m.install_prism_step4_alt()} class="max-w-200" />
 
-        <h2 class="mt-4 text-2xl mc10">{m.install_prism_step5_title()}</h2>
+        <h2 class="mt-4 font-ten text-2xl">{m.install_prism_step5_title()}</h2>
         {m.install_prism_step5_body()}
         <img src={setupImage} alt="Simple Voice Chat setup" class="max-w-200" />
         <p>
             {m.install_prism_step5_p2()}
         </p>
 
-        <h2 class="mt-4 text-2xl mc10">{m.install_prism_step6_title()}</h2>
+        <h2 class="mt-4 font-ten text-2xl">{m.install_prism_step6_title()}</h2>
         <p class="mb-3">
             <LocalizedRichText msg={m.install_prism_step6_body} />
         </p>

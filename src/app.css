@@ -2,14 +2,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @font-face {
-    font-family: 'MinecraftSeven';
-    src: url('$lib/MinecraftSeven.otf');
+    font-family: 'Mojangles';
+    src: url('$lib/fonts/26.2-Minecraft-Regular.otf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
+    font-family: 'Mojangles';
+    src: url('$lib/fonts/26.2-Minecraft-Italic.otf');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Mojangles';
+    src: url('$lib/fonts/26.2-Minecraft-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mojangles';
+    src: url('$lib/fonts/26.2-Minecraft-BoldItalic.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Five';
+    src: url('$lib/fonts/MinecraftFive-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Five';
+    src: url('$lib/fonts/MinecraftFive-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
     font-family: 'MinecraftTen';
-    src: url('$lib/MinecraftTen.woff');
+    src: url('$lib/fonts/MinecraftTen.woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -37,10 +67,16 @@ html {
 }
 */
 
-.mc7 {
-    font-family: 'MinecraftSeven', sans-serif;
+@theme {
+    --font-sans: 'Noto Sans', sans-serif;
+    --font-mc: 'Mojangles', sans-serif;
+    --font-five: 'Five', sans-serif;
+    --font-ten: 'MinecraftTen', sans-serif;
 }
-.mc10 {
+.font-mc {
+    font-family: 'Mojangles', sans-serif;
+}
+.font-ten {
     font-family: 'MinecraftTen', sans-serif;
 }
 .default-font {

@@ -51,7 +51,7 @@
 
   <!--
   <p class="shadow-lg font-bold text-white text-2xl">SPELA NU!</p>
-  <div class="bg-black shadow-lg mb-3 px-3 py-1 text-white text-xl md:text-2xl text-center b-white b-2 b-solid mc7">
+  <div class="bg-black shadow-lg mb-3 px-3 py-1 font-mc text-white text-xl md:text-2xl text-center b-white b-2 b-solid">
     mc.datasektionen.se
   </div>
   -->

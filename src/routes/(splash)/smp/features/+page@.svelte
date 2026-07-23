@@ -12,40 +12,40 @@
 </script>
   
 <Header />
-<div class="w-100% flex-1 bg-bookshelf">
+<div class="flex-1 bg-bookshelf w-100%">
 
     <Title>FEATURES</Title>
 
-    <a href="/smp" class="block w-full max-w-[79rem] mx-auto font-bold text-white mb-2 no-underline hover:text-#BE185D transition-colors">&lt; {m.features_back_to_survival()}</a>
-    <div class="flex flex-col lg:flex-row gap-4 max-w-[80rem] mx-auto mb-4">
-        <div class="flex flex-col gap-2 flex-1 bg-book p-6 leading-tight">
-            <div class="mc10 text-2xl md:text-3xl">PLAYER SHOPS</div>
+    <a href="/smp" class="block mx-auto mb-2 w-full max-w-[79rem] font-bold text-white hover:text-#BE185D no-underline transition-colors">&lt; {m.features_back_to_survival()}</a>
+    <div class="flex lg:flex-row flex-col gap-4 mx-auto mb-4 max-w-[80rem]">
+        <div class="flex flex-col flex-1 gap-2 bg-book p-6 leading-tight">
+            <div class="font-ten text-2xl md:text-3xl">PLAYER SHOPS</div>
             <p>{m.features_shops_p1()}</p>
             <img src={shopCraft} alt="shop block crafting recipe" class="max-w-[25rem]">
             <p><LocalizedRichText msg={m.features_shops_p2} /></p>
         </div>
 
     </div>
-    <div class="flex flex-col lg:flex-row gap-4 max-w-[80rem] mx-auto mb-4">
-        <div class="flex flex-col gap-2 flex-1 bg-book p-6 leading-tight">
-            <div class="mc10 text-2xl md:text-3xl">{m.features_wrench_title()}</div>
+    <div class="flex lg:flex-row flex-col gap-4 mx-auto mb-4 max-w-[80rem]">
+        <div class="flex flex-col flex-1 gap-2 bg-book p-6 leading-tight">
+            <div class="font-ten text-2xl md:text-3xl">{m.features_wrench_title()}</div>
             <p>{m.features_wrench_p1()}</p>
             <img src={wrenchCraft} alt="wrench crafting recipe" class="max-w-[25rem]">
         </div>
-        <div class="flex flex-col gap-2 flex-1 bg-book p-6 leading-tight">
-            <div class="mc10 text-2xl md:text-3xl">{m.features_drill_title()}</div>
+        <div class="flex flex-col flex-1 gap-2 bg-book p-6 leading-tight">
+            <div class="font-ten text-2xl md:text-3xl">{m.features_drill_title()}</div>
             <p>{m.features_drill_p1()}</p>
             <img src={drillCrafting} alt="Bedrock Drill crafting recipe" class="max-w-[25rem]">
         </div>
     </div>
 
-    <div class="flex flex-col lg:flex-row gap-4 max-w-[80rem] mx-auto mb-4">
-        <div class="flex flex-col gap-2 flex-1 bg-book p-6">
-            <div class="mc10 text-2xl md:text-3xl">{m.features_functional_title()}</div>
+    <div class="flex lg:flex-row flex-col gap-4 mx-auto mb-4 max-w-[80rem]">
+        <div class="flex flex-col flex-1 gap-2 bg-book p-6">
+            <div class="font-ten text-2xl md:text-3xl">{m.features_functional_title()}</div>
             <Section icon="https://minecraft.wiki/images/Anvil_(N)_JE3.png" anchor="anvil">
                 <LocalizedRichText msg={m.features_anvil} />
                 <br>
-                <span class="text-sm text-stone-500">(<LocalizedRichText msg={m.features_anvil_note} />)</span>
+                <span class="text-stone-500 text-sm">(<LocalizedRichText msg={m.features_anvil_note} />)</span>
             </Section>
             <Section icon="https://minecraft.wiki/images/VillagerFace.png" anchor="villager">
                 <LocalizedRichText msg={m.features_villager} />
@@ -53,7 +53,7 @@
             <Section icon="https://minecraft.wiki/images/Baby_Cow_JE3.png" anchor="silenceme">
                 <LocalizedRichText msg={m.features_silence} />
                 <br>
-                <span class="text-sm text-stone-500">({m.features_silence_note()})</span>
+                <span class="text-stone-500 text-sm">({m.features_silence_note()})</span>
             </Section>
             <Section icon="https://minecraft.wiki/images/Nether_Portal_(EW)_JE1.png" anchor="portal">
                 <LocalizedRichText msg={m.features_portal} />
@@ -77,8 +77,8 @@
                 <LocalizedRichText msg={m.features_minecarts} />
             </Section>
         </div>
-        <div class="flex flex-col gap-2 flex-1 bg-book p-6">
-            <div class="mc10 text-2xl md:text-3xl">{m.features_decorative_title()}</div>
+        <div class="flex flex-col flex-1 gap-2 bg-book p-6">
+            <div class="font-ten text-2xl md:text-3xl">{m.features_decorative_title()}</div>
             <Section icon="https://minecraft.wiki/images/Armor_Stand_%28item%29_JE2_BE2.png" anchor="statue">
                 <LocalizedRichText msg={m.features_statue} />
             </Section>
@@ -100,8 +100,8 @@
         </div>
     </div>
 
-    <div class="flex flex-col gap-2 w-full max-w-[80rem] mx-auto bg-book p-6 mb-6 md:mb-24">
-        <div class="text-center my-4">
+    <div class="flex flex-col gap-2 bg-book mx-auto mb-6 md:mb-24 p-6 w-full max-w-[80rem]">
+        <div class="my-4 text-center">
             <p><LocalizedRichText msg={m.features_feedback} /></p>
         </div>
     </div>

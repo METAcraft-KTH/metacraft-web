@@ -27,12 +27,12 @@
 
 <Header />
 <div class="w-100%">
-  <div id="mainSplash" class="flex flex-col flex-justify-center w-100% h-100svh min-h-[40rem] lg:bg-fixed relative">
+  <div id="mainSplash" class="relative flex flex-col flex-justify-center lg:bg-fixed w-100% h-100svh min-h-[40rem]">
 
-    <div id="splashContent" class="titleFadeIn py-20 px-4 flex flex-col flex-items-center flex-justify-center">
-      <div class="flex flex-col-reverse items-start md:flex-row gap-4">
+    <div id="splashContent" class="flex flex-col flex-justify-center flex-items-center px-4 py-20 titleFadeIn">
+      <div class="flex md:flex-row flex-col-reverse items-start gap-4">
         <img src="https://minecraft.wiki/images/Enchanted_Book.gif" alt="book" class="drop-shadow-xl max-w-[10rem] aspect-square">
-        <div class="h-max tip mc7 text-xl max-w-[20rem]">
+        <div class="max-w-[20rem] h-max font-mc text-xl tip">
           <div class="bg-[rgba(16,0,16,0.94)] p-0.375em">
             <span class="text-#FFFF55 italic">{page.status}</span>
             <br>
@@ -55,7 +55,7 @@
 <Footer />
 <!--
 <Header />
-  <div class="flex-1 flex flex-col flex-items-center w-100%">
+  <div class="flex flex-col flex-1 flex-items-center w-100%">
     <Title>{page.status}</Title>
     <Main>
       <span class="text-xl">

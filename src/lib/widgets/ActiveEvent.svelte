@@ -71,9 +71,9 @@
   }
 </style>
 
-<a href={href} class="w-100% my-10 flex flex-col flex-justify-center flex-items-center no-underline text-black hover:contrast-150 shadow-xl">
+<a href={href} class="flex flex-col flex-justify-center flex-items-center shadow-xl my-10 w-100% text-black no-underline hover:contrast-150">
 
-  <div class="loop-container mc10 mb-2 text-yellow-700">
+  <div class="mb-2 font-ten text-yellow-700 loop-container">
     <span class="loopspan">
       {#each {length: 60} as _}
         {#if state === 'starting'}
@@ -88,7 +88,7 @@
   </div>
 
 
-  <span class="mc10 text-5xl text-center"><slot /></span>
+  <span class="font-ten text-5xl text-center"><slot /></span>
 
   <span class="text-lg text-center">
     {#if state === 'starting'}
@@ -101,7 +101,7 @@
   </span>
 
   {#if countdown && (state === 'starting' || state === 'active')}
-    <div class="mc10 text-3xl">
+    <div class="font-ten text-3xl">
       {d}<span class="text-base">d</span>
       {h}<span class="text-base">h</span>
       {m}<span class="text-base">m</span>
@@ -110,7 +110,7 @@
   {/if}
 
 
-  <div class="loop-container mc10 mt-2 text-yellow-700">
+  <div class="mt-2 font-ten text-yellow-700 loop-container">
     <span class="loopspan reverse">
       {#each {length: 60} as _}
         {#if state === 'starting'}

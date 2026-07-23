@@ -39,9 +39,9 @@
     $: if (count <= 0) clearInterval(interval);
   </script>
   
-  <div class="bg-#000000cc w-100% py-4vh flex justify-center items-center flex-col text-white">
-    <div class="mc7 text-5vh mb-4vh">Servern öppnar om</div>
-    <div class="mc7 text-16vh flex flex-row">
+  <div class="flex flex-col justify-center items-center bg-#000000cc py-4vh w-100% text-white">
+    <div class="mb-4vh font-mc text-5vh">Servern öppnar om</div>
+    <div class="flex flex-row font-mc text-16vh">
       <CountdownBlock time={d} text="dagar" />
       :
       <CountdownBlock time={h} text="timmar" /> 
