@@ -3,25 +3,25 @@
 
 @font-face {
     font-family: 'Mojangles';
-    src: url('$lib/fonts/26.2-Minecraft-Regular.otf');
+    src: url('$lib/fonts/Minecraft-Regular.otf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Mojangles';
-    src: url('$lib/fonts/26.2-Minecraft-Italic.otf');
+    src: url('$lib/fonts/Minecraft-Italic.otf');
     font-weight: normal;
     font-style: italic;
 }
 @font-face {
     font-family: 'Mojangles';
-    src: url('$lib/fonts/26.2-Minecraft-Bold.otf');
+    src: url('$lib/fonts/Minecraft-Bold.otf');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: 'Mojangles';
-    src: url('$lib/fonts/26.2-Minecraft-BoldItalic.otf');
+    src: url('$lib/fonts/Minecraft-BoldItalic.otf');
     font-weight: bold;
     font-style: italic;
 }
@@ -39,7 +39,7 @@
 }
 @font-face {
     font-family: 'MinecraftTen';
-    src: url('$lib/fonts/MinecraftTen.woff');
+    src: url('$lib/fonts/MC_Ten_Lowercase_Alt_Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
