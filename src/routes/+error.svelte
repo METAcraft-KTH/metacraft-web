@@ -26,20 +26,20 @@
 </style>
 
 <Header />
-<div class="w-100%">
-  <div id="mainSplash" class="relative flex flex-col flex-justify-center lg:bg-fixed w-100% h-100svh min-h-[40rem]">
+<div class="w-full">
+  <div id="mainSplash" class="relative flex flex-col justify-center lg:bg-fixed w-full h-[100svh] min-h-[40rem]">
 
-    <div id="splashContent" class="flex flex-col flex-justify-center flex-items-center px-4 py-20 titleFadeIn">
+    <div id="splashContent" class="flex flex-col justify-center items-center px-4 py-20 titleFadeIn">
       <div class="flex md:flex-row flex-col-reverse items-start gap-4">
         <img src="https://minecraft.wiki/images/Enchanted_Book.gif" alt="book" class="drop-shadow-xl max-w-[10rem] aspect-square">
         <div class="max-w-[20rem] h-max font-mc text-xl tip">
-          <div class="bg-[rgba(16,0,16,0.94)] p-0.375em">
-            <span class="text-#FFFF55 italic">{page.status}</span>
+          <div class="bg-[rgba(16,0,16,0.94)] p-[0.375em]">
+            <span class="text-[#FFFF55] italic">{page.status}</span>
             <br>
-            <span class="text-#AA00AA italic">{m.error_info_pending()}
+            <span class="text-[#AA00AA] italic">{m.error_info_pending()}
               <br>
               <br>
-              {m.error_discord_prefix()} <a href="/discord" class="text-#55FFFF">discord-server</a>?
+              {m.error_discord_prefix()} <a href="/discord" class="text-[#55FFFF]">discord-server</a>?
             </span>
           </div>
         </div>
@@ -55,7 +55,7 @@
 <Footer />
 <!--
 <Header />
-  <div class="flex flex-col flex-1 flex-items-center w-100%">
+  <div class="flex flex-col flex-1 items-center w-full">
     <Title>{page.status}</Title>
     <Main>
       <span class="text-xl">

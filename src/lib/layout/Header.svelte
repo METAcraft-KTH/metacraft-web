@@ -17,12 +17,12 @@
 <svelte:window bind:scrollY={scrollY} />
 
 <!-- mobile -->
-<nav class="md:hidden z-99 w-100%">
+<nav class="md:hidden z-99 w-full">
 	<MobileHeader {hideHeader} />
 </nav>
 
 <!-- not mobile -->
-<nav class="hidden z-99 md:flex w-100%">
+<nav class="hidden z-99 md:flex w-full">
 	<DesktopHeader {hideHeader} />
 </nav>
 

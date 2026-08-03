@@ -9,14 +9,14 @@
 </script>
 
 <div class="flex flex-row">
-	<div class="max-w-300px">
+	<div class="max-w-[300px]">
 		{@render image?.()}
 	</div>
-	<div class="flex flex-col p-l-4">
-		<div class="font-size-8">
+	<div class="flex flex-col pl-4">
+		<div class="text-[2rem]">
 			{@render title?.()}
 		</div>
-		<div class="max-w-300px p-t-4">
+		<div class="max-w-[300px] pt-4">
 			{@render content?.()}
 		</div>
 	</div>

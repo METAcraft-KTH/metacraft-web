@@ -11,7 +11,7 @@
 </script>
 
 <aside transition:slide
-  class="absolute left-0 top-14 transition-all-300 bg-pink-800 flex flex-col overflow-hidden"
+  class="absolute left-0 top-14 transition-all duration-300 bg-pink-800 flex flex-col overflow-hidden"
   class:h-0={!hovered}
   onmouseover={() => hovered = true}
   onfocus={()=>{/* a11y wants an on:focus event, i guess */}}

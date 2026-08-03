@@ -62,37 +62,37 @@
     font-family: 'OCR', monospace;
   }
 </style>
-<div class="w-100lvw h-100vh fixed z--10 bg-center-center custombg2"></div>
+<div class="-z-10 fixed bg-center w-[100lvw] h-[100vh] custombg2"></div>
 
-<div class="w-100% min-h-100svh pt-10 block">
-  <div class="absolute top-0 left-0 w-100% h-100% bg-center-bottom bg-cover custombg z--5"></div>
+<div class="block pt-10 w-full min-h-[100svh]">
+  <div class="top-0 left-0 -z-5 absolute bg-cover bg-bottom w-full h-full custombg"></div>
 
   <Title>3.1<br>FINAL CAMPAIGN</Title>
 
   <Countdown />
 
-  <button class="notButton absolute bottom-0 left-0 w-100% h-15 m-0 text-center color-white titleFadeIn" onmousedown={scrollDown}>
+  <button class="bottom-0 left-0 absolute m-0 w-full h-15 text-white text-center notButton titleFadeIn" onmousedown={scrollDown}>
     <ChevronDown />
   </button>
 </div>
 
-<div class="mx-auto mt-4 md:mt-12 mb-12 w-100% max-w-250 p-2 rd">
-  <iframe class="w-100% aspect-video" style="box-shadow: 0 0 0 .5rem black" src="https://www.youtube-nocookie.com/embed/Uy6ZGn5OHdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="mx-auto mt-4 md:mt-12 mb-12 p-2 rounded w-full max-w-250">
+  <iframe class="w-full aspect-video" style="box-shadow: 0 0 0 .5rem black" src="https://www.youtube-nocookie.com/embed/Uy6ZGn5OHdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 <!--<Main bg="black" text="white">
 </Main>-->
 
-<p class="text-center ocr text-red-5 text-lg md:text-xl mb-4 px-3">LADDA OM SIDAN FÖR ATT UPPDATERA MÄTAREN.</p>
+<p class="mb-4 px-3 text-red-500 text-lg md:text-xl text-center ocr">LADDA OM SIDAN FÖR ATT UPPDATERA MÄTAREN.</p>
 
-<div class="relative flex flex-col gap-3 items-center text-white text-lg ocr w-100% max-w-180">
+<div class="relative flex flex-col items-center gap-3 w-full max-w-180 text-white text-lg ocr">
   <span class="text-center">ÅTERSTÄLLER ARKIVDATA... [5/6] ERROR!</span>
-  <img src={BossbarBackground} alt="bossbar" class="w-100%" style="image-rendering: pixelated;">
-  <img src={BossbarProgress} alt="bossbar" class="w-100% absolute bottom-0 left-0" style={`image-rendering: pixelated;
+  <img src={BossbarBackground} alt="bossbar" class="w-full" style="image-rendering: pixelated;">
+  <img src={BossbarProgress} alt="bossbar" class="bottom-0 left-0 absolute w-full" style={`image-rendering: pixelated;
     clip-path: polygon(0 0, ${progressBarPercentage}% 0, ${progressBarPercentage}% 100%, 0 100%);`}>
-  <img src={BossbarOverlay} alt="bossbar" class="w-100% absolute bottom-0 left-0" style="image-rendering: pixelated;">
+  <img src={BossbarOverlay} alt="bossbar" class="bottom-0 left-0 absolute w-full" style="image-rendering: pixelated;">
 </div>
-<div class="flex flex-row w-100% max-w-180 ocr">
+<div class="flex flex-row w-full max-w-180 ocr">
   <Shortcut href="#tis">TIS</Shortcut>
   <Shortcut href="#ons">ONS</Shortcut>
   <Shortcut href="#tors">TORS</Shortcut>
@@ -101,7 +101,7 @@
   <Shortcut href="#sön">???</Shortcut>
 </div>
 
-<main class="ocr w-100% max-w-200 mb-20 md:mb-32 text-white">
+<main class="mb-20 md:mb-32 w-full max-w-200 text-white ocr">
 
   <DayStart href="tis">TISDAG, 4 JUNI</DayStart>
 
@@ -109,7 +109,7 @@
     <p class="mb-2">Våra spejare har upptäckt nya underjordiska byggnader. Enligt deras undersökning skulle dessa strukturer ha kallats "utmaningskammare", samt innehållit exklusiva skatter.</p>
     <p class="mb-2">Vi har hunnit kartlägga minst nio sådana kammare. Koordinaterna är markerade i kartor som finns att hämta gratis vid $hamn. Se bifogad bild för var man kan hämta dessa.</p>
     <p class="mb-2">Det är möjligt att vi hittar uråldriga vapen som kan komma till användning i Kriget. Därför vill jag be om resurser för att utforska och lära oss mer om dessa kammare. </p>
-    <a href={trial_maps} target="_blank" class="block no-underline"><img src={trial_maps} alt="tis_map.png" ><p class="text-sm text-gray-6">trial_maps.png - Klicka för att visa i ett annat fönster.</p></a>
+    <a href={trial_maps} target="_blank" class="block no-underline"><img src={trial_maps} alt="tis_map.png" ><p class="text-gray-600 text-sm">trial_maps.png - Klicka för att visa i ett annat fönster.</p></a>
   </Message>
 
   <Message head="Re: Trial Chambers" subhead="Från Borgarorden" iconOnLeft={false}>
@@ -128,14 +128,14 @@
     <p class="mb-2">Vi har samlat och förberett våra resurser för att så många som möjligt ska kunna bidra i Kriget. <u>Besök KTH Entré snarast för att hämta era utrustningar</u>, oavsett om du har tidigare varit aktiv i världen eller ej. Inför söndag behöver vi verkligen varenda person vi kan få tag på.</p>
     <p class="mb-2">I varje persons utrustningspaket ingår järnutrustning, resurser, svärd, pilbåge, pilar, guldäpple, mat, byggmaterial, annat gott vi kunde slänga in, och såklart en shulker box som innehåller allt ovan.</p>
     <p class="mb-2">Om du inte hinner komma förbi Campus tidigare, så kan du hämta dina utrustning fram tills Kriget börjar söndag kl 19. Bli inte sen.</p>
-    <a href={rep} target="_blank" class="block no-underline"><img src={rep} alt="tis_map.png" ><p class="text-sm text-gray-6">representative.png - Klicka för att visa i ett annat fönster.</p></a>
+    <a href={rep} target="_blank" class="block no-underline"><img src={rep} alt="tis_map.png" ><p class="text-gray-600 text-sm">representative.png - Klicka för att visa i ett annat fönster.</p></a>
   </Message>
 
   <DayStart href="fre">FREDAG, 7 JUNI</DayStart>
 
   <Message iconUUID="586bde1fad41411dbc8ceb2148821763" head="Info" subhead="Från Okänd">
     <p class="mb-2"></p>
-    <a href={infopic} target="_blank" class="block no-underline"><img src={infopic} alt="tis_map.png" ><p class="text-sm text-gray-6">info.png - Klicka för att visa i ett annat fönster.</p></a>
+    <a href={infopic} target="_blank" class="block no-underline"><img src={infopic} alt="tis_map.png" ><p class="text-gray-600 text-sm">info.png - Klicka för att visa i ett annat fönster.</p></a>
   </Message>
 
   <Message head="Re: Info" subhead="Från Borgarorden" iconOnLeft={false}>
@@ -150,7 +150,7 @@
 
   <Message iconUUID="e9e4eda633fd4f02a7185d7307dcd5d9" head="Fler utrustningar finns att köpa" subhead="Pressmeddelande från Herobrine">
     <p class="mb-2">Exklusiva utrustningar finns nu att handla utanför KTH Entré. Vi erbjuder allt från stridsklubbor till förtrollade guldäpple. Missa inte specialpriset på de första fem stridsklubborna.</p>
-    <a href={shop} target="_blank" class="block no-underline"><img src={shop} alt="tis_map.png" ><p class="text-sm text-gray-6">shop.png - Klicka för att visa i ett annat fönster.</p></a>
+    <a href={shop} target="_blank" class="block no-underline"><img src={shop} alt="tis_map.png" ><p class="text-gray-600 text-sm">shop.png - Klicka för att visa i ett annat fönster.</p></a>
   </Message>
 
   <DayStart href="lör">SÖNDAG, 9 JUNI</DayStart>

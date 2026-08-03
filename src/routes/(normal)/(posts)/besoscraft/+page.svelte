@@ -12,7 +12,7 @@
 </script>
 
 <!-- TODO: gör det här elementet till en layout? -->
-<div class="w-100% flex flex-col bg-stone">
+<div class="flex flex-col bg-stone w-full">
 
   <Splash --image={url}>
     <Title {post}>
@@ -21,7 +21,7 @@
   </Splash>
 
   <Main {post}>
-    <div class="text-center w-100%">
+    <div class="w-full text-center">
       <TypeAndTime type={'event'} date={'2024/4/1'} style={'mb-6 md:mb-10'} />
     </div>
     <!-- TODO: make these into $lib/textstyle components -->
@@ -36,7 +36,7 @@
     <p class="mb-6">
       Med anledning av ovannämnt har vi beslutat att <b>stänga ner METAcraft permanent.</b> Men oroa er icke! Den ersätts av <b>BE$O$craft</b>, en spännande ny koncept som använder den bästa spelversionen genom tiderna: <b>Beta 1.7.3</b>! Du kan gå med i den nya (gamla) servern redan nu, följ bara instruktionerna nedan!
     </p>
-    <h1 class="text-2xl font-bold mb-3">Instruktionerna nedan</h1>
+    <h1 class="mb-3 font-bold text-2xl">Instruktionerna nedan</h1>
     <ol class="mb-6">
       <li>1. Gå till inställningarna i din Minecraft launcher</li>
       <li>2. Sätt på "historiska versioner"</li>
@@ -44,18 +44,18 @@
       <li>4. Ignorera Mojangs varningar om "player safety features" (snarare 1984 features)</li>
       <li>5. Anslut till <span class="font-mono">betasektionen.se</span>!</li>
     </ol>
-    <h1 class="text-2xl font-bold mb-3">FAQ</h1>
-    <h2 class="text-xl font-bold mb-3">Vad innebär det för mig som spelare?</h2>
+    <h1 class="mb-3 font-bold text-2xl">FAQ</h1>
+    <h2 class="mb-3 font-bold text-xl">Vad innebär det för mig som spelare?</h2>
     <p>Du kan se fram emot flera fördelar, såsom:</p>
-    <ul class="list-disc mb-6 ml-4">
+    <ul class="mb-6 ml-4 list-disc">
       <li> inga jävla fackförbund</li>
     </ul>
     
-    <h2 class="text-xl font-bold mb-3">Kan jag spela på METAcraft ändå?</h2>
+    <h2 class="mb-3 font-bold text-xl">Kan jag spela på METAcraft ändå?</h2>
     <p class="mb-6">
       Ja, men inte länge till! BE$O$craft är här för att stanna, och vi är överens om att det är den bästa riktningen för servern framöver.
     </p>
-    <h2 class="text-xl font-bold mb-3">Kan jag donera till be$o$?</h2>
+    <h2 class="mb-3 font-bold text-xl">Kan jag donera till be$o$?</h2>
     <p class="mb-12">
       ja
     </p>

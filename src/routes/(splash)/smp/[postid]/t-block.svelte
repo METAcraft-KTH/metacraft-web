@@ -7,7 +7,7 @@
     }
 </style>
 <p class="text-center">
-    <img class="w-100% max-w-150" src={recipe} alt="recipe for t-block" />
+    <img class="w-full max-w-150" src={recipe} alt="recipe for t-block" />
 </p>
 <p>
     Halloj alla! 👋

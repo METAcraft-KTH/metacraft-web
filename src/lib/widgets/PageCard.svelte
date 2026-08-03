@@ -6,8 +6,8 @@
 	let { children }: Props = $props();
 </script>
 
-<div class="flex flex-col flex-items-center">
-	<div class="bg-white border-rounded-1">
+<div class="flex flex-col items-center">
+	<div class="bg-white rounded-xs">
 		{@render children?.()}
 	</div>
 </div>

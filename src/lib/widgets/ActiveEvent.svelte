@@ -71,7 +71,7 @@
   }
 </style>
 
-<a href={href} class="flex flex-col flex-justify-center flex-items-center shadow-xl my-10 w-100% text-black no-underline hover:contrast-150">
+<a href={href} class="flex flex-col justify-center items-center shadow-xl my-10 w-full text-black no-underline hover:contrast-150">
 
   <div class="mb-2 font-ten text-yellow-700 loop-container">
     <span class="loopspan">

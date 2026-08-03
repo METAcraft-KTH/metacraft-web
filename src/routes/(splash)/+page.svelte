@@ -59,17 +59,17 @@
 
 </style>
 
-<div id="mainSplash" class="relative flex flex-col flex-justify-center lg:bg-fixed mt--14 w-100% h-100svh min-h-[40rem]">
+<div id="mainSplash" class="relative flex flex-col justify-center lg:bg-fixed -mt-14 w-full h-[100svh] min-h-[40rem]">
 
-  <div id="splashContent" class="flex flex-col flex-justify-center flex-items-center px-0 py-20 titleFadeIn">
-    <p class="text-shadow-xl font-ten text-white text-3xl sm:text-4xl text-center">{m.home_welcome()}</p>
+  <div id="splashContent" class="flex flex-col justify-center items-center px-0 py-20 titleFadeIn">
+    <p class="text-shadow-lg font-ten text-white text-3xl sm:text-4xl text-center">{m.home_welcome()}</p>
 
-    <img src={logo} alt="METAcraft" class="my-6 w-100% max-w-600px logo" />
+    <img src={logo} alt="METAcraft" class="my-6 w-full max-w-[600px] logo" />
 
-    <p class="text-shadow-xl font-ten text-white text-3xl sm:text-4xl text-center">{m.home_kth_community()}</p>
+    <p class="text-shadow-lg font-ten text-white text-3xl sm:text-4xl text-center">{m.home_kth_community()}</p>
 
     {#if false}
-      <div class="bg-black p-2 px-4 sm:w-400px font-mc text-white text-xl sm:text-2xl text-center b-white b-2 b-solid">
+      <div class="bg-black p-2 px-4 border-2 border-white border-solid sm:w-[400px] font-mc text-white text-xl sm:text-2xl text-center">
         mc.datasektionen.se
         <!--{$page.url.toString().replace(/https?:\/\//,'').replace(/\//,'')}-->
       </div>
@@ -78,10 +78,10 @@
     {/if}
 
     <div class="flex md:flex-row flex-col justify-center items-center gap-4 mt-4 sm:mt-0 text-center">
-      <a href="/smp" class="block bg-map shadow-xl md:m-t8 px-4 py-3 font-bold text-black text-lg no-underline hover:scale-105 transition-all rd hover:contrast-200">
+      <a href="/smp" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black text-lg no-underline hover:scale-105 transition-all hover:contrast-200">
         {m.home_start_playing_cta()}
       </a>
-      <a href="https://discord.com/invite/MttUbkmeyD" target="_blank" class="block bg-map shadow-xl md:m-t8 px-4 py-3 font-bold text-black text-lg no-underline hover:scale-105 transition-all rd hover:contrast-200">
+      <a href="https://discord.com/invite/MttUbkmeyD" target="_blank" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black text-lg no-underline hover:scale-105 transition-all hover:contrast-200">
         {m.home_join_discord_cta()}
       </a>
     </div>
@@ -102,7 +102,7 @@
     
   </div>
 
-  <button class="bottom-0 left-0 absolute w-100% h-15 text-center notButton color-white titleFadeIn" style="animation-delay: 1s" onmousedown={scrollDown}>
+  <button class="bottom-0 left-0 absolute w-full h-15 text-white text-center notButton titleFadeIn" style="animation-delay: 1s" onmousedown={scrollDown}>
     <ChevronDown />
   </button>
 </div>
@@ -112,26 +112,26 @@
 
 
 
-<div class="bg-cover bg-center-center bg-fixed w-100% abcabc">
-  <div class="flex flex-col items-center gap-4 md:gap-8 backdrop-blur px-2 py-12 w-100% h-100%">
-    <div class="bg-white-concrete-powder shadow-2xl p-2 w-100% max-w-250 rd">
-      <iframe class="w-100% aspect-video" src="https://www.youtube-nocookie.com/embed/5KnJjiPfZQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="bg-cover bg-center bg-fixed w-full abcabc">
+  <div class="flex flex-col items-center gap-4 md:gap-8 backdrop-blur px-2 py-12 w-full h-full">
+    <div class="bg-white-concrete-powder shadow-2xl p-2 rounded w-full max-w-250">
+      <iframe class="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/5KnJjiPfZQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
-    <span class="inline bg-white shadow-xl px-3 py-2 font-ten text-black text-4xl md:text-5xl text-center rd">
+    <span class="inline bg-white shadow-xl px-3 py-2 rounded font-ten text-black text-4xl md:text-5xl text-center">
       {m.home_this_is_metacraft()}
     </span>
 
-    <div class="bg-white-concrete-powder shadow-xl px-2 py-6 max-w-[50rem] text-black text-lg text-center leading-tight rd">
+    <div class="bg-white-concrete-powder shadow-xl px-2 py-6 rounded max-w-[50rem] text-black text-lg text-center leading-tight">
       {m.home_intro()}
     </div>
 
   </div>
 </div>
 
-<div class="flex flex-col items-center gap-4 md:gap-8 bg-dark-oak-planks px-2 py-12 w-100% leading-tight">
+<div class="flex flex-col items-center gap-4 md:gap-8 bg-dark-oak-planks px-2 py-12 w-full leading-tight">
 
-  <div class="inline drop-shadow-xl px-2 font-ten text-white text-4xl md:text-5xl text-center rd">
+  <div class="inline drop-shadow-xl px-2 rounded font-ten text-white text-4xl md:text-5xl text-center">
     <LocalizedRichText msg={m.home_play_your_way} />
   </div>
   <p class="max-w-[50rem] text-white text-center">
@@ -149,7 +149,7 @@
     <p class="font-ten text-4xl">måndag 23 september</p>
   </div>
 
-  <main class="bg-map shadow-xl mx-2 my-12 p-8 md:p-10 w-100% max-w-250 text-base md:text-lg">
+  <main class="bg-map shadow-xl mx-2 my-12 p-8 md:p-10 w-full max-w-250 text-base md:text-lg">
     <span class="font-bold">Välkommen till METAcraft!</span>
   
     <div class="my-14" />
@@ -186,11 +186,11 @@
         {m.home_flex_cta()}
       </a>
     </div>
-    <img src={hands} alt="holding hands" class="drop-shadow-xl px-3 w-100% max-w-25rem">
+    <img src={hands} alt="holding hands" class="drop-shadow-xl px-3 w-full max-w-[25rem]">
   </div>
 
   <div class="flex md:flex-row flex-col items-center gap-10 px-6 py-12 max-w-[70rem] text-white">
-    <img src={vcrender} alt="holding hands" class="drop-shadow-xl px-3 w-100% max-w-30rem">
+    <img src={vcrender} alt="holding hands" class="drop-shadow-xl px-3 w-full max-w-[30rem]">
     <div class="flex flex-col justify-center items-center md:items-start gap-3">
       <h1 class="font-ten text-4xl md:text-5xl md:text-left text-center">Proximity voice chat</h1>
       <p class="md:text-left text-center leading-tight"><LocalizedRichText msg={m.home_vc_pre} /></p>
@@ -201,9 +201,9 @@
   </div>
 
 
-  <div class="flex flex-col items-center gap-4 mx-2 mb-12 md:p-10 w-100% max-w-50rem text-base">
+  <div class="flex flex-col items-center gap-4 mx-2 mb-12 md:p-10 w-full max-w-[50rem] text-base">
     <h1 class="font-ten text-white text-4xl md:text-5xl text-center">{m.home_help_us_title()}</h1>
-    <a href="https://forms.gle/aUhgyC99nNAQXGS37" target="_blank" class="inline-block bg-map p-4 hover:scale-105 transition-all hover:contrast-120"><img src={spyglass} alt={m.home_spyglass_alt()} class="sepia-50 w-100% max-w-25rem"></a>
+    <a href="https://forms.gle/aUhgyC99nNAQXGS37" target="_blank" class="inline-block bg-map p-4 hover:scale-105 transition-all hover:contrast-120"><img src={spyglass} alt={m.home_spyglass_alt()} class="sepia-50 w-full max-w-[25rem]"></a>
 
     <p class="px-5 text-white text-center leading-tight"><LocalizedRichText msg={m.home_help_us_pre} /></p>
 
@@ -213,7 +213,7 @@
   </div>
 
   <!--<div class="flex sm:flex-row flex-col">
-    <img src="https://minecraft.wiki/images/Impulse_Command_Block_JE5_BE2.png" alt="command block" class="flex-1 max-w-8rem aspect-square">
+    <img src="https://minecraft.wiki/images/Impulse_Command_Block_JE5_BE2.png" alt="command block" class="flex-1 max-w-[8rem] aspect-square">
     <div>
 
     </div>

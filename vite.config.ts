@@ -1,12 +1,11 @@
 import { paraglideVitePlugin } from '@inlang/paraglide-js';
 import { sveltekit } from '@sveltejs/kit/vite';
-import UnoCSS from 'unocss/vite';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
-import extractorSvelte from '@unocss/extractor-svelte';
 
 export default defineConfig({
 	plugins: [
-		UnoCSS({ extractors: [extractorSvelte()] }),
+		tailwindcss(),
 		sveltekit(),
 		paraglideVitePlugin({
 			project: './project.inlang',

@@ -17,7 +17,7 @@
       ), url("$lib/images/background3.png")
 	}
 </style>
-<div class="top-0 z--10 fixed bg-cover bg-center-center w-100lvw h-100lvh custombg"></div>
+<div class="top-0 -z-10 fixed bg-cover bg-center w-[100lvw] h-[100lvh] custombg"></div>
 <!-- !! CUSTOM BG !! -->
 
 <Title>
@@ -27,7 +27,7 @@
   <p class="mb-5 text-lg text-center">
     <LocalizedRichText msg={m.about_intro} />
   </p>
-  <div class="flex flex-row flex-wrap flex-justify-center w-100%">
+  <div class="flex flex-row flex-wrap justify-center w-full">
     {#each credits as info}
       <Person {info} />
     {/each}
@@ -37,7 +37,7 @@
   <p class="mb-5 text-lg text-center">
     {m.about_former_intro()}
   </p>
-  <div class="flex flex-row flex-wrap flex-justify-center w-100%">
+  <div class="flex flex-row flex-wrap justify-center w-full">
     {#each credits_old as info}
       <Person {info} />
     {/each}

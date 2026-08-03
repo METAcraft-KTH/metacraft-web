@@ -9,7 +9,7 @@
 </script>
 
 <Header splashPage={true} />
-<div class="w-100%">
+<div class="w-full">
 	<!--
 		this wrapper is required for top level elements in +page to properly respect height rule,
 		most notably the splash page that hides overflow when the screen isnt tall enough.

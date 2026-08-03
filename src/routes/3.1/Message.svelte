@@ -16,17 +16,17 @@
   }: Props = $props();
 </script>
 
-<section class="relative flex flex-row items-start mb-3 mx-1">
+<section class="relative flex flex-row items-start mx-1 mb-3">
   {#if iconOnLeft}
-    <img src={`https://mc-heads.net/avatar/${iconUUID}/64.png`} alt="playerhead" class="b-pink-9 b-2 b-solid hidden md:block mr-3">
+    <img src={`https://mc-heads.net/avatar/${iconUUID}/64.png`} alt="playerhead" class="hidden md:block mr-3 border-2 border-pink-900 border-solid">
   {/if}
-  <div class="b-pink-9 b-2 b-solid p-3 md:p-4 pt-2 bg-black w-100%">
-    <h1 class="text-pink-500 text-xl md:text-2xl font-bold">{head}</h1>
-    <h2 class="text-pink-700 mb-3">{subhead}</h2>
-    <img src={`https://mc-heads.net/avatar/${iconUUID}/40.png`} alt="playerhead" class="block md:hidden absolute top-2 right-2" style="box-shadow: .125rem .125rem rgb(131 24 67);">
+  <div class="bg-black p-3 md:p-4 pt-2 border-2 border-pink-900 border-solid w-full">
+    <h1 class="font-bold text-pink-500 text-xl md:text-2xl">{head}</h1>
+    <h2 class="mb-3 text-pink-700">{subhead}</h2>
+    <img src={`https://mc-heads.net/avatar/${iconUUID}/40.png`} alt="playerhead" class="md:hidden block top-2 right-2 absolute" style="box-shadow: .125rem .125rem rgb(131 24 67);">
     {@render children?.()}
   </div>
   {#if !iconOnLeft}
-    <img src={`https://mc-heads.net/avatar/${iconUUID}/64.png`} alt="playerhead" class="b-pink-9 b-2 b-solid hidden md:block ml-3">
+    <img src={`https://mc-heads.net/avatar/${iconUUID}/64.png`} alt="playerhead" class="hidden md:block ml-3 border-2 border-pink-900 border-solid">
   {/if}
 </section>

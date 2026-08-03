@@ -18,7 +18,7 @@
       ), url("$lib/images/background2.png")
 	}
 </style>
-<div class="w-100lvw h-100lvh fixed z--10 custombg bg-center-center bg-cover"></div>
+<div class="w-[100lvw] h-[100lvh] fixed -z-10 custombg bg-center bg-cover"></div>
 <!-- !! CUSTOM BG !! -->
 
 <Title>

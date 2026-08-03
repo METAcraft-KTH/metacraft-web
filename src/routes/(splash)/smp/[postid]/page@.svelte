@@ -53,7 +53,7 @@
 <Header />
   
   <!-- TODO: gör det här elementet till en layout? -->
-  <div class="w-100% flex flex-col bg-stone">
+  <div class="flex flex-col bg-stone w-full">
   
     <Splash --image={"url("+ThisImage+")"}>
         <Title {post}>
@@ -62,7 +62,7 @@
     </Splash>
   
     <Main {post} back_button={true}>
-        <div class="text-center w-100%">
+        <div class="w-full text-center">
             <TypeAndTime type={ThisPost.type} date={ThisPost.date} style={'mb-6 md:mb-10'} />
         </div>
         {@const SvelteComponent = postContent}

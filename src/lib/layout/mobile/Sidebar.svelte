@@ -8,7 +8,7 @@
 	let { sideVisible }: Props = $props();
 </script>
 
-<aside class="fixed top-14 transition-all-300 w-100% bg-pink-900 flex flex-col z-10" class:left--100%={!sideVisible} class:left-0={sideVisible}>
+<aside class="top-14 z-10 fixed flex flex-col bg-pink-900 w-full transition-all duration-300" class:-left-full={!sideVisible} class:left-0={sideVisible}>
 	<SideLink href="/smp">Survival</SideLink>
   
     <SideSubLink href="/smp/features">Features</SideSubLink>

@@ -7,7 +7,7 @@
 </script>
 
 <Header />
-<div class="flex-1 bg-bookshelf w-100%">
+<div class="flex-1 bg-bookshelf w-full">
 	<Title>RESOURCE PACKS</Title>
 	<div class="flex lg:flex-row flex-col gap-4 mx-auto mb-4 max-w-[80rem]">
 		<div class="flex flex-col flex-1 gap-2 bg-book p-10 leading-tight">

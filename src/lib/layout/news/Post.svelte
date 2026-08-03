@@ -81,33 +81,33 @@
   }
 </style>
 
-<a transition:slide {href} class="text-black no-underline rd-lg w-98% hover:w-100% transition-all">
-  <div class="bg-wool w-100% flex flex-col md:flex-row rd b-3 b-white b-solid" class:live={live} class:latest={latest}>
+<a transition:slide {href} class="rounded-lg w-[98%] hover:w-full text-black no-underline transition-all">
+  <div class="flex md:flex-row flex-col bg-wool border-3 border-white border-solid rounded w-full" class:live={live} class:latest={latest}>
 
-    <div class="flex flex-row items-center flex-1">
+    <div class="flex flex-row flex-1 items-center">
 
-      <div class="icon mr-2 w-8 h-8 md:w-12 md:h-12 md:m-3 md:mr-5"
+      <div class="md:m-3 mr-2 md:mr-5 w-8 md:w-12 h-8 md:h-12 icon"
       class:typeEvent={type==='event'}
       class:typeUpdate={type==='update'}
 ></div>
 
-      <div class="flex-1 flex flex-col flex-justify-center my-2">
-        <h1 class="text-lg sm:text-xl md:text-2xl leading-tight mt--1 sm:mt-0 sm:mb-1 text-pink-800">{title}</h1>
+      <div class="flex flex-col flex-1 justify-center my-2">
+        <h1 class="-mt-1 sm:mt-0 sm:mb-1 text-pink-800 text-lg sm:text-xl md:text-2xl leading-tight">{title}</h1>
         <TypeAndTime {type} {date} />
       </div>
     </div>
     
     <!--
-    <img src={image} alt="banner" class="banner w-30% md:w-40% relative rd-r h-[5rem] object-cover object-center transition-all">
+    <img src={image} alt="banner" class="relative rounded-r w-[30%] md:w-[40%] h-[5rem] object-center object-cover transition-all banner">
     -->
 
     
-    <div class="banner rd-r transition-all w-30% md:w-40% relative"></div>
+    <div class="relative rounded-r w-[30%] md:w-[40%] transition-all banner"></div>
     
 
     <!--
-    <div class="rd-r transition-all w-30% md:w-40% relative banner">
-      <img src="{image}" alt="banner" class="banner h-50% object-cover object-center">
+    <div class="relative rounded-r w-[30%] md:w-[40%] transition-all banner">
+      <img src="{image}" alt="banner" class="h-[50%] object-center object-cover banner">
     </div>
     -->
     

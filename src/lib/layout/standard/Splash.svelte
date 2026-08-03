@@ -18,9 +18,9 @@
   }
 </style>
 
-<div class="back w-100%">
-  <div class="bl w-100% flex flex-justify-center">
-    <div class="splash w-100% max-w-350 aspect-4 lg:max-h-85 flex flex-justify-center flex-items-end">
+<div class="w-full back">
+  <div class="flex justify-center w-full bl">
+    <div class="flex justify-center items-end w-full max-w-350 lg:max-h-85 aspect-4/1 splash">
       {@render children?.()}
     </div>
   </div>

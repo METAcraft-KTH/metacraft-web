@@ -12,11 +12,11 @@
 </script>
   
 <Header />
-<div class="flex-1 bg-bookshelf w-100%">
+<div class="flex-1 bg-bookshelf w-full">
 
     <Title>FEATURES</Title>
 
-    <a href="/smp" class="block mx-auto mb-2 w-full max-w-[79rem] font-bold text-white hover:text-#BE185D no-underline transition-colors">&lt; {m.features_back_to_survival()}</a>
+    <a href="/smp" class="block mx-auto mb-2 w-full max-w-[79rem] font-bold text-white hover:text-[#BE185D] no-underline transition-colors">&lt; {m.features_back_to_survival()}</a>
     <div class="flex lg:flex-row flex-col gap-4 mx-auto mb-4 max-w-[80rem]">
         <div class="flex flex-col flex-1 gap-2 bg-book p-6 leading-tight">
             <div class="font-ten text-2xl md:text-3xl">PLAYER SHOPS</div>

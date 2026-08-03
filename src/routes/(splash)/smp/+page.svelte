@@ -42,28 +42,28 @@
     }
 </style>
 
-<div class="bg-stone bg-center w-100%">
-    <div class="flex justify-center items-end shadow-xl mx-auto mt--14 pb-16 w-100% max-w-[80rem] h-16rem lg:h-25rem font-ten text-white splash">
+<div class="bg-stone bg-center w-full">
+    <div class="flex justify-center items-end shadow-xl mx-auto -mt-14 pb-16 w-full max-w-[80rem] h-[16rem] lg:h-[25rem] font-ten text-white splash">
         <Title>SURVIVAL</Title>
     </div>
 
     <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">
         <div class="font-bold text-white text-lg">{m.smp_play_today()}</div>
-        <div class="inline-block bg-black mx-1 px-3 py-1 w-full max-w-[15rem] font-mc text-white text-xl b-white b-solid b-2">metacraft.nu</div>
+        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[15rem] font-mc text-white text-xl">metacraft.nu</div>
         <div class="font-bold text-white text-base">{m.smp_no_mods_required()}</div>
     </div>
 
     <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem] font-mc">
         <Button href="/smp/features">
-            <img src="https://minecraft.wiki/images/Knowledge_Book_JE2.png" alt="icon" class="w-3rem md:w-4rem">
+            <img src="https://minecraft.wiki/images/Knowledge_Book_JE2.png" alt="icon" class="w-[3rem] md:w-[4rem]">
             <span>{m.smp_everything_you_need()}</span>
         </Button>
         <Button href="/smp/map">
-            <img src="https://minecraft.wiki/images/Map_Zoom_4.png" alt="icon" class="w-3rem md:w-4rem">
+            <img src="https://minecraft.wiki/images/Map_Zoom_4.png" alt="icon" class="w-[3rem] md:w-[4rem]">
             <span>{m.smp_see_map()}</span>
         </Button>
         <Button href="/install">
-            <img src="https://cdn.modrinth.com/data/9eGKb6K1/icon.png" alt="icon" class="w-3rem md:w-4rem">
+            <img src="https://cdn.modrinth.com/data/9eGKb6K1/icon.png" alt="icon" class="w-[3rem] md:w-[4rem]">
             <span>{m.smp_add_voicechat()}</span>
         </Button>
     </div>
@@ -119,18 +119,18 @@
         </p>
     </SplashRow>
 
-    <div class="bg-cover bg-center-center bg-fixed w-100% abcabc">
-        <div class="flex flex-col items-center gap-4 md:gap-8 px-2 py-12 w-100% h-100%">
-            <span class="inline bg-white shadow-xl px-3 py-2 font-ten text-black text-4xl md:text-5xl text-center rd">
+    <div class="bg-cover bg-center bg-fixed w-full abcabc">
+        <div class="flex flex-col items-center gap-4 md:gap-8 px-2 py-12 w-full h-full">
+            <span class="inline bg-white shadow-xl px-3 py-2 rounded font-ten text-black text-4xl md:text-5xl text-center">
               {m.smp_watch_trailer()}
             </span>
-            <div class="bg-white-concrete-powder shadow-2xl p-2 w-100% max-w-250 rd">
-                <iframe class="w-100% aspect-video" src="https://www.youtube-nocookie.com/embed/5KnJjiPfZQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="bg-white-concrete-powder shadow-2xl p-2 rounded w-full max-w-250">
+                <iframe class="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/5KnJjiPfZQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
-            <div class="bg-white-concrete-powder shadow-xl px-2 py-6 max-w-[50rem] text-black text-lg text-center leading-tight rd">
+            <div class="bg-white-concrete-powder shadow-xl px-2 py-6 rounded max-w-[50rem] text-black text-lg text-center leading-tight">
                 <span class="font-bold">{m.smp_ready_to_play()}</span>
-                <div class="inline-block bg-black mx-1 px-3 py-1 w-full max-w-[15rem] font-mc text-white text-xl b-white b-solid b-2">metacraft.nu</div>
+                <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[15rem] font-mc text-white text-xl">metacraft.nu</div>
                 <div class="font-bold text-base">{m.smp_no_mods_required()}</div>
             </div>
         </div>
@@ -138,12 +138,12 @@
     <!--
     <div class="flex flex-col items-center gap-4 md:gap-8 bg-bookshelf px-2 py-12 pb-24">
         <div class="relative">
-            <div class="top--14 absolute" id="history"></div>
+            <div class="-top-14 absolute" id="history"></div>
         </div>
-        <span class="inline bg-white shadow-xl px-3 py-2 w-max font-ten text-black text-4xl md:text-5xl text-center rd">
+        <span class="inline bg-white shadow-xl px-3 py-2 rounded w-max font-ten text-black text-4xl md:text-5xl text-center">
             SERVERHISTORIK
         </span>
-        <div class="flex flex-col-reverse items-center gap-2 md:gap-6 mb-12 w-100% max-w-300">
+        <div class="flex flex-col-reverse items-center gap-2 md:gap-6 mb-12 w-full max-w-300">
             {#each index as post}
               <Post {...post} href={"/smp/"+post.href} --image={
                 post.image && post_images[post.image]                   ? "url(" + post_images[post.image] + ")" :
@@ -157,10 +157,10 @@
         <p class="text-white">
             {JSON.stringify(post_images_array)}
         </p>
-        <p class="text-gray">
+        <p class="text-gray-500">
             {JSON.stringify(post_images)}
         </p>
-        <p class="text-gray">
+        <p class="text-gray-500">
             {JSON.stringify(fallback_post_image)}
         </p>
         

@@ -15,7 +15,7 @@
 </script>
 
 <!-- TODO: gör det här elementet till en layout? -->
-<div class="w-100% flex flex-col bg-stone">
+<div class="flex flex-col bg-stone w-full">
 
   <Splash --image={url}>
     <Title {post}>
@@ -24,7 +24,7 @@
   </Splash>
 
   <Main {post}>
-    <div class="text-center w-100%">
+    <div class="w-full text-center">
       <TypeAndTime type={'update'} date={'2024/2/9'} style={'mb-6 md:mb-10'} />
     </div>
     <!-- TODO: make these into $lib/textstyle components -->
@@ -33,7 +33,7 @@
       <br>
       Här är de viktigaste nyheterna:
     </p>
-    <h1 class="text-2xl font-bold mb-3">BYGGTÄVLING</h1>
+    <h1 class="mb-3 font-bold text-2xl">BYGGTÄVLING</h1>
     <p class="mb-6">
       Alla vet att om du fick tag på den genomsnittliga studenten och frågade om dennes största kritik mot KTH, så skulle 9 av 10 svara att KTH aldrig expanderar med nya byggnader. Det är förstås inte helt skolans fel, men nu har vi chansen att ge folket det de verkligen vill ha.
     </p>
@@ -44,8 +44,8 @@
       Mer information kommer!
     </p>
     
-    <h1 class="text-2xl font-bold mb-3">NYTT MATERIAL</h1>
-    <p class="mb-3 text-center text-neutral italic">
+    <h1 class="mb-3 font-bold text-2xl">NYTT MATERIAL</h1>
+    <p class="mb-3 text-neutral-500 text-center italic">
       EDIT: På grund av kommunikationsfel räknas denna del av inlägget som <b>non-canon</b>.<br>Den är endast inkluderade här av arkiverande skäl.
     </p>
     <p class="mb-6 line-through">
@@ -54,14 +54,14 @@
     <p class="mb-12 line-through">
       Till denna vecka har vi framställt ett nytt material: Inte netherit, men tillräckligt bra! Dr Horten menar att materialen kan låta oss laga netherit-utrustningar utan netherit! Informationen om receptet finns i hans kontor på campus.
     </p>
-    <h1 class="text-2xl font-bold mb-3">GRUVVAGN MK. III</h1>
+    <h1 class="mb-3 font-bold text-2xl">GRUVVAGN MK. III</h1>
     <p class="mb-6">
       Gruvvagnar är bra för transport men de är långsamma, trots modern teknologi. Tack vare Dr Horten och hans efterforskningar på magmakräm lyckades vi förbättra Gruvvagn Mk. II ännu mer: Vi presenterar *Gruvvagn Mk. III som höjer maxhastigheten till 30 blocks per sekund!
       <br><br>
       <i class="italic">*receptet till Gruvvagn Mk. III kräver Gruvvagn Mk. II.</i>
     </p>
-    <img src={mk2} alt={'mk2 recipe'} class="max-w-100 mb-2" />
-    <img src={mk3} alt={'mk3 recipe'} class="max-w-100 mb-6" />
+    <img src={mk2} alt={'mk2 recipe'} class="mb-2 max-w-100" />
+    <img src={mk3} alt={'mk3 recipe'} class="mb-6 max-w-100" />
     <p class="mb-6">
       Det var allt från oss denna vecka! Ha så kul!
     </p>

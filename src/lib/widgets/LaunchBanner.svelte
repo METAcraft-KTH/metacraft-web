@@ -19,10 +19,10 @@
 	});
 </script>
 
-<div class="flex flex-col justify-center items-center h-100%">
-	<div class="bg-pink-500 m-8 p-6 b-rd-4 color-white">
-		<div class="font-size-10">Lansering den 26e December!</div>
-		<div class="font-size-10">
+<div class="flex flex-col justify-center items-center h-full">
+	<div class="bg-pink-500 m-8 p-6 rounded-sm text-white">
+		<div class="text-[2.5rem]">Lansering den 26e December!</div>
+		<div class="text-[2.5rem]">
 			{d}d {h}h {m}m {s}s
 		</div>
 	</div>

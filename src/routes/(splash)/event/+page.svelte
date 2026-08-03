@@ -50,8 +50,8 @@ html {
     }
 </style>
 
-<div class="bg-stone bg-center w-100%">
-    <div class="flex justify-center items-end shadow-xl mx-auto mt--14 pb-16 w-100% max-w-[80rem] h-16rem lg:h-25rem font-ten text-white splash">
+<div class="bg-stone bg-center w-full">
+    <div class="flex justify-center items-end shadow-xl mx-auto -mt-14 pb-16 w-full max-w-[80rem] h-[16rem] lg:h-[25rem] font-ten text-white splash">
         <Title>{m.event_title()}</Title>
     </div>
 
@@ -59,22 +59,22 @@ html {
     <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">
         {#if false}
         <div class="font-bold text-white text-lg">{m.event_connect_via()}</div>
-        <div class="inline-block bg-black mx-1 px-3 py-1 w-full max-w-[20rem] font-mc text-white text-xl b-white b-solid b-2">event.metacraft.nu</div>
+        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[20rem] font-mc text-white text-xl">event.metacraft.nu</div>
         <div class="font-bold text-white text-base">{m.event_java_no_mods()}</div>
         {:else}
         <div class="font-bold text-white text-lg">{m.event_next_scheduled()}</div>
-        <div class="inline-block mx-1 px-3 py-1 md:py-2 w-100% w-full font-mc font-bold text-white text-xl md:text-2xl rainbowbg">???</div>
+        <div class="inline-block mx-1 px-3 py-1 md:py-2 w-full w-full font-mc font-bold text-white text-xl md:text-2xl rainbowbg">???</div>
         <div class="font-bold text-white text-base">{m.event_sometime_2025()}</div>
         {/if}
     </div>
 
     <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem]">
         <Button href="/event/leaderboard">
-            <img src="https://minecraft.wiki/images/Gold_Ingot_JE4_BE2.png" alt="icon" class="w-3rem md:w-4rem">
+            <img src="https://minecraft.wiki/images/Gold_Ingot_JE4_BE2.png" alt="icon" class="w-[3rem] md:w-[4rem]">
             <span>{m.event_see_leaderboards()}</span>
         </Button>
         <Button href="#timeline">
-            <img src="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png" alt="icon" class="w-3rem md:w-4rem">
+            <img src="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png" alt="icon" class="w-[3rem] md:w-[4rem]">
             <span>{m.event_read_past_events()}</span>
         </Button>
     </div>
@@ -119,10 +119,10 @@ html {
         </p>
     </SplashRow>
 
-    <div class="relative bg-cover bg-center-center bg-fixed w-100% abcabc">
-        <div id="timeline" class="top--14 absolute"></div>
-        <div class="flex flex-col items-center gap-4 md:gap-8 px-2 pt-12 w-100% h-100%">
-            <span class="inline bg-white shadow-xl px-3 py-2 font-ten text-black text-4xl md:text-5xl text-center rd">
+    <div class="relative bg-cover bg-center bg-fixed w-full abcabc">
+        <div id="timeline" class="-top-14 absolute"></div>
+        <div class="flex flex-col items-center gap-4 md:gap-8 px-2 pt-12 w-full h-full">
+            <span class="inline bg-white shadow-xl px-3 py-2 rounded font-ten text-black text-4xl md:text-5xl text-center">
               {m.event_timeline_heading()}
             </span>
             <Timeline>

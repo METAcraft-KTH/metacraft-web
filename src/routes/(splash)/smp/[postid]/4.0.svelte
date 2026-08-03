@@ -8,7 +8,7 @@
 </p>
 <h1 class="mb-4 font-bold text-xl md:text-3xl text-center">Videoarkiv</h1>
 <p class="text-center">
-    <iframe class="w-100% max-w-150 aspect-video" src="https://www.youtube-nocookie.com/embed/wC56RsEgM9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe class="w-full max-w-150 aspect-video" src="https://www.youtube-nocookie.com/embed/wC56RsEgM9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </p>
 <p>
     Halloj allihop!

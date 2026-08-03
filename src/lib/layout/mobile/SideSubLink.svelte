@@ -10,8 +10,8 @@
 	let active = $derived(page.url.pathname.includes(href));
 </script>
 
-<a {href} class="pl-5 w-100% decoration-none" class:bg-pink-950={!active} class:bg-pink-700={active}>
-  <div class="flex flex-items-center p-2 p-l8 text-white b-l-pink-800 b-l-3 b-l-dotted">
+<a {href} class="pl-5 w-full no-underline" class:bg-pink-950={!active} class:bg-pink-700={active}>
+  <div class="flex items-center p-2 pl-8 border-l-3 border-l-pink-800 border-dotted text-white">
     {@render children?.()}
   </div>
 </a>

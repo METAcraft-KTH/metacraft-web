@@ -171,4 +171,4 @@
 
 <textarea bind:value={karpsravor} oninput={translateB} placeholder="syllabics here" class="text-lg" cols="50" rows="10"></textarea>
 
-{#key warning}<p class="text-red">{warning !== '' ? warning+"is not legal" : ""}</p>{/key}
+{#key warning}<p class="text-red-500">{warning !== '' ? warning+"is not legal" : ""}</p>{/key}

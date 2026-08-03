@@ -39,7 +39,7 @@
   $: if (count <= 0) clearInterval(interval);
 </script>
 
-<div class="flex flex-col justify-center items-center bg-#000000aa py-8 w-100% text-white">
+<div class="flex flex-col justify-center items-center bg-[#000000aa] py-8 w-full text-white">
   <div class="font-mc text-lg md:text-xl">Kriget börjar om</div>
   <div class="font-ten text-5xl md:text-8xl">
     {d}<span class="text-2xl md:text-5xl">d</span>

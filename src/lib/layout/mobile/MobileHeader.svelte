@@ -20,24 +20,24 @@
 	let { hideHeader }: Props = $props();
 </script>
 
-<div class="top-0 fixed flex justify-between w-100% h-14 transition-all"
+<div class="top-0 fixed flex justify-between w-full h-14 transition-all"
 	class:bg-pink-800={!hideHeader || sideVisible}
 >
 
-	<button onmousedown={() => sideVisible = !sideVisible} class="inline-block p-2 h-100% aspect-square text-left notButton color-pink-400" class:color-white={sideVisible || hideHeader}>
+	<button onmousedown={() => sideVisible = !sideVisible} class="inline-block p-2 h-full aspect-square text-pink-400 text-left notButton" class:text-white={sideVisible || hideHeader}>
 		<Menu />
 	</button>
 
-	<a href="/" class="p-2 h-100% aspect-3 text-center color-pink-400" class:color-white={hideHeader && !sideVisible}>
+	<a href="/" class="p-2 h-full aspect-3/1 text-pink-400 text-center" class:text-white={hideHeader && !sideVisible}>
 		<MetacraftLogo />
 	</a>
 
 	{#if false}
-		<a href="/map" class="inline-block p-3 h-100% aspect-square text-right color-pink-400" class:color-white={page.url.pathname === '/smp/map' || (hideHeader && !sideVisible)}>
+		<a href="/map" class="inline-block p-3 h-full aspect-square text-pink-400 text-right" class:text-white={page.url.pathname === '/smp/map' || (hideHeader && !sideVisible)}>
 			<Map />
 		</a>
 	{:else}
-		<div class="inline-block p-3 h-100% aspect-square"></div>
+		<div class="inline-block p-3 h-full aspect-square"></div>
 	{/if}
 </div>
 

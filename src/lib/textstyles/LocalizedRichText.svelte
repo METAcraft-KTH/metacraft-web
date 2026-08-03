@@ -17,7 +17,7 @@
         <u>{@render children?.()}</u>
     {/snippet}
     {#snippet uu({ children })}
-        <u class="underline-2">{@render children?.()}</u>
+        <u class="decoration-2">{@render children?.()}</u>
     {/snippet}
     {#snippet ign({ children })}
         <Ign>{@render children?.()}</Ign>

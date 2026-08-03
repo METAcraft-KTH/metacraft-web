@@ -41,7 +41,7 @@
 </script>
 
 <!-- CUSTOM BG -->
-<div class="z--10 fixed bg-bookshelf bg-cover bg-center-center w-100lvw h-100lvh"></div>
+<div class="-z-10 fixed bg-bookshelf bg-cover bg-center w-[100lvw] h-[100lvh]"></div>
 
 <Title>
 	VOICE CHAT
@@ -50,8 +50,8 @@
 <h1 class="mb-2 font-mc text-white text-center">{m.install_os_question()}</h1>
 <div class="flex flex-row bg-calcite mx-auto mb-8 rounded-xl max-w-200 overflow-hidden">
     {#each platformButtons as [platformName, PlatformIcon]}
-        <button class="flex flex-col flex-1 items-center bg-opacity-40 p-2 border-none transition-colors"
-            class:bg-blue={selectedPlatform === platformName}
+        <button class="flex flex-col flex-1 items-center p-2 border-none transition-colors"
+            class:bg-blue-500={selectedPlatform === platformName}
             class:text-blue-900={selectedPlatform === platformName}
             class:bg-transparent={selectedPlatform !== platformName}
             onmousedown={() => {selectedPlatform = platformName}}>
@@ -68,8 +68,8 @@
     <h1 class="mb-2 font-mc text-white text-center">{m.install_launcher_question()}</h1>
     <div class="flex flex-row bg-calcite mx-auto mb-8 rounded-xl max-w-200 overflow-hidden">
         {#each launcherButtons as [launcherName, launcherIcon]}
-            <button class="flex flex-col flex-1 items-center bg-opacity-40 p-2 border-none transition-colors"
-                class:bg-blue={selectedLauncher === launcherName}
+            <button class="flex flex-col flex-1 items-center p-2 border-none transition-colors"
+                class:bg-blue-500={selectedLauncher === launcherName}
                 class:text-blue-900={selectedLauncher === launcherName}
                 class:bg-transparent={selectedLauncher !== launcherName}
                 onmousedown={() => {selectedLauncher = launcherName}}>
@@ -94,7 +94,7 @@
 <div transition:slide={{duration: 200}}>
     <Main>
         <H1>{m.install_prism_guide_title()}</H1>
-        <div class="bg-yellow m-3 px-3 py-2 max-w-lg">
+        <div class="bg-yellow-400 m-3 px-3 py-2 max-w-lg">
             <span class="font-ten">{m.install_prism_update_title()}</span>
             <p>
                 {m.install_prism_update_p1()}
@@ -125,7 +125,7 @@
         <p>{m.install_prism_step3_p1()}</p>
         <img src={addInstanceImage} alt={m.install_prism_step3_alt1()} class="max-w-200" />
         <p>{m.install_prism_step3_p2()}</p>
-        <div class="inline-block bg-black p-3 font-mc link color-white rd">
+        <div class="inline-block bg-black p-3 font-mc link text-white rounded">
             https://metacraft.nu/install/METAcraft.zip
         </div>
         <img src={importImage} alt={m.install_prism_step3_alt2()} class="max-w-200" />

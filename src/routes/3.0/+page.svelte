@@ -42,7 +42,7 @@
     font-family: "Courier Prime", monospace;
   }
 </style>
-<div class="z--10 fixed bg-cover bg-center-center w-100lvw h-100lvh custombg"></div>
+<div class="-z-10 fixed bg-cover bg-center w-[100lvw] h-[100lvh] custombg"></div>
 <!-- !! CUSTOM BG !! -->
 
 <!-- TODO: gör det här elementet till en layout? -->
@@ -51,16 +51,16 @@
 
   <!--
   <p class="shadow-lg font-bold text-white text-2xl">SPELA NU!</p>
-  <div class="bg-black shadow-lg mb-3 px-3 py-1 font-mc text-white text-xl md:text-2xl text-center b-white b-2 b-solid">
+  <div class="bg-black shadow-lg mb-3 px-3 py-1 border-2 border-white border-solid font-mc text-white text-xl md:text-2xl text-center">
     mc.datasektionen.se
   </div>
   -->
 
-  <div class="flex flex-row gap-1 px-2 w-100% max-w-200 h-8 md:h-16 text-bold text-green text-xl md:text-3xl">
-    <button class="flex justify-center items-center bg-black w-8 md:w-16 h-100% text-white text-3xl md:text-5xl cursor-pointer b-green hover:b-white b-solid mono" onclick={() => {pageNumber--; if (pageNumber < 0) pageNumber = 4}}>
+  <div class="flex flex-row gap-1 px-2 w-full max-w-200 h-8 md:h-16 font-bold text-green-500 text-xl md:text-3xl">
+    <button class="flex justify-center items-center bg-black border-green-500 hover:border-white border-solid w-8 md:w-16 h-full text-white text-3xl md:text-5xl cursor-pointer mono" onclick={() => {pageNumber--; if (pageNumber < 0) pageNumber = 4}}>
       {#if pageNumber > 0}←{/if}
     </button>
-    <div class="flex flex-1 justify-center items-center bg-black h-100% text-bold b-green hover:b-white b-2 b-solid mono">
+    <div class="flex flex-1 justify-center items-center bg-black border-2 border-green-500 hover:border-white border-solid h-full font-bold mono">
       {#if pageNumber == 0}
         T MINUS 10 DAGAR
       {:else if pageNumber == 1}
@@ -73,20 +73,20 @@
         LAUNCH DAY
       {/if}
     </div>
-    <button class="flex justify-center items-center bg-black w-8 md:w-16 h-100% text-white text-3xl md:text-5xl cursor-pointer b-green hover:b-white b-solid mono" onclick={() => {pageNumber++; if (pageNumber > 4) pageNumber = 0}}>
+    <button class="flex justify-center items-center bg-black border-green-500 hover:border-white border-solid w-8 md:w-16 h-full text-white text-3xl md:text-5xl cursor-pointer mono" onclick={() => {pageNumber++; if (pageNumber > 4) pageNumber = 0}}>
       {#if pageNumber < 4}→{/if}
     </button>
   </div>
 
       
-  <div class="flex flex-col items-center mb-24 w-100% max-w-200 text-base">
+  <div class="flex flex-col items-center mb-24 w-full max-w-200 text-base">
     {#if pageNumber == 0}
-      <img transition:slide src={d10} alt="i" class="m-2 w-100% b-white b-solid b-2">
-      <div transition:slide class="flex flex-col gap-3 bg-black p-4 w-100% text-neutral-200 b-white b-solid b-2">
+      <img transition:slide src={d10} alt="i" class="m-2 border-2 border-white border-solid w-full">
+      <div transition:slide class="flex flex-col gap-3 bg-black p-4 border-2 border-white border-solid w-full text-neutral-200">
         <p class="text-2xl">Välkomna tillbaka, METAcrafters!</p>
-        <p><b>TLDR:</b> METAcraft öppnar 26 december på IP <span class="mono">mc.datasektionen.se</span> med en storslagen launch-event. <a href="https://discord.gg/MttUbkmeyD" target="_blank" class="text-green"><b>Gå med i Discorden</b></a> så missar du inget.</p>
+        <p><b>TLDR:</b> METAcraft öppnar 26 december på IP <span class="mono">mc.datasektionen.se</span> med en storslagen launch-event. <a href="https://discord.gg/MttUbkmeyD" target="_blank" class="text-green-500"><b>Gå med i Discorden</b></a> så missar du inget.</p>
 
-        <hr class="w-100%">
+        <hr class="w-full">
         
         <p>Det har varit två långa år (irl) utan mining och crafting här i sektionen, och efter våra galna events längtar vi bara ännu mer till den klassiska vanilla-upplevelsen. Nu är väntan äntligen över: <b>METAcraft gör snart sin storslagen återkomst!</b> 🎉</p> 
         
@@ -94,30 +94,30 @@
         
         <p><b>den 26 december öppnar METAcraft sin port till helt nya & spännande äventyr.</b> Den kommer börja med en launch-event där ni kommer bland annat få en ordentlig introduktion till allt som servern har att erbjuda, samt hemliga aktiviteter att utföra. Missa den inte! 🎂</p>
         
-        <p>Gå med i vår <a href="https://discord.gg/MttUbkmeyD" target="_blank" class="text-green"><b>Discord server</b></a> så att du inte missar en enda händelse.</p>
+        <p>Gå med i vår <a href="https://discord.gg/MttUbkmeyD" target="_blank" class="text-green-500"><b>Discord server</b></a> så att du inte missar en enda händelse.</p>
         <p>Server IP (Java 1.20.2): <span class="mono">mc.datasektionen.se</span></p>
       </div>
     {:else if pageNumber == 1}
-      <img transition:slide src={d4} alt="i" class="m-2 w-100% b-white b-solid b-2">
-      <div transition:slide class="flex flex-col gap-3 bg-black p-4 w-100% text-neutral-200 b-white b-solid b-2">
+      <img transition:slide src={d4} alt="i" class="m-2 border-2 border-white border-solid w-full">
+      <div transition:slide class="flex flex-col gap-3 bg-black p-4 border-2 border-white border-solid w-full text-neutral-200">
         <p class="text-2xl">Endast 4 dagar återstår innan survivalservern öppnas.</p>
         <p>Under tiden har vi rotat djupt i ett laboratorium, och funnit denna blueprint som kan vara av intresse...</p>
       </div>
     {:else if pageNumber == 2}
-      <img transition:slide src={d3} alt="i" class="m-2 w-100% b-white b-solid b-2">
-      <div transition:slide class="flex flex-col gap-3 bg-black p-4 w-100% text-neutral-200 b-white b-solid b-2">
+      <img transition:slide src={d3} alt="i" class="m-2 border-2 border-white border-solid w-full">
+      <div transition:slide class="flex flex-col gap-3 bg-black p-4 border-2 border-white border-solid w-full text-neutral-200">
         <p class="text-2xl">Survivalservern öppnas om mindre än 72 timmar!</p>
         <p>Vi har fått in en spännande rekommendation som kan gynna alla byteshandlare...</p>
       </div>
     {:else if pageNumber == 3}
-      <img transition:slide src={d2} alt="i" class="m-2 w-100% b-white b-solid b-2">
-      <div transition:slide class="flex flex-col gap-3 bg-black p-4 w-100% text-neutral-200 b-white b-solid b-2">
+      <img transition:slide src={d2} alt="i" class="m-2 border-2 border-white border-solid w-full">
+      <div transition:slide class="flex flex-col gap-3 bg-black p-4 border-2 border-white border-solid w-full text-neutral-200">
         <p class="text-2xl">God jul, METAcraftare!</p>
         <p>Ikväll råder det julefrid, men med mindre än 48 timmar kvar till launch tänker vi snabbt påminna om några client-side mods för att maxa spelupplevelsen!</p>
         <p>Om du aldrig har använt mods förut eller använder den officiella Minecraft-launchern, så rekommenderar vi att använda Fabric Loader enligt följande instruktioner:</p>
         <ol class="ml-4 list-decimal">
-          <li>Ladda ner installationsprogrammet <a href="https://fabricmc.net/use/installer/" target="_blank" class="text-green">här</a> och följ instruktionerna för att sätta upp profilen för 1.20.2.</li>
-          <li>Installera Simple Voice Chat <a href="https://modrinth.com/plugin/simple-voice-chat" target="_blank" class="text-green">här</a>, plus ev. andra mods du vill ha.</li>
+          <li>Ladda ner installationsprogrammet <a href="https://fabricmc.net/use/installer/" target="_blank" class="text-green-500">här</a> och följ instruktionerna för att sätta upp profilen för 1.20.2.</li>
+          <li>Installera Simple Voice Chat <a href="https://modrinth.com/plugin/simple-voice-chat" target="_blank" class="text-green-500">här</a>, plus ev. andra mods du vill ha.</li>
           <li>Placera .jar-filen du just har laddat ner i mods-mappen under .minecraft.</li>
           <li>Starta spelet med den nya Fabric-profilen!</li>
         </ol>
@@ -126,8 +126,8 @@
         <p>Vi ses på servern!</p>
       </div>
     {:else}
-      <img transition:slide src={dlaunch} alt="i" class="m-2 w-100% b-white b-solid b-2">
-      <div transition:slide class="flex flex-col gap-3 bg-black p-4 w-100% text-neutral-200 b-white b-solid b-2">
+      <img transition:slide src={dlaunch} alt="i" class="m-2 border-2 border-white border-solid w-full">
+      <div transition:slide class="flex flex-col gap-3 bg-black p-4 border-2 border-white border-solid w-full text-neutral-200">
         <p class="text-2xl">ÄR NI REDO?</p>
         <p>Vi kommer börja med en Campusrundvandring (i minecraft). Där kommer vi gå igenom allt som är bra att känna till! Det kommer även finnas en liten frågesport där vinnaren kommer få ett försprång med resurser, så missa den inte!</p>
         <p>Vi ses på servern!</p>
