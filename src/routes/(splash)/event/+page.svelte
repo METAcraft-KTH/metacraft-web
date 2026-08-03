@@ -70,11 +70,11 @@ html {
 
     <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem]">
         <Button href="/event/leaderboard">
-            <img src="https://minecraft.wiki/images/Gold_Ingot_JE4_BE2.png" alt="icon" class="w-[3rem] md:w-[4rem]">
+            <img src="https://minecraft.wiki/images/Gold_Ingot_JE4_BE2.png" alt="icon" class="w-12 md:w-16">
             <span>{m.event_see_leaderboards()}</span>
         </Button>
         <Button href="#timeline">
-            <img src="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png" alt="icon" class="w-[3rem] md:w-[4rem]">
+            <img src="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png" alt="icon" class="w-12 md:w-16">
             <span>{m.event_read_past_events()}</span>
         </Button>
     </div>

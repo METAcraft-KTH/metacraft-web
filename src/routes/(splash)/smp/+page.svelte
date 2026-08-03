@@ -55,15 +55,15 @@
 
     <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem] font-mc">
         <Button href="/smp/features">
-            <img src="https://minecraft.wiki/images/Knowledge_Book_JE2.png" alt="icon" class="w-[3rem] md:w-[4rem]">
+            <img src="https://minecraft.wiki/images/Knowledge_Book_JE2.png" alt="icon" class="w-12 md:w-16">
             <span>{m.smp_everything_you_need()}</span>
         </Button>
         <Button href="/smp/map">
-            <img src="https://minecraft.wiki/images/Map_Zoom_4.png" alt="icon" class="w-[3rem] md:w-[4rem]">
+            <img src="https://minecraft.wiki/images/Map_Zoom_4.png" alt="icon" class="w-12 md:w-16">
             <span>{m.smp_see_map()}</span>
         </Button>
         <Button href="/install">
-            <img src="https://cdn.modrinth.com/data/9eGKb6K1/icon.png" alt="icon" class="w-[3rem] md:w-[4rem]">
+            <img src="https://cdn.modrinth.com/data/9eGKb6K1/icon.png" alt="icon" class="w-12 md:w-16">
             <span>{m.smp_add_voicechat()}</span>
         </Button>
     </div>

@@ -40,11 +40,11 @@
 
     <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem]">
         <Button href="/campus/detail">
-            <img src="https://minecraft.wiki/images/Knowledge_Book_JE2.png" alt="icon" class="w-[3rem] md:w-[4rem]">
+            <img src="https://minecraft.wiki/images/Knowledge_Book_JE2.png" alt="icon" class="w-12 md:w-16">
             <span>{m.campus_technical_details()}</span>
         </Button>
         <Button href="/campus/map">
-            <img src="https://minecraft.wiki/images/Map_Zoom_4.png" alt="icon" class="w-[3rem] md:w-[4rem]">
+            <img src="https://minecraft.wiki/images/Map_Zoom_4.png" alt="icon" class="w-12 md:w-16">
             <span>{m.campus_isometric_map()}</span>
         </Button>
     </div>

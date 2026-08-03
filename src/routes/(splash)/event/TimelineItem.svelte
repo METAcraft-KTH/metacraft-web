@@ -59,8 +59,8 @@
                 {@render children?.()}
             </div>
         </div>
-        <div class="flex flex-col justify-center items-center w-[4rem]">
-            <a href={"#"+name.replaceAll(" ","_")} class="bg-cerise-concrete-powder shadow-lg p-2 rounded-lg w-[4rem] h-[4rem] hover:scale-110 active:scale-95 transition-transform" class:hover:rotate-5={left} class:hover:-rotate-5={!left}>
+        <div class="flex flex-col justify-center items-center w-16">
+            <a href={"#"+name.replaceAll(" ","_")} class="bg-cerise-concrete-powder shadow-lg p-2 rounded-lg w-16 h-16 hover:scale-110 active:scale-95 transition-transform" class:hover:rotate-5={left} class:hover:-rotate-5={!left}>
                 <img src={icon} alt="icon">
             </a>
             <div class="flex-1 bg-pink-900 w-2"></div>

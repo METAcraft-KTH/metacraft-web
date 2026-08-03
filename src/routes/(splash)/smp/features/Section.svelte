@@ -3,9 +3,9 @@
     let { icon, anchor, children } = $props();
 </script>
 
-<div class="p-1 relative transition-colors text-base leading-tight" class:bg-yellow-300={$page.url.hash === "#"+anchor}>
-    <div id={anchor} class="absolute -top-16"></div>
-    <a href={`#${anchor}`} class="float-left w-[3rem] hover:scale-110 active:scale-95 transition-transform inline-block aspect-square bg-top bg-[length:100%_auto] mr-2 bg-no-repeat" style={`background-image: url('${icon}')`}> </a>
+<div class="relative p-1 text-base leading-tight transition-colors" class:bg-yellow-300={$page.url.hash === "#"+anchor}>
+    <div id={anchor} class="-top-16 absolute"></div>
+    <a href={`#${anchor}`} class="inline-block float-left bg-[length:100%_auto] bg-no-repeat bg-top mr-2 w-12 aspect-square hover:scale-110 active:scale-95 transition-transform" style={`background-image: url('${icon}')`}> </a>
     <div>
         {@render children?.()}
     </div>
