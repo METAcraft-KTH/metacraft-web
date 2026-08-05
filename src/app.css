@@ -46,20 +46,25 @@
 
 @import 'tailwindcss';
 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    font-family: 'Noto Sans', sans-serif;
-    background: #000;
-    /*background-image: linear-gradient(
-        #724b4f80, 
-        #724b4f80
-      ),
-      url("$lib/images/background.png");*/
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+@layer base {
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        font-family: 'Noto Sans', sans-serif;
+        background: #000;
+        /*background-image: linear-gradient(
+            #724b4f80,
+            #724b4f80
+          ),
+          url("$lib/images/background.png");*/
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    a { /* so i can still recolor links with tailwind classes */
+        color: #BE185D;
+    }
 }
 /*
 html {
@@ -193,10 +198,6 @@ html {
     border-radius: 20px;
 }
 
-a {
-    color: #BE185D;
-}
-
 /* use the class below when you need a button to not look like a button.
    a11y standards say clickable things should use html elements that are
    meant to be clicked, so using <div> is not an option.
@@ -209,7 +210,7 @@ a {
 }
 
 
-/* use the class below to animate titles fading in on page load. */
+/* animate titles fading in on page load */
 @keyframes titleFadeIn {
     from { transform: translateY(10px); opacity: 0; }
     to   { transform: translateY(0); opacity: 1; }

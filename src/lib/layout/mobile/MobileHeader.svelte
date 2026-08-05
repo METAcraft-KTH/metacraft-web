@@ -24,16 +24,16 @@
 	class:bg-pink-800={!hideHeader || sideVisible}
 >
 
-	<button onmousedown={() => sideVisible = !sideVisible} class="inline-block p-2 h-full aspect-square text-pink-400 text-left notButton" class:text-white={sideVisible || hideHeader}>
+	<button onmousedown={() => sideVisible = !sideVisible} class="inline-block p-2 h-full aspect-square text-left notButton" class:text-pink-400={!(sideVisible || hideHeader)} class:text-white={sideVisible || hideHeader}>
 		<Menu />
 	</button>
 
-	<a href="/" class="p-2 h-full aspect-3/1 text-pink-400 text-center" class:text-white={hideHeader && !sideVisible}>
+	<a href="/" class="p-2 h-full aspect-3/1 text-center" class:text-pink-400={!(hideHeader && !sideVisible)} class:text-white={hideHeader && !sideVisible}>
 		<MetacraftLogo />
 	</a>
 
 	{#if false}
-		<a href="/map" class="inline-block p-3 h-full aspect-square text-pink-400 text-right" class:text-white={page.url.pathname === '/smp/map' || (hideHeader && !sideVisible)}>
+		<a href="/map" class="inline-block p-3 h-full aspect-square text-right" class:text-pink-400={!(page.url.pathname === '/smp/map' || (hideHeader && !sideVisible))} class:text-white={page.url.pathname === '/smp/map' || (hideHeader && !sideVisible)}>
 			<Map />
 		</a>
 	{:else}

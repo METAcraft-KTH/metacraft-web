@@ -102,7 +102,7 @@
     
   </div>
 
-  <button class="bottom-0 left-0 absolute w-full h-15 text-white text-center notButton titleFadeIn" style="animation-delay: 1s" onmousedown={scrollDown}>
+  <button class="bottom-0 left-0 absolute flex justify-center w-full h-15 text-white text-center notButton titleFadeIn" style="animation-delay: 1s" onmousedown={scrollDown}>
     <ChevronDown />
   </button>
 </div>

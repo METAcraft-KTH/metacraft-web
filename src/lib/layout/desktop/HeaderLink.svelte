@@ -15,7 +15,7 @@
 </script>
 
 <a {href}
-	class="inline-block relative flex justify-center items-center px-4 lg:px-8 h-full font-mc text-white text-center no-underline transition-all"
+	class="relative flex justify-center items-center px-4 lg:px-8 h-full font-mc text-white text-center no-underline transition-all"
 	class:bg-pink-700={active}
 	class:hover:bg-pink-700={!active}
 	onmouseover={() => hovered = true}

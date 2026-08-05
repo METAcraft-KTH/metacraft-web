@@ -3,7 +3,6 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import { locales, localizeHref } from '$lib/paraglide/runtime';
-	import '../reset.css';
 	import '../app.css';
 
 	interface Props {
@@ -13,7 +12,7 @@
 	let { children }: Props = $props();
 </script>
 
-<div class="h-full flex flex-col items-center">{@render children?.()}</div>
+<div class="flex flex-col items-center h-full">{@render children?.()}</div>
 
 <div style="display:none">
 	{#each locales as locale (locale)}
