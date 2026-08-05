@@ -22,10 +22,7 @@
   }
 </style>
 
-<a href={disabled ? '#?' : href} class="
-  inline-block text-center flex flex-col no-underline transition-colors
-  basis-[33.3%] md:flex-1
-  "
+<a href={disabled ? '#?' : href} class="flex flex-col md:flex-1 text-center no-underline transition-colors basis-[33.3%]"
   class:pulse={!disabled}
   class:text-slate-800={disabled}
   class:cursor-default={disabled}
