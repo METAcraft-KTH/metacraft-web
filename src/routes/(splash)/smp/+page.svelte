@@ -9,23 +9,12 @@
 	import SplashRow from './../SplashRow.svelte';
 	import Post from '$lib/layout/news/Post.svelte';
 
-    import fallback_post_image from '$lib/images/pr_squares/survival.png';
-
-    import index from './Posts.json';
-	import { onMount } from 'svelte';
 	import { m } from '$lib/paraglide/messages.js';
 	import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
+	import { listHistory } from '$lib/content/posts';
 
-    // get (links of) all the images from the directory
-    let post_images_array = Object.values(import.meta.glob('$lib/images/posts/*.{png,webp}', { eager: true, import: 'default' }));
-    // create key-value pairs for each image link so i can refer to them easier
-    let post_images = {};
-    post_images_array.forEach((link) => {
-        let index = link.match(/^.+\/([a-zA-Z0-9\-_]+)(\.[a-zA-Z0-9]+)+$/i)[1]; // for some reason this must be case insensitive to match
-        //post_images.push(index)
-        post_images[index] = link;
-    });
-
+    // markdown posts and the older Posts.json ones, already merged and sorted newest-first
+    const history = listHistory();
 </script>
 
 <style>
@@ -135,7 +124,6 @@
             </div>
         </div>
     </div>
-    <!--
     <div class="flex flex-col items-center gap-4 md:gap-8 bg-bookshelf px-2 py-12 pb-24">
         <div class="relative">
             <div class="-top-14 absolute" id="history"></div>
@@ -143,27 +131,17 @@
         <span class="inline bg-white shadow-xl px-3 py-2 rounded w-max font-ten text-black text-4xl md:text-5xl text-center">
             SERVERHISTORIK
         </span>
-        <div class="flex flex-col-reverse items-center gap-2 md:gap-6 mb-12 w-full max-w-300">
-            {#each index as post}
-              <Post {...post} href={"/smp/"+post.href} --image={
-                post.image && post_images[post.image]                   ? "url(" + post_images[post.image] + ")" :
-                post.image && post.image.startsWith("http")             ? "url(" + post.image + ")" :
-                post.date && post_images[post.date.replaceAll("/","")]  ? "url(" + post_images[post.date.replaceAll("/","")] + ")" :
-                "url("+fallback_post_image+")"
-                } />
+        <div class="flex flex-col items-center gap-2 md:gap-6 mb-12 w-full max-w-300">
+            {#each history as post (post.href)}
+                <Post
+                    href={post.href}
+                    title={post.title}
+                    date={post.date}
+                    type={post.type}
+                    latest={post.latest}
+                    --image={`url(${post.imageUrl})`}
+                />
             {/each}
         </div>
-
-        <p class="text-white">
-            {JSON.stringify(post_images_array)}
-        </p>
-        <p class="text-gray-500">
-            {JSON.stringify(post_images)}
-        </p>
-        <p class="text-gray-500">
-            {JSON.stringify(fallback_post_image)}
-        </p>
-        
-
-    </div> -->
+    </div>
 </div>

@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import TypeAndTime from '$lib/widgets/TypeAndTime.svelte';
   import { slide } from 'svelte/transition';
 
@@ -8,7 +7,6 @@
     title?: string;
     date?: string;
     type?: string;
-    image: any; // intentionally unused. image link is passed as a css variable --image
     live?: boolean;
     latest?: boolean;
   }
@@ -18,12 +16,9 @@
     title = 'Unnamed',
     date = '',
     type = 'blog',
-    image,
     live = false,
     latest = false
   }: Props = $props();
-
-  let imagelink: any;
 
   let dateString: string;
 
