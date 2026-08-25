@@ -1,4 +1,5 @@
 <script lang="ts">
+  import obsidianTexture from '$lib/images/bg/obsidian.png';
   import { page } from '$app/state';
   import { slide } from 'svelte/transition';
 
@@ -177,6 +178,6 @@
 </main>
 
 
-<Footer bg_texture="https://minecraft.wiki/images/Obsidian_%28texture%29_JE2.png" />
+<Footer bg_texture={obsidianTexture} />
 
 

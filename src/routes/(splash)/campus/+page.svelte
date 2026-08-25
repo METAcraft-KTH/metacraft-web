@@ -1,4 +1,8 @@
 <script lang="ts">
+  import chiseledCopperIcon from '$lib/images/items/chiseled_copper.png';
+  import knowledgeBookIcon from '$lib/images/items/knowledge_book.png';
+  import mapZoomIcon from '$lib/images/items/map_zoom_4.png';
+  import woodenAxeIcon from '$lib/images/items/wooden_axe.png';
     import splashbg from '$lib/images/splashes/cavesun.webp';
 	import Title from '$lib/layout/standard/Title.svelte';
 	import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
@@ -40,11 +44,11 @@
 
     <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem]">
         <Button href="/campus/detail">
-            <img src="https://minecraft.wiki/images/Knowledge_Book_JE2.png" alt="icon" class="w-12 md:w-16">
+            <img src={knowledgeBookIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.campus_technical_details()}</span>
         </Button>
         <Button href="/campus/map">
-            <img src="https://minecraft.wiki/images/Map_Zoom_4.png" alt="icon" class="w-12 md:w-16">
+            <img src={mapZoomIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.campus_isometric_map()}</span>
         </Button>
     </div>
@@ -55,7 +59,7 @@
         </ActiveEvent>
     {/if}
 
-    <SplashRow image={skepp} icon="https://minecraft.wiki/images/Chiseled_Copper_JE1_BE1.png">
+    <SplashRow image={skepp} icon={chiseledCopperIcon}>
         <h1 class="font-ten text-lg md:text-2xl leading-tight">
             {m.campus_dream_title1()}
             <br>
@@ -69,7 +73,7 @@
         </p>
     </SplashRow>
 
-    <SplashRow image={samling} icon="https://minecraft.wiki/images/Wooden_Axe_JE2_BE2.png" right={true}>
+    <SplashRow image={samling} icon={woodenAxeIcon} right={true}>
         <h1 class="font-ten text-lg md:text-2xl leading-tight">
             {m.campus_teamwork_title1()}
             <br>

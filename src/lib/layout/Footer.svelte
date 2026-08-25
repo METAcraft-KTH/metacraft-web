@@ -1,10 +1,11 @@
 <script lang="ts">
+  import mudBricks from '$lib/images/bg/mud_bricks.png';
   interface Props {
     bg?: boolean;
     bg_texture?: string;
   }
 
-  let { bg = true, bg_texture = 'https://minecraft.wiki/images/Mud_Bricks_(texture)_JE1_BE1.png' }: Props = $props();
+  let { bg = true, bg_texture = mudBricks }: Props = $props();
 </script>
 <style>
   .hasbg {

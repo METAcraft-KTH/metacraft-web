@@ -1,4 +1,5 @@
 <script lang="ts">
+    import diamondIcon from '$lib/images/items/diamond.png';
     import { m } from '$lib/paraglide/messages.js';
 
     interface Props {
@@ -13,7 +14,7 @@
     let {
         name,
         time,
-        icon = "https://minecraft.wiki/images/Diamond_JE3_BE3.png",
+        icon = diamondIcon,
         left = true,
         collab = "",
         children

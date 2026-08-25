@@ -3,6 +3,8 @@
 </svelte:head>
 
 <script lang="ts">
+  import bambooSign from '$lib/images/bg/blank_sign_bamboo.png';
+  import commandBlockIcon from '$lib/images/items/impulse_command_block.png';
   import logo from '$lib/images/logo_big.webp';
   import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
 	import adventurer from '$lib/images/pr_squares/adventurer.png';
@@ -87,7 +89,7 @@
     </div>
 
     {#if false}
-    <div style="border-image: url('https://minecraft.wiki/images/Blank-sign-bamboo_JE1_BE1.png') 2 fill round;" class="hidden md:block mt-12 p-8 max-w-200 font-mc font-bold text-center">
+    <div style="border-image: url('{bambooSign}') 2 fill round;" class="hidden md:block mt-12 p-8 max-w-200 font-mc font-bold text-center">
       <p class="mb-2">SERVER LAUNCH:</p>
       <p class="font-ten text-4xl">{m.home_launch_date()}</p>
     </div>
@@ -144,7 +146,7 @@
   </div>
 
   <!--
-  <div style="border-image: url('https://minecraft.wiki/images/Blank-sign-bamboo_JE1_BE1.png') 2 fill round;" class="md:hidden block mx-4 mt-12 p-8 max-w-200 font-mc font-bold text-center">
+  <div style="border-image: url('{bambooSign}') 2 fill round;" class="md:hidden block mx-4 mt-12 p-8 max-w-200 font-mc font-bold text-center">
     <p class="mb-2">SERVER LAUNCH:</p>
     <p class="font-ten text-4xl">måndag 23 september</p>
   </div>
@@ -213,7 +215,7 @@
   </div>
 
   <!--<div class="flex sm:flex-row flex-col">
-    <img src="https://minecraft.wiki/images/Impulse_Command_Block_JE5_BE2.png" alt="command block" class="flex-1 max-w-[8rem] aspect-square">
+    <img src={commandBlockIcon} alt="command block" class="flex-1 max-w-[8rem] aspect-square">
     <div>
 
     </div>

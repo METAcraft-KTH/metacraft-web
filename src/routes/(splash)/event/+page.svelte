@@ -1,4 +1,9 @@
 <script lang="ts">
+  import bookAndQuillIcon from '$lib/images/items/book_and_quill.png';
+  import diamondSwordIcon from '$lib/images/items/diamond_sword.png';
+  import goldIngotIcon from '$lib/images/items/gold_ingot.png';
+  import targetIcon from '$lib/images/items/target.png';
+  import yellowWoolIcon from '$lib/images/items/yellow_wool.png';
     import splashbg from '$lib/images/splashes/cavesun.webp';
 	import Title from '$lib/layout/standard/Title.svelte';
 	import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
@@ -70,11 +75,11 @@ html {
 
     <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem]">
         <Button href="/event/leaderboard">
-            <img src="https://minecraft.wiki/images/Gold_Ingot_JE4_BE2.png" alt="icon" class="w-12 md:w-16">
+            <img src={goldIngotIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.event_see_leaderboards()}</span>
         </Button>
         <Button href="#timeline">
-            <img src="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png" alt="icon" class="w-12 md:w-16">
+            <img src={bookAndQuillIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.event_read_past_events()}</span>
         </Button>
     </div>
@@ -85,7 +90,7 @@ html {
         </ActiveEvent>
     {/if}
 
-    <SplashRow image={walls} icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
+    <SplashRow image={walls} icon={diamondSwordIcon}>
         <h1 class="font-ten text-lg md:text-2xl leading-tight">
             {m.event_memory_title1()}
             <br>
@@ -102,7 +107,7 @@ html {
         </p>
     </SplashRow>
 
-    <SplashRow image={hexathlon1} icon="https://minecraft.wiki/images/Target_JE1_BE1.png" right={true}>
+    <SplashRow image={hexathlon1} icon={targetIcon} right={true}>
         <h1 class="font-ten text-lg md:text-2xl leading-tight">
             {m.event_norequirement_title1()}
             <br>
@@ -132,12 +137,12 @@ html {
                     </p>
                     <a href="https://www.youtube.com/live/or8i6IGV9nI?si=haAmyQtKGpZgonJG" target="_blank">{m.event_tl_youtube_vod()}</a>
                 </TimelineItem>
-                <TimelineItem name="META-LAN ULTIMATE HARDCORE" time="20 september, 2025" collab="DESC" icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
+                <TimelineItem name="META-LAN ULTIMATE HARDCORE" time="20 september, 2025" collab="DESC" icon={diamondSwordIcon}>
                     <p>
                         <LocalizedRichText msg={m.event_tl_metalan_p1} />
                     </p>
                 </TimelineItem>
-                <TimelineItem name="SPELKVÄLL UHC" time="2 september, 2025" left={false} collab="QN & DESC" icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
+                <TimelineItem name="SPELKVÄLL UHC" time="2 september, 2025" left={false} collab="QN & DESC" icon={diamondSwordIcon}>
                     <p>
                         {m.event_tl_spelkvall_p1()}
                     </p>
@@ -172,7 +177,7 @@ html {
                         {m.event_tl_campusbattle_p2()}
                     </p>
                 </TimelineItem>
-                <TimelineItem name="METAPLACE" time="5-11 december, 2023" icon="https://minecraft.wiki/images/Yellow_Wool_JE3_BE3.png">
+                <TimelineItem name="METAPLACE" time="5-11 december, 2023" icon={yellowWoolIcon}>
                     <p>
                         <LocalizedRichText msg={m.event_tl_metaplace_p1} />
                     </p>
@@ -184,7 +189,7 @@ html {
                     </p>
                     <a href="https://youtube.com/shorts/QHMFa096EhI" target="_blank">{m.event_tl_metaplace_video()}</a>
                 </TimelineItem>
-                <TimelineItem name="METACRAFT SURVIVAL GAMES" time="13 november, 2023" left={false} icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png">
+                <TimelineItem name="METACRAFT SURVIVAL GAMES" time="13 november, 2023" left={false} icon={diamondSwordIcon}>
                     <p>
                         {m.event_tl_survgames_p1()}
                     </p>
@@ -195,7 +200,7 @@ html {
                         {m.event_tl_survgames_p3()}
                     </p>
                 </TimelineItem>
-                <TimelineItem name="META UHC" time="3 oktober, 2023" icon="https://minecraft.wiki/images/Diamond_Sword_JE3_BE3.png" collab="DESC & dJubileet">
+                <TimelineItem name="META UHC" time="3 oktober, 2023" icon={diamondSwordIcon} collab="DESC & dJubileet">
                     <p>
                         {m.event_tl_metauhc_p1()}
                     </p>

@@ -66,7 +66,7 @@
   }
 
   a {
-    background-image: url('https://minecraft.wiki/images/Yellow_Concrete_(texture)_JE1_BE1.png');
+    background-image: url('$lib/images/bg/yellow_concrete.png');
     background-repeat: repeat;
   }
 </style>

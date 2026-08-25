@@ -1,4 +1,5 @@
 <script lang="ts">
+  import enchantedBook from '$lib/images/items/enchanted_book.gif';
 	import Header from '$lib/layout/Header.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
   import Title from '$lib/layout/standard/Title.svelte';
@@ -31,7 +32,7 @@
 
     <div id="splashContent" class="flex flex-col justify-center items-center px-4 py-20 titleFadeIn">
       <div class="flex md:flex-row flex-col-reverse items-start gap-4">
-        <img src="https://minecraft.wiki/images/Enchanted_Book.gif" alt="book" class="drop-shadow-xl max-w-[10rem] aspect-square">
+        <img src={enchantedBook} alt="book" class="drop-shadow-xl max-w-[10rem] aspect-square">
         <div class="max-w-[20rem] h-max font-mc text-xl tip">
           <div class="bg-[rgba(16,0,16,0.94)] p-[0.375em]">
             <span class="text-[#FFFF55] italic">{page.status}</span>

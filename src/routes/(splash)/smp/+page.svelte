@@ -1,4 +1,9 @@
 <script lang="ts">
+  import azaleaIcon from '$lib/images/items/flowering_azalea_leaves.png';
+  import bookAndQuillIcon from '$lib/images/items/book_and_quill.png';
+  import knowledgeBookIcon from '$lib/images/items/knowledge_book.png';
+  import mapZoomIcon from '$lib/images/items/map_zoom_4.png';
+  import potionIcon from '$lib/images/items/potion_of_healing.png';
 	import Title from '$lib/layout/standard/Title.svelte';
 	import ActiveEvent from '$lib/widgets/ActiveEvent.svelte';
 	import Button from '$lib/widgets/Button.svelte';
@@ -44,11 +49,11 @@
 
     <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem] font-mc">
         <Button href="/smp/features">
-            <img src="https://minecraft.wiki/images/Knowledge_Book_JE2.png" alt="icon" class="w-12 md:w-16">
+            <img src={knowledgeBookIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.smp_everything_you_need()}</span>
         </Button>
         <Button href="/smp/map">
-            <img src="https://minecraft.wiki/images/Map_Zoom_4.png" alt="icon" class="w-12 md:w-16">
+            <img src={mapZoomIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.smp_see_map()}</span>
         </Button>
         <Button href="/install">
@@ -63,7 +68,7 @@
         </ActiveEvent>
     {/if}
 
-    <SplashRow image={cavesun} icon="https://minecraft.wiki/images/Book_and_Quill_JE2_BE2.png">
+    <SplashRow image={cavesun} icon={bookAndQuillIcon}>
         <h1 class="font-ten text-lg md:text-2xl leading-tight">
             {m.smp_multiplayer_title1()}
             <br>
@@ -80,7 +85,7 @@
         </p>
     </SplashRow>
 
-    <SplashRow image={samling} icon="https://minecraft.wiki/images/Potion_of_Healing_JE2_BE2.png" right={true}>
+    <SplashRow image={samling} icon={potionIcon} right={true}>
         <h1 class="font-ten text-lg md:text-2xl leading-tight">
             {m.smp_classmates_title1()}
             <br>
@@ -94,7 +99,7 @@
         </p>
     </SplashRow>
 
-    <SplashRow image={oas} icon="https://minecraft.wiki/images/Flowering_Azalea_Leaves_(fast)_BE1.png">
+    <SplashRow image={oas} icon={azaleaIcon}>
         <h1 class="font-ten text-lg md:text-2xl leading-tight">
             {m.smp_landscape_title1()}
             <br>

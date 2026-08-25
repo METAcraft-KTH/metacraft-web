@@ -154,7 +154,7 @@ html {
     /*background-image: linear-gradient(
         #0008, 
         #0008
-      ), url("https://minecraft.wiki/images/Mud_Bricks_(texture)_JE1_BE1.png");*/
+      ), url("$lib/images/bg/mud_bricks.png");*/
     background-repeat: repeat;
     background-size: initial;
     background-position: top center;
@@ -163,7 +163,7 @@ html {
     background-image: linear-gradient(
         #0008, 
         #0008
-      ), url("https://minecraft.wiki/images/Gray_Wool_(texture)_JE3_BE3.png");
+      ), url("$lib/images/bg/gray_wool.png");
     background-repeat: repeat;
     background-size: initial;
 }

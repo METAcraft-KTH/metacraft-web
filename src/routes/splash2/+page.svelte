@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script lang="ts">
+  import mapIcon from '$lib/images/items/map.png';
   import logo from '$lib/images/logo_mono.png';
 </script>
 
@@ -11,7 +12,7 @@
 
       text 
 
-      <!--<div class="w-full max-w-[40rem] aspect-square rotate-5 bg-cover flex items-center justify-center" style="background-image: url('https://minecraft.wiki/images/Map.png');">
+      <!--<div class="w-full max-w-[40rem] aspect-square rotate-5 bg-cover flex items-center justify-center" style="background-image: url('{mapIcon}');">
         <div>
           <img src={logo} alt="logo" class="-rotate-5" />
         </div>
