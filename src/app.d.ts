@@ -24,6 +24,16 @@ declare global {
 		disclaimer?: string;
 		/** Hidden from the post list, but still reachable by URL. */
 		draft?: boolean;
+		/**
+		 * The post has custom markup that markdown cannot express, so its page is a
+		 * hand-written route elsewhere. The .md file carries only frontmatter, and
+		 * the history list links straight to that route.
+		 */
+		external?: boolean;
+		/** Highlights the post in the history list with a "SENASTE!" banner. */
+		latest?: boolean;
+		/** Highlights the post in the history list with a "LIVE!" banner. */
+		live?: boolean;
 	}
 }
 

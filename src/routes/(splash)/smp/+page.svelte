@@ -11,10 +11,10 @@
 
 	import { m } from '$lib/paraglide/messages.js';
 	import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
-	import { listHistory } from '$lib/content/posts';
+	import { listPosts } from '$lib/content/posts';
 
-    // markdown posts and the older Posts.json ones, already merged and sorted newest-first
-    const history = listHistory();
+    // all posts, newest first, straight from the markdown frontmatter
+    const history = listPosts();
 </script>
 
 <style>
@@ -132,12 +132,13 @@
             SERVERHISTORIK
         </span>
         <div class="flex flex-col items-center gap-2 md:gap-6 mb-12 w-full max-w-300">
-            {#each history as post (post.href)}
+            {#each history as post (post.slug)}
                 <Post
-                    href={post.href}
+                    href={`/${post.slug}`}
                     title={post.title}
                     date={post.date}
                     type={post.type}
+                    live={post.live}
                     latest={post.latest}
                     --image={`url(${post.imageUrl})`}
                 />
