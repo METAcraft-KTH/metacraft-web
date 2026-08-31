@@ -221,5 +221,9 @@
   "style_with_ovve": "With ovve",
   "style_without_ovve": "Without ovve",
   "style_arms_wide": "Wide arms",
-  "style_arms_slim": "Slim arms"
+  "style_arms_slim": "Slim arms",
+  "style_username_placeholder": "Minecraft username",
+  "style_username_fetch": "Fetch skin",
+  "style_or": "or",
+  "style_error_username": "Couldn't find a skin for that username."
 }

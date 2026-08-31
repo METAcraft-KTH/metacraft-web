@@ -221,5 +221,9 @@
   "style_with_ovve": "Med overall",
   "style_without_ovve": "Utan overall",
   "style_arms_wide": "Breda armar",
-  "style_arms_slim": "Smala armar"
+  "style_arms_slim": "Smala armar",
+  "style_username_placeholder": "Minecraft-användarnamn",
+  "style_username_fetch": "Hämta skin",
+  "style_or": "eller",
+  "style_error_username": "Kunde inte hitta något skin för det användarnamnet."
 }

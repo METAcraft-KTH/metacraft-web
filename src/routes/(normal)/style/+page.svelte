@@ -17,6 +17,8 @@
 	let fileName = $state('skin');
 	let showOvve = $state(true);
 	let slimArms = $state(false);
+	let username = $state('');
+	let fetching = $state(false);
 
 	const ovveOptions = $derived<[string, boolean][]>([
 		[m.style_with_ovve(), true],
@@ -38,7 +40,7 @@
 	}
 
 	/** Draw overlay on top of the skin; overlay's pure-green pixels erase the skin instead. */
-	async function generate(skin: HTMLImageElement) {
+	async function generate(skin: CanvasImageSource) {
 		const overlay = await load(overlayUrl);
 
 		const canvas = document.createElement('canvas');
@@ -69,16 +71,40 @@
 		return canvas.toDataURL('image/png');
 	}
 
-	async function handle(file: File | undefined) {
-		if (!file) return;
-		error = '';
+	/**
+	 * Convert a legacy 64x32 skin to 64x64 by mirroring the single arm and leg
+	 * into the second set of limbs, the same way Minecraft does.
+	 */
+	function widen(skin: HTMLImageElement) {
+		const canvas = document.createElement('canvas');
+		canvas.width = SKIN_SIZE;
+		canvas.height = SKIN_SIZE;
+		const ctx = canvas.getContext('2d')!;
+		ctx.imageSmoothingEnabled = false;
+		ctx.drawImage(skin, 0, 0);
 
-		if (file.type !== 'image/png') {
-			error = m.style_error_type();
-			return;
+		// [sourceX, sourceY, width, height, destX, destY] per face, mirrored
+		const limbs: [number, number, number, number, number, number][] = [
+			[4, 16, 4, 4, 20, 48], [8, 16, 4, 4, 24, 48], // leg top/bottom
+			[0, 20, 4, 12, 24, 52], [4, 20, 4, 12, 20, 52], // leg outer/front
+			[8, 20, 4, 12, 16, 52], [12, 20, 4, 12, 28, 52], // leg inner/back
+			[44, 16, 4, 4, 36, 48], [48, 16, 4, 4, 40, 48], // arm top/bottom
+			[40, 20, 4, 12, 40, 52], [44, 20, 4, 12, 36, 52], // arm outer/front
+			[48, 20, 4, 12, 32, 52], [52, 20, 4, 12, 44, 52] // arm inner/back
+		];
+
+		ctx.save();
+		ctx.scale(-1, 1);
+		for (const [sx, sy, w, h, dx, dy] of limbs) {
+			ctx.drawImage(skin, sx, sy, w, h, -dx - w, dy, w, h);
 		}
+		ctx.restore();
 
-		const url = URL.createObjectURL(file);
+		return canvas;
+	}
+
+	/** Validate a loaded image is a skin, widening legacy ones, then render the result. */
+	async function apply(url: string, name: string) {
 		let skin: HTMLImageElement;
 		try {
 			skin = await load(url);
@@ -88,15 +114,64 @@
 			return;
 		}
 
-		if (skin.width !== SKIN_SIZE || skin.height !== SKIN_SIZE) {
+		if (skin.width !== SKIN_SIZE || (skin.height !== SKIN_SIZE && skin.height !== SKIN_SIZE / 2)) {
 			URL.revokeObjectURL(url);
 			error = m.style_error_size({ width: skin.width, height: skin.height });
 			return;
 		}
 
-		fileName = file.name.replace(/\.png$/i, '');
+		let source: CanvasImageSource = skin;
+		if (skin.height !== SKIN_SIZE) {
+			const wide = widen(skin);
+			source = wide;
+			// the previews need a 64x64 original too, so replace the legacy blob URL
+			URL.revokeObjectURL(url);
+			url = wide.toDataURL('image/png');
+		}
+
+		fileName = name;
 		originalUrl = url;
-		resultUrl = await generate(skin);
+		resultUrl = await generate(source);
+	}
+
+	async function handle(file: File | undefined) {
+		if (!file) return;
+		error = '';
+
+		if (file.type !== 'image/png') {
+			error = m.style_error_type();
+			return;
+		}
+
+		await apply(URL.createObjectURL(file), file.name.replace(/\.png$/i, ''));
+	}
+
+	async function fetchByName() {
+		const name = username.trim();
+		if (!name || fetching) return;
+		error = '';
+		fetching = true;
+		try {
+			// ponytail: playerdb is the lookup because Mojang's own name->UUID API sends no
+			// CORS headers and every image proxy answers 200-with-Steve for unknown names.
+			// Its 400 is the only clean "no such player" signal. The skin itself still comes
+			// straight from Mojang's CDN, which is CORS-open.
+			const res = await fetch(`https://playerdb.co/api/player/minecraft/${encodeURIComponent(name)}`);
+			if (!res.ok) throw new Error(String(res.status));
+			const player = (await res.json()).data.player;
+
+			const textures = JSON.parse(atob(player.properties[0].value)).textures;
+			if (!textures.SKIN) throw new Error('no skin');
+			slimArms = textures.SKIN.metadata?.model === 'slim';
+
+			const skin = await fetch(textures.SKIN.url.replace(/^http:/, 'https:'));
+			if (!skin.ok) throw new Error(String(skin.status));
+			await apply(URL.createObjectURL(await skin.blob()), player.username);
+		} catch {
+			error = m.style_error_username();
+		} finally {
+			fetching = false;
+		}
 	}
 
 	function reset() {
@@ -106,6 +181,7 @@
 		error = '';
 		showOvve = true;
 		slimArms = false;
+		username = '';
 		fileInput.value = '';
 	}
 </script>
@@ -147,6 +223,26 @@
 				<img src={overlayUrl} alt="" class="w-16 h-16 pixel" />
 				<span class="font-mc">{m.style_dropzone()}</span>
 			</button>
+
+			<p class="my-4 font-mc text-center">{m.style_or()}</p>
+
+			<form class="flex sm:flex-row flex-col gap-3" onsubmit={(e) => { e.preventDefault(); fetchByName(); }}>
+				<input
+					type="text"
+					bind:value={username}
+					placeholder={m.style_username_placeholder()}
+					autocomplete="off"
+					spellcheck="false"
+					class="flex-1 bg-white/80 px-4 py-3 border-4 border-black/30 focus:border-black/60 border-solid rounded-lg outline-none font-mc"
+				/>
+				<button
+					type="submit"
+					disabled={fetching || !username.trim()}
+					class="bg-map disabled:opacity-50 px-6 py-3 font-mc text-black text-center hover:contrast-150 transition-all hover:-translate-y-1 disabled:translate-y-0 notButton"
+				>
+					{m.style_username_fetch()}
+				</button>
+			</form>
 		{:else}
 			<OptionSwitcher
 				options={ovveOptions}
