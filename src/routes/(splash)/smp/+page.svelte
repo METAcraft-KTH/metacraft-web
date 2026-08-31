@@ -12,14 +12,25 @@
     import samling from '$lib/images/splashes/smp/samling.webp';
     import oas from '$lib/images/splashes/smp/oas.webp';
 	import SplashRow from './../SplashRow.svelte';
-	import Post from '$lib/layout/news/Post.svelte';
+	import BlogPost from '$lib/layout/news/BlogPost.svelte';
 
 	import { m } from '$lib/paraglide/messages.js';
 	import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
-	import { listPosts } from '$lib/content/posts';
+	import OptionSwitcher from '$lib/widgets/OptionSwitcher.svelte';
+	import { listPosts, listSeasons, seasonOf } from '$lib/content/posts';
 
     // all posts, newest first, straight from the markdown frontmatter
     const history = listPosts();
+
+    // null is the "all seasons" option
+    const seasons: (number | null)[] = [...listSeasons(), null];
+    const seasonLabel = (season: number | null) =>
+        season === null ? 'ALLA' : `${season}/${(season + 1) % 100}`;
+
+    let season = $state(seasons[0]);
+    let shown = $derived(
+        season === null ? history : history.filter((post) => seasonOf(post.date) === season)
+    );
 </script>
 
 <style>
@@ -129,6 +140,7 @@
             </div>
         </div>
     </div>
+    <!--
     <div class="flex flex-col items-center gap-4 md:gap-8 bg-bookshelf px-2 py-12 pb-24">
         <div class="relative">
             <div class="-top-14 absolute" id="history"></div>
@@ -136,18 +148,14 @@
         <span class="inline bg-white shadow-xl px-3 py-2 rounded w-max font-ten text-black text-4xl md:text-5xl text-center">
             SERVERHISTORIK
         </span>
-        <div class="flex flex-col items-center gap-2 md:gap-6 mb-12 w-full max-w-300">
-            {#each history as post (post.slug)}
-                <Post
-                    href={`/${post.slug}`}
-                    title={post.title}
-                    date={post.date}
-                    type={post.type}
-                    live={post.live}
-                    latest={post.latest}
-                    --image={`url(${post.imageUrl})`}
-                />
+
+        <OptionSwitcher options={seasons} bind:selected={season} label={seasonLabel} />
+
+        <div class="flex flex-col items-center gap-6 md:gap-10 mb-12 w-full max-w-300">
+            {#each shown as post (post.slug)}
+                <BlogPost {post} />
             {/each}
         </div>
     </div>
+    -->
 </div>

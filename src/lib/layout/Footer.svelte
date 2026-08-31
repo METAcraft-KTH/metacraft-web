@@ -32,16 +32,16 @@
   <p class="mb-2">"Minecraft" samt tillhörande grafik är varumärkesregistrerat av Mojang Synergies AB</p>
   <!--<p><a href="/about" class:text-pink-300={!bg}>Om oss</a> ・ <a href="/discord" target="_blank" class:text-pink-300={!bg}>Discord-server</a> ・ <a href="/gdpr" class:text-pink-300={!bg}>GDPR Statement</a></p>-->
   <div class="flex md:flex-row flex-col justify-center items-center gap-4 sm:mt-0 text-center">
-    <a href="/sok" target="_blank" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline -rotate-2 hover:scale-105 transition-all hover:contrast-200">
+    <a href="/sok" target="_blank" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
       Gå med i projektgruppen
     </a>
-    <a href="/discord" target="_blank" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline rotate-2 hover:scale-105 transition-all hover:contrast-200">
+    <a href="/discord" target="_blank" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
       Discord-server
     </a>
-    <a href="/youtube" target="_blank" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline -rotate-2 hover:scale-105 transition-all hover:contrast-200">
+    <a href="/youtube" target="_blank" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
       YouTube-kanal
     </a>
-    <a href="/about" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline rotate-2 hover:scale-105 transition-all hover:contrast-200">
+    <a href="/about" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
       Här är alla vi!
     </a>
   </div>

@@ -57,3 +57,15 @@ export function listPosts(): Post[] {
 		.filter((post) => !post.draft)
 		.sort((a, b) => b.date.localeCompare(a.date));
 }
+
+/** A season runs from 1 July 202X to 30 June 202X+1, and is named after X. */
+export function seasonOf(date: string): number {
+	const [year, month] = date.split('-').map(Number);
+	return month >= 7 ? year : year - 1;
+}
+
+/** Seasons that actually have posts, newest first. */
+export function listSeasons(): number[] {
+	const seasons = new Set(listPosts().map((post) => seasonOf(post.date)));
+	return [...seasons].sort((a, b) => b - a);
+}
