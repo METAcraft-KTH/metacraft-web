@@ -17,12 +17,14 @@
 	import prismLauncherIcon from '$lib/images/launcher/prism_launcher.png';
 	import H1 from '$lib/textstyles/H1.svelte';
 	import { slide } from 'svelte/transition';
+	import type { Component } from 'svelte';
 	import { m } from '$lib/paraglide/messages.js';
     import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
+    import OptionSwitcher from '$lib/widgets/OptionSwitcher.svelte';
 
     let selectedPlatform = $state("Windows");
 
-    const platformButtons = [
+    const platformButtons: [string, Component][] = [
         ["Windows", Windows],
         ["Mac", Apple],
         ["Linux", Linux]
@@ -30,7 +32,7 @@
 
     let selectedLauncher = $state("Vanilla Launcher");
 
-    const launcherButtons = [
+    const launcherButtons: [string, string][] = [
         ["Vanilla Launcher", minecraftLauncherIcon],
         ["Prism / MultiMC", prismLauncherIcon]
     ];
@@ -48,36 +50,22 @@
 </Title>
 
 <h1 class="mb-2 font-mc text-white text-center">{m.install_os_question()}</h1>
-<div class="flex flex-row bg-calcite mx-auto mb-8 rounded-xl max-w-200 overflow-hidden">
-    {#each platformButtons as [platformName, PlatformIcon]}
-        <button class="flex flex-col flex-1 items-center p-2 border-none transition-colors"
-            class:bg-blue-500={selectedPlatform === platformName}
-            class:text-blue-900={selectedPlatform === platformName}
-            class:bg-transparent={selectedPlatform !== platformName}
-            onmousedown={() => {selectedPlatform = platformName}}>
-            <div class="text-3xl">
-                <PlatformIcon />
-            </div>
-            <span class="font-mc">{platformName}</span>
-        </button>
-    {/each}
-</div>
+<OptionSwitcher options={platformButtons} bind:selected={selectedPlatform} value={([name]) => name} label={([name]) => name}>
+    {#snippet icon([, PlatformIcon])}
+        <div class="text-3xl">
+            <PlatformIcon />
+        </div>
+    {/snippet}
+</OptionSwitcher>
 
 {#if selectedPlatform !== 'Mac'}
 <div transition:slide={{duration: 100}}>
     <h1 class="mb-2 font-mc text-white text-center">{m.install_launcher_question()}</h1>
-    <div class="flex flex-row bg-calcite mx-auto mb-8 rounded-xl max-w-200 overflow-hidden">
-        {#each launcherButtons as [launcherName, launcherIcon]}
-            <button class="flex flex-col flex-1 items-center p-2 border-none transition-colors"
-                class:bg-blue-500={selectedLauncher === launcherName}
-                class:text-blue-900={selectedLauncher === launcherName}
-                class:bg-transparent={selectedLauncher !== launcherName}
-                onmousedown={() => {selectedLauncher = launcherName}}>
-                <img src={launcherIcon} alt={launcherName} class="mb-2 h-12" />
-                <span class="font-mc">{launcherName}</span>
-            </button>
-        {/each}
-    </div>
+    <OptionSwitcher options={launcherButtons} bind:selected={selectedLauncher} value={([name]) => name} label={([name]) => name}>
+        {#snippet icon([name, launcherIcon])}
+            <img src={launcherIcon} alt={name} class="mb-2 h-12" />
+        {/snippet}
+    </OptionSwitcher>
 </div>
 {:else}
 <div transition:slide={{duration: 100}}>
@@ -125,7 +113,7 @@
         <p>{m.install_prism_step3_p1()}</p>
         <img src={addInstanceImage} alt={m.install_prism_step3_alt1()} class="max-w-200" />
         <p>{m.install_prism_step3_p2()}</p>
-        <div class="inline-block bg-black p-3 font-mc link text-white rounded">
+        <div class="inline-block bg-black p-3 rounded font-mc text-white link">
             https://metacraft.nu/install/METAcraft.zip
         </div>
         <img src={importImage} alt={m.install_prism_step3_alt2()} class="max-w-200" />
