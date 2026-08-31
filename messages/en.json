@@ -219,5 +219,7 @@
   "style_reset_view": "Reset view",
   "style_drag_hint": "Drag to rotate",
   "style_with_ovve": "With ovve",
-  "style_without_ovve": "Without ovve"
+  "style_without_ovve": "Without ovve",
+  "style_arms_wide": "Wide arms",
+  "style_arms_slim": "Slim arms"
 }

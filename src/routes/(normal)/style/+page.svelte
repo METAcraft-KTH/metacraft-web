@@ -16,10 +16,16 @@
 	let resultUrl = $state('');
 	let fileName = $state('skin');
 	let showOvve = $state(true);
+	let slimArms = $state(false);
 
 	const ovveOptions = $derived<[string, boolean][]>([
 		[m.style_with_ovve(), true],
 		[m.style_without_ovve(), false]
+	]);
+
+	const armOptions = $derived<[string, boolean][]>([
+		[m.style_arms_wide(), false],
+		[m.style_arms_slim(), true]
 	]);
 
 	function load(src: string): Promise<HTMLImageElement> {
@@ -99,6 +105,7 @@
 		resultUrl = '';
 		error = '';
 		showOvve = true;
+		slimArms = false;
 		fileInput.value = '';
 	}
 </script>
@@ -150,7 +157,15 @@
 
 			<SkinViewer
 				src={showOvve ? resultUrl : originalUrl}
+				slim={slimArms}
 				alt={showOvve ? m.style_preview_result() : m.style_preview_original()}
+			/>
+
+			<OptionSwitcher
+				options={armOptions}
+				bind:selected={slimArms}
+				value={([, on]) => on}
+				label={([name]) => name}
 			/>
 
 			<div class="flex justify-center items-start gap-8 mt-6">

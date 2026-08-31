@@ -13,10 +13,12 @@
 		src: string;
 		/** Pixels per Minecraft unit. */
 		scale?: number;
+		/** Slim ("Alex") arms are 3 wide instead of 4. */
+		slim?: boolean;
 		alt?: string;
 	}
 
-	let { src, scale = 6, alt = '' }: Props = $props();
+	let { src, scale = 6, slim = false, alt = '' }: Props = $props();
 
 	let yaw = $state(-25);
 	let pitch = $state(-12);
@@ -67,7 +69,6 @@
 
 	// Shoulder joint, as an offset from the arm box's centre-x / top-y.
 	// Legs and head pivot at their box top, so they need no offset.
-	const ARM_PIVOT_X = 1;
 	const ARM_PIVOT_Y = 2;
 
 	// [x, y, z] size in MC units, and [u, v] sheet origin
@@ -75,10 +76,19 @@
 	const HAT: Box = { w: 8, h: 8, d: 8, u: 32, v: 0 };
 	const BODY: Box = { w: 8, h: 12, d: 4, u: 16, v: 16 };
 	const JACKET: Box = { w: 8, h: 12, d: 4, u: 16, v: 32 };
-	const RARM: Box = { w: 4, h: 12, d: 4, u: 40, v: 16 };
-	const RARM2: Box = { w: 4, h: 12, d: 4, u: 40, v: 32 };
-	const LARM: Box = { w: 4, h: 12, d: 4, u: 32, v: 48 };
-	const LARM2: Box = { w: 4, h: 12, d: 4, u: 48, v: 48 };
+	// Slim arms are 3 wide; faces() derives every UV rect from the box's own
+	// width and depth, so the narrower sheet layout falls out automatically.
+	const ARM_W = $derived(slim ? 3 : 4);
+	const RARM: Box = $derived({ w: ARM_W, h: 12, d: 4, u: 40, v: 16 });
+	const RARM2: Box = $derived({ w: ARM_W, h: 12, d: 4, u: 40, v: 32 });
+	const LARM: Box = $derived({ w: ARM_W, h: 12, d: 4, u: 32, v: 48 });
+	const LARM2: Box = $derived({ w: ARM_W, h: 12, d: 4, u: 48, v: 48 });
+
+	// The arm hangs off the torso edge (x=4), so its centre moves in with its
+	// width, but the shoulder joint stays put at x=5 either way.
+	const ARM_X = $derived(4 + ARM_W / 2);
+	// keeps the shoulder at x=5 for both arm widths
+	const ARM_PIVOT_X = $derived(ARM_X - 5);
 	const RLEG: Box = { w: 4, h: 12, d: 4, u: 0, v: 16 };
 	const RLEG2: Box = { w: 4, h: 12, d: 4, u: 0, v: 32 };
 	const LLEG: Box = { w: 4, h: 12, d: 4, u: 16, v: 48 };
@@ -159,11 +169,11 @@
 				     offset from that point. The model puts the shoulder 1 unit
 				     inboard and 2 down, so the arm swings from the joint rather
 				     than from the middle of its top face. -->
-				{@render part(-6 * scale, -14 * scale, 0, -swing, [
+				{@render part(-ARM_X * scale, -14 * scale, 0, -swing, [
 					[RARM, 0],
 					[RARM2, LAYER_INFLATE]
 				], [ARM_PIVOT_X, ARM_PIVOT_Y])}
-				{@render part(6 * scale, -14 * scale, 0, swing, [
+				{@render part(ARM_X * scale, -14 * scale, 0, swing, [
 					[LARM, 0],
 					[LARM2, LAYER_INFLATE]
 				], [-ARM_PIVOT_X, ARM_PIVOT_Y])}

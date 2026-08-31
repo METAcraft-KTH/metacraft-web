@@ -219,5 +219,7 @@
   "style_reset_view": "Återställ vy",
   "style_drag_hint": "Dra för att rotera",
   "style_with_ovve": "Med overall",
-  "style_without_ovve": "Utan overall"
+  "style_without_ovve": "Utan overall",
+  "style_arms_wide": "Breda armar",
+  "style_arms_slim": "Smala armar"
 }
