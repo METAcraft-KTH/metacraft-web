@@ -4,10 +4,23 @@
 	import PageDescription from '$lib/layout/standard/PageDescription.svelte';
 	import { m } from '$lib/paraglide/messages.js';
 	import overlayUrl from '$lib/images/ovve-overlay.png';
+	import templateWide from '$lib/images/template-wide.png';
+	import templateSlim from '$lib/images/template-slim.png';
 	import SkinViewer from '$lib/widgets/SkinViewer.svelte';
 	import OptionSwitcher from '$lib/widgets/OptionSwitcher.svelte';
 
 	const SKIN_SIZE = 64;
+
+	// ponytail: every variant points at the one overlay that exists today. Swap in
+	// the real art per entry as it lands; nothing else here needs to change.
+	const VARIANTS: { id: string; label: () => string; overlay: string | null }[] = [
+		{ id: 'none', label: () => m.style_variant_none(), overlay: null },
+		{ id: '1', label: () => m.style_variant_1(), overlay: overlayUrl },
+		{ id: '2', label: () => m.style_variant_2(), overlay: overlayUrl },
+		{ id: '3', label: () => m.style_variant_3(), overlay: overlayUrl },
+		{ id: '4', label: () => m.style_variant_4(), overlay: overlayUrl },
+		{ id: '5', label: () => m.style_variant_5(), overlay: overlayUrl }
+	];
 
 	let fileInput: HTMLInputElement;
 	let dragging = $state(false);
@@ -15,20 +28,21 @@
 	let originalUrl = $state('');
 	let resultUrl = $state('');
 	let fileName = $state('skin');
-	let showOvve = $state(true);
 	let slimArms = $state(false);
 	let username = $state('');
 	let fetching = $state(false);
+	let variant = $state('1');
 
-	const ovveOptions = $derived<[string, boolean][]>([
-		[m.style_with_ovve(), true],
-		[m.style_without_ovve(), false]
-	]);
+	/** The 64x64 source the overlay composites onto; kept so variants can re-render. */
+	let source: CanvasImageSource | null = null;
 
 	const armOptions = $derived<[string, boolean][]>([
 		[m.style_arms_wide(), false],
 		[m.style_arms_slim(), true]
 	]);
+
+	// Nothing loaded yet: show the UV template so the viewer is never empty.
+	const shown = $derived(resultUrl || originalUrl || (slimArms ? templateSlim : templateWide));
 
 	function load(src: string): Promise<HTMLImageElement> {
 		return new Promise((resolve, reject) => {
@@ -40,8 +54,8 @@
 	}
 
 	/** Draw overlay on top of the skin; overlay's pure-green pixels erase the skin instead. */
-	async function generate(skin: CanvasImageSource) {
-		const overlay = await load(overlayUrl);
+	async function generate(skin: CanvasImageSource, overlayHref: string) {
+		const overlay = await load(overlayHref);
 
 		const canvas = document.createElement('canvas');
 		canvas.width = SKIN_SIZE;
@@ -103,6 +117,12 @@
 		return canvas;
 	}
 
+	/** Composite the selected variant over the loaded skin. */
+	async function render() {
+		const overlay = VARIANTS.find((v) => v.id === variant)?.overlay;
+		resultUrl = source && overlay ? await generate(source, overlay) : '';
+	}
+
 	/** Validate a loaded image is a skin, widening legacy ones, then render the result. */
 	async function apply(url: string, name: string) {
 		let skin: HTMLImageElement;
@@ -120,7 +140,7 @@
 			return;
 		}
 
-		let source: CanvasImageSource = skin;
+		source = skin;
 		if (skin.height !== SKIN_SIZE) {
 			const wide = widen(skin);
 			source = wide;
@@ -129,9 +149,10 @@
 			url = wide.toDataURL('image/png');
 		}
 
+		if (originalUrl) URL.revokeObjectURL(originalUrl);
 		fileName = name;
 		originalUrl = url;
-		resultUrl = await generate(source);
+		await render();
 	}
 
 	async function handle(file: File | undefined) {
@@ -179,10 +200,15 @@
 		originalUrl = '';
 		resultUrl = '';
 		error = '';
-		showOvve = true;
+		source = null;
 		slimArms = false;
 		username = '';
 		fileInput.value = '';
+	}
+
+	function pick(id: string) {
+		variant = id;
+		render();
 	}
 </script>
 
@@ -198,21 +224,26 @@
 </PageDescription>
 
 <Main>
-	<div class="mx-auto w-full max-w-150">
-		<input
-			bind:this={fileInput}
-			type="file"
-			accept="image/png"
-			class="hidden"
-			onchange={(e) => handle(e.currentTarget.files?.[0])}
-		/>
+	<input
+		bind:this={fileInput}
+		type="file"
+		accept="image/png"
+		class="hidden"
+		onchange={(e) => handle(e.currentTarget.files?.[0])}
+	/>
 
-		{#if !resultUrl}
-			<button
-				type="button"
-				class="flex flex-col justify-center items-center gap-3 border-4 border-black/30 hover:border-black/60 {dragging ? 'border-black/60 bg-black/5' : ''} border-dashed p-8 rounded-lg w-full min-h-60 text-center transition-colors notButton"
-				onclick={() => fileInput.click()}
-				ondragover={(e) => { e.preventDefault(); dragging = true; }}
+	<div class="items-start gap-8 grid lg:grid-cols-2 mx-auto w-full max-w-250">
+		<!-- LEFT: always-on preview, doubling as the drop target -->
+		<div>
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
+			<div
+				class="relative rounded-lg transition-colors {dragging
+					? 'bg-black/5 outline-4 outline-black/60 outline-dashed'
+					: ''}"
+				ondragover={(e) => {
+					e.preventDefault();
+					dragging = true;
+				}}
 				ondragleave={() => (dragging = false)}
 				ondrop={(e) => {
 					e.preventDefault();
@@ -220,13 +251,41 @@
 					handle(e.dataTransfer?.files?.[0]);
 				}}
 			>
-				<img src={overlayUrl} alt="" class="w-16 h-16 pixel" />
-				<span class="font-mc">{m.style_dropzone()}</span>
+				<SkinViewer src={shown} slim={slimArms} alt={m.style_preview_result()} />
+
+				{#if dragging}
+					<div
+						class="absolute inset-0 flex justify-center items-center bg-black/20 rounded-lg font-mc text-white text-center pointer-events-none"
+					>
+						{m.style_dropzone()}
+					</div>
+				{/if}
+			</div>
+
+			<OptionSwitcher
+				options={armOptions}
+				bind:selected={slimArms}
+				value={([, on]) => on}
+				label={([name]) => name}
+			/>
+
+			<!-- the viewer swallows drags to rotate, so keep an explicit browse button -->
+			<button
+				type="button"
+				class="bg-map px-6 py-3 w-full font-mc text-black text-center hover:contrast-150 transition-all hover:-translate-y-1 notButton"
+				onclick={() => fileInput.click()}
+			>
+				{m.style_upload()}
 			</button>
+			<p class="mt-2 text-center text-sm">{m.style_dropzone_hint()}</p>
 
-			<p class="my-4 font-mc text-center">{m.style_or()}</p>
-
-			<form class="flex sm:flex-row flex-col gap-3" onsubmit={(e) => { e.preventDefault(); fetchByName(); }}>
+			<form
+				class="flex sm:flex-row flex-col gap-3 mt-4"
+				onsubmit={(e) => {
+					e.preventDefault();
+					fetchByName();
+				}}
+			>
 				<input
 					type="text"
 					bind:value={username}
@@ -243,61 +302,65 @@
 					{m.style_username_fetch()}
 				</button>
 			</form>
-		{:else}
-			<OptionSwitcher
-				options={ovveOptions}
-				bind:selected={showOvve}
-				value={([, on]) => on}
-				label={([name]) => name}
-			/>
 
-			<SkinViewer
-				src={showOvve ? resultUrl : originalUrl}
-				slim={slimArms}
-				alt={showOvve ? m.style_preview_result() : m.style_preview_original()}
-			/>
+			{#if error}
+				<p class="mt-4 font-mc text-red-800 text-center">{error}</p>
+			{/if}
+		</div>
 
-			<OptionSwitcher
-				options={armOptions}
-				bind:selected={slimArms}
-				value={([, on]) => on}
-				label={([name]) => name}
-			/>
+		<!-- RIGHT: overlay variants -->
+		<div>
+			<h2 class="mb-4 font-mc text-xl">{m.style_variants_title()}</h2>
 
-			<div class="flex justify-center items-start gap-8 mt-6">
-				<figure class="flex flex-col items-center gap-2">
-					<img src={originalUrl} alt={m.style_preview_original()} class="w-20 h-20 pixel" />
-					<figcaption class="font-mc text-sm">{m.style_preview_original()}</figcaption>
-				</figure>
-				<figure class="flex flex-col items-center gap-2">
-					<img src={resultUrl} alt={m.style_preview_result()} class="w-20 h-20 pixel checker" />
-					<figcaption class="font-mc text-sm">{m.style_preview_result()}</figcaption>
-				</figure>
+			<div class="gap-3 grid grid-cols-2 sm:grid-cols-3">
+				{#each VARIANTS as v (v.id)}
+					<button
+						type="button"
+						class={[
+							'flex flex-col items-center gap-2 p-3 border-4 rounded-lg transition-all notButton',
+							variant === v.id
+								? 'bg-black/10 border-black/60'
+								: 'bg-black/0 hover:bg-black/5 border-black/20 hover:border-black/40'
+						]}
+						aria-pressed={variant === v.id}
+						onclick={() => pick(v.id)}
+					>
+						{#if v.overlay}
+							<img src={v.overlay} alt="" class="w-12 h-12 pixel checker" />
+						{:else}
+							<span class="flex justify-center items-center w-12 h-12 text-2xl">&times;</span>
+						{/if}
+						<span class="font-mc text-sm">{v.label()}</span>
+					</button>
+				{/each}
 			</div>
 
-			<div class="flex sm:flex-row flex-col justify-center gap-4 mt-8">
+			<div class="flex sm:flex-row flex-col gap-4 mt-8">
+				<!-- no skin loaded yet: `shown` is the UV template, which must not be
+				     downloadable, so drop the href rather than just the pointer events -->
 				<a
-					href={resultUrl}
+					href={originalUrl ? shown : undefined}
 					download="{fileName}-metacraft.png"
-					class="bg-map px-6 py-3 font-mc text-black text-center no-underline hover:contrast-150 transition-all hover:-translate-y-1"
+					class="flex-1 bg-map px-6 py-3 font-mc text-black text-center no-underline hover:contrast-150 transition-all hover:-translate-y-1"
+					class:opacity-50={!originalUrl}
+					class:cursor-not-allowed={!originalUrl}
+					aria-disabled={!originalUrl}
 				>
 					{m.style_download()}
 				</a>
-				<button
-					type="button"
-					class="bg-map px-6 py-3 font-mc text-black text-center hover:contrast-150 transition-all hover:-translate-y-1 notButton"
-					onclick={reset}
-				>
-					{m.style_reset()}
-				</button>
+				{#if originalUrl}
+					<button
+						type="button"
+						class="bg-map px-6 py-3 font-mc text-black text-center hover:contrast-150 transition-all hover:-translate-y-1 notButton"
+						onclick={reset}
+					>
+						{m.style_reset()}
+					</button>
+				{/if}
 			</div>
 
-			<p class="mt-6 text-center text-sm">{m.style_help()}</p>
-		{/if}
-
-		{#if error}
-			<p class="mt-4 font-mc text-red-800 text-center">{error}</p>
-		{/if}
+			<p class="mt-6 text-sm">{m.style_help()}</p>
+		</div>
 	</div>
 </Main>
 
@@ -305,7 +368,7 @@
 	.pixel {
 		image-rendering: pixelated;
 	}
-	/* show transparency on the generated skin */
+	/* show transparency on the overlay swatches */
 	.checker {
 		background-image:
 			linear-gradient(45deg, #0002 25%, transparent 25%, transparent 75%, #0002 75%),

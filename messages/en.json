@@ -218,12 +218,18 @@
   "style_walk": "Walk",
   "style_reset_view": "Reset view",
   "style_drag_hint": "Drag to rotate",
-  "style_with_ovve": "With ovve",
-  "style_without_ovve": "Without ovve",
   "style_arms_wide": "Wide arms",
   "style_arms_slim": "Slim arms",
   "style_username_placeholder": "Minecraft username",
   "style_username_fetch": "Fetch skin",
   "style_or": "or",
-  "style_error_username": "Couldn't find a skin for that username."
+  "style_error_username": "Couldn't find a skin for that username.",
+  "style_variant_none": "No ovve",
+  "style_variant_1": "Data",
+  "style_variant_2": "Data, nercabbad",
+  "style_variant_3": "Mediafrack",
+  "style_variant_4": "IT",
+  "style_variant_5": "IT, nercabbad",
+  "style_variants_title": "Choose your ovve",
+  "style_dropzone_hint": "Drop a skin on the preview, or click to browse"
 }

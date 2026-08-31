@@ -218,12 +218,18 @@
   "style_walk": "Gå",
   "style_reset_view": "Återställ vy",
   "style_drag_hint": "Dra för att rotera",
-  "style_with_ovve": "Med overall",
-  "style_without_ovve": "Utan overall",
   "style_arms_wide": "Breda armar",
   "style_arms_slim": "Smala armar",
   "style_username_placeholder": "Minecraft-användarnamn",
   "style_username_fetch": "Hämta skin",
   "style_or": "eller",
-  "style_error_username": "Kunde inte hitta något skin för det användarnamnet."
+  "style_error_username": "Kunde inte hitta något skin för det användarnamnet.",
+  "style_variant_none": "Ingen ovve",
+  "style_variant_1": "Data",
+  "style_variant_2": "Data, nercabbad",
+  "style_variant_3": "Mediafrack",
+  "style_variant_4": "IT",
+  "style_variant_5": "IT, nercabbad",
+  "style_variants_title": "Välj din ovve",
+  "style_dropzone_hint": "Släpp ett skin på förhandsvisningen, eller klicka för att bläddra"
 }
