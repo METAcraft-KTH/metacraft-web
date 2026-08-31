@@ -202,5 +202,17 @@
   "smp_landscape_p1": "Vi har finjusterat världen en gnutta för att göra utforskandet mer spännande och givande. Du kan finna fantastiska oaser, isgrottor, häpnadsväckande savanner, och så mycket mer, inte för att nämna 30+ nya strukturer för dig att utforska i alla dimensioner.",
   "smp_landscape_p2": "Vi har även implementerat flera funktionella och dekorativa ändringar i spelet för att förbättra din upplevelse. Det kan handla om allt från Villager Trade Rebalance till möjligheten att tysta mobs. {#a href=|/smp/features|}Läs om alla skillnader här.{/a}",
   "smp_watch_trailer": "SE TRAILERN",
-  "smp_ready_to_play": "Redo att spela?"
+  "smp_ready_to_play": "Redo att spela?",
+  "style_title": "STIL",
+  "style_description": "Ge ditt Minecraft-skin METAcraft-looken. Ladda upp ditt skin och ladda ner resultatet.",
+  "style_upload": "Välj skin",
+  "style_dropzone": "Släpp ett 64x64-skin här, eller klicka för att bläddra",
+  "style_download": "Ladda ner skin",
+  "style_reset": "Välj ett annat",
+  "style_preview_original": "Original",
+  "style_preview_result": "Med overlay",
+  "style_error_type": "Det där är ingen PNG-bild. Minecraft-skins är .png-filer.",
+  "style_error_size": "Skins måste vara 64x64 pixlar. Bilden är {width}x{height}.",
+  "style_error_read": "Kunde inte läsa bilden.",
+  "style_help": "Ladda upp resultatet på minecraft.net eller i din launcher för att bära det i spelet."
 }

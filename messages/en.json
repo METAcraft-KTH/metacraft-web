@@ -202,5 +202,17 @@
   "smp_landscape_p1": "We've fine-tuned the world a little to make exploring more exciting and rewarding. You can find amazing oases, ice caves, breathtaking savannas, and so much more, not to mention 30+ new structures for you to explore across all dimensions.",
   "smp_landscape_p2": "We've also implemented several functional and decorative changes to the game to improve your experience. That can be anything from Villager Trade Rebalance to the ability to silence mobs. {#a href=|/smp/features|}Read about all the differences here.{/a}",
   "smp_watch_trailer": "WATCH THE TRAILER",
-  "smp_ready_to_play": "Ready to play?"
+  "smp_ready_to_play": "Ready to play?",
+  "style_title": "STYLE",
+  "style_description": "Give your Minecraft skin the METAcraft look. Upload your skin and download the result.",
+  "style_upload": "Choose skin",
+  "style_dropzone": "Drop a 64x64 skin here, or click to browse",
+  "style_download": "Download skin",
+  "style_reset": "Choose another",
+  "style_preview_original": "Original",
+  "style_preview_result": "With overlay",
+  "style_error_type": "That's not a PNG image. Minecraft skins are .png files.",
+  "style_error_size": "Skins must be 64x64 pixels. That image is {width}x{height}.",
+  "style_error_read": "Couldn't read that image.",
+  "style_help": "Upload the result at minecraft.net or in your launcher to wear it in game."
 }
