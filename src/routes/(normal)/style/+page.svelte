@@ -4,6 +4,8 @@
 	import PageDescription from '$lib/layout/standard/PageDescription.svelte';
 	import { m } from '$lib/paraglide/messages.js';
 	import overlayUrl from '$lib/images/ovve-overlay.png';
+	import SkinViewer from '$lib/widgets/SkinViewer.svelte';
+	import OptionSwitcher from '$lib/widgets/OptionSwitcher.svelte';
 
 	const SKIN_SIZE = 64;
 
@@ -13,6 +15,12 @@
 	let originalUrl = $state('');
 	let resultUrl = $state('');
 	let fileName = $state('skin');
+	let showOvve = $state(true);
+
+	const ovveOptions = $derived<[string, boolean][]>([
+		[m.style_with_ovve(), true],
+		[m.style_without_ovve(), false]
+	]);
 
 	function load(src: string): Promise<HTMLImageElement> {
 		return new Promise((resolve, reject) => {
@@ -90,6 +98,7 @@
 		originalUrl = '';
 		resultUrl = '';
 		error = '';
+		showOvve = true;
 		fileInput.value = '';
 	}
 </script>
@@ -132,13 +141,25 @@
 				<span class="font-mc">{m.style_dropzone()}</span>
 			</button>
 		{:else}
-			<div class="flex sm:flex-row flex-col justify-center items-center gap-8">
+			<OptionSwitcher
+				options={ovveOptions}
+				bind:selected={showOvve}
+				value={([, on]) => on}
+				label={([name]) => name}
+			/>
+
+			<SkinViewer
+				src={showOvve ? resultUrl : originalUrl}
+				alt={showOvve ? m.style_preview_result() : m.style_preview_original()}
+			/>
+
+			<div class="flex justify-center items-start gap-8 mt-6">
 				<figure class="flex flex-col items-center gap-2">
-					<img src={originalUrl} alt={m.style_preview_original()} class="w-32 h-32 pixel" />
+					<img src={originalUrl} alt={m.style_preview_original()} class="w-20 h-20 pixel" />
 					<figcaption class="font-mc text-sm">{m.style_preview_original()}</figcaption>
 				</figure>
 				<figure class="flex flex-col items-center gap-2">
-					<img src={resultUrl} alt={m.style_preview_result()} class="w-32 h-32 pixel checker" />
+					<img src={resultUrl} alt={m.style_preview_result()} class="w-20 h-20 pixel checker" />
 					<figcaption class="font-mc text-sm">{m.style_preview_result()}</figcaption>
 				</figure>
 			</div>

@@ -214,5 +214,10 @@
   "style_error_type": "Det där är ingen PNG-bild. Minecraft-skins är .png-filer.",
   "style_error_size": "Skins måste vara 64x64 pixlar. Bilden är {width}x{height}.",
   "style_error_read": "Kunde inte läsa bilden.",
-  "style_help": "Ladda upp resultatet på minecraft.net eller i din launcher för att bära det i spelet."
+  "style_help": "Ladda upp resultatet på minecraft.net eller i din launcher för att bära det i spelet.",
+  "style_walk": "Gå",
+  "style_reset_view": "Återställ vy",
+  "style_drag_hint": "Dra för att rotera",
+  "style_with_ovve": "Med overall",
+  "style_without_ovve": "Utan overall"
 }

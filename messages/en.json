@@ -214,5 +214,10 @@
   "style_error_type": "That's not a PNG image. Minecraft skins are .png files.",
   "style_error_size": "Skins must be 64x64 pixels. That image is {width}x{height}.",
   "style_error_read": "Couldn't read that image.",
-  "style_help": "Upload the result at minecraft.net or in your launcher to wear it in game."
+  "style_help": "Upload the result at minecraft.net or in your launcher to wear it in game.",
+  "style_walk": "Walk",
+  "style_reset_view": "Reset view",
+  "style_drag_hint": "Drag to rotate",
+  "style_with_ovve": "With ovve",
+  "style_without_ovve": "Without ovve"
 }
