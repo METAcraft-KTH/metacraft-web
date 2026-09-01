@@ -5,6 +5,8 @@
 	import { m } from '$lib/paraglide/messages.js';
 	import dataNercabbad from '$lib/images/data-nercabbad.png';
 	import itNercabbad from '$lib/images/it-nercabbad.png';
+	import data from '$lib/images/data.png';
+	import dataSlim from '$lib/images/data-slim.png';
 	import templateWide from '$lib/images/template-wide.png';
 	import templateSlim from '$lib/images/template-slim.png';
 	import SkinViewer from '$lib/widgets/SkinViewer.svelte';
@@ -15,9 +17,13 @@
 	// ponytail: entries with no art yet carry a null overlay — they render the
 	// plain skin and show a placeholder swatch. Drop the png in and point the
 	// entry at it; nothing else here needs to change.
-	const VARIANTS: { id: string; label: () => string; overlay: string | null }[] = [
+	//
+	// `overlay` can also be a function of slim-ness: Data has separate wide/slim
+	// art because the ovve sleeve is drawn onto the arm, so it has to follow the
+	// same UV layout the arm itself uses.
+	const VARIANTS: { id: string; label: () => string; overlay: string | null | ((slim: boolean) => string) }[] = [
 		{ id: 'none', label: () => m.style_variant_none(), overlay: null },
-		{ id: '1', label: () => m.style_variant_1(), overlay: null },
+		{ id: '1', label: () => m.style_variant_1(), overlay: (slim: boolean) => (slim ? dataSlim : data) },
 		{ id: '2', label: () => m.style_variant_2(), overlay: dataNercabbad },
 		{ id: '3', label: () => m.style_variant_3(), overlay: null },
 		{ id: '4', label: () => m.style_variant_4(), overlay: null },
@@ -124,9 +130,18 @@
 		return canvas;
 	}
 
+	// re-render if the arm width changes while an arm-aware overlay (Data) is
+	// selected -- every other variant's art doesn't depend on slimArms, but
+	// render() doesn't know that without re-running.
+	$effect(() => {
+		slimArms;
+		if (source) render();
+	});
+
 	/** Composite the selected variant over the loaded skin. */
 	async function render() {
-		const overlay = VARIANTS.find((v) => v.id === variant)?.overlay;
+		const entry = VARIANTS.find((v) => v.id === variant)?.overlay;
+		const overlay = typeof entry === 'function' ? entry(slimArms) : entry;
 		resultUrl = source && overlay ? await generate(source, overlay) : '';
 	}
 
@@ -329,7 +344,11 @@
 						onclick={() => pick(v.id)}
 					>
 						{#if v.overlay}
-							<img src={v.overlay} alt="" class="w-12 h-12 pixel checker" />
+							<img
+								src={typeof v.overlay === 'function' ? v.overlay(slimArms) : v.overlay}
+								alt=""
+								class="w-12 h-12 pixel checker"
+							/>
 						{:else}
 							<span class="flex justify-center items-center w-12 h-12 text-2xl">&times;</span>
 						{/if}
