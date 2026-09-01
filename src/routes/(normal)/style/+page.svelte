@@ -3,7 +3,8 @@
 	import Title from '$lib/layout/standard/Title.svelte';
 	import PageDescription from '$lib/layout/standard/PageDescription.svelte';
 	import { m } from '$lib/paraglide/messages.js';
-	import overlayUrl from '$lib/images/ovve-overlay.png';
+	import dataNercabbad from '$lib/images/data-nercabbad.png';
+	import itNercabbad from '$lib/images/it-nercabbad.png';
 	import templateWide from '$lib/images/template-wide.png';
 	import templateSlim from '$lib/images/template-slim.png';
 	import SkinViewer from '$lib/widgets/SkinViewer.svelte';
@@ -11,15 +12,16 @@
 
 	const SKIN_SIZE = 64;
 
-	// ponytail: every variant points at the one overlay that exists today. Swap in
-	// the real art per entry as it lands; nothing else here needs to change.
+	// ponytail: entries with no art yet carry a null overlay — they render the
+	// plain skin and show a placeholder swatch. Drop the png in and point the
+	// entry at it; nothing else here needs to change.
 	const VARIANTS: { id: string; label: () => string; overlay: string | null }[] = [
 		{ id: 'none', label: () => m.style_variant_none(), overlay: null },
-		{ id: '1', label: () => m.style_variant_1(), overlay: overlayUrl },
-		{ id: '2', label: () => m.style_variant_2(), overlay: overlayUrl },
-		{ id: '3', label: () => m.style_variant_3(), overlay: overlayUrl },
-		{ id: '4', label: () => m.style_variant_4(), overlay: overlayUrl },
-		{ id: '5', label: () => m.style_variant_5(), overlay: overlayUrl }
+		{ id: '1', label: () => m.style_variant_1(), overlay: null },
+		{ id: '2', label: () => m.style_variant_2(), overlay: dataNercabbad },
+		{ id: '3', label: () => m.style_variant_3(), overlay: null },
+		{ id: '4', label: () => m.style_variant_4(), overlay: null },
+		{ id: '5', label: () => m.style_variant_5(), overlay: itNercabbad }
 	];
 
 	let fileInput: HTMLInputElement;
@@ -31,7 +33,9 @@
 	let slimArms = $state(false);
 	let username = $state('');
 	let fetching = $state(false);
-	let variant = $state('1');
+	// default to a variant that actually has art, so the tool shows an overlay
+	// on first load rather than an unchanged skin
+	let variant = $state('2');
 
 	/** The 64x64 source the overlay composites onto; kept so variants can re-render. */
 	let source: CanvasImageSource | null = null;
@@ -75,8 +79,11 @@
 
 		const out = ctx.getImageData(0, 0, SKIN_SIZE, SKIN_SIZE);
 		const key = maskCtx.getImageData(0, 0, SKIN_SIZE, SKIN_SIZE).data;
+		// Match near-green rather than exactly 00FF00: a PNG carrying an sRGB
+		// chunk gets colour-managed on decode, so the key can come back as
+		// 1,254,0 and an equality test would silently leave the mask painted on.
 		for (let i = 0; i < key.length; i += 4) {
-			if (key[i] === 0 && key[i + 1] === 255 && key[i + 2] === 0) {
+			if (key[i] < 32 && key[i + 1] > 223 && key[i + 2] < 32 && key[i + 3] > 127) {
 				out.data[i + 3] = 0;
 			}
 		}
@@ -219,10 +226,6 @@
 	{m.style_title()}
 </Title>
 
-<PageDescription>
-	{m.style_description()}
-</PageDescription>
-
 <Main>
 	<input
 		bind:this={fileInput}
@@ -272,12 +275,12 @@
 			<!-- the viewer swallows drags to rotate, so keep an explicit browse button -->
 			<button
 				type="button"
-				class="bg-map px-6 py-3 w-full font-mc text-black text-center hover:contrast-150 transition-all hover:-translate-y-1 notButton"
+				class="bg-map px-6 py-3 w-full font-mc text-black text-center transition-all hover:-translate-y-1 hover:contrast-150 notButton"
 				onclick={() => fileInput.click()}
 			>
 				{m.style_upload()}
 			</button>
-			<p class="mt-2 text-center text-sm">{m.style_dropzone_hint()}</p>
+			<p class="mt-2 text-sm text-center">{m.style_dropzone_hint()}</p>
 
 			<form
 				class="flex sm:flex-row flex-col gap-3 mt-4"
@@ -297,7 +300,7 @@
 				<button
 					type="submit"
 					disabled={fetching || !username.trim()}
-					class="bg-map disabled:opacity-50 px-6 py-3 font-mc text-black text-center hover:contrast-150 transition-all hover:-translate-y-1 disabled:translate-y-0 notButton"
+					class="bg-map disabled:opacity-50 px-6 py-3 font-mc text-black text-center transition-all hover:-translate-y-1 disabled:translate-y-0 hover:contrast-150 notButton"
 				>
 					{m.style_username_fetch()}
 				</button>
@@ -341,7 +344,7 @@
 				<a
 					href={originalUrl ? shown : undefined}
 					download="{fileName}-metacraft.png"
-					class="flex-1 bg-map px-6 py-3 font-mc text-black text-center no-underline hover:contrast-150 transition-all hover:-translate-y-1"
+					class="flex-1 bg-map px-6 py-3 font-mc text-black text-center no-underline transition-all hover:-translate-y-1 hover:contrast-150"
 					class:opacity-50={!originalUrl}
 					class:cursor-not-allowed={!originalUrl}
 					aria-disabled={!originalUrl}
@@ -351,7 +354,7 @@
 				{#if originalUrl}
 					<button
 						type="button"
-						class="bg-map px-6 py-3 font-mc text-black text-center hover:contrast-150 transition-all hover:-translate-y-1 notButton"
+						class="bg-map px-6 py-3 font-mc text-black text-center transition-all hover:-translate-y-1 hover:contrast-150 notButton"
 						onclick={reset}
 					>
 						{m.style_reset()}

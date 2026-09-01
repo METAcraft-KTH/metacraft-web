@@ -291,7 +291,11 @@
 	.face {
 		position: absolute;
 		image-rendering: pixelated;
-		backface-visibility: hidden;
+		/* No backface culling: the outer layers are mostly transparent, so the
+		   inside of the far side has to show through the near one. Culling is
+		   only ever a win on the opaque base boxes, and 36 extra composited
+		   divs is not worth a second class to claw back. */
+		backface-visibility: visible;
 		/* kill the seams between adjacent faces on fractional scales */
 		outline: 1px solid transparent;
 	}
