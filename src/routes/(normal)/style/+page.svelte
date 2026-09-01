@@ -353,7 +353,7 @@
 				<button
 					type="submit"
 					disabled={fetching || !username.trim()}
-					class="bg-map disabled:opacity-50 px-6 py-3 font-mc text-black text-center transition-all hover:-translate-y-1 disabled:translate-y-0 hover:contrast-150 notButton"
+					class="bg-map disabled:opacity-50 px-6 py-3 font-mc text-black text-sm text-center text-nowrap transition-all hover:-translate-y-1 disabled:translate-y-0 hover:contrast-150 notButton"
 				>
 					{m.style_username_fetch()}
 				</button>

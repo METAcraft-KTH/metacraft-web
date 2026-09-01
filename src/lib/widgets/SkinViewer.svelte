@@ -44,7 +44,7 @@
 	function drag(e: PointerEvent) {
 		if (!dragging) return;
 		yaw += e.movementX * 0.6;
-		pitch = Math.max(-80, Math.min(80, pitch + e.movementY * 0.6));
+		pitch = Math.max(-80, Math.min(80, pitch - e.movementY * 0.6));
 	}
 
 	/**

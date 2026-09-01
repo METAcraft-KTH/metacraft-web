@@ -38,6 +38,7 @@
 	p-4 md:p-10 mx-auto mb-36
 	bg-{bg} text-{text}
 	text-base md:text-lg
+	rounded-lg
 	{classes}"
 >
 
