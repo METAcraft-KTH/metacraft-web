@@ -8,7 +8,7 @@
 
   let { date = '', type = 'post', style = '' }: Props = $props();
 
-  let dateString: string = $state();
+  let dateString: string = $state("1997-01-01");
 
   if (date !== '') {
     dateString = new Date(date).toLocaleDateString('sv-SE', {'weekday': 'long', 'year': 'numeric', 'month': 'short', 'day': '2-digit'});
