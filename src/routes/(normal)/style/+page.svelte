@@ -7,6 +7,10 @@
 	import itNercabbad from '$lib/images/it-nercabbad.png';
 	import data from '$lib/images/data.png';
 	import dataSlim from '$lib/images/data-slim.png';
+	import mediafrack from '$lib/images/mediafrack.png';
+	import mediafrackSlim from '$lib/images/mediafrack-slim.png';
+	import it from '$lib/images/it.png';
+	import itSlim from '$lib/images/it-slim.png';
 	import templateWide from '$lib/images/template-wide.png';
 	import templateSlim from '$lib/images/template-slim.png';
 	import SkinViewer from '$lib/widgets/SkinViewer.svelte';
@@ -25,8 +29,8 @@
 		{ id: 'none', label: () => m.style_variant_none(), overlay: null },
 		{ id: '1', label: () => m.style_variant_1(), overlay: (slim: boolean) => (slim ? dataSlim : data) },
 		{ id: '2', label: () => m.style_variant_2(), overlay: dataNercabbad },
-		{ id: '3', label: () => m.style_variant_3(), overlay: null },
-		{ id: '4', label: () => m.style_variant_4(), overlay: null },
+		{ id: '3', label: () => m.style_variant_3(), overlay: (slim: boolean) => (slim ? mediafrackSlim : mediafrack) },
+		{ id: '4', label: () => m.style_variant_4(), overlay: (slim: boolean) => (slim ? itSlim : it) },
 		{ id: '5', label: () => m.style_variant_5(), overlay: itNercabbad }
 	];
 
