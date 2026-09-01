@@ -13,7 +13,7 @@
     background-image: linear-gradient(
         #46373890,
         #46373890
-      ), url('$lib/images/splashes/entre.webp');
+      ), url('$lib/images/splashes/cave.webp');
     background-size: cover;
     background-position: center center;
   }
