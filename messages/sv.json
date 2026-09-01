@@ -231,5 +231,9 @@
   "style_variant_4": "IT",
   "style_variant_5": "IT, nercabbad",
   "style_variants_title": "Välj din ovve",
-  "style_dropzone_hint": "Släpp ett skin på förhandsvisningen, eller klicka för att bläddra"
+  "style_dropzone_hint": "Släpp ett skin på förhandsvisningen, eller klicka för att bläddra",
+  "style_premade_title": "Eller ta ett färdigt skin",
+  "style_premade_description": "Inget eget skin? Ladda ner ett av Minecrafts standardskin, redan iförd en overall.",
+  "style_premade_mediafrack": "Mediafrack",
+  "style_premade_fullbody": "Helkropps data-ovve"
 }

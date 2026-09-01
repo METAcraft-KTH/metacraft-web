@@ -231,5 +231,9 @@
   "style_variant_4": "IT",
   "style_variant_5": "IT, nercabbad",
   "style_variants_title": "Choose your ovve",
-  "style_dropzone_hint": "Drop a skin on the preview, or click to browse"
+  "style_dropzone_hint": "Drop a skin on the preview, or click to browse",
+  "style_premade_title": "Or grab a ready-made skin",
+  "style_premade_description": "No skin of your own? Download one of the default Minecraft skins, already wearing an ovve.",
+  "style_premade_mediafrack": "Mediafrack",
+  "style_premade_fullbody": "Full-body Data-ovve"
 }

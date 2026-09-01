@@ -3,17 +3,51 @@
 	import Title from '$lib/layout/standard/Title.svelte';
 	import PageDescription from '$lib/layout/standard/PageDescription.svelte';
 	import { m } from '$lib/paraglide/messages.js';
-	import dataNercabbad from '$lib/images/data-nercabbad.png';
-	import itNercabbad from '$lib/images/it-nercabbad.png';
-	import data from '$lib/images/data.png';
-	import dataSlim from '$lib/images/data-slim.png';
-	import mediafrack from '$lib/images/mediafrack.png';
-	import mediafrackSlim from '$lib/images/mediafrack-slim.png';
-	import it from '$lib/images/it.png';
-	import itSlim from '$lib/images/it-slim.png';
-	import templateWide from '$lib/images/template-wide.png';
-	import templateSlim from '$lib/images/template-slim.png';
+	import dataNercabbad from '$lib/images/skins/data-nercabbad.png';
+	import itNercabbad from '$lib/images/skins/it-nercabbad.png';
+	import data from '$lib/images/skins/data.png';
+	import dataSlim from '$lib/images/skins/data-slim.png';
+	import mediafrack from '$lib/images/skins/mediafrack.png';
+	import mediafrackSlim from '$lib/images/skins/mediafrack-slim.png';
+	import it from '$lib/images/skins/it.png';
+	import itSlim from '$lib/images/skins/it-slim.png';
+
+	// Premade skins: default Minecraft characters with an ovve already applied.
+	// One png per character per set; glob rather than 18 manual imports.
+	const frackSkins = import.meta.glob('$lib/images/skins/frack-*.png', {
+		eager: true,
+		import: 'default'
+	}) as Record<string, string>;
+	const fullbodySkins = import.meta.glob('$lib/images/skins/fullbodyovve4-*.png', {
+		eager: true,
+		import: 'default'
+	}) as Record<string, string>;
+
+	type PremadeSkin = { name: string; slim: boolean; src: string };
+
+	function parsePremade(glob: Record<string, string>, prefix: string): PremadeSkin[] {
+		return Object.entries(glob)
+			.map(([path, src]) => {
+				const file = path.split('/').pop()!.replace('.png', '').slice(prefix.length);
+				const slim = file.startsWith('slim-');
+				const name = slim ? file.slice('slim-'.length) : file;
+				return { name, slim, src };
+			})
+			.sort((a, b) => a.name.localeCompare(b.name) || Number(a.slim) - Number(b.slim));
+	}
+
+	const PREMADE_SETS = [
+		{ id: 'frack', label: () => m.style_premade_mediafrack(), skins: parsePremade(frackSkins, 'frack-') },
+		{
+			id: 'fullbody',
+			label: () => m.style_premade_fullbody(),
+			skins: parsePremade(fullbodySkins, 'fullbodyovve4-')
+		}
+	];
+	import templateWide from '$lib/images/skins/template-wide.png';
+	import templateSlim from '$lib/images/skins/template-slim.png';
 	import SkinViewer from '$lib/widgets/SkinViewer.svelte';
+	import SkinBust from '$lib/widgets/SkinBust.svelte';
 	import OptionSwitcher from '$lib/widgets/OptionSwitcher.svelte';
 
 	const SKIN_SIZE = 64;
@@ -388,6 +422,29 @@
 			<p class="mt-6 text-sm">{m.style_help()}</p>
 		</div>
 	</div>
+</Main>
+
+<Main>
+	<h2 class="mb-2 font-mc text-xl text-center">{m.style_premade_title()}</h2>
+	<p class="mb-8 text-center">{m.style_premade_description()}</p>
+
+	{#each PREMADE_SETS as set (set.id)}
+		<div class="mb-8 last:mb-0">
+			<h3 class="mb-3 font-mc text-lg text-center">{set.label()}</h3>
+			<div class="gap-3 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9">
+				{#each set.skins as skin (skin.name)}
+					<a
+						href={skin.src}
+						download="{skin.name}-{set.id}-metacraft.png"
+						class="flex flex-col items-center gap-2 bg-map py-7 font-mc text-black text-xs text-center no-underline transition-all hover:-translate-y-1 hover:contrast-150"
+					>
+						<SkinBust src={skin.src} alt={skin.name} />
+						<span class="capitalize">{skin.name}</span>
+					</a>
+				{/each}
+			</div>
+		</div>
+	{/each}
 </Main>
 
 <style>
