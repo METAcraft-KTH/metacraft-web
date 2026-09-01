@@ -41,10 +41,7 @@
 					<ul class="list-disc list-inside ml-2">
 						<li>{m.rules_general_li1()}</li>
 						<li>
-							{m.rules_general_li2_pre()} <a
-								href="https://styrdokument.datasektionen.se/jamlikhetspolicy"
-								> {m.rules_general_li2_link()}</a
-							>.
+							<LocalizedRichText msg={m.rules_general_li2} />
 						</li>
 						<li>
 							{m.rules_general_li3()}

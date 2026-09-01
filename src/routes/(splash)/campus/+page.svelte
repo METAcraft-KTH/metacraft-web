@@ -92,6 +92,7 @@
     
     <div class="flex flex-col items-center gap-4 md:gap-8 bg-dark-oak-planks px-2 py-12 w-full leading-tight">
 
+        {#if false}
         <div class="flex flex-col items-center gap-4 mx-2 mb-12 md:p-10 w-full max-w-[50rem] text-base">
             <h1 class="-mt-3 font-ten text-white text-4xl md:text-5xl text-center">{m.campus_build_nights_title()}</h1>
 
@@ -121,12 +122,12 @@
             </table>
         </div>
 
-        {#if false}
+        {:else}
         <div class="flex flex-col items-center gap-4 mx-2 mb-12 md:p-10 w-full max-w-[50rem] text-base">
             <h2 class="font-ten text-white text-xl md:text-2xl text-center">{m.campus_join_placeholder_h2()}</h2>
             <h1 class="-mt-3 font-ten text-white text-4xl md:text-5xl text-center">{m.campus_join_placeholder_h1()}</h1>
 
-            <p class="px-5 text-white text-center leading-tight">{m.campus_join_placeholder_p_pre()} <a href="/discord" target="_blank" class="text-pink-400">Discord-server</a> {m.campus_join_placeholder_p_post()}</p>
+            <p class="px-5 text-white text-center leading-tight"><LocalizedRichText msg={m.campus_join_placeholder_p} /></p>
 
             <a href="https://forms.gle/aUhgyC99nNAQXGS37" target="_blank" class="inline-block bg-map shadow-xl md:mt-2 px-4 py-3 w-max font-bold text-black text-lg no-underline hover:scale-105 transition-all hover:contrast-200">
               {m.campus_join_placeholder_cta()}
