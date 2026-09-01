@@ -1,5 +1,6 @@
 <script lang="ts">
   import mudBricks from '$lib/images/bg/mud_bricks.png';
+  import { m } from '$lib/paraglide/messages.js';
   interface Props {
     bg?: boolean;
     bg_texture?: string;
@@ -29,20 +30,20 @@
     </span>
   </div>
   <p class="mb-2">METAcraft ©2023-2025</p>
-  <p class="mb-2">"Minecraft" samt tillhörande grafik är varumärkesregistrerat av Mojang Synergies AB</p>
-  <!--<p><a href="/about" class:text-pink-300={!bg}>Om oss</a> ・ <a href="/discord" target="_blank" class:text-pink-300={!bg}>Discord-server</a> ・ <a href="/gdpr" class:text-pink-300={!bg}>GDPR Statement</a></p>-->
-  <div class="flex md:flex-row flex-col justify-center items-center gap-4 sm:mt-0 text-center">
-    <a href="/sok" target="_blank" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
-      Gå med i projektgruppen
+  <div class="flex md:flex-row flex-col justify-center items-center gap-4 md:my-4 sm:mt-0 text-center">
+    <a href="/sok" target="_blank" class="block bg-map shadow-xl px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
+      {m.footer_join_project()}
     </a>
-    <a href="/discord" target="_blank" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
-      Discord-server
+    <a href="/discord" target="_blank" class="block bg-map shadow-xl px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
+      {m.footer_discord()}
     </a>
-    <a href="/youtube" target="_blank" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
-      YouTube-kanal
+    <a href="/youtube" target="_blank" class="block bg-map shadow-xl px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
+      {m.footer_youtube()}
     </a>
-    <a href="/about" class="block bg-map shadow-xl md:mt-8 px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
-      Här är alla vi!
+    <a href="/about" class="block bg-map shadow-xl px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
+      {m.footer_about()}
     </a>
   </div>
+  <p class="mb-2 font-normal text-sm italic">{m.footer_trademark()}</p>
+  <!--<p><a href="/about" class:text-pink-300={!bg}>Om oss</a> ・ <a href="/discord" target="_blank" class:text-pink-300={!bg}>Discord-server</a> ・ <a href="/gdpr" class:text-pink-300={!bg}>GDPR Statement</a></p>-->
 </div>

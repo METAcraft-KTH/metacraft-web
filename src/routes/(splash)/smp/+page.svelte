@@ -49,7 +49,7 @@
 
 <div class="bg-stone bg-center w-full">
     <div class="flex justify-center items-end shadow-xl mx-auto -mt-14 pb-16 w-full max-w-[80rem] h-[16rem] lg:h-[25rem] font-ten text-white splash">
-        <Title>SURVIVAL</Title>
+        <Title>{m.smp_title()}</Title>
     </div>
 
     <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">

@@ -124,7 +124,7 @@
       {m.home_this_is_metacraft()}
     </span>
 
-    <div class="bg-white-concrete-powder shadow-xl px-2 py-6 rounded max-w-[50rem] text-black text-lg text-center leading-tight">
+    <div class="bg-white-concrete-powder shadow-xl px-2 py-6 rounded max-w-200 text-black text-lg text-center leading-tight">
       {m.home_intro()}
     </div>
 
@@ -136,13 +136,13 @@
   <div class="inline drop-shadow-xl px-2 rounded font-ten text-white text-4xl md:text-5xl text-center">
     <LocalizedRichText msg={m.home_play_your_way} />
   </div>
-  <p class="max-w-[50rem] text-white text-center">
+  <p class="max-w-200 text-white text-center">
     {m.home_three_parts()}
   </p>
   <div class="flex md:flex-row flex-col gap-6">
-    <GameSquare img={survival} title="SURVIVAL" link="/smp">{m.home_gamesquare_survival()}</GameSquare>
-    <GameSquare img={campus} title="BYGGA CAMPUS" link="/campus">{m.home_gamesquare_campus()}</GameSquare>
-    <GameSquare img={pvp} title="TÄVLINGAR" link="/event">{m.home_gamesquare_pvp()}</GameSquare>
+    <GameSquare img={survival} title={m.smp_title()} link="/smp">{m.home_gamesquare_survival()}</GameSquare>
+    <GameSquare img={campus} title={m.campus_title()} link="/campus">{m.home_gamesquare_campus()}</GameSquare>
+    <GameSquare img={pvp} title={m.event_title()} link="/event">{m.home_gamesquare_pvp()}</GameSquare>
   </div>
 
   <!--

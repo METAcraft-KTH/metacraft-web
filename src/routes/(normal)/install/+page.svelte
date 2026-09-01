@@ -99,7 +99,7 @@
         <p>{m.install_prism_skip_note()}</p>
 
         <h2 class="mt-4 font-ten text-2xl">{m.install_prism_step1_title()}</h2>
-        <p>{m.install_prism_step1_pre()}</p>
+        <p><LocalizedRichText msg={m.install_prism_step1_pre} /></p>
 
         <h2 class="mt-4 font-ten text-2xl">{m.install_prism_step2_title()}</h2>
         <p>{m.install_prism_step2_p1()}</p>

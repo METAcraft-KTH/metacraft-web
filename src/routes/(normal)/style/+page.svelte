@@ -425,7 +425,7 @@
 </Main>
 
 <Main>
-	<h2 class="mb-2 font-mc text-xl text-center">{m.style_premade_title()}</h2>
+	<h2 class="mb-2 font-ten text-3xl text-center">{m.style_premade_title()}</h2>
 	<p class="mb-8 text-center">{m.style_premade_description()}</p>
 
 	{#each PREMADE_SETS as set (set.id)}
