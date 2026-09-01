@@ -205,11 +205,11 @@
 
   <div class="flex flex-col items-center gap-4 mx-2 mb-12 md:p-10 w-full max-w-[50rem] text-base">
     <h1 class="font-ten text-white text-4xl md:text-5xl text-center">{m.home_help_us_title()}</h1>
-    <a href="https://forms.gle/aUhgyC99nNAQXGS37" target="_blank" class="inline-block bg-map p-4 hover:scale-105 transition-all hover:contrast-120"><img src={spyglass} alt={m.home_spyglass_alt()} class="sepia-50 w-full max-w-[25rem]"></a>
+    <a href="/sok" target="_blank" class="inline-block bg-map p-4 hover:scale-105 transition-all hover:contrast-120"><img src={spyglass} alt={m.home_spyglass_alt()} class="sepia-50 w-full max-w-[25rem]"></a>
 
     <p class="px-5 text-white text-center leading-tight"><LocalizedRichText msg={m.home_help_us_pre} /></p>
 
-    <a href="https://forms.gle/aUhgyC99nNAQXGS37" target="_blank" class="inline-block bg-map shadow-xl md:mt-2 px-4 py-3 w-max font-bold text-black text-lg no-underline hover:scale-105 transition-all hover:contrast-200">
+    <a href="/sok" target="_blank" class="inline-block bg-map shadow-xl md:mt-2 px-4 py-3 w-max font-bold text-black text-lg no-underline hover:scale-105 transition-all hover:contrast-200">
       {m.home_help_us_cta()}
     </a>
   </div>

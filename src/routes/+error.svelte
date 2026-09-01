@@ -6,6 +6,7 @@
   import Main from '$lib/layout/standard/Main.svelte';
   import { page } from '$app/state';
   import { m } from '$lib/paraglide/messages.js';
+  import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
 </script>
 
 <style>
@@ -17,6 +18,9 @@
       ), url('$lib/images/splashes/hamn.webp');
     background-size: cover;
     background-position: center center;
+  }
+  .tip :global(a) {
+    color: #55ffff;
   }
   .tip {
     background: linear-gradient(#2c0a62, #180233);
@@ -40,7 +44,7 @@
             <span class="text-[#AA00AA] italic">{m.error_info_pending()}
               <br>
               <br>
-              {m.error_discord_prefix()} <a href="/discord" class="text-[#55FFFF]">discord-server</a>?
+              <LocalizedRichText msg={m.error_discord} />
             </span>
           </div>
         </div>

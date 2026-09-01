@@ -129,7 +129,7 @@
 
             <p class="px-5 text-white text-center leading-tight"><LocalizedRichText msg={m.campus_join_placeholder_p} /></p>
 
-            <a href="https://forms.gle/aUhgyC99nNAQXGS37" target="_blank" class="inline-block bg-map shadow-xl md:mt-2 px-4 py-3 w-max font-bold text-black text-lg no-underline hover:scale-105 transition-all hover:contrast-200">
+            <a href="/sok" target="_blank" class="inline-block bg-map shadow-xl md:mt-2 px-4 py-3 w-max font-bold text-black text-lg no-underline hover:scale-105 transition-all hover:contrast-200">
               {m.campus_join_placeholder_cta()}
             </a>
         </div>
