@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Main from '$lib/layout/standard/Main.svelte';
 	import Title from '$lib/layout/standard/Title.svelte';
+	import Seo from '$lib/Seo.svelte';
 
 	import profilesImage from '$lib/images/install_guide/profiles.png';
 	import addAccountImage from '$lib/images/install_guide/add-account.png';
@@ -42,8 +43,10 @@
 	const INSTALLER_EXE_URL = `https://github.com/METAcraft-KTH/METAcraft-installer/releases/download/${RELEASE}/metacraft-installer-1.0.0.exe`;
 </script>
 
+<Seo title={m.nav_voice_chat()} />
+
 <!-- CUSTOM BG -->
-<div class="-z-10 fixed bg-bookshelf bg-cover bg-center w-[100lvw] h-[100lvh]"></div>
+<div class="-z-10 fixed bg-bookshelf bg-cover bg-center w-lvw h-lvh"></div>
 
 <Title>
 	VOICE CHAT
@@ -114,7 +117,7 @@
         <img src={addInstanceImage} alt={m.install_prism_step3_alt1()} class="max-w-200" />
         <p>{m.install_prism_step3_p2()}</p>
         <div class="inline-block bg-black p-3 rounded font-mc text-white link">
-            https://metacraft.nu/install/METAcraft.zip
+            https://metacraft.se/install/METAcraft.zip
         </div>
         <img src={importImage} alt={m.install_prism_step3_alt2()} class="max-w-200" />
 

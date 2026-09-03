@@ -1,8 +1,11 @@
 <script lang="ts">
+	import Seo from '$lib/Seo.svelte';
     import splash from '$lib/images/splashes/borgargarden.webp'
 	import Countdown from './Countdown.svelte';
     import logo from '$lib/images/logo_big.webp'
 </script>
+
+<Seo noindex />
 
 <div class="w-screen h-screen bg-cover flex flex-col gap-[5vh] justify-center items-center" style={`background-image: url(${splash})`}>
     <div class="aspect-3/1 h-[40vh] flex justify-center">

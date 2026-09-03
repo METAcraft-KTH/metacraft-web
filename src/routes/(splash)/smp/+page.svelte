@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/Seo.svelte';
   import azaleaIcon from '$lib/images/items/flowering_azalea_leaves.png';
   import bookAndQuillIcon from '$lib/images/items/book_and_quill.png';
   import knowledgeBookIcon from '$lib/images/items/knowledge_book.png';
@@ -33,6 +34,8 @@
     );
 </script>
 
+<Seo title={m.nav_survival()} />
+
 <style>
     .splash {
         background-image: linear-gradient(
@@ -54,7 +57,7 @@
 
     <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">
         <div class="font-bold text-white text-lg">{m.smp_play_today()}</div>
-        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[15rem] font-mc text-white text-xl">metacraft.nu</div>
+        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[15rem] font-mc text-white text-xl">metacraft.se</div>
         <div class="font-bold text-white text-base">{m.smp_no_mods_required()}</div>
     </div>
 
@@ -135,7 +138,7 @@
 
             <div class="bg-white-concrete-powder shadow-xl px-2 py-6 rounded max-w-[50rem] text-black text-lg text-center leading-tight">
                 <span class="font-bold">{m.smp_ready_to_play()}</span>
-                <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[15rem] font-mc text-white text-xl">metacraft.nu</div>
+                <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[15rem] font-mc text-white text-xl">metacraft.se</div>
                 <div class="font-bold text-base">{m.smp_no_mods_required()}</div>
             </div>
         </div>

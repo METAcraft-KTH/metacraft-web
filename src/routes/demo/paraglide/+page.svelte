@@ -1,7 +1,10 @@
 <script lang="ts">
+	import Seo from '$lib/Seo.svelte';
 	import { setLocale } from '$lib/paraglide/runtime';
 	import { m } from '$lib/paraglide/messages.js';
 </script>
+
+<Seo noindex />
 
 <h1>{m.hello_world({ name: 'SvelteKit User' })}</h1>
 

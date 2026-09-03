@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/Seo.svelte';
   import { page } from '$app/state';
   import { slide } from 'svelte/transition';
 
@@ -24,6 +25,8 @@
     if (page.url.hash) pageNumber = parseInt(page.url.hash);
   });
 </script>
+
+<Seo noindex />
 
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 

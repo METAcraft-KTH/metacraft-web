@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/Seo.svelte';
     let rovarsprak = $state("");
     let karpsravor = $state("");
     let warning = "";
@@ -166,6 +167,8 @@
         warn()
     }
 </script>
+
+<Seo noindex />
 
 <textarea bind:value={rovarsprak} oninput={translateA} placeholder="type here" class="text-lg" cols="50" rows="10"></textarea>
 

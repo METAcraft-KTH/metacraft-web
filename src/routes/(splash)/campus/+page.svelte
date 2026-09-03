@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/Seo.svelte';
   import chiseledCopperIcon from '$lib/images/items/chiseled_copper.png';
   import knowledgeBookIcon from '$lib/images/items/knowledge_book.png';
   import mapZoomIcon from '$lib/images/items/map_zoom_4.png';
@@ -16,9 +17,11 @@
 
     const sessions = [
         {time: m.campus_session1_time(), place: `<a href="https://dsekt.se/desc">DESC</a>`},
-        {time: m.campus_session2_time(), place: `<a href="https://metacraft.nu/discord">METAcraft</a>`}
+        {time: m.campus_session2_time(), place: `<a href="https://metacraft.se/discord">METAcraft</a>`}
     ]
 </script>
+
+<Seo title={m.nav_campus()} />
 
 <style>
     .splash {
@@ -38,7 +41,7 @@
 
     <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">
         <div class="font-bold text-white text-lg">{m.campus_coming_soon()}</div>
-        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[20rem] font-mc text-white text-xl">campus.metacraft.nu</div>
+        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[20rem] font-mc text-white text-xl">campus.metacraft.se</div>
         <div class="font-bold text-white text-base">{m.campus_join_build_night()}</div>
     </div>
 

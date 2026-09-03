@@ -1,8 +1,5 @@
-<svelte:head>
-  <title>METAcraft</title>
-</svelte:head>
-
 <script lang="ts">
+  import Seo from '$lib/Seo.svelte';
   import bambooSign from '$lib/images/bg/blank_sign_bamboo.png';
   import commandBlockIcon from '$lib/images/items/impulse_command_block.png';
   import logo from '$lib/images/logo_big.webp';
@@ -30,6 +27,8 @@
 
 
 </script>
+
+<Seo bare />
 
 <style>
   /* rendern läggs in här som bakgrund när den är klar */

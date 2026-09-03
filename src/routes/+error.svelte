@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/Seo.svelte';
   import enchantedBook from '$lib/images/items/enchanted_book.gif';
 	import Header from '$lib/layout/Header.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
@@ -8,6 +9,8 @@
   import { m } from '$lib/paraglide/messages.js';
   import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
 </script>
+
+<Seo title={page.status === 404 ? "404" : "Error"} noindex />
 
 <style>
   /* rendern läggs in här som bakgrund när den är klar */

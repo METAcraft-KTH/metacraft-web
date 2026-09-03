@@ -4,6 +4,7 @@
 	import Title from '$lib/layout/standard/Title.svelte';
 	import TypeAndTime from '$lib/widgets/TypeAndTime.svelte';
 	import Note from '$lib/markdown/Note.svelte';
+	import Seo from '$lib/Seo.svelte';
 
 	let { data } = $props();
 
@@ -11,9 +12,12 @@
 	let url = $derived(`url('${post.imageUrl}')`);
 </script>
 
-<svelte:head>
-	<title>{post.title} | METAcraft</title>
-</svelte:head>
+<Seo
+	title={post.title}
+	image={post.imageUrl}
+	type="article"
+	published={post.date}
+/>
 
 <div class="flex flex-col bg-stone w-full">
 	<Splash --image={url}>

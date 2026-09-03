@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/Seo.svelte';
   import obsidianTexture from '$lib/images/bg/obsidian.png';
   import { page } from '$app/state';
   import { slide } from 'svelte/transition';
@@ -38,6 +39,8 @@
   console.log(progressBarPercentage);
   
 </script>
+
+<Seo noindex />
 
 <Header splashPage={true} />
 

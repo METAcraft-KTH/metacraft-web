@@ -3,10 +3,13 @@
 	import Hotlink from '$lib/widgets/Hotlink.svelte';
 	import Main from '$lib/layout/standard/Main.svelte';
 	import Title from '$lib/layout/standard/Title.svelte';
+	import Seo from '$lib/Seo.svelte';
 	import PageDescription from '$lib/layout/standard/PageDescription.svelte';
 	import { m } from '$lib/paraglide/messages.js';
 	import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
 </script>
+
+<Seo title={m.rules_title()} />
 
 
 <!-- !! CUSTOM BG !! -->

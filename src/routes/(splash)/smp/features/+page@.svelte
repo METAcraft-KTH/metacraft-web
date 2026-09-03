@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Seo from '$lib/Seo.svelte';
   import anvilIcon from '$lib/images/items/anvil.png';
   import armorStandIcon from '$lib/images/items/armor_stand.png';
   import babyCowIcon from '$lib/images/items/baby_cow.png';
@@ -26,6 +27,8 @@
     import { m } from '$lib/paraglide/messages.js';
     import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
 </script>
+
+<Seo title={m.nav_features()} />
   
 <Header />
 <div class="flex-1 bg-bookshelf w-full">

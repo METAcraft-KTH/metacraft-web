@@ -1,12 +1,15 @@
 <script lang="ts">
   import Title from '$lib/layout/standard/Title.svelte';
   import Main from '$lib/layout/standard/Main.svelte';
+	import Seo from '$lib/Seo.svelte';
   import Person from './Person.svelte';
   import credits from './credits.json';
   import credits_old from './credits_old.json';
   import { m } from '$lib/paraglide/messages.js';
   import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
 </script>
+
+<Seo title={m.about_title()} />
 
 <!-- !! CUSTOM BG !! -->
 <style>
@@ -17,7 +20,7 @@
       ), url("$lib/images/background3.png")
 	}
 </style>
-<div class="top-0 -z-10 fixed bg-cover bg-center w-[100lvw] h-[100lvh] custombg"></div>
+<div class="top-0 -z-10 fixed bg-cover bg-center w-lvw h-lvh custombg"></div>
 <!-- !! CUSTOM BG !! -->
 
 <Title>

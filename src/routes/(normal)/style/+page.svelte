@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Main from '$lib/layout/standard/Main.svelte';
 	import Title from '$lib/layout/standard/Title.svelte';
+	import Seo from '$lib/Seo.svelte';
 	import PageDescription from '$lib/layout/standard/PageDescription.svelte';
 	import { m } from '$lib/paraglide/messages.js';
 	import dataNercabbad from '$lib/images/skins/data-nercabbad.png';
@@ -271,6 +272,8 @@
 		render();
 	}
 </script>
+
+<Seo title={m.style_title()} />
 
 <!-- CUSTOM BG -->
 <div class="-z-10 fixed bg-bookshelf bg-cover bg-center w-lvw h-lvh"></div>
