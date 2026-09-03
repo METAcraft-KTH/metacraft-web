@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Background from '$lib/layout/standard/Background.svelte';
+  import bg from '$lib/images/background3.png';
   import Title from '$lib/layout/standard/Title.svelte';
   import Main from '$lib/layout/standard/Main.svelte';
 	import Seo from '$lib/Seo.svelte';
@@ -11,17 +13,7 @@
 
 <Seo title={m.about_title()} />
 
-<!-- !! CUSTOM BG !! -->
-<style>
-	.custombg {
-		background-image: linear-gradient(
-        #e83d8430, 
-        #e83d8430
-      ), url("$lib/images/background3.png")
-	}
-</style>
-<div class="top-0 -z-10 fixed bg-cover bg-center w-lvw h-lvh custombg"></div>
-<!-- !! CUSTOM BG !! -->
+<Background src={bg} tint="#e83d8430" />
 
 <Title>
   {m.about_title()}

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Background from '$lib/layout/standard/Background.svelte';
+  import bg from '$lib/images/background2.png';
 	import PageCard from '$lib/widgets/PageCard.svelte';
 	import Hotlink from '$lib/widgets/Hotlink.svelte';
 	import Main from '$lib/layout/standard/Main.svelte';
@@ -12,17 +14,7 @@
 <Seo title={m.rules_title()} />
 
 
-<!-- !! CUSTOM BG !! -->
-<style>
-	.custombg {
-		background-image: linear-gradient(
-        #724b4f80, 
-        #724b4f80
-      ), url("$lib/images/background2.png")
-	}
-</style>
-<div class="-z-10 fixed bg-cover bg-center w-lvw h-lvh custombg"></div>
-<!-- !! CUSTOM BG !! -->
+<Background src={bg} tint="#724b4f80" />
 
 <Title>
 	{m.rules_title()}
