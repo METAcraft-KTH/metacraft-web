@@ -45,7 +45,7 @@
     font-family: "Courier Prime", monospace;
   }
 </style>
-<div class="-z-10 fixed bg-cover bg-center w-[100lvw] h-[100lvh] custombg"></div>
+<div class="-z-10 fixed bg-cover bg-center w-lvw h-lvh custombg"></div>
 <!-- !! CUSTOM BG !! -->
 
 <!-- TODO: gör det här elementet till en layout? -->

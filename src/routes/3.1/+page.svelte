@@ -66,9 +66,9 @@
     font-family: 'OCR', monospace;
   }
 </style>
-<div class="-z-10 fixed bg-center w-[100lvw] h-[100vh] custombg2"></div>
+<div class="-z-10 fixed bg-center w-lvw h-lvh custombg2"></div>
 
-<div class="block pt-10 w-full min-h-[100svh]">
+<div class="block pt-10 w-full min-h-svh">
   <div class="top-0 left-0 -z-5 absolute bg-cover bg-bottom w-full h-full custombg"></div>
 
   <Title>3.1<br>FINAL CAMPAIGN</Title>

@@ -21,7 +21,7 @@
       ), url("$lib/images/background2.png")
 	}
 </style>
-<div class="w-[100lvw] h-[100lvh] fixed -z-10 custombg bg-center bg-cover"></div>
+<div class="-z-10 fixed bg-cover bg-center w-lvw h-lvh custombg"></div>
 <!-- !! CUSTOM BG !! -->
 
 <Title>
@@ -41,7 +41,7 @@
 
 				<div class="mb-4">
 					{m.rules_general_p2()}
-					<ul class="list-disc list-inside ml-2">
+					<ul class="ml-2 list-disc list-inside">
 						<li>{m.rules_general_li1()}</li>
 						<li>
 							<LocalizedRichText msg={m.rules_general_li2} />
@@ -59,7 +59,7 @@
 				</div>
 				<div class="mb-4">
 					{m.rules_cheating_p2()}
-					<ul class="list-disc list-inside ml-2">
+					<ul class="ml-2 list-disc list-inside">
 						<li>{m.rules_cheating_li1()}</li>
 						<li>X-ray</li>
 						<li>{m.rules_cheating_li3()}</li>
@@ -88,7 +88,7 @@
 					<LocalizedRichText msg={m.rules_survival_p1} />
 				</div>
 				<div class="mb-4">
-					<ul class="list-disc ml-6">
+					<ul class="ml-6 list-disc">
 						<li class="mb-2">
 							<LocalizedRichText msg={m.rules_survival_li1} />
 						</li>

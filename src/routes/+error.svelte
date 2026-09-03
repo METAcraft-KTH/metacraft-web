@@ -35,12 +35,12 @@
 
 <Header />
 <div class="w-full">
-  <div id="mainSplash" class="relative flex flex-col justify-center lg:bg-fixed w-full h-[100svh] min-h-[40rem]">
+  <div id="mainSplash" class="relative flex flex-col justify-center lg:bg-fixed w-full h-svh min-h-160">
 
     <div id="splashContent" class="flex flex-col justify-center items-center px-4 py-20 titleFadeIn">
       <div class="flex md:flex-row flex-col-reverse items-start gap-4">
-        <img src={enchantedBook} alt="book" class="drop-shadow-xl max-w-[10rem] aspect-square">
-        <div class="max-w-[20rem] h-max font-mc text-xl tip">
+        <img src={enchantedBook} alt="book" class="drop-shadow-xl max-w-40 aspect-square">
+        <div class="max-w-80 h-max font-mc text-xl tip">
           <div class="bg-[rgba(16,0,16,0.94)] p-[0.375em]">
             <span class="text-[#FFFF55] italic">{page.status}</span>
             <br>

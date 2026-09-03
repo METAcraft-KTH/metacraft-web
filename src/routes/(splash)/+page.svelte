@@ -60,7 +60,7 @@
 
 </style>
 
-<div id="mainSplash" class="relative flex flex-col justify-center lg:bg-fixed -mt-14 w-full h-[100svh] min-h-[40rem]">
+<div id="mainSplash" class="relative flex flex-col justify-center lg:bg-fixed -mt-14 w-full h-svh min-h-160">
 
   <div id="splashContent" class="flex flex-col justify-center items-center px-0 py-20 titleFadeIn">
     <p class="text-shadow-lg font-ten text-white text-3xl sm:text-4xl text-center">{m.home_welcome()}</p>

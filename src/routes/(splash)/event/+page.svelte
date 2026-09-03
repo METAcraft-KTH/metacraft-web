@@ -67,7 +67,7 @@ html {
     <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">
         {#if false}
         <div class="font-bold text-white text-lg">{m.event_connect_via()}</div>
-        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[20rem] font-mc text-white text-xl">event.metacraft.se</div>
+        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-80 font-mc text-white text-xl">event.metacraft.se</div>
         <div class="font-bold text-white text-base">{m.event_java_no_mods()}</div>
         {:else}
         <div class="font-bold text-white text-lg">{m.event_next_scheduled()}</div>

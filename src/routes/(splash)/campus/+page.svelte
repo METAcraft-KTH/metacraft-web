@@ -41,7 +41,7 @@
 
     <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">
         <div class="font-bold text-white text-lg">{m.campus_coming_soon()}</div>
-        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[20rem] font-mc text-white text-xl">campus.metacraft.se</div>
+        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-80 font-mc text-white text-xl">campus.metacraft.se</div>
         <div class="font-bold text-white text-base">{m.campus_join_build_night()}</div>
     </div>
 
@@ -101,7 +101,7 @@
 
             <p class="mb-10 px-5 text-white text-center leading-tight">{m.campus_build_nights_intro()}
             </p>
-            <table class="w-full max-w-[40rem] text-white">
+            <table class="w-full max-w-160 text-white">
                 <tbody>
                     <tr class="border-b-2 border-b-white border-solid font-bold text-xl">
                         <th class="w-[50%]">

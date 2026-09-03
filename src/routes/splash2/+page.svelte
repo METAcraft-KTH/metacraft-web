@@ -6,12 +6,12 @@
 
 <Seo noindex />
 
-<div class="bg-dark-oak-planks w-[100vw] h-[100vh] max-w-[160rem] flex justify-center">
-    <div class="w-full max-w-[60rem] py-10 px-6 drop-shadow-2xl flex flex-col items-center bg-map">
+<div class="flex justify-center bg-dark-oak-planks w-[100vw] max-w-[160rem] h-[100vh]">
+    <div class="flex flex-col items-center bg-map drop-shadow-2xl px-6 py-10 w-full max-w-[60rem]">
 
       text 
 
-      <!--<div class="w-full max-w-[40rem] aspect-square rotate-5 bg-cover flex items-center justify-center" style="background-image: url('{mapIcon}');">
+      <!--<div class="flex justify-center items-center bg-cover w-full max-w-160 aspect-square rotate-5" style="background-image: url('{mapIcon}');">
         <div>
           <img src={logo} alt="logo" class="-rotate-5" />
         </div>

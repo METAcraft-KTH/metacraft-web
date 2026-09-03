@@ -37,7 +37,7 @@
     <div id="splashContent" class="flex flex-col justify-center items-center px-4 py-20 titleFadeIn">
       <div class="flex md:flex-row flex-col-reverse items-start gap-4">
         <img src={enchantedBook} alt="book" class="drop-shadow-xl max-w-40 aspect-square">
-        <div class="max-w-[20rem] h-max font-mc text-xl tip">
+        <div class="max-w-80 h-max font-mc text-xl tip">
           <div class="bg-[rgba(16,0,16,0.94)] p-[0.375em]">
             <span class="text-[#FFFF55] italic">{m.sok_form_pending_title()}</span>
             <br>
