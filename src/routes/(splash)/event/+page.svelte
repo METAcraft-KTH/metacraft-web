@@ -71,16 +71,24 @@ html {
         <div class="font-bold text-white text-base">{m.event_java_no_mods()}</div>
         {:else}
         <div class="font-bold text-white text-lg">{m.event_next_scheduled()}</div>
-        <div class="inline-block mx-1 px-3 py-1 md:py-2 w-full w-full font-mc font-bold text-white text-xl md:text-2xl rainbowbg">???</div>
-        <div class="font-bold text-white text-base">{m.event_sometime_2025()}</div>
+        <div class="inline-block mx-1 px-3 py-1 md:py-2 w-full w-full font-mc font-bold text-white text-xl md:text-2xl rainbowbg">METAcraft Rivals (Data vs ITK)</div>
+        <div class="font-bold text-white text-base">19th September 2026</div>
         {/if}
+    </div>
+    <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">
+        <div class="font-bold text-white text-lg">{m.event_connect_via()}</div>
+        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[15rem] font-mc text-white text-xl">metacraft.se</div>
+        <div class="font-bold text-white text-base">{m.smp_no_mods_required()}</div>
     </div>
 
     <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem]">
+        <!--
         <Button href="/event/leaderboard">
             <img src={goldIngotIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.event_see_leaderboards()}</span>
         </Button>
+        -->
+        
         <Button href="#timeline">
             <img src={bookAndQuillIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.event_read_past_events()}</span>
@@ -134,6 +142,21 @@ html {
               {m.event_timeline_heading()}
             </span>
             <Timeline>
+                <TimelineItem name="METACRAFT RIVALS" time="19 september, 2026" left={true} collab="DESC">
+                    <p>
+                        {m.event_tl_metacraftrivals_p1()}
+                    </p>
+                </TimelineItem>
+                <TimelineItem name="MINECRAFT HEXATHLON 5.5" time="12 june, 2026" left={false} collab="DESC">
+                    <p>
+                        {m.event_tl_hex55_p1()}
+                    </p>
+                </TimelineItem>
+                <TimelineItem name="MINECRAFT HEXATHLON 5" time="28 march, 2026" left={true} collab="DESC">
+                    <p>
+                        {m.event_tl_hex5_p1()}
+                    </p>
+                </TimelineItem>
                 <TimelineItem name="MINECRAFT HEXATHLON 4" time="20 december, 2025" left={false} collab="DESC">
                     <p>
                         {m.event_tl_hex4_p1()}

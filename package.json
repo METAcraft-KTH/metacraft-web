@@ -15,7 +15,7 @@
 		"@inlang/paraglide-js": "^2.21.0",
 		"@inlang/paraglide-js-svelte": "^1.0.3",
 		"@sveltejs/adapter-static": "^3.0.10",
-		"@sveltejs/kit": "^2.69.2",
+		"@sveltejs/kit": "^2.70.3",
 		"@sveltejs/vite-plugin-svelte": "^7.2.0",
 		"@tailwindcss/vite": "^4.3.3",
 		"@typescript-eslint/eslint-plugin": "^8.63.0",

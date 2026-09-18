@@ -29,7 +29,7 @@
       class="inline-block w-[1920px] h-[70px] shrink-0" class:hidden={!bg}>
     </span>
   </div>
-  <p class="mb-2">METAcraft ©2023-2025</p>
+  <p class="mb-2">METAcraft ©2023-2026</p>
   <div class="flex md:flex-row flex-col justify-center items-center gap-4 md:my-4 sm:mt-0 text-center">
     <a href="/sok" target="_blank" class="block bg-map shadow-xl px-4 py-3 rounded font-bold text-black no-underline hover:scale-105 transition-all hover:contrast-200">
       {m.footer_join_project()}

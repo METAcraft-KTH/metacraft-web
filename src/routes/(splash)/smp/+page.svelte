@@ -66,10 +66,12 @@
             <img src={knowledgeBookIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.smp_everything_you_need()}</span>
         </Button>
+        <!--
         <Button href="/smp/map">
             <img src={mapZoomIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.smp_see_map()}</span>
         </Button>
+        -->
         <Button href="/install">
             <img src="https://cdn.modrinth.com/data/9eGKb6K1/icon.png" alt="icon" class="w-12 md:w-16">
             <span>{m.smp_add_voicechat()}</span>
@@ -133,7 +135,7 @@
               {m.smp_watch_trailer()}
             </span>
             <div class="bg-white-concrete-powder shadow-2xl p-2 rounded w-full max-w-250">
-                <iframe class="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/5KnJjiPfZQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/aqf5YxJ4RRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
             <div class="bg-white-concrete-powder shadow-xl px-2 py-6 rounded max-w-[50rem] text-black text-lg text-center leading-tight">

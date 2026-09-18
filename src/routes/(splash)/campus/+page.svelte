@@ -46,6 +46,7 @@
     </div>
 
     <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem]">
+        <!--
         <Button href="/campus/detail">
             <img src={knowledgeBookIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.campus_technical_details()}</span>
@@ -54,6 +55,7 @@
             <img src={mapZoomIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.campus_isometric_map()}</span>
         </Button>
+        -->
     </div>
 
     {#if false} <!-- ? experimental design. vi kan slipa på detta mer när resten av hemsidan är redo -->

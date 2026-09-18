@@ -16,8 +16,8 @@
 	// dropdowns
 	let smp = $derived([
 		["/smp/features", m.nav_features()],
-		["/smp/map", m.nav_map()],
-		["/smp#history", m.nav_history()]
+		// ["/smp/map", m.nav_map()],
+		// ["/smp#history", m.nav_history()]
 	]);
 	let event = $derived([
 		["/leaderboard", m.nav_leaderboard()]
