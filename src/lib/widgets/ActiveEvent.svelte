@@ -1,6 +1,7 @@
 <!-- @migration-task Error while migrating Svelte code: can't migrate `let now = Date.now();` to `$state` because there's a variable named state.
      Rename the variable and try again or migrate by hand. -->
 <script lang="ts">
+  import { m } from '$lib/paraglide/messages.js';
   export let start: Date;
   export let end: Date;
   export let href: string;
@@ -11,7 +12,7 @@
   let now = Date.now();
   let count: number;
   let s: number;
-  let m: number;
+  let minutes: number;
   let h: number;
   let d: number;
 
@@ -29,7 +30,7 @@
       state = 'ended';
     }
     s = count % 60;
-    m = Math.floor(count / 60) % 60;
+    minutes = Math.floor(count / 60) % 60;
     h = Math.floor(count / (60 * 60)) % 24;
     d = Math.floor(count / (60 * 60 * 24));
   }
@@ -77,11 +78,11 @@
     <span class="loopspan">
       {#each {length: 60} as _}
         {#if state === 'starting'}
-          <span class="inner">NYTT EVENT!&nbsp;</span>
+          <span class="inner">{m.home_metacraft_launch_top_starting()}&nbsp;</span>
         {:else if state === 'active'}
-          <span class="inner">HÄNDER JUST NU!&nbsp;</span>
+          <span class="inner">{m.home_metacraft_launch_top_active()}&nbsp;</span>
         {:else}
-          <span class="inner">EVENTET ÄR ÖVER!&nbsp;</span>
+          <span class="inner">{m.home_metacraft_launch_top_done()}&nbsp;</span>
         {/if}
       {/each}
     </span>
@@ -92,11 +93,11 @@
 
   <span class="text-lg text-center">
     {#if state === 'starting'}
-      börjar om
+      {m.home_metacraft_launch_starting_in()}&nbsp; 
     {:else if state === 'active'}
       {countdown ? 'avslutas om' : 'är LIVE just nu! Klicka här för att läsa mer!'}
     {:else}
-      är avslutad!
+      {m.home_metacraft_launch_is_done()}&nbsp;
     {/if}
   </span>
 
@@ -104,7 +105,7 @@
     <div class="font-ten text-3xl">
       {d}<span class="text-base">d</span>
       {h}<span class="text-base">h</span>
-      {m}<span class="text-base">m</span>
+      {minutes}<span class="text-base">m</span>
       {s}<span class="text-base">s</span>
     </div>
   {/if}
@@ -114,11 +115,11 @@
     <span class="loopspan reverse">
       {#each {length: 60} as _}
         {#if state === 'starting'}
-          <span>KLICKA HÄR!&nbsp;</span>
+          <span>{m.home_metacraft_launch_bottom_starting()}&nbsp;</span>
         {:else if state === 'active'}
-        <span>KLICKA HÄR!&nbsp;</span>
+          <span>{m.home_metacraft_launch_bottom_active()}&nbsp;</span>
         {:else}
-          <span class="inner">KLICKA HÄR!&nbsp;</span>
+          <span class="inner">{m.home_metacraft_launch_bottom_done()}&nbsp;</span>
         {/if}
       {/each}
     </span>
