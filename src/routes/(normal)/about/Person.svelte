@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex flex-row sm:flex-col sm:items-center p-2 w-full sm:w-[33%] lg:w-[25%]">
-  <img src={`https://crafthead.net/cube/${info[0]}`} alt={info[1]} class="mr-2 sm:mr-0 sm:mb-2 w-[60px] sm:w-[100px] md:w-[110px] h-[60px] sm:h-[100px] md:h-[110px]"
+  <img src={`https://render.crafty.gg/3d/bust/${info[1]}`} alt={info[1]} class="mr-2 sm:mr-0 sm:mb-2 w-[60px] sm:w-[100px] md:w-[110px] h-[60px] sm:h-[100px] md:h-[110px]"
   />
   <p class="flex flex-col justify-start sm:items-center">
     <span class="font-mc font-bold text-lg sm:text-xl sm:text-center">{info[1]}</span>
