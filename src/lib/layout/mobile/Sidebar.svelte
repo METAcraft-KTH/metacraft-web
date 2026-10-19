@@ -13,13 +13,14 @@
 	<SideLink href="/smp">{m.nav_survival()}</SideLink>
   
     <SideSubLink href="/smp/features">{m.nav_features()}</SideSubLink>
-    <SideSubLink href="/smp/map">{m.nav_map()}</SideSubLink>
-    <SideSubLink href="/smp#history">{m.nav_history()}</SideSubLink>
+    <!--<SideSubLink href="/smp/map">{m.nav_map()}</SideSubLink>-->
+    <!--<SideSubLink href="/smp#history">{m.nav_history()}</SideSubLink>-->
   
 	<SideLink href="/campus">{m.nav_campus()}</SideLink>
 	<SideLink href="/event">{m.nav_event()}</SideLink>
-	<SideLink href="/install">{m.nav_voice_chat()}</SideLink>
+	<!--<SideLink href="/install">{m.nav_voice_chat()}</SideLink>-->
   	<SideLink href="/rules">{m.nav_rules()}</SideLink>
+	<SideLink href="/about">{m.nav_about()}</SideLink>
 	<SideLink href="/sok">{m.nav_help_us()}</SideLink>
 	<!--<SideLink href="/faq">FAQ</SideLink>-->
 </aside>

@@ -34,8 +34,9 @@
 			<HeaderLink href="/smp" dropdown={smp}>{m.nav_survival()}</HeaderLink>
 			<HeaderLink href="/campus">{m.nav_campus()}</HeaderLink>
 			<HeaderLink href="/event">{m.nav_event()}</HeaderLink>
-			<HeaderLink href="/install">{m.nav_voice_chat()}</HeaderLink>
+			<!--<HeaderLink href="/install">{m.nav_voice_chat()}</HeaderLink>-->
 			<HeaderLink href="/rules">{m.nav_rules()}</HeaderLink>
+			<HeaderLink href="/about">{m.nav_about()}</HeaderLink>
 			<HeaderLink href="/sok">{m.nav_help_us()}</HeaderLink>
 		</div>
 
