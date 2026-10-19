@@ -65,20 +65,20 @@ html {
 
 
     <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">
-        {#if false}
+        <!--{#if true}
         <div class="font-bold text-white text-lg">{m.event_connect_via()}</div>
         <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-80 font-mc text-white text-xl">event.metacraft.se</div>
         <div class="font-bold text-white text-base">{m.event_java_no_mods()}</div>
-        {:else}
+        {:else} -->
         <div class="font-bold text-white text-lg">{m.event_next_scheduled()}</div>
-        <div class="inline-block mx-1 px-3 py-1 md:py-2 w-full w-full font-mc font-bold text-white text-xl md:text-2xl rainbowbg">METAcraft Rivals (Data vs ITK)</div>
-        <div class="font-bold text-white text-base">19th September 2026</div>
-        {/if}
+        <div class="inline-block mx-1 px-3 py-1 md:py-2 w-full w-full font-mc font-bold text-white text-xl md:text-2xl rainbowbg">???</div>
+        <div class="font-bold text-white text-base"></div>
+        <!-- {/if} -->
     </div>
     <div class="flex flex-col items-center gap-1 mt-4 w-full text-white text-center">
         <div class="font-bold text-white text-lg">{m.event_connect_via()}</div>
-        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-[15rem] font-mc text-white text-xl">metacraft.se</div>
-        <div class="font-bold text-white text-base">{m.smp_no_mods_required()}</div>
+        <div class="inline-block bg-black mx-1 px-3 py-1 border-2 border-white border-solid w-full max-w-80 font-mc text-white text-xl">event.metacraft.se</div>
+        <div class="font-bold text-white text-base">{m.event_java_no_mods()}</div>
     </div>
 
     <div class="flex md:flex-row flex-col gap-4 mx-auto my-12 px-4 max-w-[80rem]">
@@ -142,7 +142,7 @@ html {
               {m.event_timeline_heading()}
             </span>
             <Timeline>
-                <TimelineItem name="METACRAFT RIVALS" time="19 september, 2026" left={true} collab="DESC">
+                <TimelineItem name="METACRAFT RIVALS" time="19 september, 2026" left={true} collab="ITK">
                     <p>
                         {m.event_tl_metacraftrivals_p1()}
                     </p>

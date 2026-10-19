@@ -195,7 +195,7 @@
     <div class="flex flex-col justify-center items-center md:items-start gap-3">
       <h1 class="font-ten text-4xl md:text-5xl md:text-left text-center">Proximity voice chat</h1>
       <p class="md:text-left text-center leading-tight"><LocalizedRichText msg={m.home_vc_pre} /></p>
-      <a href="/install" class="inline-block bg-map shadow-xl md:mt-2 px-4 py-3 w-max font-bold text-black text-lg no-underline hover:scale-105 transition-all hover:contrast-200">
+      <a href="https://modrinth.com/plugin/simple-voice-chat" target="_blank" class="inline-block bg-map shadow-xl md:mt-2 px-4 py-3 w-max font-bold text-black text-lg no-underline hover:scale-105 transition-all hover:contrast-200">
         {m.home_vc_cta()}
       </a>
     </div>
