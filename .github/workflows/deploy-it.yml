@@ -1,0 +1,23 @@
+name: Deploy (IT)
+
+on:
+  workflow_run:
+    workflows: ["Publish to ghcr.io"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    # Only deploy if the image was published successfully (or when run manually).
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger webhook
+        run: |
+          curl -fsS --max-time 300 -X POST "$WEBHOOK_URL" \
+            -H "X-Deploy-Token: $DEPLOY_TOKEN"
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
