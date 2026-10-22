@@ -4,12 +4,14 @@
   import armorStandIcon from '$lib/images/items/armor_stand.png';
   import babyCowIcon from '$lib/images/items/baby_cow.png';
   import chickenHeadIcon from '$lib/images/items/head_chicken.png';
+  import chapterColorsIcon from '$lib/images/items/chapter_color.png';
   import endermanHeadIcon from '$lib/images/items/head_enderman.png';
   import eyeOfEnderIcon from '$lib/images/items/eye_of_ender.png';
   import leadIcon from '$lib/images/items/lead.png';
   import mapZoomIcon from '$lib/images/items/map_zoom_4.png';
   import minecartIcon from '$lib/images/items/minecart.png';
   import netherPortalIcon from '$lib/images/items/nether_portal.png';
+  import ovvarIcon from '$lib/images/items/ovvar.png';
   import parrotIcon from '$lib/images/items/red_parrot.png';
   import playerHeadIcon from '$lib/images/items/player_head.png';
   import sandIcon from '$lib/images/items/sand.png';
@@ -24,6 +26,7 @@
     import shopCraft from '$lib/images/mods/shop_crafting.jpg';
     import wrenchCraft from '$lib/images/mods/wrench_crafting.png';
     import drillCrafting from '$lib/images/mods/bedrock_drill_crafting.png';
+    import ovvarInventory from '$lib/images/mods/ovvar_inventory.png';
     import { m } from '$lib/paraglide/messages.js';
     import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
 </script>
@@ -36,15 +39,7 @@
     <Title>FEATURES</Title>
 
     <a href="/smp" class="block mx-auto mb-2 w-full max-w-[79rem] font-bold text-white hover:text-[#BE185D] no-underline transition-colors">&lt; {m.features_back_to_survival()}</a>
-    <div class="flex lg:flex-row flex-col gap-4 mx-auto mb-4 max-w-[80rem]">
-        <div class="flex flex-col flex-1 gap-2 bg-book p-6 leading-tight">
-            <div class="font-ten text-2xl md:text-3xl">PLAYER SHOPS</div>
-            <p>{m.features_shops_p1()}</p>
-            <img src={shopCraft} alt="shop block crafting recipe" class="max-w-[25rem]">
-            <p><LocalizedRichText msg={m.features_shops_p2} /></p>
-        </div>
 
-    </div>
     <div class="flex lg:flex-row flex-col gap-4 mx-auto mb-4 max-w-[80rem]">
         <div class="flex flex-col flex-1 gap-2 bg-book p-6 leading-tight">
             <div class="font-ten text-2xl md:text-3xl">{m.features_wrench_title()}</div>
@@ -52,10 +47,27 @@
             <img src={wrenchCraft} alt="wrench crafting recipe" class="max-w-[25rem]">
         </div>
         <div class="flex flex-col flex-1 gap-2 bg-book p-6 leading-tight">
+            <div class="font-ten text-2xl md:text-3xl">{m.features_shops_title()}</div>
+            <p>{m.features_shops_p1()}</p>
+            <img src={shopCraft} alt="shop block crafting recipe" class="max-w-[25rem]">
+            <p><LocalizedRichText msg={m.features_shops_p2} /></p>
+        </div>
+        <!--<div class="flex flex-col flex-1 gap-2 bg-book p-6 leading-tight">
             <div class="font-ten text-2xl md:text-3xl">{m.features_drill_title()}</div>
             <p>{m.features_drill_p1()}</p>
             <img src={drillCrafting} alt="Bedrock Drill crafting recipe" class="max-w-[25rem]">
+        </div>-->
+    </div>
+    <div class="flex lg:flex-row flex-col gap-4 mx-auto mb-4 max-w-[80rem]">
+        <div class="flex flex-col flex-1 gap-2 bg-book p-6 leading-tight">
+            <div class="font-ten text-2xl md:text-3xl">{m.features_ovvar_title()}</div>
+            <p><LocalizedRichText msg={m.features_ovvar_p1} /></p>
+            <div class="flex w-full min-w-0 flex-wrap items-start gap-4">
+                <img src={ovvarInventory} alt="shop block crafting recipe" class="max-w-[min(100%,25rem)]">
+                <img src={ovvarIcon} alt="shop block crafting recipe" class="max-h-[25rem] max-w-[min(100%,25rem)]">
+            </div>
         </div>
+
     </div>
 
     <div class="flex lg:flex-row flex-col gap-4 mx-auto mb-4 max-w-[80rem]">
@@ -113,8 +125,11 @@
             <Section icon={mapZoomIcon} anchor="worldgen">
                 <LocalizedRichText msg={m.features_worldgen} />
             </Section>
-            <Section icon={eyeOfEnderIcon} anchor="end">
+            <!--<Section icon={eyeOfEnderIcon} anchor="end">
                 <LocalizedRichText msg={m.features_end} />
+            </Section>-->
+            <Section icon={chapterColorsIcon} anchor="chapter">
+                <LocalizedRichText msg={m.features_chapter_colors} />
             </Section>
         </div>
     </div>
