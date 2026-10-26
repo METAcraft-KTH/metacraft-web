@@ -44,6 +44,6 @@
       {m.footer_about()}
     </a>
   </div>
-  <p class="mb-2 font-normal text-sm italic">{m.footer_trademark()}</p>
+  <p class="mt-6 mb-2 font-normal text-sm italic">{m.footer_trademark()}</p>
   <!--<p><a href="/about" class:text-pink-300={!bg}>Om oss</a> ・ <a href="/discord" target="_blank" class:text-pink-300={!bg}>Discord-server</a> ・ <a href="/gdpr" class:text-pink-300={!bg}>GDPR Statement</a></p>-->
 </div>

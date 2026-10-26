@@ -11,7 +11,7 @@
   import survival from '$lib/images/pr_squares/survival.png';
   import pvp from '$lib/images/pr_squares/pvp.png';
   import campus from '$lib/images/pr_squares/campus.png';
-  import hands from '$lib/images/pr_squares/holdinghands.png';
+  import holdinghands from '$lib/images/pr_squares/holdinghands.png';
   import vcrender from '$lib/images/pr_squares/voicechat-render.png';
   import spyglass from '$lib/images/pr_squares/spyglass.png';
 	import PrRow from './PrRow.svelte';
@@ -60,7 +60,7 @@
 
 </style>
 
-<div id="mainSplash" class="relative flex flex-col justify-center lg:bg-fixed -mt-14 w-full h-svh min-h-160">
+<div id="mainSplash" class="relative flex flex-col justify-center lg:bg-fixed -mt-14 w-full min-h-[max(100svh,40rem)]">
 
   <div id="splashContent" class="flex flex-col justify-center items-center px-0 py-20 titleFadeIn">
     <p class="text-shadow-lg font-ten text-white text-3xl sm:text-4xl text-center">{m.home_welcome()}</p>
@@ -187,11 +187,11 @@
         {m.home_flex_cta()}
       </a>
     </div>
-    <img src={hands} alt="holding hands" class="drop-shadow-xl px-3 w-full max-w-[25rem]">
+    <img src={holdinghands} alt="holding hands" class="drop-shadow-xl px-3 w-full max-w-[25rem]">
   </div>
 
   <div class="flex md:flex-row flex-col items-center gap-10 px-6 py-12 max-w-[70rem] text-white">
-    <img src={vcrender} alt="holding hands" class="drop-shadow-xl px-3 w-full max-w-[30rem]">
+    <img src={vcrender} alt="voice chat" class="drop-shadow-xl px-3 w-full max-w-[30rem]">
     <div class="flex flex-col justify-center items-center md:items-start gap-3">
       <h1 class="font-ten text-4xl md:text-5xl md:text-left text-center">Proximity voice chat</h1>
       <p class="md:text-left text-center leading-tight"><LocalizedRichText msg={m.home_vc_pre} /></p>

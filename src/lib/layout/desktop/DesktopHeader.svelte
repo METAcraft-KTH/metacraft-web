@@ -1,6 +1,7 @@
 <script lang="ts">
 	import HeaderLink from "./HeaderLink.svelte";
 	import Discord from "$lib/icons/Discord.svelte";
+	import YouTube from '$lib/icons/YouTube.svelte';
 	import Logo from '$lib/icons/MetacraftLogo.svelte';
 	import { m } from '$lib/paraglide/messages.js';
 
@@ -14,12 +15,13 @@
 	let { hideHeader }: Props = $props();
 
 	// dropdowns
-	let smp = $derived([
+	let smp: [string, string, string?][] = $derived([
 		["/smp/features", m.nav_features()],
+		["https://wiki.metacraft.se", m.nav_wiki(), "_blank"]
 		// ["/smp/map", m.nav_map()],
 		// ["/smp#history", m.nav_history()]
 	]);
-	let event = $derived([
+	let event: [string, string, string?][] = $derived([
 		["/leaderboard", m.nav_leaderboard()]
 	]);
 </script>
@@ -35,13 +37,17 @@
 			<HeaderLink href="/campus">{m.nav_campus()}</HeaderLink>
 			<HeaderLink href="/event">{m.nav_event()}</HeaderLink>
 			<!--<HeaderLink href="/install">{m.nav_voice_chat()}</HeaderLink>-->
+			<HeaderLink href="/style">{m.nav_style()}</HeaderLink>
 			<HeaderLink href="/rules">{m.nav_rules()}</HeaderLink>
 			<HeaderLink href="/about">{m.nav_about()}</HeaderLink>
 			<HeaderLink href="/sok">{m.nav_help_us()}</HeaderLink>
 		</div>
 
-		<a href="/discord" target="_blank" class="inline-block p-3 w-[115px] h-full hover:text-pink-100 text-right" class:text-pink-300={!hideHeader} class:text-white={hideHeader}>
+		<a href="/discord" target="_blank" class="inline-block p-3 w-[60px] h-full hover:text-pink-100 text-right" class:text-pink-300={!hideHeader} class:text-white={hideHeader}>
 			<Discord />
+		</a>
+		<a href="/youtube" target="_blank" class="inline-block p-3 w-[60px] h-full hover:text-pink-100 text-right" class:text-pink-300={!hideHeader} class:text-white={hideHeader}>
+			<YouTube />
 		</a>
 	</div>
 </div>

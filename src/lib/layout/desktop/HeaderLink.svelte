@@ -3,18 +3,19 @@
 	import { page } from '$app/state';
 	interface Props {
 		href: string;
-		dropdown?: Array<Array<string>>;
+		dropdown?: [string, string, (string | undefined)?][];
+		target?: string;
 		children?: import('svelte').Snippet;
 	}
 
-	let { href, dropdown = [], children }: Props = $props();
+	let { href, target, dropdown = [], children }: Props = $props();
 
 	let active = $derived(page.url.pathname.includes(href));
 
 	let hovered = $state(false);
 </script>
 
-<a {href}
+<a {href} {target}
 	class="relative flex justify-center items-center px-4 lg:px-8 h-full font-mc text-white text-center no-underline transition-all"
 	class:bg-pink-700={active}
 	class:hover:bg-pink-700={!active}

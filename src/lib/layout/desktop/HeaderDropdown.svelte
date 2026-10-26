@@ -4,7 +4,7 @@
 
   interface Props {
     hovered: boolean;
-    elements: Array<Array<string>>;
+    elements: [string, string, string?][];
   }
 
   let { hovered = $bindable(), elements }: Props = $props();
@@ -18,6 +18,6 @@
 	onmouseleave={() => hovered = false}
 >
   {#each elements as item}
-    <HeaderSubLink href={item[0]}>{item[1]}</HeaderSubLink>
+    <HeaderSubLink href={item[0]} target={item[2]}>{item[1]}</HeaderSubLink>
   {/each}
 </aside>
