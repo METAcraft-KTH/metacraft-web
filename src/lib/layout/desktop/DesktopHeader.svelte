@@ -16,9 +16,9 @@
 
 	// dropdowns
 	let smp: [string, string, string?][] = $derived([
+		["/smp/map", m.nav_map()],
 		["/smp/features", m.nav_features()],
 		["https://wiki.metacraft.se", m.nav_wiki(), "_blank"]
-		// ["/smp/map", m.nav_map()],
 		// ["/smp#history", m.nav_history()]
 	]);
 	let event: [string, string, string?][] = $derived([

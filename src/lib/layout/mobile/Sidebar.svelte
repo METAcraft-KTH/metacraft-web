@@ -11,9 +11,9 @@
 
 <aside class="top-14 z-10 fixed flex flex-col bg-pink-900 w-full transition-all duration-300" class:-left-full={!sideVisible} class:left-0={sideVisible}>
 	<SideLink href="/smp">{m.nav_survival()}</SideLink>
+    <SideSubLink href="/smp/map">{m.nav_map()}</SideSubLink>
     <SideSubLink href="/smp/features">{m.nav_features()}</SideSubLink>
 	<SideSubLink href="https://wiki.metacraft.se" target="_blank">{m.nav_wiki()}</SideSubLink>
-    <!--<SideSubLink href="/smp/map">{m.nav_map()}</SideSubLink>-->
     <!--<SideSubLink href="/smp#history">{m.nav_history()}</SideSubLink>-->
   	<SideLink href="/campus">{m.nav_campus()}</SideLink>
 	<SideLink href="/event">{m.nav_event()}</SideLink>

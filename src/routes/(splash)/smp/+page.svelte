@@ -71,12 +71,10 @@
             <img src={enchantedBookIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.smp_wiki()}</span>
         </Button>
-        <!--
         <Button href="/smp/map">
             <img src={mapZoomIcon} alt="icon" class="w-12 md:w-16">
             <span>{m.smp_see_map()}</span>
         </Button>
-        -->
         <Button href="https://modrinth.com/plugin/simple-voice-chat" target="_blank">
             <img src="https://cdn.modrinth.com/data/9eGKb6K1/icon.png" alt="icon" class="w-12 md:w-16">
             <span>{m.smp_add_voicechat()}</span>
