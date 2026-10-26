@@ -38,7 +38,7 @@
         ["Prism / MultiMC", prismLauncherIcon]
     ];
 
-    const RELEASE = '26.1.2';
+    const RELEASE = '26.3';
 	const INSTALLER_JAR_URL = `https://github.com/METAcraft-KTH/METAcraft-installer/releases/download/${RELEASE}/metacraft-installer-1.0.0.jar`;
 	const INSTALLER_EXE_URL = `https://github.com/METAcraft-KTH/METAcraft-installer/releases/download/${RELEASE}/metacraft-installer-1.0.0.exe`;
 </script>
