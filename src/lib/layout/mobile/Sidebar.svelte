@@ -18,6 +18,7 @@
   	<SideLink href="/campus">{m.nav_campus()}</SideLink>
 	<SideLink href="/event">{m.nav_event()}</SideLink>
 	<!--<SideLink href="/install">{m.nav_voice_chat()}</SideLink>-->
+	<SideLink href="/style">{m.nav_style()}</SideLink>
   	<SideLink href="/rules">{m.nav_rules()}</SideLink>
 	<SideLink href="/about">{m.nav_about()}</SideLink>
 	<SideLink href="/sok">{m.nav_help_us()}</SideLink>
