@@ -28,7 +28,7 @@
 		<Menu />
 	</button>
 
-	<a href="/" class="p-2 h-full aspect-3/1 text-pink-400 text-center" class:text-white={hideHeader && !sideVisible}>
+	<a href="/" class="flex p-2 h-full aspect-3/1 text-pink-400 justify-center content-center" class:text-white={hideHeader && !sideVisible}>
 		<MetacraftLogo />
 	</a>
 
