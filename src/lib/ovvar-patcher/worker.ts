@@ -7,7 +7,7 @@ export interface WorkerRequest {
 }
 
 export interface WorkerResponse {
-	status: 'PATCHED' | 'PATCHED_COPY' | 'NOT_A_SHADERPACK' | 'NOTHING_PATCHED';
+	status: 'PATCHED' | 'PATCHED_COPY' | 'NOT_A_SHADERPACK' | 'NOTHING_PATCHED' | 'UNREADABLE';
 	log: string[];
 	outName?: string;
 	bytes?: ArrayBuffer;
@@ -16,8 +16,8 @@ export interface WorkerResponse {
 self.onmessage = (event: MessageEvent<WorkerRequest>) => {
 	const { name, bytes } = event.data;
 	const result = processPack(name, new Uint8Array(bytes));
-	// A copy of the view's own range, so the transferred buffer is exactly the zip.
-	const out = result.bytes ? result.bytes.slice().buffer : undefined;
+	// writeZip allocates the output exactly, so its buffer is the zip and nothing else.
+	const out = result.bytes ? (result.bytes.buffer as ArrayBuffer) : undefined;
 	const response: WorkerResponse = {
 		status: result.status,
 		log: result.log,

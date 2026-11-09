@@ -3,7 +3,7 @@ import { patchPack, type Status } from './patcher.ts';
 import { resources } from './resources.generated.ts';
 
 export interface PatchResult {
-	status: Status;
+	status: Status | 'UNREADABLE';
 	log: string[];
 	outName?: string;
 	bytes?: Uint8Array;
@@ -63,7 +63,7 @@ export function processPack(name: string, bytes: Uint8Array): PatchResult {
 	try {
 		files = readZip(bytes);
 	} catch {
-		return { status: 'NOT_A_SHADERPACK', log: ['Not a readable zip file.'] };
+		return { status: 'UNREADABLE', log: ['Not a readable zip file.'] };
 	}
 	const result = patchPack(files, resources);
 	if (result.status !== 'PATCHED') return { status: result.status, log: result.log };

@@ -6,58 +6,83 @@
 	import { m } from '$lib/paraglide/messages.js';
 	import type { WorkerRequest, WorkerResponse } from '$lib/ovvar-patcher/worker.ts';
 
+	type Reason =
+		'PATCHED_COPY' | 'NOT_A_SHADERPACK' | 'NOTHING_PATCHED' | 'UNREADABLE' | 'ERROR' | 'FOLDER';
 	type State =
 		| { kind: 'idle' }
 		| { kind: 'working'; name: string }
-		| { kind: 'done'; name: string; outName: string; log: string[] }
-		| {
-				kind: 'refused';
-				reason: 'PATCHED_COPY' | 'NOT_A_SHADERPACK' | 'NOTHING_PATCHED' | 'ERROR' | 'FOLDER';
-				log: string[];
-		  };
+		| { kind: 'done'; name: string; outName: string; url: string; log: string[] }
+		| { kind: 'refused'; reason: Reason; log: string[] };
 
 	let phase = $state<State>({ kind: 'idle' });
 	let dragging = $state(false);
+	let several = $state(false);
 	let input: HTMLInputElement | undefined = $state();
+	let current: Worker | undefined;
 
-	function download(bytes: ArrayBuffer, outName: string) {
-		const url = URL.createObjectURL(new Blob([bytes], { type: 'application/zip' }));
-		const a = document.createElement('a');
-		a.href = url;
-		a.download = outName;
-		document.body.appendChild(a);
-		a.click();
-		a.remove();
-		setTimeout(() => URL.revokeObjectURL(url), 60_000);
+	/** Frees what the previous run holds: its worker and its download URL. */
+	function reset() {
+		current?.terminate();
+		current = undefined;
+		if (phase.kind === 'done') URL.revokeObjectURL(phase.url);
+	}
+
+	function fail(reason: Reason = 'ERROR') {
+		reset();
+		phase = { kind: 'refused', reason, log: [] };
 	}
 
 	function run(file: File) {
+		reset();
 		phase = { kind: 'working', name: file.name };
-		const worker = new Worker(new URL('$lib/ovvar-patcher/worker.ts', import.meta.url), {
-			type: 'module'
-		});
+		let worker: Worker;
+		try {
+			worker = new Worker(new URL('$lib/ovvar-patcher/worker.ts', import.meta.url), {
+				type: 'module'
+			});
+		} catch {
+			fail();
+			return;
+		}
+		current = worker;
+		const gone = () => worker !== current;
 		worker.onmessage = (event: MessageEvent<WorkerResponse>) => {
-			worker.terminate();
+			if (gone()) return;
 			const { status, log, outName, bytes } = event.data;
 			if (status === 'PATCHED' && bytes && outName) {
-				download(bytes, outName);
-				phase = { kind: 'done', name: file.name, outName, log };
+				reset();
+				const url = URL.createObjectURL(new Blob([bytes], { type: 'application/zip' }));
+				phase = { kind: 'done', name: file.name, outName, url, log };
+				// May be blocked without user activation (Safari); the link below is the fallback.
+				const a = document.createElement('a');
+				a.href = url;
+				a.download = outName;
+				document.body.appendChild(a);
+				a.click();
+				a.remove();
 			} else {
+				reset();
 				phase = { kind: 'refused', reason: status === 'PATCHED' ? 'ERROR' : status, log };
 			}
 		};
 		worker.onerror = () => {
-			worker.terminate();
-			phase = { kind: 'refused', reason: 'ERROR', log: [] };
+			if (!gone()) fail();
+		};
+		worker.onmessageerror = () => {
+			if (!gone()) fail();
 		};
 		file.arrayBuffer().then(
 			(bytes) => {
-				const request: WorkerRequest = { name: file.name, bytes };
-				worker.postMessage(request, [bytes]);
+				if (gone()) return;
+				try {
+					const request: WorkerRequest = { name: file.name, bytes };
+					worker.postMessage(request, [bytes]);
+				} catch {
+					fail();
+				}
 			},
 			() => {
-				worker.terminate();
-				phase = { kind: 'refused', reason: 'ERROR', log: [] };
+				if (!gone()) fail();
 			}
 		);
 	}
@@ -65,13 +90,16 @@
 	function accept(files: FileList | null | undefined, items?: DataTransferItemList) {
 		const file = files?.[0];
 		if (!file) return;
-		// A dropped folder shows up as a file with no type and no size to read.
+		several = files.length > 1;
+		// Dropped folders are only recognisable through the entry API.
 		const entry = items?.[0]?.webkitGetAsEntry?.();
 		if (entry?.isDirectory) {
+			reset();
 			phase = { kind: 'refused', reason: 'FOLDER', log: [] };
 			return;
 		}
 		if (!file.name.toLowerCase().endsWith('.zip')) {
+			reset();
 			phase = { kind: 'refused', reason: 'NOT_A_SHADERPACK', log: [] };
 			return;
 		}
@@ -94,10 +122,21 @@
 		PATCHED_COPY: () => m.ovvar_shaders_patched_copy(),
 		NOT_A_SHADERPACK: () => m.ovvar_shaders_not_a_pack(),
 		NOTHING_PATCHED: () => m.ovvar_shaders_nothing(),
+		UNREADABLE: () => m.ovvar_shaders_unreadable(),
 		ERROR: () => m.ovvar_shaders_error(),
 		FOLDER: () => m.ovvar_shaders_folder()
 	};
 </script>
+
+<svelte:window
+	ondragover={(e) => e.preventDefault()}
+	ondrop={(e) => {
+		// Drops outside the zone (or while working) must not make the browser open the file.
+		e.preventDefault();
+		dragging = false;
+	}}
+	onbeforeunload={reset}
+/>
 
 <Seo title={m.ovvar_shaders_seo()} />
 
@@ -143,9 +182,18 @@
 		</div>
 	{/if}
 
+	{#if several && phase.kind !== 'working'}
+		<p class="mt-4 text-base">{m.ovvar_shaders_several()}</p>
+	{/if}
+
 	{#if phase.kind === 'done'}
 		<div class="mt-6" role="status">
 			<h2 class="mb-2 font-ten text-2xl">{m.ovvar_shaders_done_title({ name: phase.outName })}</h2>
+			<p class="mb-3">
+				<a class="font-bold underline" href={phase.url} download={phase.outName}>
+					{m.ovvar_shaders_download({ name: phase.outName })}
+				</a>
+			</p>
 			<ol class="pl-6 list-decimal">
 				<li><LocalizedRichText msg={m.ovvar_shaders_step_1} /></li>
 				<li><LocalizedRichText msg={m.ovvar_shaders_step_2} /></li>

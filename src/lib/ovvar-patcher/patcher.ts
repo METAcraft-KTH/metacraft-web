@@ -1,5 +1,5 @@
 // Vendored from METAmods 9d24da54 mods/ovvar/tools/shaderpatcher/web/patcher.ts — do not edit
-// @ts-nocheck — added in the website: the file is not strict-null clean, and its behaviour is pinned by the METAmods fixtures.
+// @ts-nocheck — website vendoring step, see README.md in this folder
 // 1:1 port of PackPatch.java (the Java is the truth; the shared fixtures prove they agree).
 // Runtime-agnostic: no imports, works on Map<string, Uint8Array> with TextDecoder/TextEncoder.
 //
