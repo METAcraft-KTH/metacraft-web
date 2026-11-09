@@ -6,6 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"test": "node --test 'src/lib/ovvar-patcher/*.test.ts'",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
@@ -18,6 +19,7 @@
 		"@sveltejs/kit": "^2.70.3",
 		"@sveltejs/vite-plugin-svelte": "^7.2.0",
 		"@tailwindcss/vite": "^4.3.3",
+		"@types/node": "^26.6.6",
 		"@typescript-eslint/eslint-plugin": "^8.63.0",
 		"@typescript-eslint/parser": "^8.63.0",
 		"eslint": "^10.13.0",
@@ -33,5 +35,8 @@
 		"typescript": "^5.9.3",
 		"vite": "^8.1.4"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"fflate": "^0.8.3"
+	}
 }
