@@ -3,6 +3,7 @@
 	import Title from '$lib/layout/standard/Title.svelte';
 	import Seo from '$lib/Seo.svelte';
 	import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
+	import { onDestroy } from 'svelte';
 	import { m } from '$lib/paraglide/messages.js';
 	import type { WorkerRequest, WorkerResponse } from '$lib/ovvar-patcher/worker.ts';
 
@@ -25,6 +26,14 @@
 		current?.terminate();
 		current = undefined;
 		if (phase.kind === 'done') URL.revokeObjectURL(phase.url);
+	}
+
+	onDestroy(reset);
+
+	function again() {
+		reset();
+		several = false;
+		phase = { kind: 'idle' };
 	}
 
 	function fail(reason: Reason = 'ERROR') {
@@ -51,15 +60,25 @@
 			const { status, log, outName, bytes } = event.data;
 			if (status === 'PATCHED' && bytes && outName) {
 				reset();
-				const url = URL.createObjectURL(new Blob([bytes], { type: 'application/zip' }));
+				let url: string;
+				try {
+					url = URL.createObjectURL(new Blob([bytes], { type: 'application/zip' }));
+				} catch {
+					fail();
+					return;
+				}
 				phase = { kind: 'done', name: file.name, outName, url, log };
-				// May be blocked without user activation (Safari); the link below is the fallback.
-				const a = document.createElement('a');
-				a.href = url;
-				a.download = outName;
-				document.body.appendChild(a);
-				a.click();
-				a.remove();
+				try {
+					// May be blocked without user activation (Safari); the link below is the fallback.
+					const a = document.createElement('a');
+					a.href = url;
+					a.download = outName;
+					document.body.appendChild(a);
+					a.click();
+					a.remove();
+				} catch {
+					// the visible link still works
+				}
 			} else {
 				reset();
 				phase = { kind: 'refused', reason: status === 'PATCHED' ? 'ERROR' : status, log };
@@ -135,7 +154,6 @@
 		e.preventDefault();
 		dragging = false;
 	}}
-	onbeforeunload={reset}
 />
 
 <Seo title={m.ovvar_shaders_seo()} />
@@ -209,6 +227,12 @@
 			<summary class="cursor-pointer">{m.ovvar_shaders_details()}</summary>
 			<pre class="mt-2 p-3 overflow-x-auto text-sm bg-black/10 rounded">{phase.log.join('\n')}</pre>
 		</details>
+	{/if}
+
+	{#if phase.kind === 'done' || phase.kind === 'refused'}
+		<button type="button" class="mt-6 underline cursor-pointer" onclick={again}>
+			{m.ovvar_shaders_try_again()}
+		</button>
 	{/if}
 
 	<p class="mt-10 text-base">

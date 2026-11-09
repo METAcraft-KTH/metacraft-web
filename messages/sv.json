@@ -194,7 +194,7 @@
   "features_drill_title": "BERGGRUNDSBORR",
   "features_drill_p1": "Borr som kan borra igenom berggrunden högst upp i nether:",
   "features_ovvar_title": "OVVE",
-  "features_ovvar_p1": "En ovve är din student overall: ett klädesplagg, som läggs på dina byxor nercabbad eller inte, som du kan sy märken på. Du får märken vid sektion events och i minispel; ett märke som du får hamnar i din gömma med en elegans och en mening i chatten, och väntar där tills du tar ut den. Öppna upp det med {#b}/ovvar patches{/b} och markera ett märke för att se vem som gjorde det och vart man kan sy den. Ovven är även en säck, med dubbla av dess kapacitet", 
+  "features_ovvar_p1": "En ovve är din student overall: ett klädesplagg, som läggs på dina byxor nercabbad eller inte, som du kan sy märken på. Du får märken vid sektion events och i minispel; ett märke som du får hamnar i din gömma med en elegans och en mening i chatten, och väntar där tills du tar ut den. Öppna upp det med {#b}/ovvar patches{/b} och markera ett märke för att se vem som gjorde det och vart man kan sy den. Ovven är även en säck, med dubbla av dess kapacitet",
   "features_functional_title": "FUNKTIONELLA ÄNDRINGAR",
   "features_anvil": "{#b}Anvil{/b} ökar inte XP-kostnaden när man reparerar eller döper om ett item, och det maximala XP-kostnaden blir aldrig högre än 39 nivåer.",
   "features_anvil_note": "Det betyder att {#i}Mending{/i} inte är lika nödvändigt som i vanilla, eftersom det inte finns en övre gräns för hur många gånger man kan reparera ett item.",
