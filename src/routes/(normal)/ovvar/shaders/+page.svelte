@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Main from '$lib/layout/standard/Main.svelte';
 	import Title from '$lib/layout/standard/Title.svelte';
+	import PageDescription from '$lib/layout/standard/PageDescription.svelte';
 	import Seo from '$lib/Seo.svelte';
 	import LocalizedRichText from '$lib/textstyles/LocalizedRichText.svelte';
 	import { onDestroy } from 'svelte';
@@ -158,84 +159,109 @@
 
 <Seo title={m.ovvar_shaders_seo()} />
 
+<!-- CUSTOM BG -->
 <div class="-z-10 fixed bg-bookshelf bg-cover bg-center w-lvw h-lvh"></div>
 
 <Title>{m.ovvar_shaders_title()}</Title>
 
+<PageDescription>
+	<p>{m.ovvar_shaders_why()}</p>
+	<p class="mt-2 text-sm">{m.ovvar_shaders_privacy()}</p>
+</PageDescription>
+
 <Main>
-	<p class="mb-2">{m.ovvar_shaders_why()}</p>
-	<p class="mb-6 text-base opacity-75">{m.ovvar_shaders_privacy()}</p>
+	<div class="mx-auto w-full max-w-250">
+		<input
+			bind:this={input}
+			type="file"
+			accept=".zip,application/zip"
+			class="hidden"
+			onchange={onPick}
+		/>
 
-	{#if phase.kind === 'working'}
-		<div class="flex flex-col items-center gap-4 p-10" role="status">
+		{#if phase.kind === 'working'}
 			<div
-				class="border-4 border-black/20 border-t-black rounded-full w-12 h-12 animate-spin"
-			></div>
-			<p>{m.ovvar_shaders_working({ name: phase.name })}</p>
-		</div>
-	{:else}
-		<!-- svelte-ignore a11y_no_static_element_interactions -->
-		<div
-			class="flex flex-col items-center gap-2 p-10 border-4 border-dashed rounded-lg text-center transition-colors {dragging
-				? 'border-black bg-black/10'
-				: 'border-black/40'}"
-			ondragover={(e) => {
-				e.preventDefault();
-				dragging = true;
-			}}
-			ondragleave={() => (dragging = false)}
-			ondrop={onDrop}
-		>
-			<p class="font-bold">{m.ovvar_shaders_drop()}</p>
-			<button type="button" class="underline cursor-pointer" onclick={() => input?.click()}>
-				{m.ovvar_shaders_pick()}
-			</button>
-			<input
-				bind:this={input}
-				type="file"
-				accept=".zip,application/zip"
-				class="hidden"
-				onchange={onPick}
-			/>
-		</div>
-	{/if}
+				class="flex flex-col justify-center items-center gap-4 bg-black/5 p-10 border-4 border-black/20 rounded-lg font-mc text-center"
+				role="status"
+			>
+				{m.ovvar_shaders_working({ name: phase.name })}
+			</div>
+		{:else}
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
+			<div
+				class="flex flex-col justify-center items-center gap-4 p-10 border-4 rounded-lg text-center transition-colors {dragging
+					? 'bg-black/5 border-black/60 border-dashed'
+					: 'border-black/20'}"
+				ondragover={(e) => {
+					e.preventDefault();
+					dragging = true;
+				}}
+				ondragleave={() => (dragging = false)}
+				ondrop={onDrop}
+			>
+				<p class="font-mc">{m.ovvar_shaders_drop()}</p>
+				<button
+					type="button"
+					class="bg-map px-6 py-3 font-mc text-black text-center transition-all hover:-translate-y-1 hover:contrast-150 notButton"
+					onclick={() => input?.click()}
+				>
+					{m.ovvar_shaders_pick()}
+				</button>
+			</div>
+		{/if}
 
-	{#if several && phase.kind !== 'working'}
-		<p class="mt-4 text-base">{m.ovvar_shaders_several()}</p>
-	{/if}
+		{#if several && phase.kind !== 'working'}
+			<p class="mt-2 text-sm text-center">{m.ovvar_shaders_several()}</p>
+		{/if}
 
-	{#if phase.kind === 'done'}
-		<div class="mt-6" role="status">
-			<h2 class="mb-2 font-ten text-2xl">{m.ovvar_shaders_done_title({ name: phase.outName })}</h2>
-			<p class="mb-3">
-				<a class="font-bold underline" href={phase.url} download={phase.outName}>
-					{m.ovvar_shaders_download({ name: phase.outName })}
-				</a>
+		{#if phase.kind === 'done'}
+			<div class="mt-8" role="status">
+				<h2 class="font-ten text-2xl">{m.ovvar_shaders_done_title({ name: phase.outName })}</h2>
+				<ol class="mt-2 ml-2 list-decimal list-inside">
+					<li><LocalizedRichText msg={m.ovvar_shaders_step_1} /></li>
+					<li><LocalizedRichText msg={m.ovvar_shaders_step_2} /></li>
+					<li>{m.ovvar_shaders_step_3()}</li>
+				</ol>
+			</div>
+		{:else if phase.kind === 'refused'}
+			<p class="mt-4 font-mc text-red-800 text-center" role="alert">
+				{refusedMessage[phase.reason]()}
 			</p>
-			<ol class="pl-6 list-decimal">
-				<li><LocalizedRichText msg={m.ovvar_shaders_step_1} /></li>
-				<li><LocalizedRichText msg={m.ovvar_shaders_step_2} /></li>
-				<li>{m.ovvar_shaders_step_3()}</li>
-			</ol>
-		</div>
-	{:else if phase.kind === 'refused'}
-		<p class="mt-6 font-bold" role="alert">{refusedMessage[phase.reason]()}</p>
-	{/if}
+		{/if}
 
-	{#if (phase.kind === 'done' || phase.kind === 'refused') && phase.log.length > 0}
-		<details class="mt-4">
-			<summary class="cursor-pointer">{m.ovvar_shaders_details()}</summary>
-			<pre class="mt-2 p-3 overflow-x-auto text-sm bg-black/10 rounded">{phase.log.join('\n')}</pre>
-		</details>
-	{/if}
+		{#if phase.kind === 'done' || phase.kind === 'refused'}
+			<div class="flex sm:flex-row flex-col gap-4 mt-8">
+				{#if phase.kind === 'done'}
+					<a
+						href={phase.url}
+						download={phase.outName}
+						class="flex-1 bg-map px-6 py-3 font-mc text-black text-center no-underline transition-all hover:-translate-y-1 hover:contrast-150"
+					>
+						{m.ovvar_shaders_download({ name: phase.outName })}
+					</a>
+				{/if}
+				<button
+					type="button"
+					class="bg-map px-6 py-3 font-mc text-black text-center transition-all hover:-translate-y-1 hover:contrast-150 notButton"
+					onclick={again}
+				>
+					{m.ovvar_shaders_try_again()}
+				</button>
+			</div>
+		{/if}
 
-	{#if phase.kind === 'done' || phase.kind === 'refused'}
-		<button type="button" class="mt-6 underline cursor-pointer" onclick={again}>
-			{m.ovvar_shaders_try_again()}
-		</button>
-	{/if}
+		{#if (phase.kind === 'done' || phase.kind === 'refused') && phase.log.length > 0}
+			<details class="mt-6">
+				<summary class="cursor-pointer">{m.ovvar_shaders_details()}</summary>
+				<pre
+					class="bg-black mt-2 p-3 rounded overflow-x-auto font-mc text-white text-sm">{phase.log.join(
+						'\n'
+					)}</pre>
+			</details>
+		{/if}
 
-	<p class="mt-10 text-base">
-		<a href="/ovvar/OvvarShaderPatcher.jar" download>{m.ovvar_shaders_offline()}</a>
-	</p>
+		<p class="mt-6 text-sm">
+			<a href="/ovvar/OvvarShaderPatcher.jar" download>{m.ovvar_shaders_offline()}</a>
+		</p>
+	</div>
 </Main>
