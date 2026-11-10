@@ -1,4 +1,4 @@
-// Vendored from METAmods 9d24da54 mods/ovvar/tools/shaderpatcher/web/patcher.ts — do not edit
+// Vendored from METAmods 4070fe50 mods/ovvar/tools/shaderpatcher/web/patcher.ts — do not edit
 // @ts-nocheck — website vendoring step, see README.md in this folder
 // 1:1 port of PackPatch.java (the Java is the truth; the shared fixtures prove they agree).
 // Runtime-agnostic: no imports, works on Map<string, Uint8Array> with TextDecoder/TextEncoder.
@@ -117,6 +117,12 @@ class PackPatch {
 			let vertText: string | null = vert === null ? null : text(files, vert);
 			if (vert === null) {
 				this.say('  ' + frag + ': no matching vertex program found; skipped');
+				continue;
+			}
+			// Both stages in one file: without both stage markers there is no telling where one ends, and the
+			// vertex code would land in the fragment main().
+			if (vert === frag && (find(FRAGMENT_MARKER, fragText) === null || find(VERTEX_MARKER, fragText) === null)) {
+				this.say('  ' + frag + ': one file for both stages, but no #ifdef FSH/VSH-style stage markers found; skipped');
 				continue;
 			}
 			let changed = false;

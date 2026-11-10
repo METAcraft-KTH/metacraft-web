@@ -39,6 +39,12 @@ test('not-a-shaderpack is refused', { skip }, () => {
 	assert.equal(processPack('x.zip', zipFixture('not-a-shaderpack')).status, 'NOT_A_SHADERPACK');
 });
 
+test('a single-file program without stage markers gets no download', { skip }, () => {
+	const r = processPack('x.zip', zipFixture('single-file-no-markers'));
+	assert.equal(r.status, 'NOTHING_PATCHED');
+	assert.equal(r.bytes, undefined);
+});
+
 test('a patched output is recognised as a patched copy', { skip }, () => {
 	const r = processPack('pack.zip', zipFixture('split-programs'));
 	assert.equal(processPack('pack+ovvar.zip', r.bytes!).status, 'PATCHED_COPY');
