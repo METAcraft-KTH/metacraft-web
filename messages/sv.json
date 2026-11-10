@@ -290,6 +290,7 @@
   "ovvar_shaders_error": "Något gick fel när filen lästes. Berätta på Discord.",
   "ovvar_shaders_details": "Detaljer",
   "ovvar_shaders_try_again": "Patcha en pack till",
+  "ovvar_shaders_mod": "Orkar du inte göra detta varje gång ett pack uppdateras? Lägg modden Ovvar Shader Patch i din mods-mapp (Fabric, bredvid Iris) så patchar den dina pack varje gång spelet startar.",
   "ovvar_shaders_offline": "Hellre köra offline? Ladda ner patchern (kräver Java).",
   "ovvar_shaders_unreadable": "Vi kunde inte läsa filen som en zip. Är den trasig?",
   "ovvar_shaders_download": "Ladda ner {name}",

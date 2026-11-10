@@ -260,7 +260,10 @@
 			</details>
 		{/if}
 
-		<p class="mt-6 text-sm">
+		<p class="mt-6">
+			<a href="/ovvar/ovvar-shaderpatch.jar" download>{m.ovvar_shaders_mod()}</a>
+		</p>
+		<p class="mt-2 text-sm">
 			<a href="/ovvar/OvvarShaderPatcher.jar" download>{m.ovvar_shaders_offline()}</a>
 		</p>
 	</div>

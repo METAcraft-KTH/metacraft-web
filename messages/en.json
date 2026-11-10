@@ -290,6 +290,7 @@
   "ovvar_shaders_error": "Something went wrong reading that file. Tell us in Discord.",
   "ovvar_shaders_details": "Details",
   "ovvar_shaders_try_again": "Patch another pack",
+  "ovvar_shaders_mod": "Rather not do this every time a pack updates? Put the Ovvar Shader Patch mod in your mods folder (Fabric, next to Iris) and it patches your packs every time the game starts.",
   "ovvar_shaders_offline": "Prefer to run it offline? Download the patcher (needs Java).",
   "ovvar_shaders_unreadable": "We couldn't read that file as a zip. Is it damaged?",
   "ovvar_shaders_download": "Download {name}",
