@@ -5,3 +5,14 @@ services:
     ports:
       - "127.0.0.1:3000:3000"
     restart: unless-stopped
+    # The East vs West vs Rest API reads the mod's MySQL database; see .env.example.
+    environment:
+      EVW_DB_HOST: ${EVW_DB_HOST:-}
+      EVW_DB_PORT: ${EVW_DB_PORT:-3306}
+      EVW_DB_NAME: ${EVW_DB_NAME:-metacraft}
+      EVW_DB_USER: ${EVW_DB_USER:-metacraft}
+      EVW_DB_PASSWORD: ${EVW_DB_PASSWORD:-}
+      EVW_DB_TABLE_PREFIX: ${EVW_DB_TABLE_PREFIX:-evw_}
+    # lets EVW_DB_HOST=host.docker.internal reach a database running on the host
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

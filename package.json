@@ -14,7 +14,7 @@
 	"devDependencies": {
 		"@inlang/paraglide-js": "^2.21.0",
 		"@inlang/paraglide-js-svelte": "^1.0.3",
-		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/adapter-node": "^5.5.8",
 		"@sveltejs/kit": "^2.70.3",
 		"@sveltejs/vite-plugin-svelte": "^7.2.0",
 		"@tailwindcss/vite": "^4.3.3",
@@ -33,5 +33,8 @@
 		"typescript": "^5.9.3",
 		"vite": "^8.1.4"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"mysql2": "^3.24.6"
+	}
 }

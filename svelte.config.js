@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-node';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import { join, dirname } from 'node:path';
@@ -22,12 +22,10 @@ const config = {
 	],
 
 	kit: {
-		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
-		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
-		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
-		adapter: adapter({
-			fallback: '404.html'
-		}),
+		// Every page is still prerendered (see src/routes/+layout.ts); the node server
+		// serves those files and runs the few +server.ts endpoints that opt out,
+		// such as the East vs West vs Rest API that reads MySQL.
+		adapter: adapter(),
 		prerender: {
 			handleHttpError: 'warn',
 			handleMissingId: 'warn',
