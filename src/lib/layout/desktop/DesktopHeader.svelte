@@ -18,7 +18,7 @@
 	let smp: [string, string, string?][] = $derived([
 		["/smp/map", m.nav_map()],
 		["/smp/features", m.nav_features()],
-		["/smp/eastvswestvsrest", m.nav_evw()],
+		["/smp/museum", m.nav_museum()],
 		["https://wiki.metacraft.se", m.nav_wiki(), "_blank"]
 		// ["/smp#history", m.nav_history()]
 	]);
