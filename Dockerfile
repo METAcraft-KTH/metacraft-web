@@ -2,9 +2,9 @@ FROM node:22-alpine AS base
 
 WORKDIR /app
 
-FROM base AS build
-
 RUN corepack enable
+
+FROM base AS build
 
 COPY package.json pnpm-lock.yaml ./
 
@@ -14,11 +14,22 @@ COPY . .
 
 RUN pnpm build
 
-FROM busybox:1-musl
+# only what the server imports at runtime (the MySQL driver); the rest is bundled by the build
+FROM base AS deps
+
+COPY package.json pnpm-lock.yaml ./
+
+RUN pnpm install --prod
+
+FROM node:22-alpine
 WORKDIR /app
 
-RUN echo "E404:/app/404.html" > /httpd.conf
-COPY --from=build /app/build /app
+ENV NODE_ENV=production PORT=3000
 
+COPY --from=deps /app/node_modules ./node_modules
+COPY --from=build /app/build ./build
+COPY package.json ./
+
+USER node
 EXPOSE 3000
-CMD ["httpd", "-fp3000", "-c/httpd.conf"]
+CMD ["node", "build"]
