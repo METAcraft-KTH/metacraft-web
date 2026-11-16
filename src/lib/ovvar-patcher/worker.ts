@@ -1,0 +1,28 @@
+/// <reference lib="webworker" />
+import { processPack } from './process.ts';
+
+export interface WorkerRequest {
+	name: string;
+	bytes: ArrayBuffer;
+}
+
+export interface WorkerResponse {
+	status: 'PATCHED' | 'PATCHED_COPY' | 'NOT_A_SHADERPACK' | 'NOTHING_PATCHED' | 'UNREADABLE';
+	log: string[];
+	outName?: string;
+	bytes?: ArrayBuffer;
+}
+
+self.onmessage = (event: MessageEvent<WorkerRequest>) => {
+	const { name, bytes } = event.data;
+	const result = processPack(name, new Uint8Array(bytes));
+	// writeZip allocates the output exactly, so its buffer is the zip and nothing else.
+	const out = result.bytes ? (result.bytes.buffer as ArrayBuffer) : undefined;
+	const response: WorkerResponse = {
+		status: result.status,
+		log: result.log,
+		outName: result.outName,
+		bytes: out
+	};
+	(self as unknown as DedicatedWorkerGlobalScope).postMessage(response, out ? [out] : []);
+};
