@@ -94,7 +94,7 @@
 				{/each}
 			</div>
 
-			<p class="tagline">Three teams. One Item Collector. Every different item counts.</p>
+			<a class="font-ten scoreboard tagline" href="/smp/museum">SEE THE SCOREBOARD</a>
 		</div>
 
 		<button class="scroll-hint" onclick={scrollDown} aria-label="Scroll to how to play">
@@ -103,11 +103,11 @@
 	</section>
 
 	<!-- ───────────── HOW TO PLAY ───────────── -->
-	<section id="how-to-play" class="section split wide-right reveal" {@attach inView()}>
+	<section id="how-to-play" class="wide-right section split reveal" {@attach inView()}>
 		<div class="copy">
 			<span class="step">01</span>
-			<h2>Bring any item to the <em>Item Collector</em></h2>
-			<p class="lead">Hand it over, get it registered, and <strong>you keep the item.</strong></p>
+			<h2>Bring any item to the <em>Item Collector</em> at spawn</h2>
+			<p class="lead">The item is kept, so you can submit your best gear too!</p>
 			<div class="team-toggle" role="group" aria-label="Show the chat as team">
 				{#each TEAMS as team, i (team.name)}
 					<button
@@ -130,8 +130,7 @@
 			<span class="step">02</span>
 			<h2>Every <em>different</em> item scores for your team</h2>
 			<p class="lead">
-				Each distinct item counts once for your team, so variety beats volume. The team with the
-				widest collection wins the museum.
+				Every distinct item counts once for yourself and your team, so different names or enchants don't count. Most varied collection wins!
 			</p>
 		</div>
 		<Race />
@@ -143,7 +142,7 @@
 			<span class="step">03</span>
 			<h2>The winning team gets the <em>Ender Chest Lid</em></h2>
 			<p class="lead">
-				Every item that's new for your team brings it one step closer to the Ender Chest Lid.
+				Every item that's new for your team brings it one step closer to the Ender Chest Lid, <strong>a hat you can put on your head.</strong>
 			</p>
 			<p class="lead rivals">
 				Will it be
@@ -168,7 +167,7 @@
 			<span class="step">04</span>
 			<h2>Top <em>5</em> collectors win</h2>
 			<p class="lead">
-				Each of the five best collectors gets their own overflowing Collector Chest helmet skin.
+				On top of the team race, it's also a FFA! The top 5 players who have submitted the most items get their own overflowing Collector Chest helmet skin.
 			</p>
 		</div>
 
@@ -223,6 +222,7 @@
 			<code>{COMMAND}</code>
 			<span class="copy-state">{copied ? 'Copied!' : 'Click to copy'}</span>
 		</button>
+		<a class="font-ten scoreboard" href="/smp/museum">SEE THE SCOREBOARD</a>
 	</section>
 </div>
 
@@ -389,11 +389,27 @@
 
 	.tagline {
 		margin: clamp(1.5rem, 3vw, 2.25rem) 0 0;
+		animation: rise 0.5s ease-out 0.8s both;
+	}
+	.scoreboard {
+		display: inline-block;
+		padding: 0.6em 1.4em;
 		font-size: clamp(1rem, 2vw, 1.35rem);
 		font-weight: 700;
-		opacity: 0.9;
+		color: inherit;
+		text-decoration: none;
+		border: 2px solid currentColor;
+		border-radius: 0.5rem;
+		background: rgba(0, 0, 0, 0.35);
 		text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
-		animation: rise 0.5s ease-out 0.8s both;
+		transition:
+			background 0.2s,
+			scale 0.2s;
+	}
+	.scoreboard:hover,
+	.scoreboard:focus-visible {
+		background: rgba(0, 0, 0, 0.6);
+		scale: 1.05;
 	}
 	.scroll-hint {
 		position: absolute;
@@ -616,6 +632,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
+		padding-bottom: clamp(6rem, 14vw, 11rem);
 		text-align: center;
 	}
 	.cta-title {
