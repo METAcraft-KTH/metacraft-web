@@ -11,7 +11,15 @@
  * (~/.gradle/caches/fabric-loom/<version>/minecraft-client.jar), or
  * .minecraft/versions/<version>/<version>.jar. Later sources override earlier
  * ones, so a server resource pack (Polymer's, for instance) adds or replaces
- * items on top of vanilla. Writes:
+ * items on top of vanilla.
+ *
+ * The server's own modded items come from the METAmods checkout next to this
+ * repo. Some modules (moredyes, ovvar, kultur) generate their assets, so run
+ * `./gradlew runDatagen` there first, then pass generated before hand-made:
+ *
+ *   node scripts/museum-item-icons.mjs <client .jar> ../METAmods/mods/*\/src/main/generated/ ../METAmods/mods/*\/src/main/resources/
+ *
+ * Writes:
  *
  *   src/lib/images/museum-items.png   the icons, ICON px square, COLUMNS per row
  *   src/lib/museum-items.json         { size, columns, ids }: icon i is ids[i]
@@ -25,7 +33,7 @@
  *
  * Dependency-free on purpose: a zip reader and a PNG codec on node:zlib.
  */
-import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative, sep, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import zlib from 'node:zlib';
@@ -88,11 +96,7 @@ function readDir(dir) {
 			else files.set(relative(dir, path).split(sep).join('/'), () => readFileSync(path));
 		}
 	};
-	walk(join(dir, 'assets'));
-	for (const [k, v] of [...files]) {
-		files.delete(k);
-		files.set('assets/' + k, v);
-	}
+	if (existsSync(join(dir, 'assets'))) walk(join(dir, 'assets')); // a mod without assets adds nothing
 	return files;
 }
 
@@ -103,8 +107,13 @@ if (sources.length === 0) {
 }
 /** Later sources win. */
 const assets = new Map();
+/** Every en_us translation key of every source, merged: modules share namespaces, so their lang files share paths. */
+const names = new Set();
 for (const source of sources) {
-	for (const [k, v] of statSync(source).isDirectory() ? readDir(source) : readZip(source)) assets.set(k, v);
+	for (const [k, v] of statSync(source).isDirectory() ? readDir(source) : readZip(source)) {
+		assets.set(k, v);
+		if (/^assets\/[^/]+\/lang\/en_us\.json$/.test(k)) for (const key in JSON.parse(v().toString('utf8').replace(/^﻿/, ''))) names.add(key);
+	}
 }
 
 const id = (ref, ns = 'minecraft') => (ref.includes(':') ? ref.split(':', 2) : [ns, ref]);
@@ -587,7 +596,7 @@ function special(special) {
 	const type = special.type.replace(/^minecraft:/, '');
 	switch (type) {
 		case 'chest': {
-			const t = `minecraft:entity/chest/${id(special.texture)[1]}`;
+			const t = id(special.texture).join(':entity/chest/');
 			const s = [64, 64];
 			return {
 				elements: [
@@ -598,7 +607,7 @@ function special(special) {
 			};
 		}
 		case 'shulker_box': {
-			const t = `minecraft:entity/shulker/${id(special.texture)[1]}`;
+			const t = id(special.texture).join(':entity/shulker/');
 			const s = [64, 64];
 			return { elements: [entityBox(t, s, [0, 28], [0, 0, 0], [16, 8, 16]), entityBox(t, s, [0, 0], [0, 4, 0], [16, 16, 16])] };
 		}
@@ -694,6 +703,11 @@ function renderItem(definition) {
 const items = [...assets.keys()]
 	.map((key) => key.match(/^assets\/([^/]+)\/items\/(.+)\.json$/))
 	.filter(Boolean)
+	// Mods also keep item definitions for display-entity parts and for item_model
+	// looks on vanilla items, neither of which the museum can record (it stores the
+	// registry id). A registered item has a name; those don't. Vanilla's are all items.
+	// ponytail: a modded item named by a custom translation key is left out; list it here if one turns up.
+	.filter(([, ns, path]) => ns === 'minecraft' || ['item', 'block'].some((kind) => names.has(`${kind}.${ns}.${path.replaceAll('/', '.')}`)))
 	.map(([, ns, path]) => `${ns}:${path}`)
 	.sort();
 

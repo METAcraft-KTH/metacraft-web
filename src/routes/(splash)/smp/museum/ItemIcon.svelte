@@ -1,8 +1,8 @@
 <!--
 	An item's inventory icon, cut from the sprite sheet that
-	scripts/museum-item-icons.mjs renders from the game's assets: one image
-	for every item on the page, fetched once and cached. An item the sheet
-	doesn't have (a newer version's, or a modded one) gets a placeholder.
+	scripts/museum-item-icons.mjs renders from the game's and METAmods' assets:
+	one image for every item on the page, fetched once and cached. An item the
+	sheet doesn't have (a newer version's, or another mod's) gets a placeholder.
 -->
 <script module lang="ts">
 	import atlas from '$lib/images/museum-items.png';
